@@ -18,7 +18,7 @@ public class KeyInput_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //사용자 입력값 수집. 
+        //사용자 입력값 수집.
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
