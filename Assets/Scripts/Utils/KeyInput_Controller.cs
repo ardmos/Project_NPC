@@ -24,6 +24,24 @@ public class KeyInput_Controller : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+        
+
+        if(movement.y == -1)
+        {
+            animator.SetInteger("Direction", 0);
+        }
+        else if (movement.y == 1)
+        {
+            animator.SetInteger("Direction",1);
+        }
+        else if (movement.x == 1)
+        {
+            animator.SetInteger("Direction", 2);
+        }
+        else if (movement.x == -1)
+        {
+            animator.SetInteger("Direction", 3);
+        }
     }
 
 
