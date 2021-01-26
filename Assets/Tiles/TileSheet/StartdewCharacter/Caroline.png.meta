@@ -186,12 +186,12 @@ TextureImporter:
       name: Caroline_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 192
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,12 +207,12 @@ TextureImporter:
       name: Caroline_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 18
         y: 192
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,12 +228,12 @@ TextureImporter:
       name: Caroline_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 192
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: Caroline_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 50
         y: 192
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,12 +270,12 @@ TextureImporter:
       name: Caroline_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 160
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: Caroline_5
       rect:
         serializedVersion: 2
-        x: 16
+        x: 18
         y: 160
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,12 +312,12 @@ TextureImporter:
       name: Caroline_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 160
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -333,12 +333,12 @@ TextureImporter:
       name: Caroline_7
       rect:
         serializedVersion: 2
-        x: 48
+        x: 50
         y: 160
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -354,12 +354,12 @@ TextureImporter:
       name: Caroline_8
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 128
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -375,12 +375,12 @@ TextureImporter:
       name: Caroline_9
       rect:
         serializedVersion: 2
-        x: 16
+        x: 18
         y: 128
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -396,12 +396,12 @@ TextureImporter:
       name: Caroline_10
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 128
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -417,12 +417,12 @@ TextureImporter:
       name: Caroline_11
       rect:
         serializedVersion: 2
-        x: 48
+        x: 50
         y: 128
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,12 +438,12 @@ TextureImporter:
       name: Caroline_12
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 96
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -459,12 +459,12 @@ TextureImporter:
       name: Caroline_13
       rect:
         serializedVersion: 2
-        x: 16
+        x: 18
         y: 96
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -480,12 +480,12 @@ TextureImporter:
       name: Caroline_14
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 96
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -503,10 +503,10 @@ TextureImporter:
         serializedVersion: 2
         x: 48
         y: 96
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 14
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -522,12 +522,12 @@ TextureImporter:
       name: Caroline_16
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 64
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 13
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -545,10 +545,10 @@ TextureImporter:
         serializedVersion: 2
         x: 16
         y: 64
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,10 +566,10 @@ TextureImporter:
         serializedVersion: 2
         x: 32
         y: 64
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -585,12 +585,12 @@ TextureImporter:
       name: Caroline_19
       rect:
         serializedVersion: 2
-        x: 48
+        x: 50
         y: 64
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 12
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -609,9 +609,9 @@ TextureImporter:
         x: 0
         y: 32
         width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -628,11 +628,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 0
+        width: 48
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -648,12 +648,12 @@ TextureImporter:
       name: Caroline_22
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 50
+        y: 36
+        width: 13
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -669,12 +669,12 @@ TextureImporter:
       name: Caroline_23
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2
+        y: 0
+        width: 12
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -682,90 +682,6 @@ TextureImporter:
       bones: []
       spriteID: 46a8db12125fb2a30800000000000000
       internalID: 4191713400847174244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Caroline_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7eb08d421326d720800000000000000
-      internalID: 2870520374011936378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Caroline_25
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7dcf3bc22dcd157d0800000000000000
-      internalID: -2931319087190246185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Caroline_26
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5424a1d7db9dd000800000000000000
-      internalID: 62377321090524254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Caroline_27
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da9e0ec1117dd9fd0800000000000000
-      internalID: -2333472563409131091
       vertices: []
       indices: 
       edges: []
