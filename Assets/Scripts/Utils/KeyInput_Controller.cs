@@ -18,6 +18,7 @@ public class KeyInput_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //사용자 입력값 수집. 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -44,25 +45,16 @@ public class KeyInput_Controller : MonoBehaviour
         }
     }
 
-
     private void FixedUpdate()
     {
+        //실질적 이동
         rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
     }
 
-
-    /// <summary>
-    /// 아, 지금 이동을 쑥 쑥 해버려서, 충돌체크 하기도 전에 쑥 통과해버리는거지!!!  
-    /// 이동방식 변경 ㄱㄱ !
-    /// </summary>
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.gameObject.name);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        print(collision.gameObject.name);
+        //충돌체크.
+        print(collision.gameObject.name + "here");
     }
 }
 
