@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleTitle.unity
     guid: 482ea775fc027e849ab93eed04b2319f
   - enabled: 1
-    path: Assets/Scenes/SampleRoom.unity
+    path: Assets/Scenes/SampleRoom_Incident.unity
     guid: 07e10e72f85071f43931bce3a56d1860
   - enabled: 1
     path: Assets/Scenes/SampleGallary.unity

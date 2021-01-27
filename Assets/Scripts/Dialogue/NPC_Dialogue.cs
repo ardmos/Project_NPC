@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class NPC_Dialogue : MonoBehaviour
 {
-    public int talkCount = 0;
-    public int storyPackCount = 1;
+    int talkCount = 0;
+    private int storyPackCount = 1;  //스토리팩의 갯수. 내가 일일히 바꿔줘야함. 기본은 1
     public Dialogue[] storyPack;    //storyPack1, storyPack2, storyPack3,
+
+    public void SetPackCount(int n)
+    {
+        //각 오브젝트의 스크립트에서 이걸 설정해주는 부분 추가. 
+        storyPackCount = n;
+    }
 
     public void TriggerDialogue()
     {
@@ -23,5 +29,4 @@ public class NPC_Dialogue : MonoBehaviour
             talkCount++;
         }
     }
-
 }

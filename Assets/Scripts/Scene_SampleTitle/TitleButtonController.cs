@@ -3,20 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonController : MonoBehaviour
+public class TitleButtonController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnButtonClick_Continue()
     {
         //이어하기
@@ -38,7 +26,7 @@ public class ButtonController : MonoBehaviour
     public void OnButtonClick_Option()
     {
         //옵션창 팝업
-        Debug.Log("옵션창 팝업");
+        FindObjectOfType<OptionPopUp>().OpenThisPopup();
     }
     public void OnButtonClick_EndGame()
     {

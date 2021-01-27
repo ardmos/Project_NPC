@@ -54,7 +54,7 @@ public class KeyInput_Controller : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //충돌체크.
-        print(collision.gameObject.name + "here");
+        //print(collision.gameObject.name + "here");
     }
 }
 
