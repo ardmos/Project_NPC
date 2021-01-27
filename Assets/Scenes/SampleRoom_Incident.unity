@@ -2093,6 +2093,7 @@ GameObject:
   - component: {fileID: 937402249}
   - component: {fileID: 937402248}
   - component: {fileID: 937402251}
+  - component: {fileID: 937402252}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2199,6 +2200,26 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &937402252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937402247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 32
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &970492860
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,6 +4207,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613328308}
     m_Modifications:
+    - target: {fileID: 986611874, guid: 2682bce6d6d3bdd4285d4846713ca0f8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3064296686708591242, guid: 2682bce6d6d3bdd4285d4846713ca0f8,
         type: 3}
       propertyPath: m_Name
@@ -4194,7 +4219,7 @@ PrefabInstance:
     - target: {fileID: 3064296686708591243, guid: 2682bce6d6d3bdd4285d4846713ca0f8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3064296686708591243, guid: 2682bce6d6d3bdd4285d4846713ca0f8,
         type: 3}

@@ -26,7 +26,7 @@ public class KeyInput_Controller : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
         
-
+        //Idle방향
         if(movement.y == -1)
         {
             animator.SetInteger("Direction", 0);
