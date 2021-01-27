@@ -14,7 +14,7 @@ public class TitleButtonController : MonoBehaviour
     public void OnButtonClick_StartNewGame()
     {
         //처음부터 시작.
-        SceneManager.LoadScene("SampleRoom");
+        SceneManager.LoadScene("SampleRoom_Incident");
     }
 
     public void OnButtonClick_Gallary()
