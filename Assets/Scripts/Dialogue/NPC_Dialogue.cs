@@ -17,7 +17,7 @@ public class NPC_Dialogue : MonoBehaviour
     public void TriggerDialogue()
     {
         //하나인 경우. 
-        DialogueManager.instance.StartDialogue(storyPack);
+        DialogueManager.instance.StartDialogue(storyPack, "Stable");
         //여럿인 경우는 talkCount에 따라서 다른 스토리팩을 보내줘야 함. 
     } 
 

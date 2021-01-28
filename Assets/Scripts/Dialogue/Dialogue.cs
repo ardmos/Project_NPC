@@ -8,4 +8,10 @@ public class Dialogue
     public string name;
     [TextArea(8, 10)]
     public string sentence;
+    public Sprite portrait;
+
+    public Dialogue(string name)
+    {
+        this.name = name;
+    }
 }

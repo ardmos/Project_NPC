@@ -7,7 +7,8 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText, sentenceText;
 
-    public Animator animator;
+    public GameObject dialogue_Slide, dialogue_Stable;
+    Animator dialogue_Slide_animator;
     
     //싱글턴
     public static DialogueManager instance;
@@ -23,13 +24,30 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dialogue_Slide_animator = dialogue_Slide.GetComponent<Animator>();
 
         storyPack = new Queue<Dialogue>();
     }
 
-    public void StartDialogue(Dialogue[] storyPack)
+
+
+    #region 다이얼로그 열고 닫기
+
+    public void StartDialogue(Dialogue[] storyPack, string dialogueStyle)
     {
-        animator.SetBool("isOpen", true);
+
+        switch (dialogueStyle)
+        {
+            case "Slide":
+
+                dialogue_Slide_animator.SetBool("isOpen", true);
+                break;
+            case "Stable":
+                dialogue_Stable.SetActive(true);
+                break;
+            default:
+                break;
+        }
 
         this.storyPack.Clear();
 
@@ -42,11 +60,29 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+
+    public void EndDialogue(string dialogueStyle)
+    {
+        switch (dialogueStyle)
+        {
+            case "Slide":
+                dialogue_Slide_animator.SetBool("isOpen", false);
+                break;
+            case "Stable":
+                dialogue_Stable.SetActive(false);
+                break;
+            default:
+                break;
+        }
+
+    }
+    #endregion
+
     public void DisplayNextSentence()
     {
-        if(this.storyPack.Count == 0)
+        if (this.storyPack.Count == 0)
         {
-            EndDialogue();
+            EndDialogue("Stable");
             return;
         }
 
@@ -67,11 +103,4 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-
-    void EndDialogue()
-    {
-        animator.SetBool("isOpen", false);
-    }
-
-
 }
