@@ -1446,10 +1446,10 @@ RectTransform:
   - {fileID: 124598117}
   - {fileID: 1959286225}
   - {fileID: 680339352}
+  - {fileID: 1383763141}
   m_Father: {fileID: 1728788597}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
 <<<<<<< Updated upstream
@@ -1460,13 +1460,6 @@ RectTransform:
   m_SizeDelta: {x: -20, y: 240}
 >>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0}
-=======
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -239.98}
-  m_SizeDelta: {x: 880, y: 280}
-  m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> parent of 063fb45... .
 --- !u!114 &187658095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1512,7 +1505,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187658093}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5870389648b5892479d39dd6a4a367df, type: 2}
   m_CullingMode: 0
@@ -4246,7 +4239,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 --- !u!1 &1383763140
 =======
@@ -4387,8 +4379,6 @@ CanvasRenderer:
   m_GameObject: {fileID: 1448644272}
 >>>>>>> Stashed changes
   m_CullTransparentMesh: 0
-=======
->>>>>>> parent of 063fb45... .
 --- !u!1 &1502509901
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,10 +4489,10 @@ RectTransform:
   m_Father: {fileID: 732958160}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1792519941
 GameObject:

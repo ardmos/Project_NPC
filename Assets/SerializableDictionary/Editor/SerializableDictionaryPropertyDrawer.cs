@@ -5,7 +5,8 @@ using UnityEditor;
 using System.Reflection;
 using System;
 
-[CustomPropertyDrawer(typeof(IntStrings))]
+[CustomPropertyDrawer(typeof(IntDialogues))]
+
 public class SerializableDictionaryPropertyDrawer : PropertyDrawer
 {
 	const string KeysFieldName = "m_keys";

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-//public class IntDialogues : SerializableDictionary<int, Dialogue> { }
-public class IntStrings : SerializableDictionary<int, string[]> { }
+public class IntDialogues : SerializableDictionary<int, Dialogue> { } 
 
 public class TalkManager : MonoBehaviour
 {
     [Header("---전체 이야기 보따리---    (+ 추가, - 제거)")]
-    public IntStrings talkData;
+    public IntDialogues talkData;
 
 
     private void Awake()
