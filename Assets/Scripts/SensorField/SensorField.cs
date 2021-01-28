@@ -12,6 +12,6 @@ public class SensorField : MonoBehaviour
         print(collision.gameObject.name + "here");
 
         //경찰 호출 
-        police1.GetComponent<NPC_SamplePolice>().Move_Event();
+        police1.GetComponent<NPC>().Move_Event();
     }
 }
