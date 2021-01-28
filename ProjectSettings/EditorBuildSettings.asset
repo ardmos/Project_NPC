@@ -11,10 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleTitle.unity
     guid: 482ea775fc027e849ab93eed04b2319f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleRoom_Incident.unity
     guid: 07e10e72f85071f43931bce3a56d1860
   - enabled: 1
     path: Assets/Scenes/SampleGallary.unity
     guid: c59e1a2ec19e8b548b3f0eb8f34f04ee
+  - enabled: 1
+    path: Assets/Scenes/DialogueTest.unity
+    guid: 3434fae9891c3c04f972c92e203b50ae
   m_configObjects: {}

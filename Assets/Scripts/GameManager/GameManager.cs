@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         {
             //End ScanAction
             isScanAction = false;
-            DialogueManager.instance.EndDialogue(dialogueStyle);
+            //DialogueManager.instance.EndDialogue(dialogueStyle);
         }
         else
         {
