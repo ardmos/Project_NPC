@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : MonoBehaviour
+public class NPC_SamplePolice : MonoBehaviour
 {
     public float movespeed = 5f;
     public Rigidbody2D rb;
@@ -11,6 +11,7 @@ public class NPC : MonoBehaviour
 
     private void Start()
     {
+        //샘플임
         pos = rb.position+Vector2.left;
     }
 

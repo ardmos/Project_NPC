@@ -17,7 +17,7 @@ public class InteractableObject : MonoBehaviour
     public void TriggerDialogue()
     {
         //하나인 경우. 
-        DialogueManager.instance.StartDialogue(itemDiscriptionPack);
+        DialogueManager.instance.StartDialogue(itemDiscriptionPack, "Stable");
         //여럿인 경우는 talkCount에 따라서 다른 스토리팩을 보내줘야 함. 
     }
 
