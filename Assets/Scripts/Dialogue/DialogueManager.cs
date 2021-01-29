@@ -7,54 +7,78 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText, sentenceText;
 
-    public Animator animator;
-    
+
+    public GameObject dialog_Stable, dialog_Slide;
+
+    Animator slide_animator;
+
+
+    #region For Signleton
     //싱글턴
     public static DialogueManager instance;
 
-    private Queue<Dialogue> storyPack;
+    //private Queue<Dialogue> storyPack;
 
     private void Awake()
     {
         //싱글턴
         instance = this;
     }
+    #endregion
+
 
     // Start is called before the first frame update
     void Start()
     {
-
-        storyPack = new Queue<Dialogue>();
+        slide_animator = dialog_Slide.GetComponent<Animator>();
+        //storyPack = new Queue<Dialogue>();
     }
 
-    public void StartDialogue(Dialogue[] storyPack)
+    public void StartDialogue(Dialogue[] dialogueData, string dialogueStyle)
     {
-        animator.SetBool("isOpen", true);
-
-        this.storyPack.Clear();
+        GameObject dialogueObject = new GameObject();
+        switch (dialogueStyle)
+        {
+            case "Stable":
+                dialog_Stable.SetActive(true);
+                dialogueObject = dialog_Stable;
+                break;
+            case "Slide":
+                slide_animator.SetBool("isOpen", true);
+                dialogueObject = dialog_Slide;
+                break;
+            default:
+                Debug.Log("please make sure the dialogueStyle is correct");
+                return;               
+        }
+        //this.storyPack.Clear();
 
         //대화내용 통째로 가져와서 처리 storyPack[] 
-        foreach (Dialogue dialogues in storyPack)
-        {
-            this.storyPack.Enqueue(dialogues);
-        }
+        //foreach (Dialogue dialogues in storyPack)
+        //{
+        //    this.storyPack.Enqueue(dialogues);
+       // }
 
-        DisplayNextSentence();
+        DisplayNextSentence(dialogueData, dialogueObject);
     }
 
-    public void DisplayNextSentence()
+    void DisplayNextSentence(Dialogue[] dialogueData, GameObject dialogueObject)
     {
-        if(this.storyPack.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
+        //dialogueObject.GetCh
 
-        Dialogue dialogue = this.storyPack.Dequeue();
-        nameText.text = dialogue.name;
-        string sentence = dialogue.sentence;
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        //셋데이타 호출. 데이타 세팅. 
+
+        //if(this.storyPack.Count == 0)
+        //{
+        //    EndDialogue();
+        //    return;
+        //}
+
+        //Dialogue dialogue = this.storyPack.Dequeue();
+        //nameText.text = dialogue.name;
+        //string sentence = dialogue.sentence;
+        //StopAllCoroutines();
+        //StartCoroutine(TypeSentence(sentence));
     }
 
     //한글자씩 도도도 찍기
@@ -70,7 +94,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        animator.SetBool("isOpen", false);
+        slide_animator.SetBool("isOpen", false);
     }
 
 

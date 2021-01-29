@@ -6,7 +6,7 @@ public class NPC_Dialogue : MonoBehaviour
 {
     int talkCount = 0;
     private int storyPackCount = 1;  //스토리팩의 갯수. 내가 일일히 바꿔줘야함. 기본은 1
-    public Dialogue[] storyPack;    //storyPack1, storyPack2, storyPack3,
+    public Dialogue[] dialogueData;    //storyPack1, storyPack2, storyPack3,
 
     public void SetPackCount(int n)
     {
@@ -17,7 +17,7 @@ public class NPC_Dialogue : MonoBehaviour
     public void TriggerDialogue()
     {
         //하나인 경우. 
-        DialogueManager.instance.StartDialogue(storyPack);
+        DialogueManager.instance.StartDialogue(dialogueData, "Stable");
         //여럿인 경우는 talkCount에 따라서 다른 스토리팩을 보내줘야 함. 
     } 
 

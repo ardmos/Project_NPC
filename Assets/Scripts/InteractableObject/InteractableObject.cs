@@ -6,7 +6,7 @@ public class InteractableObject : MonoBehaviour
 {
     int talkCount = 0;
     private int discriptionPackCount = 1;   //설명팩들의 갯수. 내가 일일히 바꿔줘야함. 기본은 1
-    public Dialogue[] itemDiscriptionPack;    //storyPack1, storyPack2, storyPack3,
+    public Dialogue[] dialogueData;    //storyPack1, storyPack2, storyPack3,
 
     public void SetPackCount(int n)
     {
@@ -17,7 +17,7 @@ public class InteractableObject : MonoBehaviour
     public void TriggerDialogue()
     {
         //하나인 경우. 
-        DialogueManager.instance.StartDialogue(itemDiscriptionPack);
+        DialogueManager.instance.StartDialogue(dialogueData, "Stable");
         //여럿인 경우는 talkCount에 따라서 다른 스토리팩을 보내줘야 함. 
     }
 

@@ -12,8 +12,9 @@ public class TalkManager : MonoBehaviour
     [System.Serializable]
     public struct MyStruct
     {
-        public string name;
         public int id;
+        public string name;
+        [TextArea(8, 10)]
         public string[] vs;
     }
 
@@ -32,6 +33,8 @@ public class TalkManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        
 
         for (int i = 0; i < addHere.Length; i++)
         {
@@ -52,27 +55,6 @@ public class TalkManager : MonoBehaviour
                 }
             }
         }
-
-
-        /*
-        for (int i = 0; i < addHere.Length; i++)
-        {
-
-            keyValuePairs.Add(addHere[i].id, addHere[i].vs);
-        }
-
-
-        foreach (KeyValuePair<int,string[]> item in keyValuePairs)
-        {
-            //Debug.Log(string.Format("{0} : {1}", item.Key, item.Value));
-            foreach (string str in item.Value)
-            {
-                print(item.Key +" ,  " +  str);
-            }
-        }
-        */
-
-
 
     }
 
