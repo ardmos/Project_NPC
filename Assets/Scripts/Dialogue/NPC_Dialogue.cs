@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPC_Dialogue : MonoBehaviour
 {
-    int id;
+    public int id;
 
     public void TriggerDialogue()
     {
