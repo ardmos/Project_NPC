@@ -100,4 +100,9 @@ public class ChoiceBox : MonoBehaviour
         }
     }
 
+    public void GetChoice()
+    {
+
+    }
+
 }
