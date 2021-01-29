@@ -17,9 +17,10 @@ public class Dialogue
 
     [Header("- 초상화")]
     public bool isPortrait;
-    public Sprite[] portraits;           
-    
+    public Sprite[] portraits;
+
     [Header("- 선택지")]
+    public string ask;
     public string[] choices;
     public string[] choice_results;
 

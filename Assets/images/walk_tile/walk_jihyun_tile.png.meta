@@ -1,12 +1,60 @@
 fileFormatVersion: 2
 guid: c28321cdaf282604c964771a6a9a606b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6652151408204668431
+    second: walk_jihyun_tile_0
+  - first:
+      213: -1631411018812827983
+    second: walk_jihyun_tile_1
+  - first:
+      213: 3344223879856694923
+    second: walk_jihyun_tile_2
+  - first:
+      213: 7824676329534198307
+    second: walk_jihyun_tile_3
+  - first:
+      213: 738978707816413125
+    second: walk_jihyun_tile_4
+  - first:
+      213: -7950491206654601625
+    second: walk_jihyun_tile_5
+  - first:
+      213: 4203699872375541230
+    second: walk_jihyun_tile_6
+  - first:
+      213: 9206680280645936479
+    second: walk_jihyun_tile_7
+  - first:
+      213: -2417577001243030771
+    second: walk_jihyun_tile_8
+  - first:
+      213: 5410562396543091539
+    second: walk_jihyun_tile_9
+  - first:
+      213: 6795225832967021290
+    second: walk_jihyun_tile_10
+  - first:
+      213: 7370693465109009397
+    second: walk_jihyun_tile_11
+  - first:
+      213: 5735680335850060821
+    second: walk_jihyun_tile_12
+  - first:
+      213: 8856682411594216327
+    second: walk_jihyun_tile_13
+  - first:
+      213: -1432895414421624988
+    second: walk_jihyun_tile_14
+  - first:
+      213: 7791693211139838286
+    second: walk_jihyun_tile_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,27 +79,27 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -61,7 +109,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -73,7 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -85,7 +133,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -97,11 +145,347 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: walk_jihyun_tile_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 64
+        width: 30
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1a8d1f98fcea3a0800000000000000
+      internalID: -6652151408204668431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 64
+        width: 24
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6d00d62501c59e0800000000000000
+      internalID: -1631411018812827983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 64
+        width: 22
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86ac3876e1196e20800000000000000
+      internalID: 3344223879856694923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 64
+        width: 23
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3221b403aa5d69c60800000000000000
+      internalID: 7824676329534198307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 64
+        width: 30
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c779ff2831614a00800000000000000
+      internalID: 738978707816413125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_5
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 64
+        width: 23
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7665c7dfe5e2aa190800000000000000
+      internalID: -7950491206654601625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 64
+        width: 22
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed8c4303ca865a30800000000000000
+      internalID: 4203699872375541230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 64
+        width: 24
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55ae78afe2b4cf70800000000000000
+      internalID: 9206680280645936479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 24
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b41c7b68a037ed0800000000000000
+      internalID: -2417577001243030771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_9
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 22
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353890155dd261b40800000000000000
+      internalID: 5410562396543091539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_10
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 23
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2ae8674ed7d4e50800000000000000
+      internalID: 6795225832967021290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 30
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f39d18a7a6f94660800000000000000
+      internalID: 7370693465109009397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_12
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 23
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c398360ea399f40800000000000000
+      internalID: 5735680335850060821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_13
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 22
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783f5878ab149ea70800000000000000
+      internalID: 8856682411594216327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_14
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 0
+        width: 24
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467ec1f56355d1ce0800000000000000
+      internalID: -1432895414421624988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_jihyun_tile_15
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 30
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4110d081b7a12c60800000000000000
+      internalID: 7791693211139838286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 833d28cc4163cd0419906007268d581f
     internalID: 0
     vertices: []
     indices: 
