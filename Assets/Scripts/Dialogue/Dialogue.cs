@@ -11,7 +11,7 @@ public class Dialogue
     public float letterSpeed;
     
 
-    [Header("- Sentence 입력 방법 -> \"이름:문장:스타일(0~1):초상화번호\" ")]
+    [Header("- Sentence 입력 방법 -> \"이름:문장:스타일(0~1):초상화번호(-1 없음)\" ")]
     [TextArea(8, 10)]
     public string[] sentences;      //이름, 문장, 스타일, 초상화번호
 
@@ -20,7 +20,6 @@ public class Dialogue
     public Sprite[] portraits;           
     
     [Header("- 선택지")]
-    public bool isChoices;
     public string[] choices;
     public string[] choice_results;
 

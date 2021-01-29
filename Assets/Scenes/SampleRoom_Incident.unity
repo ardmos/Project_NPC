@@ -3848,7 +3848,7 @@ MonoBehaviour:
     sentences:
     - "\uACBD\uCC30:\uC5B4\uC774\uC5B4\uC774"
     - "\uACBD\uCC30\uD654:\uC2E0\uBD84\uC99D\uC744 \uBCF4\uC774\uB77C\uAD6C!!:1:1"
-    isPortrait: 1
+    isPortrait: 0
     portraits:
     - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
     - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
@@ -4095,8 +4095,8 @@ BoxCollider2D:
   m_Offset: {x: -0.00000008940697, y: -0.03142667}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.25}
-    oldSize: {x: 0.75, y: 1.5625}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.6875, y: 1.9375}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4144,7 +4144,7 @@ SpriteRenderer:
   m_SortingLayerID: 2087208287
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4457817970638861840, guid: 9edd9f72cef5333448912393dfd79cb1,
+  m_Sprite: {fileID: 4795623047785171311, guid: f1053e63127836942b756405f06b136c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
