@@ -7,14 +7,16 @@ public class DialogueObject : MonoBehaviour
 {
     public Text dialogObjName, sentence;
     public Image portrait;
+    public string[] sentences;
+    public Sprite[] portraits;
 
-    public void SetData(Text name, Text sentence, Sprite portrait, bool isPortrait)
+    public void SetData(Dialogue dialogueData)
     {
-        this.dialogObjName = name;
-        this.sentence = sentence;
-        this.portrait.sprite = portrait;
+        this.dialogObjName.text = dialogueData.situationName;
+        sentences = dialogueData.sentences;
+        portraits = dialogueData.portraits;
 
-        if (isPortrait)
+        if (dialogueData.isPortrait)
             this.portrait.color = new Color(1, 1, 1, 1);
         else
             this.portrait.color = new Color(1, 1, 1, 0);

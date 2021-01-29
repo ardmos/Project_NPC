@@ -35,7 +35,7 @@ public class TalkManager : MonoBehaviour
     {
 
         
-
+        /*
         for (int i = 0; i < addHere.Length; i++)
         {
 
@@ -55,6 +55,7 @@ public class TalkManager : MonoBehaviour
                 }
             }
         }
+        */
 
     }
 

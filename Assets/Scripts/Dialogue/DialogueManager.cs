@@ -5,13 +5,22 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText, sentenceText;
+    enum DialogueStyle
+    {
+        Stable,
+        Slide
+    }
 
 
     public GameObject dialog_Stable, dialog_Slide;
 
     Animator slide_animator;
 
+    [Header("스토리 문장 저장소")]
+    public Dialogue[] dialogueData;
+    Dictionary<int, Dialogue[]> dialogueData_Dic;
+
+    DialogueStyle dialogueStyle;
 
     #region For Signleton
     //싱글턴
@@ -23,6 +32,7 @@ public class DialogueManager : MonoBehaviour
     {
         //싱글턴
         instance = this;
+        dialogueData_Dic = new Dictionary<int, Dialogue[]>();
     }
     #endregion
 
@@ -34,16 +44,18 @@ public class DialogueManager : MonoBehaviour
         //storyPack = new Queue<Dialogue>();
     }
 
-    public void StartDialogue(Dialogue[] dialogueData, string dialogueStyle)
+    public void StartDialogue(int objid)
     {
-        GameObject dialogueObject = new GameObject();
+        //딕셔너리에 넣는 과정 필요. 
+
+        GameObject dialogueObject;
         switch (dialogueStyle)
         {
-            case "Stable":
+            case DialogueStyle.Stable:
                 dialog_Stable.SetActive(true);
                 dialogueObject = dialog_Stable;
                 break;
-            case "Slide":
+            case DialogueStyle.Slide:
                 slide_animator.SetBool("isOpen", true);
                 dialogueObject = dialog_Slide;
                 break;
@@ -59,14 +71,16 @@ public class DialogueManager : MonoBehaviour
         //    this.storyPack.Enqueue(dialogues);
        // }
 
-        DisplayNextSentence(dialogueData, dialogueObject);
+
+        DisplayNextSentence(objid, dialogueObject);
     }
 
-    void DisplayNextSentence(Dialogue[] dialogueData, GameObject dialogueObject)
+    void DisplayNextSentence(int objid, GameObject dialogueObject)
     {
-        //dialogueObject.GetCh
+        //셋데이타 호출. 데이타 세팅.
+        //dialogueObject.GetComponent<DialogueObject>().SetData(dialogueData);
 
-        //셋데이타 호출. 데이타 세팅. 
+
 
         //if(this.storyPack.Count == 0)
         //{
@@ -84,10 +98,10 @@ public class DialogueManager : MonoBehaviour
     //한글자씩 도도도 찍기
     IEnumerator TypeSentence(string sentence)
     {
-        sentenceText.text = "";
+        //sentenceText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            sentenceText.text += letter;
+        //    sentenceText.text += letter;
             yield return new WaitForSeconds(0.1f);
         }
     }

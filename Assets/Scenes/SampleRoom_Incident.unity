@@ -1481,6 +1481,8 @@ MonoBehaviour:
   dialogObjName: {fileID: 124598118}
   sentence: {fileID: 1959286226}
   portrait: {fileID: 714163986}
+  sentences: []
+  portraits: []
 --- !u!1 &233750243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1922,8 @@ MonoBehaviour:
   dialogObjName: {fileID: 654758906}
   sentence: {fileID: 2112349322}
   portrait: {fileID: 523184087}
+  sentences: []
+  portraits: []
 --- !u!222 &547224640
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2458,7 +2462,6 @@ MonoBehaviour:
     name: "\uC774\uBC88"
     vs:
     - "\uB610\uBD59\uB124\uC694."
-    - "\uAC74\uAC15\uD558\uC168\uB098\uC694."
 --- !u!4 &802145696
 Transform:
   m_ObjectHideFlags: 0
@@ -4228,10 +4231,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c836510a9a9fa4498d705e0d946624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 124598118}
-  sentenceText: {fileID: 1959286226}
   dialog_Stable: {fileID: 547224636}
   dialog_Slide: {fileID: 187658093}
+  dialogueData:
+  - situationName: "\uACBD\uCC30\uACFC\uC758 \uB9CC\uB0A8"
+    storyId: 0
+    sentences:
+    - 
+    - 
+    portraits:
+    - {fileID: 0}
+    - {fileID: 0}
+    isPortrait: 0
+    letterSpeed: 0
+    choices:
+    - 
+    choice_results:
+    - 
+    - 
 --- !u!4 &1502509903
 Transform:
   m_ObjectHideFlags: 0

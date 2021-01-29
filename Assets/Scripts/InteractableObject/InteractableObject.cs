@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    /*
     int talkCount = 0;
     private int discriptionPackCount = 1;   //설명팩들의 갯수. 내가 일일히 바꿔줘야함. 기본은 1
     public Dialogue[] dialogueData;    //storyPack1, storyPack2, storyPack3,
@@ -29,4 +30,5 @@ public class InteractableObject : MonoBehaviour
             talkCount++;
         }
     }
+    */
 }

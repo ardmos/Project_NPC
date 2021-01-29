@@ -5,10 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-    public int id;
-    public string name;
+    public string situationName;
+    public int storyId;    
     [TextArea(8, 10)]
-    public string sentence;
-    public Sprite portrait;
+    public string[] sentences;
+    public Sprite[] portraits;
     public bool isPortrait;
+    [Range(0f,1f)]
+    public float letterSpeed;
+    public string[] choices;
+    public string[] choice_results;
 }
