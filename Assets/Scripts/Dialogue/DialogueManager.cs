@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
         foreach (Dialogue item in dialogueData)
         {
             dialogueData_Dic.Add(item.storyId, item);
-        }
+        }        
     }
 
     public void StartDialogue(int objid)    //다이얼로그의 다양한 부분을 초기화. 
@@ -225,6 +225,7 @@ public class DialogueManager : MonoBehaviour
         ///
         //분기점 관련 기록 부분 추가 필요
         //
+        //그리고 분기가 나뉘면,  id값을 다르게 해서 다른 이야기팩으로 새로 시작하게끔 하자. 
         ///
         isNPCresponding = false;
         SplitStringServiceSir(dialogue.responses[valueToResponse]);
