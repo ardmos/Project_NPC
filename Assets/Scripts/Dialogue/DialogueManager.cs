@@ -17,7 +17,8 @@ public class DialogueManager : MonoBehaviour
     public Dialogue[] dialogueData;
     Dictionary<int, Dialogue> dialogueData_Dic;
     Dialogue dialogue;
-    Queue<string> sentences;
+    Queue<Dialogue.DialogueSet> dialogueSetsQue;
+    Dialogue.DialogueSet curDialogSet;
 
     bool activeChoiceBox, isNPCresponding;
     int npcResponseNum;
@@ -38,30 +39,34 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sentences = new Queue<string>();
+        dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
         //딕셔너리에 넣는 과정 
-        foreach (Dialogue item in dialogueData)
+        if (dialogueData.Length != 0)
         {
-            dialogueData_Dic.Add(item.storyId, item);
+            foreach (Dialogue item in dialogueData)
+            {
+                dialogueData_Dic.Add(item.storyId, item);
+            }
         }
+
     }
 
     public void StartDialogue(int objid)    //다이얼로그의 다양한 부분을 초기화. 
     {
         //해당 아이디값 개체 검색
-        print(dialogueData_Dic[objid]);
+        //print(dialogueData_Dic[objid]);
 
         if (dialogueData_Dic.ContainsKey(objid))    //해당 id값을 가진 개체가 존자한다면
         {
             //그 개체의 Dialogue 클래스를 꺼내와서
             dialogue = dialogueData_Dic[objid];
             //그 중 sentences 스트링 배열에 접근한다.
-            string[] sentences_ = dialogue.sentences;
+            Dialogue.DialogueSet[] sentences_ = dialogue.dialogueSet;
             //얻어낸 string[]를 Queue에 순차적으로 Enqueue 한다.
-            sentences.Clear();
-            foreach (string item in sentences_)
+            dialogueSetsQue.Clear();
+            foreach (Dialogue.DialogueSet item in sentences_)
             {
-                sentences.Enqueue(item);
+                dialogueSetsQue.Enqueue(item);
             }
         }
         else
@@ -92,183 +97,87 @@ public class DialogueManager : MonoBehaviour
             NPCResponseToTheChoiceResult(npcResponseNum);
             return;
         }
-        if (sentences.Count == 0)
+        if (dialogueSetsQue.Count == 0)
         {
             EndDialogue();
             return;
         }
-        SplitStringServiceSir(sentences.Dequeue());
+
+        curDialogSet = dialogueSetsQue.Dequeue();       
+        BatchService(curDialogSet);
     }
 
-    //스플릿!
-    void SplitStringServiceSir(string str)
-    {
-        //스플릿!
-        ///
-        //split 해서 길이 0 나오면 바로 패스.
-        //바로 넥스트 다이얼로그 
-        //split 해서 길이 2 나오면 기본 stable스타일
-        //0 이름, 1문장
-        //split 해서 길이 3 나오면 스타일 선택 가능
-        //0 이름, 1 문장, 2 스타일
-        //split 해서 길이 4 나오면 초상화 선택 가능
-        //0 이름, 1 문장, 2 스타일, 3 초상화 번호
-        //split 해서 길이 5 나오면 선택지 팝업 가능
-        //0 이름, 1 문장, 2 스타일, 3 초상화 번호, 4 선택지발동팝업 (다음 페이지 시작 직전에 스톱해두고 발동. )
-        //split 해서 길이 6 나오면 선택지 팝업 가능
-        //0 이름, 1 문장, 2 스타일, 3 초상화 좌 번호, 4 선택지발동팝업 (다음 페이지 시작 직전에 스톱해두고 발동. ), 5 초상화 우 번호
-        ///
-        string[] strRules = str.Split(':');
-        string sentence = null;
-        switch (strRules.Length)
+
+
+    //배치서비스 시작합니다.   스플릿서비스는 안녕!  일괄 처리.
+    void BatchService(Dialogue.DialogueSet dialogueSet) {
+
+        //기본 글자 속도.
+        if (dialogueSet.details.letterSpeed == 0f)
+            dialogueSet.details.letterSpeed = 0.9f;
+
+        //Sentence 비어있을경우 그냥 패스! 
+        if (dialogueSet.sentence == "")
         {
-            case 1:                    
-                if (strRules[0] == "")
-                {
-                    print("It's empty! Pass!");
-                    //비어있으면 그냥 패스.
-                    DisplayNextSentence();
-                    return;
-                }
-                else
-                {
-                    //비어있는게 아닐 경우. 환경음 등의 표현일 때 ex (뚜벅뚜벅뚜벅)
-                    dialogObjName.text = "";   //이름  
-                    sentence = strRules[0];
-                    StartAnimByStyle(0);    //기본 스타일                                  
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 0); //초상화(우) 없음
-                    dialogPortrait_Left.color = new Color(1, 1, 1, 0); //초상화(좌) 없음
-                    break;
-                }
-            case 2:
-                dialogObjName.text = strRules[0];   //이름                
-                sentence = strRules[1]; //문장
-                StartAnimByStyle(0);    //기본 스타일                                  
-                dialogPortrait_Right.color = new Color(1, 1, 1, 0); //초상화(우) 없음
-                dialogPortrait_Left.color = new Color(1, 1, 1, 0); //초상화(좌) 없음
-                break;
-            case 3:
-                dialogObjName.text = strRules[0];   //이름                
-                sentence = strRules[1]; //문장
-                StartAnimByStyle(int.Parse(strRules[2]));   //스타일
-                dialogPortrait_Right.color = new Color(1, 1, 1, 0); //초상화(우) 없음
-                dialogPortrait_Left.color = new Color(1, 1, 1, 0); //초상화(좌) 없음
-                break;
-            case 4:
-                dialogObjName.text = strRules[0];   //이름               
-                sentence = strRules[1]; //문장
-                StartAnimByStyle(int.Parse(strRules[2]));   //스타일
-                if (int.Parse(strRules[3]) == -1)
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 0);
-                else
-                {
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 1);
-                    dialogPortrait_Right.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화(우) 표정
-                }
-                dialogPortrait_Left.color = new Color(1, 1, 1, 0);//초상화(좌) 없음
-                break;
-            case 5:
-                dialogObjName.text = strRules[0];   //이름               
-                sentence = strRules[1]; //문장
-                StartAnimByStyle(int.Parse(strRules[2]));   //스타일
-                if (int.Parse(strRules[3]) == -1)
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 0);
-                else
-                {
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 1);
-                    dialogPortrait_Right.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화(우) 표정
-                }
-                dialogPortrait_Left.color = new Color(1, 1, 1, 0);//초상화(좌) 없음
-                if (int.Parse(strRules[4]) == -1)
-                    print("noting");
-                else if(int.Parse(strRules[4])<dialogue.choices.Length)
-                {
-                    //선택지 발동 
-                    activeChoiceBox = true;
-                    choiceBox.isChoiceBox = true;
-                }
-                else
-                    Debug.Log("선택지 발동 부분에 입력된 숫자를 확인해주세요 : " + int.Parse(strRules[4]));
-                break;
-            case 6:
-                dialogObjName.text = strRules[0];   //이름               
-                sentence = strRules[1]; //문장
-                StartAnimByStyle(int.Parse(strRules[2]));   //스타일
-                if (int.Parse(strRules[3]) == -1)
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 0);
-                else
-                {
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 1);
-                    dialogPortrait_Right.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화(우) 표정
-                }
-                if (int.Parse(strRules[4]) == -1)
-                    print("noting");
-                else if(int.Parse(strRules[4]) < dialogue.choices.Length)
-                {
-                    //선택지 발동 
-                    activeChoiceBox = true;
-                    choiceBox.isChoiceBox = true;
-                }
-                else
-                    Debug.Log("선택지 발동 부분에 입력된 숫자를 확인해주세요 : " + int.Parse(strRules[4]));
-                //초상화(좌)
-                if (int.Parse(strRules[5]) == -1)
-                    dialogPortrait_Left.color = new Color(1, 1, 1, 0);
-                else
-                {
-                    dialogPortrait_Left.color = new Color(1, 1, 1, 1);
-                    dialogPortrait_Left.sprite = dialogue.portraits[int.Parse(strRules[5])]; //초상화(좌) 표정
-                }
-                    
-                break;
-            case 7:
-                dialogObjName.text = strRules[0];   //이름               
-                sentence = strRules[1]; //문장
-                StartAnimByStyle(int.Parse(strRules[2]));   //스타일
-                if (int.Parse(strRules[3]) == -1)
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 0);
-                else
-                {
-                    dialogPortrait_Right.color = new Color(1, 1, 1, 1);
-                    dialogPortrait_Right.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화(우) 표정
-                }
-                if (int.Parse(strRules[4]) == -1)
-                    print("noting");
-                else if (int.Parse(strRules[4]) < dialogue.choices.Length)
-                {
-                    //선택지 발동 
-                    activeChoiceBox = true;
-                    choiceBox.isChoiceBox = true;
-                }
-                else
-                    Debug.Log("선택지 발동 부분에 입력된 숫자를 확인해주세요 : " + int.Parse(strRules[4]));
-                //초상화(좌)
-                if (int.Parse(strRules[5]) == -1)
-                    dialogPortrait_Left.color = new Color(1, 1, 1, 0);
-                else
-                {
-                    dialogPortrait_Left.color = new Color(1, 1, 1, 1);
-                    dialogPortrait_Left.sprite = dialogue.portraits[int.Parse(strRules[5])]; //초상화(좌) 표정
-                }
-                    
-                
-
-                //애니메이션 발동.
-                int npcNum = int.Parse(strRules[6].Split('=')[0]);
-                string animationclip = strRules[6].Split('=')[1];
-
-                dialogue.npc[npcNum].Play(animationclip);//해당 애니메이션 실행.        
-
-                break;
-            default:
-                sentence = "error at DialogueManager.cs // split : here. please make sure the split rules.  case " + strRules.Length + ":";
-                break;
+            DisplayNextSentence();
+            return;
         }
 
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-    }
 
+        //여기서 dialogueSet에 입력된 정보에 따라 처리.
+
+        //이름
+        dialogObjName.text = dialogueSet.name;
+
+        ///Details
+        ///
+        //스타일
+        StartAnimByStyle((int)dialogueSet.details.styles);
+        //초상화 세팅
+        //초상화(좌)
+        if (dialogueSet.details.portraitSettings.isLeftPortrait)
+        {
+            dialogPortrait_Left.color = new Color(1, 1, 1, 1);
+            dialogPortrait_Left.sprite = dialogue.portraits[dialogueSet.details.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
+        }
+        else
+            dialogPortrait_Left.color = new Color(1, 1, 1, 0);
+
+        //초상화(우)
+        if (dialogueSet.details.portraitSettings.isRightPortrait)
+        {
+            dialogPortrait_Right.color = new Color(1, 1, 1, 1);
+            dialogPortrait_Right.sprite = dialogue.portraits[dialogueSet.details.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
+        }
+        else
+            dialogPortrait_Right.color = new Color(1, 1, 1, 0);
+
+
+        //선택팝업
+        if (dialogueSet.details.makeSelectionPopup)
+        {
+            //선택지 발동 
+            activeChoiceBox = true;
+            choiceBox.isChoiceBox = true;
+        }
+
+        //npc 애니메이션
+        if (dialogueSet.details.startNpcAnimate)
+        {
+            foreach (Dialogue.DialogueSet.Details.NpcAnimData npcAnimData in dialogueSet.details.npcAnimationData)
+            {
+                npcAnimData.npc.Play(npcAnimData.animationClipName);                
+            }
+        }
+        ///
+        ///Details
+        ///
+
+
+        //문장
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(dialogueSet));
+    }
 
     //3.결과문 출력
     public void PrintTheChoiceResult(int valueToReturn)
@@ -276,7 +185,8 @@ public class DialogueManager : MonoBehaviour
         activeChoiceBox = false;
         npcResponseNum = valueToReturn;//npc 응답연결을 위한 저장.  
         isNPCresponding = true;
-        SplitStringServiceSir(dialogue.choice_results[valueToReturn]);
+        //SplitStringServiceSir(dialogue.choice_results[valueToReturn]);
+        BatchService(curDialogSet.details.selectionPopupData.choice_results[valueToReturn]);
     }
     //4.결과문에 엔피씨가 응답한다.(분기점 스탯도 적용되는 부분)
     public void NPCResponseToTheChoiceResult(int valueToResponse)
@@ -287,7 +197,15 @@ public class DialogueManager : MonoBehaviour
         //그리고 분기가 나뉘면,  id값을 다르게 해서 다른 이야기팩으로 새로 시작하게끔 하자. 
         ///
         isNPCresponding = false;
-        SplitStringServiceSir(dialogue.responses[valueToResponse]);
+
+        if (curDialogSet.sentence == "")
+        {
+            //여기서도 sentece 공백이면 그냥 패스하는 부분 추가.
+            DisplayNextSentence();
+            return;
+        }
+
+        BatchService(curDialogSet.details.selectionPopupData.responses[valueToResponse]);
     }
 
 
@@ -306,21 +224,21 @@ public class DialogueManager : MonoBehaviour
                 return;
         }
         dialog_animator.SetBool("isOpen", true);
-
     }
 
     //한글자씩 도도도 찍기
-    IEnumerator TypeSentence(string sentence)
+    IEnumerator TypeSentence(Dialogue.DialogueSet dialogueSet)
     {
         dialogSentence.text = "";
-        foreach (char letter in sentence.ToCharArray())
+        foreach (char letter in dialogueSet.sentence.ToCharArray())
         {
             dialogSentence.text += letter;
-            yield return new WaitForSeconds(1f - dialogue.letterSpeed);
+            yield return new WaitForSeconds(1f - dialogueSet.details.letterSpeed); //letterSpeed 받아서 처리하게끔 하자
         }
 
+        //선택상자 실행
         if (activeChoiceBox)
-            choiceBox.InitChioceBox(dialogue.ask, dialogue.choices);
+            choiceBox.InitChioceBox(dialogueSet.details.selectionPopupData.ask, dialogueSet.details.selectionPopupData.choices);
     }
 
     void EndDialogue()
