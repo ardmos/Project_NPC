@@ -5249,6 +5249,7 @@ MonoBehaviour:
     - "\uACBD\uCC30\uAD001:...\uC544, \uD0D0\uC815\uB2D8\uC774\uC2DC\uAD70\uC694.
       \uD604\uC7A5\uC740 \uC774\uCABD\uC785\uB2C8\uB2E4."
     - 
+    animator: {fileID: 0}
 --- !u!4 &1502509903
 Transform:
   m_ObjectHideFlags: 0
