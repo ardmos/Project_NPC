@@ -5231,11 +5231,10 @@ MonoBehaviour:
     - "(\uB69C\uBC85\uB69C\uBC85\uB69C\uBC85)"
     - "??:\uC5EC\uAE30\uAC00 \uC0AC\uAC74\uD604\uC7A5\uC778\uAC00?"
     - "\uACBD\uCC30\uAD001:\uC5B4, \uC5EC\uAE30 \uB9C9 \uB4E4\uC5B4\uC624\uC2DC\uBA74
-      \uC548\uB3FC\uC694~:0:-1:1"
-    - 
-    - "\uACBD\uCC30\uAD001: ... \uC544, \uD0D0\uC815\uB2D8\uC774\uC2DC\uAD70\uC694.
-      \uD604\uC7A5\uC740 \uC774\uCABD\uC785\uB2C8\uB2E4."
+      \uC548\uB3FC\uC694~:0:-1:0:-1"
     - "\uD0D0\uC815: '\uC5B4\uC218\uC120\uD558\uAD70...':0:1"
+    - 
+    - 
     portraits:
     - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
     - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
@@ -5244,11 +5243,12 @@ MonoBehaviour:
     - "1.\uC2E0\uBD84\uC99D\uC744 \uBCF4\uC5EC\uC900\uB2E4"
     - "2.\uC557 \uAE5C\uBE61\uD588\uB2E4!"
     choice_results:
-    - "\uC2A4\uD3F0\uC9C0\uBC25:\uC5EC\uAE30\uC788\uC2B5\uB2C8\uB2E4.:1:1:0:0"
+    - "(\uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568\uC744 \uBCF4\uC778\uB2E4)"
     - 
     responses:
-    - "\uCD5C\uD615\uC0AC:\uD760, \uBB38\uC81C \uC5C6\uAD6C\uB9CC:1:0"
-    - "\uCD5C\uD615\uC0AC:\uAC00\uC838\uC624\uC2ED\uC1FC.:1:0"
+    - "\uACBD\uCC30\uAD001:...\uC544, \uD0D0\uC815\uB2D8\uC774\uC2DC\uAD70\uC694.
+      \uD604\uC7A5\uC740 \uC774\uCABD\uC785\uB2C8\uB2E4."
+    - 
 --- !u!4 &1502509903
 Transform:
   m_ObjectHideFlags: 0

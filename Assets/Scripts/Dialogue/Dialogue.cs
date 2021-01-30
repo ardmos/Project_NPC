@@ -11,9 +11,9 @@ public class Dialogue
     public float letterSpeed;
     
 
-    [Header("- Sentence 입력 방법 -> \" 이름 : 문장 : 스타일(0~1) : 초상화(우)(-1 없음) : 선택팝업(1열기) : 초상화(좌)(-1 없음) \" ")]
+    [Header("- Sentence 입력 방법 -> \" 이름 : 문장 : 스타일(0~1) : (우)상화 (-1 없음) : 선택팝업(-1 없음) : (좌)상화 (-1 없음) :  \" ")]
     [TextArea(8, 10)]
-    public string[] sentences;      //이름, 문장, 스타일, 초상화번호, 선택지발동팝업
+    public string[] sentences;      //이름, 문장, 스타일, (우)상화, 선택지, (좌)상화
 
     [Header("- 초상화")]
     public Sprite[] portraits;
@@ -26,4 +26,7 @@ public class Dialogue
     [Header("- Choice_results에 대한 엔피씨의 답변내용 입니다. 입력방법은 Sentence와 동일합니다.")]
     public string[] responses;
 
+    [Header("- ")]  //입력중
+    public Animator animator;
+    //변수명=값이다.
 }
