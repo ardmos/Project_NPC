@@ -83,8 +83,6 @@ public class DialogueManager : MonoBehaviour
             //초이스박스 열려있는 상태에서는 다음 다이얼로그 가면 안됨. 
             return;
         }
-
-
         ///
         //혹시 NPC가 선택지에 대답중이라면? 
         //바로 통화 연결 됩니다!  바로 여기서요!~! 
@@ -94,8 +92,6 @@ public class DialogueManager : MonoBehaviour
             NPCResponseToTheChoiceResult(npcResponseNum);
             return;
         }
-
-
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -109,6 +105,8 @@ public class DialogueManager : MonoBehaviour
     {
         //스플릿!
         ///
+        //split 해서 길이 0 나오면 바로 패스.
+        //바로 넥스트 다이얼로그 
         //split 해서 길이 2 나오면 기본 stable스타일
         //0 이름, 1문장
         //split 해서 길이 3 나오면 스타일 선택 가능
@@ -121,9 +119,13 @@ public class DialogueManager : MonoBehaviour
         //0 이름, 1 문장, 2 스타일, 3 초상화 좌 번호, 4 선택지발동팝업 (다음 페이지 시작 직전에 스톱해두고 발동. ), 5 초상화 우 번호
         ///
         string[] strRules = str.Split(':');
-        string sentence;
+        string sentence = null;
         switch (strRules.Length)
         {
+            case 1:
+                //비어있으면 그냥 패스.
+                DisplayNextSentence();
+                return;
             case 2:
                 dialogObjName.text = strRules[0];   //이름                
                 sentence = strRules[1]; //문장
@@ -183,8 +185,6 @@ public class DialogueManager : MonoBehaviour
                     dialogPortrait_Right.color = new Color(1, 1, 1, 1);
                     dialogPortrait_Right.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화(우) 표정
                 }
-
-
                 if (int.Parse(strRules[4]) == 1)
                 {
                     //선택지 발동 
@@ -202,7 +202,7 @@ public class DialogueManager : MonoBehaviour
                 dialogPortrait_Left.sprite = dialogue.portraits[int.Parse(strRules[5])]; //초상화(좌) 표정
                 break;
             default:
-                sentence = "error at DialogueManager.cs // split : here. please make sure the split rules";
+                sentence = "error at DialogueManager.cs // split : here. please make sure the split rules.  case " + strRules.Length + ":";
                 break;
         }
 
