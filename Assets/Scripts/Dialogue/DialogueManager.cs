@@ -215,8 +215,11 @@ public class DialogueManager : MonoBehaviour
                 if (int.Parse(strRules[5]) == -1)
                     dialogPortrait_Left.color = new Color(1, 1, 1, 0);
                 else
+                {
                     dialogPortrait_Left.color = new Color(1, 1, 1, 1);
-                dialogPortrait_Left.sprite = dialogue.portraits[int.Parse(strRules[5])]; //초상화(좌) 표정
+                    dialogPortrait_Left.sprite = dialogue.portraits[int.Parse(strRules[5])]; //초상화(좌) 표정
+                }
+                    
                 break;
             case 7:
                 dialogObjName.text = strRules[0];   //이름               

@@ -49,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 7
   spritePivot: {x: 0.5, y: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -79,7 +79,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -91,7 +91,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -103,7 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -120,10 +120,10 @@ TextureImporter:
       name: front_seunghun_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 34
-        height: 64
+        width: 25
+        height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: front_seunghun_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 40
         y: 0
-        width: 34
-        height: 64
+        width: 24
+        height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,9 +162,9 @@ TextureImporter:
       name: front_seunghun_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 74
         y: 0
-        width: 34
+        width: 24
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -183,9 +183,9 @@ TextureImporter:
       name: front_seunghun_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 107
         y: 0
-        width: 34
+        width: 25
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: front_seunghun_4
       rect:
         serializedVersion: 2
-        x: 136
+        x: 141
         y: 0
-        width: 34
-        height: 64
+        width: 25
+        height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: front_seunghun_5
       rect:
         serializedVersion: 2
-        x: 170
+        x: 175
         y: 0
-        width: 34
-        height: 64
+        width: 24
+        height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
