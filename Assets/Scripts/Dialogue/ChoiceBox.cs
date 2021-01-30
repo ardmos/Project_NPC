@@ -16,11 +16,12 @@ public class ChoiceBox : MonoBehaviour
     public string question;
     public string[] choices;
 
+    public GridLayoutGroup gridleft;
+    public Animator animator;
     public Text questionText;
     public GameObject[] buttons;
 
     int length;
-
 
     public void InitChioceBox(string mAsk, string[] mChoices) 
     {
@@ -33,6 +34,11 @@ public class ChoiceBox : MonoBehaviour
 
         length = choices.Length;
 
+        if (length<=4)        
+            gridleft.cellSize = new Vector2(280f, 45f);    
+        else
+            gridleft.cellSize = new Vector2(140f, 45f);
+
         for (int i = 0; i < length; i++)
         {
             buttons[i].GetComponentInChildren<Text>().text = choices[i];
@@ -42,13 +48,18 @@ public class ChoiceBox : MonoBehaviour
         {
             buttons[i].SetActive(false);
         }
+
+        //ChoiceBox 열기. 애니메이션.
+        animator.SetBool("isOpen", isChoiceBox);
     }
 
     public void ReturnTheAnswer(int valueToReturn)  //이 함수 호출은 버튼들에서. 
     {
         //ChoiceBox 닫기. 애니메이션. 
         isChoiceBox = false;
+        animator.SetBool("isOpen", isChoiceBox);
         //DialogueManager에 보내기. 
+        DialogueManager.instance.PrintTheChoiceResult(valueToReturn);
     }
 
     private void Update()
@@ -94,15 +105,11 @@ public class ChoiceBox : MonoBehaviour
     //입력 처리하는 부분.
     public void GetChoice(int n)
     {
+        print(n);
         if (buttons[n-1].activeSelf)
         {
-            ReturnTheAnswer(n);
+            ReturnTheAnswer(n-1);
         }
-    }
-
-    public void GetChoice()
-    {
-
     }
 
 }
