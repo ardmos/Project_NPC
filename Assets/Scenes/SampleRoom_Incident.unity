@@ -5228,9 +5228,14 @@ MonoBehaviour:
     storyId: 100
     letterSpeed: 0.942
     sentences:
-    - "\uACBD\uCC30:\uC5B4\uC774\uC5B4\uC774"
-    - "\uACBD\uCC30:\uC2E0\uBD84\uC99D\uC744 \uBCF4\uC774\uB77C\uAD6C! \n\uC2E0\uBD84\uC99D!!!!!:1:1:1"
-    - "\uCD5C\uD615\uC0AC:\uD1B5\uACFC!!!:1:0"
+    - "(\uB69C\uBC85\uB69C\uBC85\uB69C\uBC85)"
+    - "??:\uC5EC\uAE30\uAC00 \uC0AC\uAC74\uD604\uC7A5\uC778\uAC00?"
+    - "\uACBD\uCC30\uAD001:\uC5B4, \uC5EC\uAE30 \uB9C9 \uB4E4\uC5B4\uC624\uC2DC\uBA74
+      \uC548\uB3FC\uC694~:0:-1:1"
+    - 
+    - "\uACBD\uCC30\uAD001: ... \uC544, \uD0D0\uC815\uB2D8\uC774\uC2DC\uAD70\uC694.
+      \uD604\uC7A5\uC740 \uC774\uCABD\uC785\uB2C8\uB2E4."
+    - "\uD0D0\uC815: '\uC5B4\uC218\uC120\uD558\uAD70...':0:1"
     portraits:
     - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
     - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}

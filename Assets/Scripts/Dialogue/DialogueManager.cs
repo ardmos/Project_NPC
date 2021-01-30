@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
         foreach (Dialogue item in dialogueData)
         {
             dialogueData_Dic.Add(item.storyId, item);
-        }        
+        }
     }
 
     public void StartDialogue(int objid)    //다이얼로그의 다양한 부분을 초기화. 
@@ -97,7 +97,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        SplitStringServiceSir(sentences.Dequeue());     
+        SplitStringServiceSir(sentences.Dequeue());
     }
 
     //스플릿!
@@ -122,10 +122,19 @@ public class DialogueManager : MonoBehaviour
         string sentence = null;
         switch (strRules.Length)
         {
-            case 1:
-                //비어있으면 그냥 패스.
-                DisplayNextSentence();
-                return;
+            case 1:                    
+                if (strRules[0] == "")
+                {
+                    //비어있으면 그냥 패스.
+                    DisplayNextSentence();
+                    return;
+                }
+                else
+                {
+                    //비어있는게 아닐 경우. 환경음 등의 표현일 때 ex (뚜벅뚜벅뚜벅)
+                    sentence = strRules[0];
+                    break;
+                }
             case 2:
                 dialogObjName.text = strRules[0];   //이름                
                 sentence = strRules[1]; //문장
@@ -257,10 +266,10 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogSentence.text += letter;
-            yield return new WaitForSeconds(1f-dialogue.letterSpeed);
+            yield return new WaitForSeconds(1f - dialogue.letterSpeed);
         }
 
-        if(activeChoiceBox)
+        if (activeChoiceBox)
             choiceBox.InitChioceBox(dialogue.ask, dialogue.choices);
     }
 
