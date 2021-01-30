@@ -5640,35 +5640,8 @@ MonoBehaviour:
   dialogPortrait_Left: {fileID: 1204332598}
   dialogPortrait_Right: {fileID: 714163986}
   choiceBox: {fileID: 31794538}
-  dialogueData:
-  - smallTitle_: "\uD14C\uC2A4\uD2B8"
-    storyId: 100
-    dialogueSet:
-    - smallTitle_: "\uAC00\uB85C\uB9C9\uAD6C\uB9AC"
-      details:
-        letterSpeed: 0
-        styles: 1
-        portraitSettings:
-          isLeftPortrait: 1
-          leftPortraitNumber: 1
-          isRightPortrait: 1
-          rightPortraitNumber: 2
-        makeSelectionPopup: 0
-        selectionPopupData:
-          ask: 
-          choices: []
-          choice_results: []
-          responses: []
-        startNpcAnimate: 1
-        npcAnimationData:
-        - npc: {fileID: 525210964}
-          animationClipName: MoveLeft
-      name: "\uC548\uB155\uD558\uC138\uC694"
-      sentence: "\uC774\uB984\uC774 \uC548\uB155\uD558\uC138\uC694 \uC785\uB2C8\uB2E4."
-    portraits:
-    - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
-    - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
-    - {fileID: 21300000, guid: 0b43ed29b6541044a95aecd9345d7972, type: 3}
+  dialogues: []
+  portraits: []
 --- !u!4 &1502509903
 Transform:
   m_ObjectHideFlags: 0
