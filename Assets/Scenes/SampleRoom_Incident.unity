@@ -5394,6 +5394,13 @@ MonoBehaviour:
   - situationName: "\uACBD\uCC30\uACFC\uC758 \uB9CC\uB0A8"
     storyId: 100
     letterSpeed: 0.942
+    okGOGO:
+    - sample: 0
+      ha: {fileID: 0}
+      sentences: 
+    - sample: 0
+      ha: {fileID: 0}
+      sentences: 
     sentences:
     - "(\uB69C\uBC85\uB69C\uBC85\uB69C\uBC85)"
     - "??:\uC5EC\uAE30\uAC00 \uC0AC\uAC74\uD604\uC7A5\uC778\uAC00?"
@@ -6400,7 +6407,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807504350}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e93c82bb2515a44f8329bf5b1f91a0f, type: 3}
   m_Name: 
