@@ -11,12 +11,11 @@ public class Dialogue
     public float letterSpeed;
     
 
-    [Header("- Sentence 입력 방법 -> \"이름:문장:스타일(0~1):초상화번호(-1 없음):선택팝업(1열기)\" ")]
+    [Header("- Sentence 입력 방법 -> \" 이름 : 문장 : 스타일(0~1) : 초상화(우)(-1 없음) : 선택팝업(1열기) : 초상화(좌)(-1 없음) \" ")]
     [TextArea(8, 10)]
     public string[] sentences;      //이름, 문장, 스타일, 초상화번호, 선택지발동팝업
 
     [Header("- 초상화")]
-    public bool isPortrait;
     public Sprite[] portraits;
 
     [Header("- 선택지  Choices와 Choice_results와 responses는 반드시 짝을 이루어야 한다.")]

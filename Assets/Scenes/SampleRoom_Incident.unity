@@ -312,11 +312,11 @@ RectTransform:
   - {fileID: 306523136}
   - {fileID: 2123239346}
   m_Father: {fileID: 187658094}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 234}
+  m_AnchoredPosition: {x: 0, y: 253.6}
   m_SizeDelta: {x: 300, y: 234}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &31794536
@@ -1758,6 +1758,7 @@ RectTransform:
   - {fileID: 124598117}
   - {fileID: 1959286225}
   - {fileID: 680339352}
+  - {fileID: 1204332597}
   - {fileID: 714163985}
   - {fileID: 31794535}
   m_Father: {fileID: 1728788597}
@@ -2750,7 +2751,7 @@ GameObject:
   - component: {fileID: 714163987}
   - component: {fileID: 714163986}
   m_Layer: 5
-  m_Name: Portrait
+  m_Name: Portrait_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2768,11 +2769,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 187658094}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 234}
+  m_AnchoredPosition: {x: 0, y: 231.8}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &714163986
@@ -3436,6 +3437,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023926789}
+  m_CullTransparentMesh: 0
+--- !u!1 &1204332596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1204332597}
+  - component: {fileID: 1204332599}
+  - component: {fileID: 1204332598}
+  m_Layer: 5
+  m_Name: Portrait_Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1204332597
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204332596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 187658094}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 492, y: 231.9}
+  m_SizeDelta: {x: 500, y: 500}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1204332598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204332596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1204332599
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204332596}
   m_CullTransparentMesh: 0
 --- !u!1 &1232821914
 GameObject:
@@ -4787,7 +4862,8 @@ MonoBehaviour:
   slide: {fileID: 9100000, guid: 5870389648b5892479d39dd6a4a367df, type: 2}
   dialogObjName: {fileID: 124598118}
   dialogSentence: {fileID: 1959286226}
-  dialogPortrait: {fileID: 714163986}
+  dialogPortrait_Left: {fileID: 1204332598}
+  dialogPortrait_Right: {fileID: 714163986}
   choiceBox: {fileID: 31794538}
   dialogueData:
   - situationName: "\uACBD\uCC30\uACFC\uC758 \uB9CC\uB0A8"
@@ -4797,16 +4873,15 @@ MonoBehaviour:
     - "\uACBD\uCC30:\uC5B4\uC774\uC5B4\uC774"
     - "\uACBD\uCC30:\uC2E0\uBD84\uC99D\uC744 \uBCF4\uC774\uB77C\uAD6C! \n\uC2E0\uBD84\uC99D!!!!!:1:1:1"
     - "\uCD5C\uD615\uC0AC:\uD558\uD558\uD558\uD558!!!:1:0"
-    isPortrait: 0
     portraits:
     - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
     - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
-    ask: "\uC6B0\uC9E4\uAE5D\uC211"
+    ask: "\uC5B4\uCA4C\uC9C0?"
     choices:
     - "1.\uC2E0\uBD84\uC99D\uC744 \uBCF4\uC5EC\uC900\uB2E4"
     - "2.\uC557 \uAE5C\uBE61\uD588\uB2E4!"
     choice_results:
-    - "\uC2A4\uD3F0\uC9C0\uBC25:\uC5EC\uAE30\uC788\uC2B5\uB2C8\uB2E4."
+    - "\uC2A4\uD3F0\uC9C0\uBC25:\uC5EC\uAE30\uC788\uC2B5\uB2C8\uB2E4.:1:1:0:0"
     - "\uC9D5\uC9D5\uC774:\uD5C9...! \uC5C6\uB294\uB381\uC1FC!!!"
     responses:
     - "\uCD5C\uD615\uC0AC:\uD760, \uBB38\uC81C \uC5C6\uAD6C\uB9CC:1:0"

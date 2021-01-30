@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
     public Animator dialog_animator;
     public RuntimeAnimatorController stable, slide;
     public Text dialogObjName, dialogSentence;
-    public Image dialogPortrait;
+    public Image dialogPortrait_Left, dialogPortrait_Right;
     public ChoiceBox choiceBox;
 
 
@@ -63,15 +63,6 @@ public class DialogueManager : MonoBehaviour
             {
                 sentences.Enqueue(item);
             }
-
-            //초상화 설정
-            if (dialogue.isPortrait)
-                dialogPortrait.color = new Color(1, 1, 1, 1);
-            else
-                dialogPortrait.color = new Color(1, 1, 1, 0);
-
-            //선택지 켜져있는가?
-            
         }
         else
         {
@@ -126,6 +117,8 @@ public class DialogueManager : MonoBehaviour
         //0 이름, 1 문장, 2 스타일, 3 초상화 번호
         //split 해서 길이 5 나오면 선택지 팝업 가능
         //0 이름, 1 문장, 2 스타일, 3 초상화 번호, 4 선택지발동팝업 (다음 페이지 시작 직전에 스톱해두고 발동. )
+        //split 해서 길이 6 나오면 선택지 팝업 가능
+        //0 이름, 1 문장, 2 스타일, 3 초상화 좌 번호, 4 선택지발동팝업 (다음 페이지 시작 직전에 스톱해두고 발동. ), 5 초상화 우 번호
         ///
         string[] strRules = str.Split(':');
         string sentence;
@@ -135,33 +128,62 @@ public class DialogueManager : MonoBehaviour
                 dialogObjName.text = strRules[0];   //이름                
                 sentence = strRules[1]; //문장
                 StartAnimByStyle(0);    //기본 스타일                                  
-                dialogPortrait.color = new Color(1, 1, 1, 0); //초상화 없음
+                dialogPortrait_Right.color = new Color(1, 1, 1, 0); //초상화(우) 없음
+                dialogPortrait_Left.color = new Color(1, 1, 1, 0); //초상화(좌) 없음
                 break;
             case 3:
                 dialogObjName.text = strRules[0];   //이름                
                 sentence = strRules[1]; //문장
                 StartAnimByStyle(int.Parse(strRules[2]));   //스타일
-                dialogPortrait.color = new Color(1, 1, 1, 0); //초상화 없음
+                dialogPortrait_Right.color = new Color(1, 1, 1, 0); //초상화(우) 없음
+                dialogPortrait_Left.color = new Color(1, 1, 1, 0); //초상화(좌) 없음
                 break;
             case 4:
                 dialogObjName.text = strRules[0];   //이름               
                 sentence = strRules[1]; //문장
                 StartAnimByStyle(int.Parse(strRules[2]));   //스타일
                 if (int.Parse(strRules[3]) == -1)
-                    dialogPortrait.color = new Color(1, 1, 1, 0);
+                    dialogPortrait_Right.color = new Color(1, 1, 1, 0);
                 else
-                    dialogPortrait.color = new Color(1, 1, 1, 1);
-                dialogPortrait.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화 표정
+                {
+                    dialogPortrait_Right.color = new Color(1, 1, 1, 1);
+                    dialogPortrait_Right.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화(우) 표정
+                }
+                dialogPortrait_Left.color = new Color(1, 1, 1, 0);//초상화(좌) 없음
                 break;
             case 5:
                 dialogObjName.text = strRules[0];   //이름               
                 sentence = strRules[1]; //문장
                 StartAnimByStyle(int.Parse(strRules[2]));   //스타일
                 if (int.Parse(strRules[3]) == -1)
-                    dialogPortrait.color = new Color(1, 1, 1, 0);
+                    dialogPortrait_Right.color = new Color(1, 1, 1, 0);
                 else
-                    dialogPortrait.color = new Color(1, 1, 1, 1);
-                dialogPortrait.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화 표정
+                {
+                    dialogPortrait_Right.color = new Color(1, 1, 1, 1);
+                    dialogPortrait_Right.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화(우) 표정
+                }
+                dialogPortrait_Left.color = new Color(1, 1, 1, 0);//초상화(좌) 없음
+                if (int.Parse(strRules[4]) == 1)
+                {
+                    //선택지 발동 
+                    activeChoiceBox = true;
+                    choiceBox.isChoiceBox = true;
+                }
+                else
+                    Debug.Log("선택지 발동 부분에서 1이 아닌 숫자 입력됨 : " + int.Parse(strRules[4]));
+                break;
+            case 6:
+                dialogObjName.text = strRules[0];   //이름               
+                sentence = strRules[1]; //문장
+                StartAnimByStyle(int.Parse(strRules[2]));   //스타일
+                if (int.Parse(strRules[3]) == -1)
+                    dialogPortrait_Right.color = new Color(1, 1, 1, 0);
+                else
+                {
+                    dialogPortrait_Right.color = new Color(1, 1, 1, 1);
+                    dialogPortrait_Right.sprite = dialogue.portraits[int.Parse(strRules[3])]; //초상화(우) 표정
+                }
+
 
                 if (int.Parse(strRules[4]) == 1)
                 {
@@ -172,6 +194,12 @@ public class DialogueManager : MonoBehaviour
                 else
                     Debug.Log("선택지 발동 부분에서 1이 아닌 숫자 입력됨 : " + int.Parse(strRules[4]));
 
+                //초상화(좌)
+                if (int.Parse(strRules[5]) == -1)
+                    dialogPortrait_Left.color = new Color(1, 1, 1, 0);
+                else
+                    dialogPortrait_Left.color = new Color(1, 1, 1, 1);
+                dialogPortrait_Left.sprite = dialogue.portraits[int.Parse(strRules[5])]; //초상화(좌) 표정
                 break;
             default:
                 sentence = "error at DialogueManager.cs // split : here. please make sure the split rules";
