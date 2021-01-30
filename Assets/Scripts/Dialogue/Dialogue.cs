@@ -11,7 +11,7 @@ public class Dialogue
     public float letterSpeed;
     
 
-    [Header("- Sentence 입력 방법 -> \" 이름 : 문장 : 스타일(0~1) : (우)상화 (-1 없음) : 선택팝업(-1 없음) : (좌)상화 (-1 없음) :  \" ")]
+    [Header("- Sentence 입력 방법 -> \" 이름 : 문장 : 스타일(0~1) : (우)상화 (-1 없음) : 선택팝업(-1 없음) : (좌)상화 (-1 없음) : 아래 넣어준 npc 번호=실행하고싶은 AnimationClip의 이름 \" ")]
     [TextArea(8, 10)]
     public string[] sentences;      //이름, 문장, 스타일, (우)상화, 선택지, (좌)상화
 
@@ -26,7 +26,7 @@ public class Dialogue
     [Header("- Choice_results에 대한 엔피씨의 답변내용 입니다. 입력방법은 Sentence와 동일합니다.")]
     public string[] responses;
 
-    [Header("- ")]  //입력중
-    public Animator animator;
+    [Header("- 움직이고싶은 NPC들을 드래그해서 넣어주세요")]  //입력중
+    public Animation[] npc;
     //변수명=값이다.
 }

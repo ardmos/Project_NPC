@@ -243,13 +243,19 @@ public class DialogueManager : MonoBehaviour
                 if (int.Parse(strRules[5]) == -1)
                     dialogPortrait_Left.color = new Color(1, 1, 1, 0);
                 else
+                {
                     dialogPortrait_Left.color = new Color(1, 1, 1, 1);
-                dialogPortrait_Left.sprite = dialogue.portraits[int.Parse(strRules[5])]; //초상화(좌) 표정
+                    dialogPortrait_Left.sprite = dialogue.portraits[int.Parse(strRules[5])]; //초상화(좌) 표정
+                }
+                    
+                
 
                 //애니메이션 발동.
-                string strName =  strRules[6].Split('=')[0];
-                bool boolValue = bool.Parse(strRules[6].Split('=')[1]);
-                dialogue.animator.SetBool(strName, boolValue);  //해당 애니메이션 실행.                 
+                int npcNum = int.Parse(strRules[6].Split('=')[0]);
+                string animationclip = strRules[6].Split('=')[1];
+
+                dialogue.npc[npcNum].Play(animationclip);//해당 애니메이션 실행.        
+
                 break;
             default:
                 sentence = "error at DialogueManager.cs // split : here. please make sure the split rules.  case " + strRules.Length + ":";
