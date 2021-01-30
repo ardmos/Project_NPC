@@ -9,9 +9,21 @@ public class Dialogue
     public int storyId;             //
     [Range(0f, 1f)]
     public float letterSpeed;
-    
+
+
+    [System.Serializable]
+    public struct hoho
+    {
+        public bool sample;
+        public Sprite ha;
+        [TextArea(8, 10)]
+        public string sentences;      //이름, 문장, 스타일, (우)상화, 선택지, (좌)상화
+
+    }
 
     [Header("- Sentence 입력 방법 -> \" 이름 : 문장 : 스타일(0~1) : (우)상화 (-1 없음) : 선택팝업(-1 없음) : (좌)상화 (-1 없음) : 아래 넣어준 npc 번호=실행하고싶은 AnimationClip의 이름 \" ")]
+    public hoho[] okGOGO;
+
     [TextArea(8, 10)]
     public string[] sentences;      //이름, 문장, 스타일, (우)상화, 선택지, (좌)상화
 
