@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue 
 {
-    [Header("- \'Dialog 보따리\'의 제목")]
+    [Header("- ↑ 이 \'Dialog 보따리\'의 제목")]
     public string smallTitle_;
     [Header("- 지금 이 대화보따리를 부여하고자 하는 NPC or Object의 id값을 입력해주세요.")]
     public int storyId;             
@@ -77,7 +77,7 @@ public class Dialogue
             
         }
 
-        [Header("- \'Dialog\'의 제목")]
+        [Header("- ↑ 이 \'Dialog\'의 제목")]
         public string smallTitle_;
         [Header("- \'Dialog\'세부 설정"), Space(5)]
         public Details detail;
