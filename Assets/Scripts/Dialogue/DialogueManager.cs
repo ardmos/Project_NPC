@@ -11,6 +11,9 @@ public class DialogueManager : MonoBehaviour
     public Image dialogPortrait_Left, dialogPortrait_Right;
     public ChoiceBox choiceBox;
 
+    //동작 체크 
+    public bool isDialogueActive;
+
     [Header("- 대화 보따리 저장소. 만들고자 하는 Dialog 보따리의 갯수를 입력해주세요 ^^"), Space(20)]
     public Dialogue[] dialogues;
     [Header("- 초상화 저장소. 사용될 초상화들을 모두 이곳에 저장해주세요.~")]
@@ -54,8 +57,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(int objid)    //다이얼로그의 다양한 부분을 초기화. 
     {
-        //해당 아이디값 개체 검색
-        //print(dialogueData_Dic[objid]);
+        isDialogueActive = true;
+
+        //해당 아이디값 개체 검색       
 
         if (dialogueData_Dic.ContainsKey(objid))    //해당 id값을 가진 개체가 존자한다면
         {
@@ -244,6 +248,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        isDialogueActive = false;
         dialog_animator.SetBool("isOpen", false);
     }
 

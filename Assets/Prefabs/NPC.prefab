@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3064296686708591254}
   - component: {fileID: 3064296686708591253}
   - component: {fileID: 3064296686708591252}
-  - component: {fileID: 986611874}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -145,26 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b396b14bcfc566243af7bdac8e1a29df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyPack:
-  - name: "\uCCAB\uC9F8"
-    sentence: "\uCCAB \uBC88\uC9F8"
-  - name: "\uB458\uC9F8"
-    sentence: ...
-  - name: "\uC14B\uC9F8"
-    sentence: "\uC138 \uBC88\uC9F8\uBB38\uC7A5"
---- !u!114 &986611874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3064296686708591242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095da1f0eb4e4d449b5fbd9b59be65ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movespeed: 5
-  rb: {fileID: 3064296686708591253}
-  move: 0
-  pos: {x: 0, y: 0}
+  id: 0

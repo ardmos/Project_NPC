@@ -65,37 +65,37 @@ public class ChoiceBox : MonoBehaviour
     private void Update()
     {
         if (isChoiceBox)
-        {       
-            if(Input.GetKeyDown("1"))
+        {                   
+            if(Input.GetKeyDown(KeyCode.Keypad1))
             {
                 GetChoice(1);
             }
-            else if (Input.GetKeyDown("2"))
+            else if (Input.GetKeyDown(KeyCode.Keypad2))
             {
                 GetChoice(2);
             }
-            else if (Input.GetKeyDown("3"))
+            else if (Input.GetKeyDown(KeyCode.Keypad3))
             {
                 GetChoice(3);
             }
-            else if (Input.GetKeyDown("4"))
+            else if (Input.GetKeyDown(KeyCode.Keypad4))
             {
                 GetChoice(4);
             }
-            else if (Input.GetKeyDown("5"))
+            else if (Input.GetKeyDown(KeyCode.Keypad5))
             {
                 GetChoice(5);
             }
-            else if (Input.GetKeyDown("6"))
+            else if (Input.GetKeyDown(KeyCode.Keypad6))
             {
                 GetChoice(6);
             }
-            else if (Input.GetKeyDown("7"))
+            else if (Input.GetKeyDown(KeyCode.Keypad7))
             {
                 GetChoice(7);
 
             }
-            else if (Input.GetKeyDown("8"))
+            else if (Input.GetKeyDown(KeyCode.Keypad8))
             {
                 GetChoice(8);
             }
