@@ -10,13 +10,16 @@ public class DialogueManager : MonoBehaviour
     public Text dialogObjName, dialogSentence;
     public Image dialogPortrait_Left, dialogPortrait_Right;
     public ChoiceBox choiceBox;
+    public AudioSource audioSystem;
 
     //다이얼로그 열려있는지 체크 
     [HideInInspector]
     public bool isDialogueActive;
 
+    [HideInInspector]
     //ctrl키 눌렸는지 체크. 
     public bool isCtrlKeyDowned = false;
+    [HideInInspector]
     //문자출력 도중인지, 끝났는지. 
     public bool isDuringTyping = false;
 
@@ -24,6 +27,8 @@ public class DialogueManager : MonoBehaviour
     public Dialogue[] dialogues;
     [Header("- 초상화 저장소. 사용될 초상화들을 모두 이곳에 저장해주세요.~")]
     public Sprite[] portraits;
+    [Header("- 타이핑 효과음 저장소. 마찬가지로 사용될 효과음들을 모두 저장해주세요. ^^")]
+    public AudioClip[] typingSounds;
 
     Dictionary<int, Dialogue> dialogueData_Dic;
     Dialogue dialogue;
@@ -268,6 +273,14 @@ public class DialogueManager : MonoBehaviour
         {
             dialogSentence.text += letter;
 
+            //타이핑 효과음 출력 부분.  스페이스는 거른다.
+            if (letter != System.Convert.ToChar(32))
+            {
+                audioSystem.PlayOneShot(typingSounds[dialogueSet.soundNumber]);
+            }
+            else
+                print("스페이스 감지!");
+
             yield return new WaitForSeconds(1f - dialogueSet.detail.letterSpeed); //letterSpeed 받아서 처리하게끔 하자
         }
 
@@ -280,6 +293,7 @@ public class DialogueManager : MonoBehaviour
     //글자 출력 한방에 뙇 
     void PrintAtOnce(Dialogue.DialogueSet dialogueSet)
     {
+        StopAllCoroutines();
         isCtrlKeyDowned = false;
 
         dialogSentence.text = dialogueSet.sentence;

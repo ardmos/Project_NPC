@@ -81,7 +81,10 @@ public class Dialogue
         public string smallTitle_;
         [Header("- \'Dialog\'세부 설정"), Space(5)]
         public Details detail;
-        [Header("- NPC 이름"), Space(15)]
+
+        [Header("- 사용할 타이핑 사운드 번호"), Space(15)]
+        public int soundNumber;
+        [Header("- NPC 이름"), Space(5)]
         public string name;
         [TextArea(8, 10), Header("- NPC 대사")]
         public string sentence;           

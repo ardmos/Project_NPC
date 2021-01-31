@@ -3354,60 +3354,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &802145694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 802145696}
-  - component: {fileID: 802145695}
-  m_Layer: 0
-  m_Name: TalkManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &802145695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802145694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3386be15fbb4f744915da8317dc701c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addHere:
-  - id: 10
-    name: "\uC77C\uBC88"
-    vs:
-    - "\uC548\uB155\uD558\uC138\uC694."
-    - "\uC624\uB978\uCABD\uC73C\uB85C\uAC00\uC138\uC694."
-    - "\uC67C\uCABD\uC73C\uB85C\uAC00\uC138\uC694."
-  - id: 20
-    name: "\uC774\uBC88"
-    vs:
-    - "\uB610\uBD59\uB124\uC694."
---- !u!4 &802145696
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802145694}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 545.64545, y: 150.04793, z: -2.488122}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &937402247
 GameObject:
   m_ObjectHideFlags: 0
@@ -5497,6 +5443,7 @@ MonoBehaviour:
   dialogPortrait_Left: {fileID: 1204332598}
   dialogPortrait_Right: {fileID: 714163986}
   choiceBox: {fileID: 31794538}
+  audioSystem: {fileID: 1556139920}
   isDialogueActive: 0
   isCtrlKeyDowned: 0
   isDuringTyping: 0
@@ -5541,6 +5488,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5560,6 +5508,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5579,6 +5528,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5598,6 +5548,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5617,6 +5568,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5636,6 +5588,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           responses:
@@ -5656,6 +5609,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5675,6 +5629,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5694,6 +5649,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5713,6 +5669,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5732,6 +5689,7 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
           - smallTitle_: 
@@ -5751,19 +5709,14 @@ MonoBehaviour:
                 responses: []
               activateNpcAnimate: 0
               npcAnimationData: []
+            soundNumber: 0
             name: 
             sentence: 
         activateNpcAnimate: 0
         npcAnimationData: []
+      soundNumber: 0
       name: 
-      sentence: "\uCCAB \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4"
+      sentence: "\uCCAB   \uAE40 \uB300\uC0AC "
     - smallTitle_: 
       detail:
         letterSpeed: 0
@@ -5781,23 +5734,19 @@ MonoBehaviour:
           responses: []
         activateNpcAnimate: 0
         npcAnimationData: []
+      soundNumber: 0
       name: 
       sentence: "\uCCAB \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
-        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4"
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0"
   portraits:
   - {fileID: 21300000, guid: 9f0ea21766ffa5a4fa9c78dab9af205d, type: 3}
   - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
   - {fileID: 21300000, guid: 0b43ed29b6541044a95aecd9345d7972, type: 3}
   - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
+  - {fileID: 21300000, guid: 243ab710f9a0547499f0cf389bcf25f4, type: 3}
+  - {fileID: 21300000, guid: 372d5fae76831cf49bac308f6aa31f0e, type: 3}
+  typingSounds:
+  - {fileID: 8300000, guid: 74e2200ce23787b44915f6800bf7df9d, type: 3}
   curDialogSet:
     smallTitle_: 
     detail:
@@ -5816,6 +5765,7 @@ MonoBehaviour:
         responses: []
       activateNpcAnimate: 0
       npcAnimationData: []
+    soundNumber: 0
     name: 
     sentence: 
 --- !u!4 &1502509903
@@ -5831,6 +5781,133 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1556139919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556139921}
+  - component: {fileID: 1556139920}
+  m_Layer: 0
+  m_Name: AudioSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1556139920
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556139919}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1556139921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556139919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 737.6393, y: 382.85403, z: -25.020973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1574536523
 GameObject:
