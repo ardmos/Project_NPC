@@ -30,7 +30,7 @@ public class ChoiceBox : MonoBehaviour
         choices = mChoices;
         curNum = 0;
         tmp = 0;
-        choicesLength = DialogueManager.instance.curDialogSet.details.selectionPopupData.choices.Length;
+        choicesLength = DialogueManager.instance.curDialogSet.detail.selectionPopupData.choices.Length;
 
         //각 텍스트를 오브젝트텍스트에 넣어주는 과정.
         questionText.text = question;
@@ -176,6 +176,7 @@ public class ChoiceBox : MonoBehaviour
         }
     }
 
+    //생성된 버튼 갯수와 비교해서 curNum 숫자 제한
     void SetCurNum(int n)
     {        
         if (curNum + n >= choicesLength)

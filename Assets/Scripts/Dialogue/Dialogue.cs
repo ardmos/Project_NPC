@@ -40,10 +40,10 @@ public class Dialogue
                 public bool showRightPortrait;
                 public int rightPortraitNumber;
             }
-            [Header("- 초상화 설정")]
+            [Header("- 초상화 설정"), Space(5)]
             public PortraitSettings portraitSettings;
 
-            [Header("- 선택대화창 활성화")]
+            [Header("- 선택대화창 활성화"), Space(5)]
             //선택팝업
             public bool activateSelectionPopup;
             [System.Serializable]
@@ -70,7 +70,7 @@ public class Dialogue
                 [Header("- 실행시킬 animation의 이름을 입력해주세요.")]
                 public string animationName;
             }
-            [Header("- NPC 애니메이션 활성화")]
+            [Header("- NPC 애니메이션 활성화"), Space(5)]
             public bool activateNpcAnimate;
             [Header("- 활성화시킬 애니메이션의 데이터를 넣는 곳")]
             public NpcAnimData[] npcAnimationData;
@@ -79,17 +79,14 @@ public class Dialogue
 
         [Header("- \'Dialog\'의 제목")]
         public string smallTitle_;
-        [Header("- \'Dialog\'세부 설정")]
-        public Details details;
-        [Header("- NPC 이름")]
+        [Header("- \'Dialog\'세부 설정"), Space(5)]
+        public Details detail;
+        [Header("- NPC 이름"), Space(15)]
         public string name;
         [TextArea(8, 10), Header("- NPC 대사")]
-        public string sentence;    
-        
-
-
+        public string sentence;           
     }
 
-    [Header("- 현 \'Dialog보따리\'에 포함될 \'Dialog\'(대화)의 갯수를 입력해주세요.")]
-    public DialogueSet[] dialogueSet;
+    [Header("- 현 \'Dialog보따리\'에 포함될 \'Dialog\'(대화)의 갯수를 입력해주세요."), Space(10)]
+    public DialogueSet[] dialogue;
 }

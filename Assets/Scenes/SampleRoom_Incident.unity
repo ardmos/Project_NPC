@@ -5498,12 +5498,14 @@ MonoBehaviour:
   dialogPortrait_Right: {fileID: 714163986}
   choiceBox: {fileID: 31794538}
   isDialogueActive: 0
+  isCtrlKeyDowned: 0
+  isDuringTyping: 0
   dialogues:
   - smallTitle_: 
     storyId: 0
-    dialogueSet:
+    dialogue:
     - smallTitle_: 
-      details:
+      detail:
         letterSpeed: 0
         styles: 0
         portraitSettings:
@@ -5513,16 +5515,17 @@ MonoBehaviour:
           rightPortraitNumber: 0
         activateSelectionPopup: 1
         selectionPopupData:
-          question: Key Test
+          question: "\uD655\uC778"
           choices:
           - 1
           - 2
           - 3
           - 4
           - 5
+          - 6
           choice_results:
           - smallTitle_: 
-            details:
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5541,7 +5544,7 @@ MonoBehaviour:
             name: 
             sentence: 
           - smallTitle_: 
-            details:
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5560,7 +5563,7 @@ MonoBehaviour:
             name: 
             sentence: 
           - smallTitle_: 
-            details:
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5579,7 +5582,7 @@ MonoBehaviour:
             name: 
             sentence: 
           - smallTitle_: 
-            details:
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5598,7 +5601,26 @@ MonoBehaviour:
             name: 
             sentence: 
           - smallTitle_: 
-            details:
+            detail:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5618,7 +5640,7 @@ MonoBehaviour:
             sentence: 
           responses:
           - smallTitle_: 
-            details:
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5637,7 +5659,7 @@ MonoBehaviour:
             name: 
             sentence: 
           - smallTitle_: 
-            details:
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5656,7 +5678,7 @@ MonoBehaviour:
             name: 
             sentence: 
           - smallTitle_: 
-            details:
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5675,7 +5697,7 @@ MonoBehaviour:
             name: 
             sentence: 
           - smallTitle_: 
-            details:
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5694,7 +5716,26 @@ MonoBehaviour:
             name: 
             sentence: 
           - smallTitle_: 
-            details:
+            detail:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            detail:
               letterSpeed: 0
               styles: 0
               portraitSettings:
@@ -5715,7 +5756,43 @@ MonoBehaviour:
         activateNpcAnimate: 0
         npcAnimationData: []
       name: 
-      sentence: "\uC774\uAC83\uC740 \uBC15\uC2A4\uC785\uB2C8\uB2E4."
+      sentence: "\uCCAB \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4"
+    - smallTitle_: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        activateSelectionPopup: 0
+        selectionPopupData:
+          question: 
+          choices: []
+          choice_results: []
+          responses: []
+        activateNpcAnimate: 0
+        npcAnimationData: []
+      name: 
+      sentence: "\uCCAB \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4\uCCAB
+        \uB300\uC0AC \uAE40\uB610\uAE61\uC740 \uAE40\uB610\uAE61\uC4F0\uB2E4"
   portraits:
   - {fileID: 21300000, guid: 9f0ea21766ffa5a4fa9c78dab9af205d, type: 3}
   - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
@@ -5723,7 +5800,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
   curDialogSet:
     smallTitle_: 
-    details:
+    detail:
       letterSpeed: 0
       styles: 0
       portraitSettings:

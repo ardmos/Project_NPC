@@ -11,8 +11,14 @@ public class DialogueManager : MonoBehaviour
     public Image dialogPortrait_Left, dialogPortrait_Right;
     public ChoiceBox choiceBox;
 
-    //동작 체크 
+    //다이얼로그 열려있는지 체크 
+    [HideInInspector]
     public bool isDialogueActive;
+
+    //ctrl키 눌렸는지 체크. 
+    public bool isCtrlKeyDowned = false;
+    //문자출력 도중인지, 끝났는지. 
+    public bool isDuringTyping = false;
 
     [Header("- 대화 보따리 저장소. 만들고자 하는 Dialog 보따리의 갯수를 입력해주세요 ^^"), Space(20)]
     public Dialogue[] dialogues;
@@ -22,6 +28,8 @@ public class DialogueManager : MonoBehaviour
     Dictionary<int, Dialogue> dialogueData_Dic;
     Dialogue dialogue;
     Queue<Dialogue.DialogueSet> dialogueSetsQue;
+
+    [HideInInspector]
     public Dialogue.DialogueSet curDialogSet;
 
     bool activeChoiceBox, isNPCresponding;
@@ -39,7 +47,6 @@ public class DialogueManager : MonoBehaviour
     }
     #endregion
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +62,24 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        {
+            isCtrlKeyDowned = true;
+        }
+
+        if (isCtrlKeyDowned)
+        {
+            if (isDuringTyping)
+                PrintAtOnce(curDialogSet);
+            else
+                DisplayNextSentence();
+        }
+
+    }
+
+    //다이얼로그 시작
     public void StartDialogue(int objid)    //다이얼로그의 다양한 부분을 초기화. 
     {
         isDialogueActive = true;
@@ -66,7 +91,7 @@ public class DialogueManager : MonoBehaviour
             //그 개체의 Dialogue 클래스를 꺼내와서
             dialogue = dialogueData_Dic[objid];
             //그 중 sentences 스트링 배열에 접근한다.
-            Dialogue.DialogueSet[] sentences_ = dialogue.dialogueSet;
+            Dialogue.DialogueSet[] sentences_ = dialogue.dialogue;
             //얻어낸 string[]를 Queue에 순차적으로 Enqueue 한다.
             dialogueSetsQue.Clear();
             foreach (Dialogue.DialogueSet item in sentences_)
@@ -82,8 +107,10 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+    //문자 출력 들어감.
     public void DisplayNextSentence()
     {
+        isCtrlKeyDowned = false;
         ///
         //선택지 흐름
         //1.팝업 오픈 , 2.답안 선택, 3.결과문 출력, 4.결과문에 엔피씨가 응답 (분기점 스탯 적용), 5.정해진 루트 진행
@@ -112,14 +139,12 @@ public class DialogueManager : MonoBehaviour
         BatchService(curDialogSet);
     }
 
-
-
     //배치서비스 시작합니다.   스플릿서비스는 안녕!  일괄 처리.
     void BatchService(Dialogue.DialogueSet dialogueSet) {
 
         //기본 글자 속도.
-        if (dialogueSet.details.letterSpeed == 0f)
-            dialogueSet.details.letterSpeed = 0.9f;
+        if (dialogueSet.detail.letterSpeed == 0f)
+            dialogueSet.detail.letterSpeed = 0.9f;
 
         //Sentence 비어있을경우 그냥 패스! 
         if (dialogueSet.sentence == "")
@@ -137,29 +162,29 @@ public class DialogueManager : MonoBehaviour
         ///Details
         ///
         //스타일
-        StartAnimByStyle((int)dialogueSet.details.styles);
+        StartAnimByStyle((int)dialogueSet.detail.styles);
         //초상화 세팅
         //초상화(좌)
-        if (dialogueSet.details.portraitSettings.showLeftPortrait)
+        if (dialogueSet.detail.portraitSettings.showLeftPortrait)
         {
             dialogPortrait_Left.color = new Color(1, 1, 1, 1);
-            dialogPortrait_Left.sprite = portraits[dialogueSet.details.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
+            dialogPortrait_Left.sprite = portraits[dialogueSet.detail.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
         }
         else
             dialogPortrait_Left.color = new Color(1, 1, 1, 0);
 
         //초상화(우)
-        if (dialogueSet.details.portraitSettings.showRightPortrait)
+        if (dialogueSet.detail.portraitSettings.showRightPortrait)
         {
             dialogPortrait_Right.color = new Color(1, 1, 1, 1);
-            dialogPortrait_Right.sprite = portraits[dialogueSet.details.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
+            dialogPortrait_Right.sprite = portraits[dialogueSet.detail.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
         }
         else
             dialogPortrait_Right.color = new Color(1, 1, 1, 0);
 
 
         //선택팝업
-        if (dialogueSet.details.activateSelectionPopup)
+        if (dialogueSet.detail.activateSelectionPopup)
         {
             //선택지 발동 
             activeChoiceBox = true;
@@ -167,9 +192,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         //npc 애니메이션
-        if (dialogueSet.details.activateNpcAnimate)
+        if (dialogueSet.detail.activateNpcAnimate)
         {
-            foreach (Dialogue.DialogueSet.Details.NpcAnimData npcAnimData in dialogueSet.details.npcAnimationData)
+            foreach (Dialogue.DialogueSet.Details.NpcAnimData npcAnimData in dialogueSet.detail.npcAnimationData)
             {
                 npcAnimData.npc.Play(npcAnimData.animationName);                
             }
@@ -179,7 +204,7 @@ public class DialogueManager : MonoBehaviour
         ///
 
 
-        //문장
+        //문장 도도도 출력하는 부분
         StopAllCoroutines();
         StartCoroutine(TypeSentence(dialogueSet));
     }
@@ -191,9 +216,10 @@ public class DialogueManager : MonoBehaviour
         npcResponseNum = valueToReturn;//npc 응답연결을 위한 저장.  
         isNPCresponding = true;
         //SplitStringServiceSir(dialogue.choice_results[valueToReturn]);
-        BatchService(curDialogSet.details.selectionPopupData.choice_results[valueToReturn]);
+        BatchService(curDialogSet.detail.selectionPopupData.choice_results[valueToReturn]);
     }
-    //4.결과문에 엔피씨가 응답한다.(분기점 스탯도 적용되는 부분)
+
+    //4.결과문에 엔피씨가 응답한다.(분기점 스탯도 적용도 여기서 구현하면 될듯)
     public void NPCResponseToTheChoiceResult(int valueToResponse)
     {
         ///
@@ -210,10 +236,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        BatchService(curDialogSet.details.selectionPopupData.responses[valueToResponse]);
+        BatchService(curDialogSet.detail.selectionPopupData.responses[valueToResponse]);
     }
 
-
+    //다이얼로그 출현 방식에 따른 애니메이션 실행. 
     void StartAnimByStyle(int a)
     {
         switch (a)
@@ -234,18 +260,37 @@ public class DialogueManager : MonoBehaviour
     //한글자씩 도도도 찍기
     IEnumerator TypeSentence(Dialogue.DialogueSet dialogueSet)
     {
+        ///출력중       
+        isDuringTyping = true;
+
         dialogSentence.text = "";
         foreach (char letter in dialogueSet.sentence.ToCharArray())
         {
             dialogSentence.text += letter;
-            yield return new WaitForSeconds(1f - dialogueSet.details.letterSpeed); //letterSpeed 받아서 처리하게끔 하자
+
+            yield return new WaitForSeconds(1f - dialogueSet.detail.letterSpeed); //letterSpeed 받아서 처리하게끔 하자
         }
 
+        ///출력 끝났을 때
+        isDuringTyping = false;
         //선택상자 실행
         if (activeChoiceBox)
-            choiceBox.InitChioceBox(dialogueSet.details.selectionPopupData.question, dialogueSet.details.selectionPopupData.choices);
+            choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupData.question, dialogueSet.detail.selectionPopupData.choices);
+    }
+    //글자 출력 한방에 뙇 
+    void PrintAtOnce(Dialogue.DialogueSet dialogueSet)
+    {
+        isCtrlKeyDowned = false;
+
+        dialogSentence.text = dialogueSet.sentence;
+
+        isDuringTyping = false;
+        //선택상자 실행
+        if (activeChoiceBox)
+            choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupData.question, dialogueSet.detail.selectionPopupData.choices);
     }
 
+    //다이얼로그 종료 
     void EndDialogue()
     {
         isDialogueActive = false;
