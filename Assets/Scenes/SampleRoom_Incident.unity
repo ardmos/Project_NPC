@@ -5511,12 +5511,207 @@ MonoBehaviour:
           leftPortraitNumber: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
-        activateSelectionPopup: 0
+        activateSelectionPopup: 1
         selectionPopupData:
-          question: 
-          choices: []
-          choice_results: []
-          responses: []
+          question: Key Test
+          choices:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          choice_results:
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          responses:
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
+          - smallTitle_: 
+            details:
+              letterSpeed: 0
+              styles: 0
+              portraitSettings:
+                showLeftPortrait: 0
+                leftPortraitNumber: 0
+                showRightPortrait: 0
+                rightPortraitNumber: 0
+              activateSelectionPopup: 0
+              selectionPopupData:
+                question: 
+                choices: []
+                choice_results: []
+                responses: []
+              activateNpcAnimate: 0
+              npcAnimationData: []
+            name: 
+            sentence: 
         activateNpcAnimate: 0
         npcAnimationData: []
       name: 
@@ -5526,6 +5721,26 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
   - {fileID: 21300000, guid: 0b43ed29b6541044a95aecd9345d7972, type: 3}
   - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
+  curDialogSet:
+    smallTitle_: 
+    details:
+      letterSpeed: 0
+      styles: 0
+      portraitSettings:
+        showLeftPortrait: 0
+        leftPortraitNumber: 0
+        showRightPortrait: 0
+        rightPortraitNumber: 0
+      activateSelectionPopup: 0
+      selectionPopupData:
+        question: 
+        choices: []
+        choice_results: []
+        responses: []
+      activateNpcAnimate: 0
+      npcAnimationData: []
+    name: 
+    sentence: 
 --- !u!4 &1502509903
 Transform:
   m_ObjectHideFlags: 0

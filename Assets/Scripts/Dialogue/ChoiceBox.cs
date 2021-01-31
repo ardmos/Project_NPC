@@ -21,18 +21,21 @@ public class ChoiceBox : MonoBehaviour
     public Text questionText;
     public GameObject[] buttons;
 
-    int length;
+    int curNum, tmp, choicesLength;
 
     public void InitChioceBox(string mAsk, string[] mChoices) 
     {
         isChoiceBox = true;
         question = mAsk;
         choices = mChoices;
+        curNum = 0;
+        tmp = 0;
+        choicesLength = DialogueManager.instance.curDialogSet.details.selectionPopupData.choices.Length;
 
         //각 텍스트를 오브젝트텍스트에 넣어주는 과정.
         questionText.text = question;
 
-        length = choices.Length;
+        int length = choices.Length;
 
         if (length<=4)        
             gridleft.cellSize = new Vector2(280f, 45f);    
@@ -65,50 +68,131 @@ public class ChoiceBox : MonoBehaviour
     private void Update()
     {
         if (isChoiceBox)
-        {                   
-            if(Input.GetKeyDown(KeyCode.Keypad1))
-            {
-                GetChoice(1);
-            }
-            else if (Input.GetKeyDown(KeyCode.Keypad2))
-            {
-                GetChoice(2);
-            }
-            else if (Input.GetKeyDown(KeyCode.Keypad3))
-            {
-                GetChoice(3);
-            }
-            else if (Input.GetKeyDown(KeyCode.Keypad4))
-            {
-                GetChoice(4);
-            }
-            else if (Input.GetKeyDown(KeyCode.Keypad5))
-            {
-                GetChoice(5);
-            }
-            else if (Input.GetKeyDown(KeyCode.Keypad6))
-            {
-                GetChoice(6);
-            }
-            else if (Input.GetKeyDown(KeyCode.Keypad7))
-            {
-                GetChoice(7);
+        {
+            ///여기서 할 일!
+            //박스가 열리면, 1번 버튼 배경 이미지가 보임.(버튼은 항상 존재하니 신경 안써도 됨.)  
+            //방향키 이동에 따라 int값 변함. 
+            //변한 인트값에 맞는 번호의 버튼 배경 이미지가 보임. 
+            //스페이스키 입력시 현재 int값. 즉 활성화된 버튼의 번호가 GetChoice()함수로 넘어감. 
 
-            }
-            else if (Input.GetKeyDown(KeyCode.Keypad8))
+            foreach (GameObject item in buttons)
             {
-                GetChoice(8);
+                item.GetComponent<Image>().color = new Color(1, 1, 1, 0);
             }
+            buttons[curNum].GetComponent<Image>().color = new Color(1, 1, 1, 1);
+
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            {
+                //Left
+                switch (curNum)
+                {
+                    case 0:                        
+                    case 1:
+                    case 2:
+                    case 3:
+                        tmp = 0;
+                        break;
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                        tmp = -4;
+                        break;
+                    default:
+                        break;
+                }
+                SetCurNum(tmp);
+            }
+            else if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            {
+                //RIght
+                switch (curNum)
+                {
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                        tmp = 4;
+                        break;
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                        tmp = 0;
+                        break;
+                    default:
+                        break;
+                }
+                SetCurNum(tmp);
+            }
+            else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            {
+                //Up
+                switch (curNum)
+                {
+                    case 0:
+                    case 4:
+                        tmp = 0;
+                        break;
+                    case 1:
+                    case 2:
+                    case 3:                    
+                    case 5:
+                    case 6:
+                    case 7:
+                        tmp = -1;
+                        break;
+                    default:
+                        break;
+                }
+                SetCurNum(tmp);
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+            {
+                //Down
+                switch (curNum)
+                {
+                    case 0:
+                    case 1:
+                    case 2:                    
+                    case 4:
+                    case 5:
+                    case 6:
+                        tmp = 1;
+                        break;
+                    case 3:
+                    case 7:
+                        tmp = 0;
+                        break;
+                    default:
+                        break;
+                }
+                SetCurNum(tmp);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+                GetChoice(curNum);
         }
+    }
+
+    void SetCurNum(int n)
+    {        
+        if (curNum + n >= choicesLength)
+            curNum = choicesLength - 1;
+        else if (curNum + n < 0)
+            curNum = 0;
+        else
+            curNum += n;
     }
 
     //입력 처리하는 부분.
     public void GetChoice(int n)
     {
         print(n);
-        if (buttons[n-1].activeSelf)
+        if (buttons[n].activeSelf)
         {
-            ReturnTheAnswer(n-1);
+            ReturnTheAnswer(n);
         }
     }
 

@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
     Dictionary<int, Dialogue> dialogueData_Dic;
     Dialogue dialogue;
     Queue<Dialogue.DialogueSet> dialogueSetsQue;
-    Dialogue.DialogueSet curDialogSet;
+    public Dialogue.DialogueSet curDialogSet;
 
     bool activeChoiceBox, isNPCresponding;
     int npcResponseNum;
