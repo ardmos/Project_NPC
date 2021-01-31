@@ -11,10 +11,11 @@ public class DialogueManager : MonoBehaviour
     public Image dialogPortrait_Left, dialogPortrait_Right;
     public ChoiceBox choiceBox;
 
+    [Header("- 대화 보따리 저장소. 만들고자 하는 Dialog 보따리의 갯수를 입력해주세요 ^^"), Space(20)]
+    public Dialogue[] dialogues;
+    [Header("- 초상화 저장소. 사용될 초상화들을 모두 이곳에 저장해주세요.~")]
+    public Sprite[] portraits;
 
-
-    [Header("- 스토리 문장 저장소"), Space(20)]
-    public Dialogue[] dialogueData;
     Dictionary<int, Dialogue> dialogueData_Dic;
     Dialogue dialogue;
     Queue<Dialogue.DialogueSet> dialogueSetsQue;
@@ -41,9 +42,9 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
         //딕셔너리에 넣는 과정 
-        if (dialogueData.Length != 0)
+        if (dialogues.Length != 0)
         {
-            foreach (Dialogue item in dialogueData)
+            foreach (Dialogue item in dialogues)
             {
                 dialogueData_Dic.Add(item.storyId, item);
             }
@@ -135,26 +136,26 @@ public class DialogueManager : MonoBehaviour
         StartAnimByStyle((int)dialogueSet.details.styles);
         //초상화 세팅
         //초상화(좌)
-        if (dialogueSet.details.portraitSettings.isLeftPortrait)
+        if (dialogueSet.details.portraitSettings.showLeftPortrait)
         {
             dialogPortrait_Left.color = new Color(1, 1, 1, 1);
-            dialogPortrait_Left.sprite = dialogue.portraits[dialogueSet.details.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
+            dialogPortrait_Left.sprite = portraits[dialogueSet.details.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
         }
         else
             dialogPortrait_Left.color = new Color(1, 1, 1, 0);
 
         //초상화(우)
-        if (dialogueSet.details.portraitSettings.isRightPortrait)
+        if (dialogueSet.details.portraitSettings.showRightPortrait)
         {
             dialogPortrait_Right.color = new Color(1, 1, 1, 1);
-            dialogPortrait_Right.sprite = dialogue.portraits[dialogueSet.details.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
+            dialogPortrait_Right.sprite = portraits[dialogueSet.details.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
         }
         else
             dialogPortrait_Right.color = new Color(1, 1, 1, 0);
 
 
         //선택팝업
-        if (dialogueSet.details.makeSelectionPopup)
+        if (dialogueSet.details.activateSelectionPopup)
         {
             //선택지 발동 
             activeChoiceBox = true;
@@ -162,11 +163,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         //npc 애니메이션
-        if (dialogueSet.details.startNpcAnimate)
+        if (dialogueSet.details.activateNpcAnimate)
         {
             foreach (Dialogue.DialogueSet.Details.NpcAnimData npcAnimData in dialogueSet.details.npcAnimationData)
             {
-                npcAnimData.npc.Play(npcAnimData.animationClipName);                
+                npcAnimData.npc.Play(npcAnimData.animationName);                
             }
         }
         ///
@@ -238,7 +239,7 @@ public class DialogueManager : MonoBehaviour
 
         //선택상자 실행
         if (activeChoiceBox)
-            choiceBox.InitChioceBox(dialogueSet.details.selectionPopupData.ask, dialogueSet.details.selectionPopupData.choices);
+            choiceBox.InitChioceBox(dialogueSet.details.selectionPopupData.question, dialogueSet.details.selectionPopupData.choices);
     }
 
     void EndDialogue()
