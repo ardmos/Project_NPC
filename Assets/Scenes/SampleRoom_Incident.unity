@@ -276,11 +276,10 @@ MonoBehaviour:
     objToMakeMove: {fileID: 0}
     dir: 0
     distance: 0
+    endDir: 0
   originalPos: {x: 0, y: 0}
   destinationPos: {x: 0, y: 0}
   isArrived: 0
-  count: 0
-  distance: 0
 --- !u!50 &20024211
 Rigidbody2D:
   serializedVersion: 4
@@ -659,185 +658,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52146085}
   m_CullTransparentMesh: 0
---- !u!1 &96818916
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 96818917}
-  - component: {fileID: 96818921}
-  - component: {fileID: 96818920}
-  - component: {fileID: 96818919}
-  - component: {fileID: 96818922}
-  - component: {fileID: 96818918}
-  m_Layer: 0
-  m_Name: JiHyun (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &96818917
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96818916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59, y: -8.43, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 163039208}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &96818918
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96818916}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0da2840930c11404ab6970f0099e9345, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &96818919
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96818916}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &96818920
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96818916}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: 0.2}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.0625, y: 2}
-    newSize: {x: 0.6875, y: 1.9375}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.6}
-  m_EdgeRadius: 0
---- !u!212 &96818921
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96818916}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2087208287
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e036af57aa680ca43815c91a29408361, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.6875, y: 1.9375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &96818922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96818916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e93c82bb2515a44f8329bf5b1f91a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isControllable: 0
-  movespeed: 5
-  rb: {fileID: 96818919}
-  animator: {fileID: 96818918}
-  movement: {x: 0, y: 0}
-  rayDir: {x: 0, y: 0}
-  isrm: 0
-  animData:
-    objToMakeMove: {fileID: 0}
-    dir: 0
-    distance: 0
-  originalPos: {x: 0, y: 0}
-  destinationPos: {x: 0, y: 0}
-  isArrived: 0
-  count: 0
-  distance: 0
 --- !u!1 &100308314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,8 +1900,6 @@ Transform:
   m_Children:
   - {fileID: 1807504351}
   - {fileID: 20024208}
-  - {fileID: 96818917}
-  - {fileID: 2130054064}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2411,6 +2229,37 @@ Transform:
   m_Father: {fileID: 765499298}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &351250939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 351250940}
+  m_Layer: 0
+  m_Name: "\uC790\uB3D9\uC2E4\uD589"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &351250940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351250939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1917864170}
+  m_Father: {fileID: 2079382753}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &382759814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,12 +2335,151 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &515501639 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-    type: 3}
-  m_PrefabInstance: {fileID: 5503420714675005779}
+--- !u!1 &515501638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515501639}
+  - component: {fileID: 515501643}
+  - component: {fileID: 515501641}
+  - component: {fileID: 515501640}
+  - component: {fileID: 515501642}
+  m_Layer: 8
+  m_Name: InteractableObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &515501639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515501638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.94, y: -4.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 547723876}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &515501640
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515501638}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &515501641
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515501638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &515501642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515501638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b396b14bcfc566243af7bdac8e1a29df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1000
+--- !u!212 &515501643
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515501638}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1470934539
+  m_SortingLayer: 1
+  m_SortingOrder: 3
+  m_Sprite: {fileID: -2463512922558668966, guid: 7994016c6556dc64189c891f1096674d,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &525210958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,13 +2493,14 @@ GameObject:
   - component: {fileID: 525210962}
   - component: {fileID: 525210961}
   - component: {fileID: 525210960}
+  - component: {fileID: 525210964}
   m_Layer: 8
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &525210959
 Transform:
   m_ObjectHideFlags: 0
@@ -2637,6 +2626,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &525210964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525210958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e93c82bb2515a44f8329bf5b1f91a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isControllable: 0
+  movespeed: 5
+  rb: {fileID: 525210961}
+  animator: {fileID: 0}
+  movement: {x: 0, y: 0}
+  rayDir: {x: 0, y: 0}
+  isrm: 0
+  animData:
+    objToMakeMove: {fileID: 0}
+    dir: 0
+    distance: 0
+    endDir: 0
+  originalPos: {x: 0, y: 0}
+  destinationPos: {x: 0, y: 0}
+  isArrived: 0
 --- !u!1 &530049466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,7 +3130,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1502509902}
-        m_MethodName: DisplayNextSentence
+        m_MethodName: OnBtnClickedByMouse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3574,6 +3590,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &806612663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 806612664}
+  m_Layer: 0
+  m_Name: "=====\uC2A4\uD1A0\uB9AC\uC815\uB9AC====="
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &806612664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806612663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5566387, y: -9.443001, z: -0.25939754}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2079382753}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &937402247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3713,6 +3760,37 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &944339325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944339326}
+  m_Layer: 0
+  m_Name: "\uC218\uB3D9\uC2E4\uD589"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &944339326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944339325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1185064663}
+  m_Father: {fileID: 2079382753}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970492860
 GameObject:
   m_ObjectHideFlags: 0
@@ -3878,6 +3956,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023926789}
   m_CullTransparentMesh: 0
+--- !u!1 &1185064662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185064663}
+  - component: {fileID: 1185064664}
+  m_Layer: 0
+  m_Name: "\uAE4C\uB9CC \uBC15\uC2A4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1185064663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185064662}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 944339326}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1185064664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185064662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - smallTitle_: "\uAE4C\uB9CC \uBC15\uC2A4"
+    storyId: 1000
+    dialogue:
+    - smallTitle_: "\uC815\uBCF4"
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+      soundNumber: 0
+      name: "\uAE4C\uB9CC \uBC15\uC2A4"
+      sentence: "\uAE4C\uB9CC \uBC15\uC2A4\uB2E4."
 --- !u!1 &1204332596
 GameObject:
   m_ObjectHideFlags: 0
@@ -5663,417 +5816,13 @@ MonoBehaviour:
   dialogPortrait_Left: {fileID: 1204332598}
   dialogPortrait_Right: {fileID: 714163986}
   choiceBox: {fileID: 31794538}
-  audioSystem: {fileID: 1556139920}
+  audioSource: {fileID: 1556139920}
+  audioSystem: {fileID: 1556139922}
+  "\uC2A4\uD1A0\uB9AC\uC815\uB9AC": {fileID: 806612663}
   isDialogueActive: 0
   isCtrlKeyDowned: 0
   isDuringTyping: 0
-  dialogues:
-  - smallTitle_: "\uC2A4\uD1A0\uB9AC0 \uC774\uBCA4\uD2B8 "
-    storyId: 100
-    dialogue:
-    - smallTitle_: "\uBC1C\uAC78\uC74C"
-      detail:
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 1
-          objectAnimationData:
-          - objToMakeMove: {fileID: 20024210}
-            dir: 1
-            distance: 5
-          - objToMakeMove: {fileID: 1807504355}
-            dir: 4
-            distance: 2
-          - objToMakeMove: {fileID: 96818922}
-            dir: 8
-            distance: 2
-          - objToMakeMove: {fileID: 2130054059}
-            dir: 2
-            distance: 2
-        sFXSettings:
-          turnOffTypingSound: 1
-          enableSFX: 1
-          audioClip: {fileID: 8300000, guid: 926bb4805025159478b43fb2ae5d237d, type: 3}
-          playTime: 4
-      soundNumber: 0
-      name: 
-      sentence: "(\uB69C\uBC85\uB69C\uBC85)"
-    - smallTitle_: "\uB3C5\uBC31"
-      detail:
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-      soundNumber: 0
-      name: '?'
-      sentence: "\uC5EC\uAE34\uAC00... \uC0AC\uAC74 \uD604\uC7A5\uC774"
-    - smallTitle_: "\uACBD\uCC301_\uC81C\uC9C0"
-      detail:
-        letterSpeed: 0
-        styles: 1
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 1
-          rightPortraitNumber: 5
-        selectionPopupSettings:
-          activateSelectionPopup: 1
-          selectionPopupData:
-            question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
-            choices:
-            - "\uC2E0\uBD84\uC99D\uC744 \uB0B4\uC5B4\uBCF4\uC778\uB2E4"
-            - "\uD53C\uC790\uC870\uAC01\uC744 \uB4E4\uC5B4\uBCF4\uC778\uB2E4"
-            choice_results:
-            - smallTitle_: "\uC2E0\uBD84\uC99D \uBCF4\uC5EC\uC8FC\uAE30 \uC2E4\uD589"
-              detail:
-                letterSpeed: 0
-                styles: 0
-                portraitSettings:
-                  showLeftPortrait: 0
-                  leftPortraitNumber: 0
-                  showRightPortrait: 0
-                  rightPortraitNumber: 0
-                selectionPopupSettings:
-                  activateSelectionPopup: 0
-                  selectionPopupData:
-                    question: 
-                    choices: []
-                    choice_results: []
-                    responses: []
-                animationSettings:
-                  activateObjAnimate: 0
-                  objectAnimationData: []
-                sFXSettings:
-                  turnOffTypingSound: 0
-                  enableSFX: 0
-                  audioClip: {fileID: 0}
-                  playTime: 0
-              soundNumber: 0
-              name: '?'
-              sentence: "(\uC2E0\uBD84\uC99D\uC744 \uB0B4\uC5B4\uBCF4\uC778\uB2E4)"
-            - smallTitle_: "\uD53C\uC790\uC870\uAC01 \uBCF4\uC5EC\uC8FC\uAE30 \uC2E4\uD589"
-              detail:
-                letterSpeed: 0
-                styles: 0
-                portraitSettings:
-                  showLeftPortrait: 0
-                  leftPortraitNumber: 0
-                  showRightPortrait: 0
-                  rightPortraitNumber: 0
-                selectionPopupSettings:
-                  activateSelectionPopup: 0
-                  selectionPopupData:
-                    question: 
-                    choices: []
-                    choice_results: []
-                    responses: []
-                animationSettings:
-                  activateObjAnimate: 0
-                  objectAnimationData: []
-                sFXSettings:
-                  turnOffTypingSound: 0
-                  enableSFX: 0
-                  audioClip: {fileID: 0}
-                  playTime: 0
-              soundNumber: 0
-              name: '?'
-              sentence: "\uD53C\uC790\uC870\uAC01\uC744 \uB4E4\uC5B4\uBCF4\uC778\uB2E4"
-            responses:
-            - smallTitle_: "\uC2E0\uBD84\uC99D \uBCF4\uC5EC\uC8FC\uAE30\uC758 \uBC18\uC751"
-              detail:
-                letterSpeed: 0
-                styles: 0
-                portraitSettings:
-                  showLeftPortrait: 0
-                  leftPortraitNumber: 0
-                  showRightPortrait: 1
-                  rightPortraitNumber: 5
-                selectionPopupSettings:
-                  activateSelectionPopup: 0
-                  selectionPopupData:
-                    question: 
-                    choices: []
-                    choice_results: []
-                    responses: []
-                animationSettings:
-                  activateObjAnimate: 0
-                  objectAnimationData: []
-                sFXSettings:
-                  turnOffTypingSound: 0
-                  enableSFX: 0
-                  audioClip: {fileID: 0}
-                  playTime: 0
-              soundNumber: 0
-              name: "\uACBD\uCC301"
-              sentence: "\uC557 \uD0D0\uC815\uC774\uC168\uAD70\uC694! \uC5B4\uC11C
-                \uB4E4\uC5B4\uC624\uC2ED\uC2DC\uC624!"
-            - smallTitle_: "\uD53C\uC790\uC870\uAC01 \uBCF4\uC5EC\uC8FC\uAE30\uC758
-                \uBC18\uC751 "
-              detail:
-                letterSpeed: 0
-                styles: 0
-                portraitSettings:
-                  showLeftPortrait: 0
-                  leftPortraitNumber: 0
-                  showRightPortrait: 1
-                  rightPortraitNumber: 5
-                selectionPopupSettings:
-                  activateSelectionPopup: 0
-                  selectionPopupData:
-                    question: 
-                    choices: []
-                    choice_results: []
-                    responses: []
-                animationSettings:
-                  activateObjAnimate: 0
-                  objectAnimationData: []
-                sFXSettings:
-                  turnOffTypingSound: 0
-                  enableSFX: 0
-                  audioClip: {fileID: 0}
-                  playTime: 0
-              soundNumber: 0
-              name: "\uACBD\uCC301"
-              sentence: "\uB9C8...\uB9DB\uC788\uACA0\uAD70\uC694!!! \uD1B5\uACFC!!!"
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-      soundNumber: 0
-      name: "\uACBD\uCC301"
-      sentence: "\uC5B4~ \uBA48\uCD94\uC138\uC694~ \uC5EC\uAE30 \uD568\uBD80\uB85C
-        \uB4E4\uC5B4\uC624\uC2DC\uBA74 \uC548\uB429\uB2C8\uB2E4"
-    - smallTitle_: "\uACBD\uCC301_\uBE44\uD0B4"
-      detail:
-        letterSpeed: 0
-        styles: 1
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 1
-          rightPortraitNumber: 5
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
-            choices:
-            - "\uC2E0\uBD84\uC99D\uC744 \uB0B4\uC5B4\uBCF4\uC778\uB2E4"
-            - "\uD53C\uC790\uC870\uAC01\uC744 \uB4E4\uC5B4\uBCF4\uC778\uB2E4"
-            choice_results:
-            - smallTitle_: "\uC2E0\uBD84\uC99D \uBCF4\uC5EC\uC8FC\uAE30 \uC2E4\uD589"
-              detail:
-                letterSpeed: 0
-                styles: 0
-                portraitSettings:
-                  showLeftPortrait: 0
-                  leftPortraitNumber: 0
-                  showRightPortrait: 0
-                  rightPortraitNumber: 0
-                selectionPopupSettings:
-                  activateSelectionPopup: 0
-                  selectionPopupData:
-                    question: 
-                    choices: []
-                    choice_results: []
-                    responses: []
-                animationSettings:
-                  activateObjAnimate: 0
-                  objectAnimationData: []
-                sFXSettings:
-                  turnOffTypingSound: 0
-                  enableSFX: 0
-                  audioClip: {fileID: 0}
-                  playTime: 0
-              soundNumber: 0
-              name: '?'
-              sentence: "(\uC2E0\uBD84\uC99D\uC744 \uB0B4\uC5B4\uBCF4\uC778\uB2E4)"
-            - smallTitle_: "\uD53C\uC790\uC870\uAC01 \uBCF4\uC5EC\uC8FC\uAE30 \uC2E4\uD589"
-              detail:
-                letterSpeed: 0
-                styles: 0
-                portraitSettings:
-                  showLeftPortrait: 0
-                  leftPortraitNumber: 0
-                  showRightPortrait: 0
-                  rightPortraitNumber: 0
-                selectionPopupSettings:
-                  activateSelectionPopup: 0
-                  selectionPopupData:
-                    question: 
-                    choices: []
-                    choice_results: []
-                    responses: []
-                animationSettings:
-                  activateObjAnimate: 0
-                  objectAnimationData: []
-                sFXSettings:
-                  turnOffTypingSound: 0
-                  enableSFX: 0
-                  audioClip: {fileID: 0}
-                  playTime: 0
-              soundNumber: 0
-              name: '?'
-              sentence: "\uD53C\uC790\uC870\uAC01\uC744 \uB4E4\uC5B4\uBCF4\uC778\uB2E4"
-            responses:
-            - smallTitle_: "\uC2E0\uBD84\uC99D \uBCF4\uC5EC\uC8FC\uAE30\uC758 \uBC18\uC751"
-              detail:
-                letterSpeed: 0
-                styles: 0
-                portraitSettings:
-                  showLeftPortrait: 0
-                  leftPortraitNumber: 0
-                  showRightPortrait: 1
-                  rightPortraitNumber: 5
-                selectionPopupSettings:
-                  activateSelectionPopup: 0
-                  selectionPopupData:
-                    question: 
-                    choices: []
-                    choice_results: []
-                    responses: []
-                animationSettings:
-                  activateObjAnimate: 0
-                  objectAnimationData: []
-                sFXSettings:
-                  turnOffTypingSound: 0
-                  enableSFX: 0
-                  audioClip: {fileID: 0}
-                  playTime: 0
-              soundNumber: 0
-              name: "\uACBD\uCC301"
-              sentence: "\uC557 \uD0D0\uC815\uC774\uC168\uAD70\uC694! \uC5B4\uC11C
-                \uB4E4\uC5B4\uC624\uC2ED\uC2DC\uC624!"
-            - smallTitle_: "\uD53C\uC790\uC870\uAC01 \uBCF4\uC5EC\uC8FC\uAE30\uC758
-                \uBC18\uC751 "
-              detail:
-                letterSpeed: 0
-                styles: 0
-                portraitSettings:
-                  showLeftPortrait: 0
-                  leftPortraitNumber: 0
-                  showRightPortrait: 1
-                  rightPortraitNumber: 5
-                selectionPopupSettings:
-                  activateSelectionPopup: 0
-                  selectionPopupData:
-                    question: 
-                    choices: []
-                    choice_results: []
-                    responses: []
-                animationSettings:
-                  activateObjAnimate: 0
-                  objectAnimationData: []
-                sFXSettings:
-                  turnOffTypingSound: 0
-                  enableSFX: 0
-                  audioClip: {fileID: 0}
-                  playTime: 0
-              soundNumber: 0
-              name: "\uACBD\uCC301"
-              sentence: "\uB9C8...\uB9DB\uC788\uACA0\uAD70\uC694!!! \uD1B5\uACFC!!!"
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-      soundNumber: 0
-      name: "\uACBD\uCC301"
-      sentence: "\uC774\uCABD\uC785\uB2C8\uB2E4."
-  - smallTitle_: "\uACBD\uCC30 \uD074\uB9AD\uC2DC \uBC18\uC751"
-    storyId: 1111
-    dialogue:
-    - smallTitle_: 
-      detail:
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-      soundNumber: 0
-      name: "\uACBD\uCC30 1"
-      sentence: "\uC624\uC774\uC624\uC774 \uBA48\uCD94\uB77C\uAD6C \u2606 \uC774\uAC74
-        \uD074\uB9AD\uC2DC \uBC18\uC751\uC774\uB77C\uAD6C!"
-    - smallTitle_: 
-      detail:
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-      soundNumber: 0
-      name: 
-      sentence: "\uBC18\uAC11\uB2E4\uAD6C!~"
+  dialogues: []
   portraits:
   - {fileID: 21300000, guid: 9f0ea21766ffa5a4fa9c78dab9af205d, type: 3}
   - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
@@ -6108,6 +5857,7 @@ MonoBehaviour:
         enableSFX: 0
         audioClip: {fileID: 0}
         playTime: 0
+        delayTime: 0
     soundNumber: 0
     name: 
     sentence: 
@@ -6135,6 +5885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1556139921}
   - component: {fileID: 1556139920}
+  - component: {fileID: 1556139922}
   m_Layer: 0
   m_Name: AudioSystem
   m_TagString: Untagged
@@ -6154,7 +5905,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.517
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6252,6 +6003,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1556139922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556139919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e6c09da6578bd4ba4b673a775ddb4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set:
+    smallTitle_: 
+    detail:
+      letterSpeed: 0
+      styles: 0
+      portraitSettings:
+        showLeftPortrait: 0
+        leftPortraitNumber: 0
+        showRightPortrait: 0
+        rightPortraitNumber: 0
+      selectionPopupSettings:
+        activateSelectionPopup: 0
+        selectionPopupData:
+          question: 
+          choices: []
+          choice_results: []
+          responses: []
+      animationSettings:
+        activateObjAnimate: 0
+        objectAnimationData: []
+      sFXSettings:
+        turnOffTypingSound: 0
+        enableSFX: 0
+        audioClip: {fileID: 0}
+        playTime: 0
+        delayTime: 0
+    soundNumber: 0
+    name: 
+    sentence: 
 --- !u!1 &1574536523
 GameObject:
   m_ObjectHideFlags: 0
@@ -7111,7 +6903,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807504350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3899999, y: -10.37, z: 0}
+  m_LocalPosition: {x: -0.55, y: -4.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 163039208}
@@ -7237,11 +7029,10 @@ MonoBehaviour:
     objToMakeMove: {fileID: 0}
     dir: 0
     distance: 0
+    endDir: 0
   originalPos: {x: 0, y: 0}
   destinationPos: {x: 0, y: 0}
   isArrived: 0
-  count: 0
-  distance: 0
 --- !u!95 &1807504356
 Animator:
   serializedVersion: 3
@@ -7339,6 +7130,236 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870840151}
   m_CullTransparentMesh: 0
+--- !u!1 &1917864169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917864170}
+  - component: {fileID: 1917864171}
+  m_Layer: 0
+  m_Name: "1-1 \uCCAB \uB4F1\uC7A5"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1917864170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917864169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 351250940}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1917864171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917864169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - smallTitle_: 
+    storyId: 0
+    dialogue:
+    - smallTitle_: "\uB69C\uBC85\uB69C\uBC85"
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 1
+          objectAnimationData:
+          - objToMakeMove: {fileID: 20024210}
+            dir: 1
+            distance: 3
+            endDir: 0
+        sFXSettings:
+          turnOffTypingSound: 1
+          enableSFX: 1
+          audioClip: {fileID: 8300000, guid: 926bb4805025159478b43fb2ae5d237d, type: 3}
+          playTime: 2
+          delayTime: 0.5
+      soundNumber: 0
+      name: '?'
+      sentence: "(\uB69C\uBC85\uB69C\uBC85)"
+    - smallTitle_: "\uD63C\uC7A3\uB9D0"
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+      soundNumber: 0
+      name: '?'
+      sentence: "\uC5EC\uAE30\uC778\uAC00... \uC0AC\uAC74 \uD604\uC7A5\uC774..."
+    - smallTitle_: "\uACBD\uCC30 \uC81C\uC9C0"
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 1
+          rightPortraitNumber: 5
+        selectionPopupSettings:
+          activateSelectionPopup: 1
+          selectionPopupData:
+            question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
+            choices:
+            - "1. \uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568\uC744 \uBCF4\uC5EC\uC900\uB2E4.
+              (\uD0A4\uBCF4\uB4DC space\uD0A4)"
+            choice_results:
+            - smallTitle_: 
+              detail:
+                letterSpeed: 0
+                styles: 0
+                portraitSettings:
+                  showLeftPortrait: 0
+                  leftPortraitNumber: 0
+                  showRightPortrait: 0
+                  rightPortraitNumber: 0
+                selectionPopupSettings:
+                  activateSelectionPopup: 0
+                  selectionPopupData:
+                    question: 
+                    choices: []
+                    choice_results: []
+                    responses: []
+                animationSettings:
+                  activateObjAnimate: 0
+                  objectAnimationData: []
+                sFXSettings:
+                  turnOffTypingSound: 0
+                  enableSFX: 0
+                  audioClip: {fileID: 0}
+                  playTime: 0
+                  delayTime: 0
+              soundNumber: 0
+              name: '?'
+              sentence: "\uC5EC\uAE30\uC788\uC2B5\uB2C8\uB2E4."
+            responses:
+            - smallTitle_: 
+              detail:
+                letterSpeed: 0
+                styles: 0
+                portraitSettings:
+                  showLeftPortrait: 0
+                  leftPortraitNumber: 0
+                  showRightPortrait: 0
+                  rightPortraitNumber: 0
+                selectionPopupSettings:
+                  activateSelectionPopup: 0
+                  selectionPopupData:
+                    question: 
+                    choices: []
+                    choice_results: []
+                    responses: []
+                animationSettings:
+                  activateObjAnimate: 1
+                  objectAnimationData:
+                  - objToMakeMove: {fileID: 1807504355}
+                    dir: 4
+                    distance: 2
+                    endDir: 2
+                sFXSettings:
+                  turnOffTypingSound: 0
+                  enableSFX: 0
+                  audioClip: {fileID: 0}
+                  playTime: 0
+                  delayTime: 0
+              soundNumber: 0
+              name: "\uACBD\uCC301"
+              sentence: "\uC557, \uD0D0\uC815\uB2D8\uC774\uC168\uAD70\uC694! \uB4E4\uC5B4\uC624\uC2ED\uC1FC!!"
+        animationSettings:
+          activateObjAnimate: 1
+          objectAnimationData:
+          - objToMakeMove: {fileID: 1807504355}
+            dir: 3
+            distance: 2
+            endDir: 1
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+      soundNumber: 0
+      name: "\uACBD\uCC301"
+      sentence: "\uC5B4\uC5B4~ \uC5EC\uAE30 \uD568\uBD80\uB85C \uB4E4\uC5B4\uC624\uC2DC\uBA74
+        \uC548\uB429\uB2C8\uB2E4~!"
+    - smallTitle_: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC"
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 1
+          rightPortraitNumber: 3
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+      soundNumber: 0
+      name: "\uAE40\uC2B9\uD6C8 \uD0D0\uC815"
+      sentence: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC..."
 --- !u!1 &1959286224
 GameObject:
   m_ObjectHideFlags: 0
@@ -7417,6 +7438,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959286224}
   m_CullTransparentMesh: 0
+--- !u!1 &2079382752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079382753}
+  m_Layer: 0
+  m_Name: "Scene1.\uC0AC\uAC74\uD604\uC7A5"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2079382753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079382752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 351250940}
+  - {fileID: 944339326}
+  m_Father: {fileID: 806612664}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123239345
 GameObject:
   m_ObjectHideFlags: 0
@@ -7481,251 +7534,3 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
---- !u!1 &2130054058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2130054064}
-  - component: {fileID: 2130054063}
-  - component: {fileID: 2130054062}
-  - component: {fileID: 2130054061}
-  - component: {fileID: 2130054059}
-  - component: {fileID: 2130054060}
-  m_Layer: 0
-  m_Name: JiHyun (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2130054059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130054058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e93c82bb2515a44f8329bf5b1f91a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isControllable: 0
-  movespeed: 5
-  rb: {fileID: 2130054061}
-  animator: {fileID: 2130054060}
-  movement: {x: 0, y: 0}
-  rayDir: {x: 0, y: 0}
-  isrm: 0
-  animData:
-    objToMakeMove: {fileID: 0}
-    dir: 0
-    distance: 0
-  originalPos: {x: 0, y: 0}
-  destinationPos: {x: 0, y: 0}
-  isArrived: 0
-  count: 0
-  distance: 0
---- !u!95 &2130054060
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130054058}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0da2840930c11404ab6970f0099e9345, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &2130054061
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130054058}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &2130054062
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130054058}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: 0.2}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.0625, y: 2}
-    newSize: {x: 0.6875, y: 1.9375}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.6}
-  m_EdgeRadius: 0
---- !u!212 &2130054063
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130054058}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2087208287
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e036af57aa680ca43815c91a29408361, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.6875, y: 1.9375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &2130054064
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130054058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59, y: -7.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 163039208}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5503420714675005779
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 547723876}
-    m_Modifications:
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726932, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5503420714830726933, guid: be3246548bc704d4ea204cc2196daa51,
-        type: 3}
-      propertyPath: m_Name
-      value: InteractableObject
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: be3246548bc704d4ea204cc2196daa51, type: 3}

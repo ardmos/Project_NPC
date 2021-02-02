@@ -10,7 +10,9 @@ public class DialogueManager : MonoBehaviour
     public Text dialogObjName, dialogSentence;
     public Image dialogPortrait_Left, dialogPortrait_Right;
     public ChoiceBox choiceBox;
-    public AudioSource audioSystem;
+    public AudioSource audioSource;
+    public AudioSystem audioSystem;
+    public GameObject 스토리정리;
 
     //다이얼로그 열려있는지 체크 
     [HideInInspector]
@@ -24,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     public bool isDuringTyping = false;
 
     [Header("- 대화 보따리 저장소. 만들고자 하는 Dialog 보따리의 갯수를 입력해주세요 ^^"), Space(20)]
-    public Dialogue[] dialogues;
+    public List<Dialogue> dialogues;
     [Header("- 초상화 저장소. 사용될 초상화들을 모두 이곳에 저장해주세요.~")]
     public Sprite[] portraits;
     [Header("- 타이핑 효과음 저장소. 마찬가지로 사용될 효과음들을 모두 저장해주세요. ^^")]
@@ -54,10 +56,18 @@ public class DialogueManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {       
         dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
+
+
+        foreach (Dialogue item in 스토리정리.GetComponentInChildren<AttachThis>().dialogues)
+        {
+            dialogues.Add(item);
+        }
+
+
         //딕셔너리에 넣는 과정 
-        if (dialogues.Length != 0)
+        if (dialogues.Count != 0)
         {
             foreach (Dialogue item in dialogues)
             {
@@ -81,7 +91,11 @@ public class DialogueManager : MonoBehaviour
             else
                 DisplayNextSentence();
         }
+    }
 
+    public void OnBtnClickedByMouse()
+    {
+        isCtrlKeyDowned = true;
     }
 
     //다이얼로그 시작
@@ -90,7 +104,6 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = true;
 
         //해당 아이디값 개체 검색       
-
         if (dialogueData_Dic.ContainsKey(objid))    //해당 id값을 가진 개체가 존자한다면
         {
             //그 개체의 Dialogue 클래스를 꺼내와서
@@ -201,17 +214,12 @@ public class DialogueManager : MonoBehaviour
         {
             foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.animationSettings.objectAnimationData)
             {
-                objAnimData.objToMakeMove.MoveAnimTest(objAnimData);
+                objAnimData.objToMakeMove.MoveAnimStart(objAnimData);
             }
         }
 
-
         //효과음 실행
-        if (dialogueSet.detail.sFXSettings.enableSFX)
-        {
-            for (int i = 0; i < dialogueSet.detail.sFXSettings.playTime; i++)
-                audioSystem.PlayOneShot(dialogueSet.detail.sFXSettings.audioClip);                               
-        }        
+        audioSystem.DialogSFXHelper(dialogueSet);
 
         ///
         ///Details Ends
@@ -242,6 +250,7 @@ public class DialogueManager : MonoBehaviour
         ///
         isNPCresponding = false;
 
+        print("from NPC RTTCR : " + curDialogSet.sentence);
         if (curDialogSet.sentence == "")
         {
             //여기서도 sentece 공백이면 그냥 패스하는 부분 추가.
@@ -280,20 +289,21 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in dialogueSet.sentence.ToCharArray())
         {
             dialogSentence.text += letter;
-
+ 
             //타이핑 효과음 출력 부분.  스페이스는 거른다.  turnOffTypingSound 체크해제 되어있는지도 확인
             if (letter != System.Convert.ToChar(32) && dialogueSet.detail.sFXSettings.turnOffTypingSound == false)
             {
-                audioSystem.PlayOneShot(typingSounds[dialogueSet.soundNumber]);
+                audioSource.PlayOneShot(typingSounds[dialogueSet.soundNumber]);
             }
             //else
-                //print("스페이스 감지!");
+            //print("스페이스 감지!");
 
             yield return new WaitForSeconds(1f - dialogueSet.detail.letterSpeed); //letterSpeed 받아서 처리하게끔 하자
         }
 
         ///출력 끝났을 때
         isDuringTyping = false;
+
         //선택상자 실행
         if (activeChoiceBox)
             choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupSettings.selectionPopupData.question, dialogueSet.detail.selectionPopupSettings.selectionPopupData.choices);

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    [Header("현재 진행중 스토리")]
+    [Header("현재 진행중 스토리. 자동진행 스토리 관리")]
     public int storyNumber;
 
     //스토리 이벤트 

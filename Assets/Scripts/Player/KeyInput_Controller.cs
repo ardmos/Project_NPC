@@ -27,7 +27,6 @@ public class KeyInput_Controller : MonoBehaviour
     public Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData;
     public Vector2 originalPos, destinationPos;
     public bool isArrived;
-    public int count, distance;
 
     // Update is called once per frame
     void Update()
@@ -37,10 +36,10 @@ public class KeyInput_Controller : MonoBehaviour
         //리모트컨트롤 구현부분
         if (isrm)
         {
-
             Vector2 curpos = gameObject.transform.position;         
             switch (animData.dir)
             {
+                //도착했는지 확인.
                 case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
                     if (curpos.y >= destinationPos.y)
                         isArrived = true;
@@ -76,18 +75,9 @@ public class KeyInput_Controller : MonoBehaviour
                 default:
                     break;
             }
-
-
-            /*   프레임 기준 도착지점 계산방법
-            distance = animData.distance;
-            if (count/10 == distance)
-            {
-                isArrived = true;
-            }
-            */
-
             if (!isArrived)
             {
+                //아직 도착한게 아니면 계속 가.
                 switch (animData.dir)
                 {
                     case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
@@ -118,42 +108,48 @@ public class KeyInput_Controller : MonoBehaviour
                         movement = Vector2.zero;
                         break;
                 }
-                count++;
             }
             else
-                isrm = false;             
-        }
-        else if (!isControllable)
-        {
-            movement = Vector2.zero;
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
+            {
+                //리모트 이동 도착.
+                isrm = false;
+                isArrived = false;
 
-            //Idle방향
-            if (movement.y == -1)
-            {
-                animator.SetInteger("Direction", 0);
-                rayDir = Vector2.down;
-            }
-            else if (movement.y == 1)
-            {
-                animator.SetInteger("Direction", 1);
-                rayDir = Vector2.up;
-            }
-            else if (movement.x == 1)
-            {
-                animator.SetInteger("Direction", 2);
-                rayDir = Vector2.right;
-            }
-            else if (movement.x == -1)
-            {
-                animator.SetInteger("Direction", 3);
-                rayDir = Vector2.left;
-            }
-            return;
+                print("hi"+ gameObject.name);
+                //리모트이동이 아닐 때, 사용자컨트롤을 받는 오브젝트가 아닌 경우. 
+                movement = Vector2.zero;
+                animator.SetFloat("Horizontal", movement.x);
+                animator.SetFloat("Vertical", movement.y);
+                animator.SetFloat("Speed", movement.sqrMagnitude);
+
+                //Idle방향 따로 설정해줄 수 있음.
+                if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down)
+                {
+                    animator.SetInteger("Direction", 0);
+                    rayDir = Vector2.down;
+                }
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up)
+                {
+                    animator.SetInteger("Direction", 1);
+                    rayDir = Vector2.up;
+                }
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right)
+                {
+                    animator.SetInteger("Direction", 2);
+                    rayDir = Vector2.right;
+                }
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left)
+                {
+                    animator.SetInteger("Direction", 3);
+                    rayDir = Vector2.left;
+                }
+
+                return;
+            }                        
         }
-        else
+        
+        
+        if(isControllable && !isrm)
         {
             //사용자 입력값 수집.
             movement.x = DialogueManager.instance.isDialogueActive ? 0 : Input.GetAxisRaw("Horizontal");
@@ -163,6 +159,11 @@ public class KeyInput_Controller : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+        //대각선 이동 속도 조절 
+        if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
+            movespeed = 4f;
+        else
+            movespeed = 5f;
 
         //Idle방향
         if (movement.y == -1)
@@ -186,11 +187,6 @@ public class KeyInput_Controller : MonoBehaviour
             rayDir = Vector2.left;
         }
 
-        //대각선 이동 속도 조절 
-        if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
-            movespeed = 4f;
-        else
-            movespeed = 5f;
 
         //스캔 발동. 스페이스 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
         if (Input.GetButtonDown("Jump") && scanObject != null)
@@ -215,7 +211,7 @@ public class KeyInput_Controller : MonoBehaviour
             scanObject = null;
     }
 
-    public void MoveAnimTest(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
+    public void MoveAnimStart(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
     {
         isrm = true;
         this.animData = animData;

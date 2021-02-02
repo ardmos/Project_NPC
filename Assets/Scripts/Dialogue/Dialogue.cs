@@ -98,6 +98,16 @@ public class Dialogue
                     //public bool down, left, right;
                     [Header("- 이동할 거리(m)")]
                     public int distance;
+
+                    public enum EndDir
+                    {
+                        Up,
+                        Down,
+                        Left,
+                        Right
+                    }
+                    [Header("- 정지시 쳐다볼 방향")]
+                    public EndDir endDir;
                 }
                 [Header("- NPC 애니메이션 활성화"), Space(5)]
                 public bool activateObjAnimate;
@@ -119,6 +129,8 @@ public class Dialogue
                 public AudioClip audioClip;
                 [Header("- 재생할 횟수"), Space(5)]
                 public int playTime;
+                [Header("- 반복 사이 시간"), Space(5)]
+                public float delayTime;
             }
             [Header("- 사운드 효과 설정"), Space(5)]
             public SFXSettings sFXSettings;
