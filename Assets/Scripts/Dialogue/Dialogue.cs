@@ -8,7 +8,7 @@ public class Dialogue
 {
     [Header("- ↑ 이 \'Dialog 보따리\'의 제목")]
     public string smallTitle_;
-    [Header("- 지금 이 대화보따리를 부여하고자 하는 NPC or Object의 id값을 입력해주세요.")]
+    [Header("- 지금 이 대화보따리를 부여하고자 하는 Object의 id값을 입력하거나 // 스토리라인의 번호를 입력하세요.")]
     public int storyId;             
 
     [System.Serializable]
@@ -43,38 +43,86 @@ public class Dialogue
             [Header("- 초상화 설정"), Space(5)]
             public PortraitSettings portraitSettings;
 
-            [Header("- 선택대화창 활성화"), Space(5)]
-            //선택팝업
-            public bool activateSelectionPopup;
-            [System.Serializable]
-            public struct SelectionData
-            {
-                [Header("- 선택팝업창 상단의 질문")]
-                public string question;
-                [Header("- 보기(최대 8개)                     주의!  Choices와 Choice_results와 Responses의 size는 반드시 같아야 한다.")]
-                public string[] choices;
-                [Header("- 보기(Choices)중 하나가 선택됐을시 출력되는 Dialog _ 빈 칸 가능")]
-                public DialogueSet[] choice_results;
-                [Header("- Choice_results의 뒤를 이어 출력되는 Dialog _ 빈 칸 가능")]
-                public DialogueSet[] responses;
-            }
-            [Header("- 선택대화창이 갖게될 데이터를 입력하는 곳")]
-            public SelectionData selectionPopupData;
 
-            //npc애니메이션
             [System.Serializable]
-            public struct NpcAnimData
+            public struct SelectionPopupSettings
             {
-                [Header("- 움직이고싶은 NPC를 드래그해서 넣어주세요")] 
-                public Animation npc;
-                [Header("- 실행시킬 animation의 이름을 입력해주세요.")]
-                public string animationName;
+                [Header("- 선택대화창 활성화"), Space(5)]
+                //선택팝업
+                public bool activateSelectionPopup;
+                [System.Serializable]
+                public struct SelectionData
+                {
+                    [Header("- 선택팝업창 상단의 질문")]
+                    public string question;
+                    [Header("- 보기(최대 8개)                     주의!  Choices와 Choice_results와 Responses의 size는 반드시 같아야 한다.")]
+                    public string[] choices;
+                    [Header("- 보기(Choices)중 하나가 선택됐을시 출력되는 Dialog _ 빈 칸 가능")]
+                    public DialogueSet[] choice_results;
+                    [Header("- Choice_results의 뒤를 이어 출력되는 Dialog _ 빈 칸 가능")]
+                    public DialogueSet[] responses;
+                }
+                [Header("- 선택대화창이 갖게될 데이터를 입력하는 곳")]
+                public SelectionData selectionPopupData;
             }
-            [Header("- NPC 애니메이션 활성화"), Space(5)]
-            public bool activateNpcAnimate;
-            [Header("- 활성화시킬 애니메이션의 데이터를 넣는 곳")]
-            public NpcAnimData[] npcAnimationData;
-            
+            [Header("- 선택대화창 설정"), Space(5)]
+            public SelectionPopupSettings selectionPopupSettings;
+
+
+
+            [System.Serializable]
+            public struct AnimationSettings
+            {
+                //npc애니메이션
+                [System.Serializable]
+                public struct ObjectAnimData
+                {
+                    [Header("- 움직이고싶은 Object를 드래그해서 넣어주세요")]
+                    public KeyInput_Controller objToMakeMove;
+
+                    public enum MoveDir
+                    {
+                        None,
+                        Up,
+                        Down,
+                        Left,
+                        Right,
+                        UpRight,
+                        UpLeft,
+                        DownRight,
+                        DownLeft
+                    }
+                    [Header("- 이동할 방향")]
+                    public MoveDir dir;
+                    //public bool up;
+                    //public bool down, left, right;
+                    [Header("- 이동할 거리(m)")]
+                    public int distance;
+                }
+                [Header("- NPC 애니메이션 활성화"), Space(5)]
+                public bool activateObjAnimate;
+                [Header("- 활성화시킬 애니메이션의 데이터를 넣는 곳")]
+                public ObjectAnimData[] objectAnimationData;
+            }
+            [Header("- 애니메이션 설정"), Space(5)]
+            public AnimationSettings animationSettings;
+
+
+            [System.Serializable]
+            public struct SFXSettings
+            {
+                [Header("- 타이핑사운드 끄려면! 체크"), Space(5)]
+                public bool turnOffTypingSound;
+                [Header("- 효과음 넣으려면 체크"), Space(5)]
+                public bool enableSFX;
+                [Header("- 사용할 효과음을 넣어주세요"), Space(5)]
+                public AudioClip audioClip;
+                [Header("- 재생할 횟수"), Space(5)]
+                public int playTime;
+            }
+            [Header("- 사운드 효과 설정"), Space(5)]
+            public SFXSettings sFXSettings;
+
         }
 
         [Header("- ↑ 이 \'Dialog\'의 제목")]
@@ -82,11 +130,11 @@ public class Dialogue
         [Header("- \'Dialog\'세부 설정"), Space(5)]
         public Details detail;
 
-        [Header("- 사용할 타이핑 사운드 번호"), Space(15)]
+        [Header("- 사용할 타이핑 사운드 번호. 기본 0"), Space(15)]
         public int soundNumber;
-        [Header("- NPC 이름"), Space(5)]
+        [Header("- Object 이름"), Space(5)]
         public string name;
-        [TextArea(8, 10), Header("- NPC 대사")]
+        [TextArea(8, 10), Header("- Object 대사")]
         public string sentence;           
     }
 

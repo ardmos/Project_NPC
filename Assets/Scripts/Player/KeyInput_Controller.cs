@@ -8,34 +8,171 @@ public class KeyInput_Controller : MonoBehaviour
     //타일맵의 셀 사이즈를 1로 했기 때문에,  이동도 1만큼 시키면 딱 딱 맞음. <-- 바람의나라 방식
     //스타듀밸리방식은 translate * 속도 이용
 
+
+    //현재 컨트롤할 대상 선택
+    public bool isControllable;
+
+
     public float movespeed = 5f;
 
     public Rigidbody2D rb;
     public Animator animator;
 
-    Vector2 movement, rayDir;
+    public Vector2 movement, rayDir;
     GameObject scanObject;
+
+
+    //리모트무브
+    public bool isrm;
+    public Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData;
+    public Vector2 originalPos, destinationPos;
+    public bool isArrived;
+    public int count, distance;
 
     // Update is called once per frame
     void Update()
     {
-        //사용자 입력값 수집.
-        movement.x = DialogueManager.instance.isDialogueActive ? 0 : Input.GetAxisRaw("Horizontal");
-        movement.y = DialogueManager.instance.isDialogueActive ? 0 : Input.GetAxisRaw("Vertical");
+        //컨트롤체크 안되어있는 뇨속은 컨트롤 불가!
+ 
+        //리모트컨트롤 구현부분
+        if (isrm)
+        {
+
+            Vector2 curpos = gameObject.transform.position;         
+            switch (animData.dir)
+            {
+                case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
+                    if (curpos.y >= destinationPos.y)
+                        isArrived = true;
+                    break;
+                case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Down:
+                    if (curpos.y <= destinationPos.y)
+                        isArrived = true;
+                    break;
+                case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Left:
+                    if (curpos.x <= destinationPos.x)
+                        isArrived = true;
+                    break;
+                case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Right:
+                    if (curpos.x >= destinationPos.x)
+                        isArrived = true;
+                    break;
+                case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.UpRight:
+                    if (curpos.x >= destinationPos.x && curpos.y >= destinationPos.y)
+                        isArrived = true;
+                    break;
+                case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.UpLeft:
+                    if (curpos.x <= destinationPos.x && curpos.y >= destinationPos.y)
+                        isArrived = true;
+                    break;
+                case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownRight:
+                    if (curpos.x >= destinationPos.x && curpos.y <= destinationPos.y)
+                        isArrived = true;
+                    break;
+                case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownLeft:
+                    if (curpos.x <= destinationPos.x && curpos.y <= destinationPos.y)
+                        isArrived = true;
+                    break;
+                default:
+                    break;
+            }
+
+
+            /*   프레임 기준 도착지점 계산방법
+            distance = animData.distance;
+            if (count/10 == distance)
+            {
+                isArrived = true;
+            }
+            */
+
+            if (!isArrived)
+            {
+                switch (animData.dir)
+                {
+                    case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
+                        movement = Vector2.up;
+                        break;
+                    case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Down:
+                        movement = Vector2.down;
+                        break;
+                    case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Left:
+                        movement = Vector2.left;
+                        break;
+                    case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Right:
+                        movement = Vector2.right;
+                        break;
+                    case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.UpRight:
+                        movement = new Vector2(1, 1);
+                        break;
+                    case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.UpLeft:
+                        movement = new Vector2(-1, 1);
+                        break;
+                    case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownRight:
+                        movement = new Vector2(1, -1);
+                        break;
+                    case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownLeft:
+                        movement = new Vector2(-1, -1);
+                        break;
+                    default:
+                        movement = Vector2.zero;
+                        break;
+                }
+                count++;
+            }
+            else
+                isrm = false;             
+        }
+        else if (!isControllable)
+        {
+            movement = Vector2.zero;
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Speed", movement.sqrMagnitude);
+
+            //Idle방향
+            if (movement.y == -1)
+            {
+                animator.SetInteger("Direction", 0);
+                rayDir = Vector2.down;
+            }
+            else if (movement.y == 1)
+            {
+                animator.SetInteger("Direction", 1);
+                rayDir = Vector2.up;
+            }
+            else if (movement.x == 1)
+            {
+                animator.SetInteger("Direction", 2);
+                rayDir = Vector2.right;
+            }
+            else if (movement.x == -1)
+            {
+                animator.SetInteger("Direction", 3);
+                rayDir = Vector2.left;
+            }
+            return;
+        }
+        else
+        {
+            //사용자 입력값 수집.
+            movement.x = DialogueManager.instance.isDialogueActive ? 0 : Input.GetAxisRaw("Horizontal");
+            movement.y = DialogueManager.instance.isDialogueActive ? 0 : Input.GetAxisRaw("Vertical");
+        }
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        
+
         //Idle방향
-        if(movement.y == -1)
+        if (movement.y == -1)
         {
             animator.SetInteger("Direction", 0);
             rayDir = Vector2.down;
         }
         else if (movement.y == 1)
         {
-            animator.SetInteger("Direction",1);
+            animator.SetInteger("Direction", 1);
             rayDir = Vector2.up;
         }
         else if (movement.x == 1)
@@ -65,8 +202,8 @@ public class KeyInput_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //실질적 이동.
-            rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
+        //실질적 이동
+        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
 
         //Ray
         Debug.DrawRay(rb.position, rayDir, Color.green, 0.7f);
@@ -78,13 +215,48 @@ public class KeyInput_Controller : MonoBehaviour
             scanObject = null;
     }
 
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void MoveAnimTest(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
     {
-        //충돌체크.
-        //print(collision.gameObject.name + "here");
+        isrm = true;
+        this.animData = animData;
+        originalPos = gameObject.transform.position;
+
+        switch (animData.dir)
+        {
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
+                destinationPos = originalPos + Vector2.up*animData.distance;
+                break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Down:
+                destinationPos = originalPos + Vector2.down * animData.distance;
+                break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Left:
+                destinationPos = originalPos + Vector2.left * animData.distance;
+                break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Right:
+                destinationPos = originalPos + Vector2.right * animData.distance;
+                break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.UpRight:
+                destinationPos = originalPos + new Vector2(1, 1) * animData.distance;
+                break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.UpLeft:
+                destinationPos = originalPos + new Vector2(-1, 1) * animData.distance;
+                break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownRight:
+                destinationPos = originalPos + new Vector2(1, -1) * animData.distance;
+                break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownLeft:
+                destinationPos = originalPos + new Vector2(-1, -1) * animData.distance;
+                break;
+            default:
+                break;
+        }
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //충돌체크.
+    //print(collision.gameObject.name + "here");
+    //}
 }
 
 

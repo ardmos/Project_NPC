@@ -30,7 +30,7 @@ public class ChoiceBox : MonoBehaviour
         choices = mChoices;
         curNum = 0;
         tmp = 0;
-        choicesLength = DialogueManager.instance.curDialogSet.detail.selectionPopupData.choices.Length;
+        choicesLength = DialogueManager.instance.curDialogSet.detail.selectionPopupSettings.selectionPopupData.choices.Length;
 
         //각 텍스트를 오브젝트텍스트에 넣어주는 과정.
         questionText.text = question;
@@ -190,9 +190,14 @@ public class ChoiceBox : MonoBehaviour
     //입력 처리하는 부분.
     public void GetChoice(int n)
     {
-        print(n);
+        //print(n);
         if (buttons[n].activeSelf)
         {
+            foreach (GameObject item in buttons)
+            {
+                item.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            }
+            buttons[n].GetComponent<Image>().color = new Color(1, 1, 1, 1);
             ReturnTheAnswer(n);
         }
     }

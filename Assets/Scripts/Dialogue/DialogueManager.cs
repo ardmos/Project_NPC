@@ -189,24 +189,32 @@ public class DialogueManager : MonoBehaviour
 
 
         //선택팝업
-        if (dialogueSet.detail.activateSelectionPopup)
+        if (dialogueSet.detail.selectionPopupSettings.activateSelectionPopup)
         {
             //선택지 발동 
             activeChoiceBox = true;
             choiceBox.isChoiceBox = true;
         }
 
-        //npc 애니메이션
-        if (dialogueSet.detail.activateNpcAnimate)
+        //Object 애니메이션
+        if (dialogueSet.detail.animationSettings.activateObjAnimate)
         {
-            foreach (Dialogue.DialogueSet.Details.NpcAnimData npcAnimData in dialogueSet.detail.npcAnimationData)
+            foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.animationSettings.objectAnimationData)
             {
-                npcAnimData.npc.Play(npcAnimData.animationName);                
+                objAnimData.objToMakeMove.MoveAnimTest(objAnimData);
             }
         }
+
+
+        //효과음 실행
+        if (dialogueSet.detail.sFXSettings.enableSFX)
+        {
+            for (int i = 0; i < dialogueSet.detail.sFXSettings.playTime; i++)
+                audioSystem.PlayOneShot(dialogueSet.detail.sFXSettings.audioClip);                               
+        }        
+
         ///
-        ///Details
-        ///
+        ///Details Ends
 
 
         //문장 도도도 출력하는 부분
@@ -221,7 +229,7 @@ public class DialogueManager : MonoBehaviour
         npcResponseNum = valueToReturn;//npc 응답연결을 위한 저장.  
         isNPCresponding = true;
         //SplitStringServiceSir(dialogue.choice_results[valueToReturn]);
-        BatchService(curDialogSet.detail.selectionPopupData.choice_results[valueToReturn]);
+        BatchService(curDialogSet.detail.selectionPopupSettings.selectionPopupData.choice_results[valueToReturn]);
     }
 
     //4.결과문에 엔피씨가 응답한다.(분기점 스탯도 적용도 여기서 구현하면 될듯)
@@ -241,7 +249,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        BatchService(curDialogSet.detail.selectionPopupData.responses[valueToResponse]);
+        BatchService(curDialogSet.detail.selectionPopupSettings.selectionPopupData.responses[valueToResponse]);
     }
 
     //다이얼로그 출현 방식에 따른 애니메이션 실행. 
@@ -273,13 +281,13 @@ public class DialogueManager : MonoBehaviour
         {
             dialogSentence.text += letter;
 
-            //타이핑 효과음 출력 부분.  스페이스는 거른다.
-            if (letter != System.Convert.ToChar(32))
+            //타이핑 효과음 출력 부분.  스페이스는 거른다.  turnOffTypingSound 체크해제 되어있는지도 확인
+            if (letter != System.Convert.ToChar(32) && dialogueSet.detail.sFXSettings.turnOffTypingSound == false)
             {
                 audioSystem.PlayOneShot(typingSounds[dialogueSet.soundNumber]);
             }
-            else
-                print("스페이스 감지!");
+            //else
+                //print("스페이스 감지!");
 
             yield return new WaitForSeconds(1f - dialogueSet.detail.letterSpeed); //letterSpeed 받아서 처리하게끔 하자
         }
@@ -288,7 +296,7 @@ public class DialogueManager : MonoBehaviour
         isDuringTyping = false;
         //선택상자 실행
         if (activeChoiceBox)
-            choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupData.question, dialogueSet.detail.selectionPopupData.choices);
+            choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupSettings.selectionPopupData.question, dialogueSet.detail.selectionPopupSettings.selectionPopupData.choices);
     }
     //글자 출력 한방에 뙇 
     void PrintAtOnce(Dialogue.DialogueSet dialogueSet)
@@ -301,7 +309,7 @@ public class DialogueManager : MonoBehaviour
         isDuringTyping = false;
         //선택상자 실행
         if (activeChoiceBox)
-            choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupData.question, dialogueSet.detail.selectionPopupData.choices);
+            choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupSettings.selectionPopupData.question, dialogueSet.detail.selectionPopupSettings.selectionPopupData.choices);
     }
 
     //다이얼로그 종료 
