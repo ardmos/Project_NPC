@@ -62,9 +62,14 @@ public class DialogueManager : MonoBehaviour
         dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
 
 
-        foreach (Dialogue item in 스토리정리.GetComponentInChildren<AttachThis>().dialogues)
+        foreach (AttachThis attachThis in 스토리정리.GetComponentsInChildren<AttachThis>())
         {
-            dialogues.Add(item);
+            //dialogues.Add(item);
+            //dialogues.Add()
+            foreach (Dialogue item in attachThis.dialogues)
+            {
+                dialogues.Add(item);
+            }
         }
 
 
@@ -209,9 +214,8 @@ public class DialogueManager : MonoBehaviour
         //선택팝업
         if (dialogueSet.detail.selectionPopupSettings.activateSelectionPopup)
         {
-            //선택지 발동 
-            activeChoiceBox = true;
-            choiceBox.isChoiceBox = true;
+            //선택지 발동 조건 미리 만족시켜둠.  실행은 타이핑이 끝난 시점에 됨. 
+            activeChoiceBox = true;            
         }
 
         //Object 애니메이션
@@ -313,7 +317,10 @@ public class DialogueManager : MonoBehaviour
 
         //선택상자 실행
         if (activeChoiceBox)
+        {
+            choiceBox.isChoiceBox = true;
             choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupSettings.selectionPopupData.question, dialogueSet.detail.selectionPopupSettings.selectionPopupData.choices);
+        }            
     }
 
     //글자 출력 한방에 뙇 
@@ -327,7 +334,11 @@ public class DialogueManager : MonoBehaviour
         isDuringTyping = false;
         //선택상자 실행
         if (activeChoiceBox)
+        {
+            choiceBox.isChoiceBox = true;
             choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupSettings.selectionPopupData.question, dialogueSet.detail.selectionPopupSettings.selectionPopupData.choices);
+        }
+            
     }
 
     //다이얼로그 종료 
