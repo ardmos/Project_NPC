@@ -41,6 +41,8 @@ public class DialogueManager : MonoBehaviour
 
     bool activeChoiceBox, isNPCresponding;
     int npcResponseNum;
+    //선택상자에대한 응답에서 문장 빨리넘기기 했을 시 사용할 문장.  이미 도도도 찍고있던 문장을 담고있다.
+    string printingSentence;
 
     #region For Signleton
     //싱글턴
@@ -153,7 +155,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        curDialogSet = dialogueSetsQue.Dequeue();       
+        //curDialogSet 갱신.
+        curDialogSet = dialogueSetsQue.Dequeue();
+
+
         BatchService(curDialogSet);
     }
 
@@ -250,7 +255,6 @@ public class DialogueManager : MonoBehaviour
         ///
         isNPCresponding = false;
 
-        print("from NPC RTTCR : " + curDialogSet.sentence);
         if (curDialogSet.sentence == "")
         {
             //여기서도 sentece 공백이면 그냥 패스하는 부분 추가.
@@ -285,6 +289,9 @@ public class DialogueManager : MonoBehaviour
         ///출력중       
         isDuringTyping = true;
 
+        //선택상자 팝업에서 빨리넘기기 할 때 쓰이는 변수. 
+        printingSentence = dialogueSet.sentence;
+
         dialogSentence.text = "";
         foreach (char letter in dialogueSet.sentence.ToCharArray())
         {
@@ -308,13 +315,14 @@ public class DialogueManager : MonoBehaviour
         if (activeChoiceBox)
             choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupSettings.selectionPopupData.question, dialogueSet.detail.selectionPopupSettings.selectionPopupData.choices);
     }
+
     //글자 출력 한방에 뙇 
     void PrintAtOnce(Dialogue.DialogueSet dialogueSet)
     {
         StopAllCoroutines();
         isCtrlKeyDowned = false;
 
-        dialogSentence.text = dialogueSet.sentence;
+        dialogSentence.text = printingSentence;
 
         isDuringTyping = false;
         //선택상자 실행
