@@ -26,6 +26,12 @@ namespace CatchingWildBoar
         //디버깅을 위한 텍스트
         public Text text;
 
+
+        //커서 변경을 위한 부분
+        public Texture2D cursorTexture;
+        public CursorMode cursorMode = CursorMode.Auto;
+        public Vector2 hotSpot = Vector2.zero;
+
         private void Start()
         {
             foreach (GameObject bush in GameObject.FindGameObjectsWithTag("Bush"))
@@ -39,6 +45,9 @@ namespace CatchingWildBoar
             //50마리 넘게 잡으면 
             if (catchCount >= 50 && !isClear)
             {
+                //커서 원래대로 변경
+                Cursor.SetCursor(null, Vector2.zero, cursorMode);
+
                 text.text = "Clear!  Count : " + catchCount.ToString();
                 isClear = true;
                 //다이얼로그 시작 
@@ -50,6 +59,9 @@ namespace CatchingWildBoar
 
             if (!isClear && catchCount<50)
             {
+                //커서 변경
+                Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+
                 if (frameCounter == genTiming)
                 {
                     frameCounter = 0;

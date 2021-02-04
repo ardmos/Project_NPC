@@ -367,7 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -432,6 +432,9 @@ MonoBehaviour:
   frameCounter: 0
   genTiming: 100
   text: {fileID: 985426859}
+  cursorTexture: {fileID: 10910, guid: 0000000000000000f000000000000000, type: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!4 &1082006447
 Transform:
   m_ObjectHideFlags: 0
