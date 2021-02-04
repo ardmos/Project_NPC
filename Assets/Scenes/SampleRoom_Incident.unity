@@ -1801,6 +1801,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124598116}
   m_CullTransparentMesh: 0
+--- !u!1 &124837765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124837766}
+  m_Layer: 0
+  m_Name: "\uBBF8\uB2C8\uAC8C\uC784"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &124837766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124837765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1823594665}
+  m_Father: {fileID: 806612664}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &143384930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4012533050028055199, guid: af579edce83354e6f859b60b60e757b6,
@@ -2157,7 +2188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315965341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.059992, y: -9.568738, z: -10.042969}
+  m_LocalPosition: {x: -2.0635102, y: -9.565221, z: -10.042969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1792519942}
@@ -3534,6 +3565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 806612664}
+  - component: {fileID: 806612665}
   m_Layer: 0
   m_Name: "=====\uC2A4\uD1A0\uB9AC\uC815\uB9AC====="
   m_TagString: Untagged
@@ -3553,9 +3585,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2079382753}
+  - {fileID: 124837766}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &806612665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806612663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79c6b07d90c5c24c89ed62fda6447db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &853463470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,7 +3730,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -3710,7 +3755,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937402247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9834609, y: -10.016539, z: -11}
+  m_LocalPosition: {x: -1.986979, y: -10.013021, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7078,6 +7123,196 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2000
+--- !u!1 &1823594664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823594665}
+  - component: {fileID: 1823594666}
+  m_Layer: 0
+  m_Name: "\uBA67\uB3FC\uC9C0\uC7A1\uAE30"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1823594665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823594664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 124837766}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1823594666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823594664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - smallTitle_: "\uC7A1\uACE0\uB098\uC11C \uC120\uD0DD"
+    storyId: 31
+    dialogue:
+    - smallTitle_: "\uBB3C\uC5B4\uBCF4\uAE30"
+      detail:
+        letterSpeed: 0
+        styles: 1
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 1
+          selectionPopupData:
+            question: "\uD589\uB3D9 \uACB0\uC815"
+            choices:
+            - "\uB193\uC544\uC900\uB2E4"
+            - "\uC5D4\uD53C\uC528\uC5D0\uAC8C \uB370\uB824\uAC04\uB2E4"
+            choice_results:
+            - smallTitle_: "\uB193\uC544\uC92C\uC744 \uB54C"
+              detail:
+                letterSpeed: 0
+                styles: 0
+                portraitSettings:
+                  showLeftPortrait: 0
+                  leftPortraitNumber: 0
+                  showRightPortrait: 0
+                  rightPortraitNumber: 0
+                selectionPopupSettings:
+                  activateSelectionPopup: 0
+                  selectionPopupData:
+                    question: 
+                    choices: []
+                    choice_results: []
+                    responses: []
+                animationSettings:
+                  activateObjAnimate: 0
+                  objectAnimationData: []
+                sFXSettings:
+                  turnOffTypingSound: 0
+                  enableSFX: 0
+                  audioClip: {fileID: 0}
+                  playTime: 0
+                  delayTime: 0
+              soundNumber: 0
+              name: "\uBA67\uB3FC\uC9C0"
+              sentence: "\uACE0\uB9D9\uC2B5\uB2C8\uB2E4!!"
+            - smallTitle_: "\uC5D4\uD53C\uC528\uC5D0\uAC8C \uB370\uB824\uAC14\uC744
+                \uB54C"
+              detail:
+                letterSpeed: 0
+                styles: 0
+                portraitSettings:
+                  showLeftPortrait: 0
+                  leftPortraitNumber: 0
+                  showRightPortrait: 0
+                  rightPortraitNumber: 0
+                selectionPopupSettings:
+                  activateSelectionPopup: 0
+                  selectionPopupData:
+                    question: 
+                    choices: []
+                    choice_results: []
+                    responses: []
+                animationSettings:
+                  activateObjAnimate: 0
+                  objectAnimationData: []
+                sFXSettings:
+                  turnOffTypingSound: 0
+                  enableSFX: 0
+                  audioClip: {fileID: 0}
+                  playTime: 0
+                  delayTime: 0
+              soundNumber: 0
+              name: "\uBA67\uB3FC\uC9C0"
+              sentence: "\uD751\uD751 "
+            responses:
+            - smallTitle_: 
+              detail:
+                letterSpeed: 0
+                styles: 0
+                portraitSettings:
+                  showLeftPortrait: 0
+                  leftPortraitNumber: 0
+                  showRightPortrait: 0
+                  rightPortraitNumber: 0
+                selectionPopupSettings:
+                  activateSelectionPopup: 0
+                  selectionPopupData:
+                    question: 
+                    choices: []
+                    choice_results: []
+                    responses: []
+                animationSettings:
+                  activateObjAnimate: 0
+                  objectAnimationData: []
+                sFXSettings:
+                  turnOffTypingSound: 0
+                  enableSFX: 0
+                  audioClip: {fileID: 0}
+                  playTime: 0
+                  delayTime: 0
+              soundNumber: 0
+              name: 
+              sentence: 
+            - smallTitle_: 
+              detail:
+                letterSpeed: 0
+                styles: 0
+                portraitSettings:
+                  showLeftPortrait: 0
+                  leftPortraitNumber: 0
+                  showRightPortrait: 0
+                  rightPortraitNumber: 0
+                selectionPopupSettings:
+                  activateSelectionPopup: 0
+                  selectionPopupData:
+                    question: 
+                    choices: []
+                    choice_results: []
+                    responses: []
+                animationSettings:
+                  activateObjAnimate: 0
+                  objectAnimationData: []
+                sFXSettings:
+                  turnOffTypingSound: 0
+                  enableSFX: 0
+                  audioClip: {fileID: 0}
+                  playTime: 0
+                  delayTime: 0
+              soundNumber: 0
+              name: 
+              sentence: 
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+      soundNumber: 0
+      name: 
+      sentence: "\uBA67\uB3FC\uC9C0\uB97C \uC5B4\uB5BB\uAC8C \uD560\uAE4C?"
 --- !u!1 &1870840151
 GameObject:
   m_ObjectHideFlags: 0

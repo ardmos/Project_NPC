@@ -232,7 +232,7 @@ public class DialogueManager : MonoBehaviour
 
         ///
         ///Details Ends
-
+        
 
         //문장 도도도 출력하는 부분
         StopAllCoroutines();
