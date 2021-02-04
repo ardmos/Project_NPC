@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace CatchingWildBoar
@@ -14,27 +15,98 @@ namespace CatchingWildBoar
         //잡고나서 어떻게 할지 선택상자 다이얼로그 호출. 
         //멧돼지 어떻게할지 선택상자 id번호 31
 
+        //동물 생성할 부쉬 계속 바꿔주기 위한 부분
+        public List<GameObject> bushes;
+        public int n;
+        public int m;
+        public int j;
+        public int frameCounter, genTiming;
+
+
+        //디버깅을 위한 텍스트
+        public Text text;
+
+        private void Start()
+        {
+            foreach (GameObject bush in GameObject.FindGameObjectsWithTag("Bush"))
+            {
+                bushes.Add(bush);
+            }
+        }
 
         private void Update()
         {
             //50마리 넘게 잡으면 
-            if (catchCount >= 50)
+            if (catchCount >= 50 && !isClear)
             {
+                text.text = "Clear!  Count : " + catchCount.ToString();
                 isClear = true;
                 //다이얼로그 시작 
                 StartChoice();
             }
-            else
-                isClear = false;
+
+            //text.text = " Count : " + catchCount.ToString();
+
+
+            if (!isClear && catchCount<50)
+            {
+                if (frameCounter == genTiming)
+                {
+                    frameCounter = 0;
+
+                    if (catchCount<=20)
+                    {
+                        // 잡은게 20마리까진 한 부쉬에서 1마리 생성하면, 바꿔줌.
+                        ChooseRandomBushToGenerate();
+                        text.text = "Pase 1  Count : " + catchCount.ToString();
+                    }
+                    else if (catchCount<=45)
+                    {
+                        // 잡은게 21마리 부터는 한 번에 두 곳에서 생성됨. 
+                        ChooseRandom_Two_BushesToGenerate();
+                        text.text = "Pase 2  Count : " + catchCount.ToString();
+                    }
+                    else
+                    {
+                        // 잡은게 46마리 부터는 한 번에 세 곳에서 생성됨.
+                        ChooseRandom_Three_BushesToGenerate();
+                        text.text = "Pase 3  Count : " + catchCount.ToString();
+                    }
+                }
+                frameCounter++;
+            }
+
+        }
+
+        public void ChooseRandomBushToGenerate()
+        {
+            n = Random.Range(0, bushes.Count - 1);
+
+            bushes[n].GetComponent<Bush>().generateSwitch = true;
+        }
+
+        public void ChooseRandom_Two_BushesToGenerate()
+        {
+            n = Random.Range(0, bushes.Count - 1);
+            m = Random.Range(0, bushes.Count - 1);
+
+            bushes[n].GetComponent<Bush>().generateSwitch = true;
+            bushes[m].GetComponent<Bush>().generateSwitch = true;
+        }
+
+        public void ChooseRandom_Three_BushesToGenerate()
+        {
+            n = Random.Range(0, bushes.Count - 1);
+            m = Random.Range(0, bushes.Count - 1);
+            j = Random.Range(0, bushes.Count - 1);
+
+            bushes[n].GetComponent<Bush>().generateSwitch = true;
+            bushes[m].GetComponent<Bush>().generateSwitch = true;
+            bushes[j].GetComponent<Bush>().generateSwitch = true;
         }
 
         void StartChoice()
         {
-            //자동생성 정지
-            foreach (Bush bush in FindObjectsOfType<Bush>())
-            {
-                bush.StopGenerating();
-            }
             //다이얼로그 시작
             DialogueManager.instance.StartDialogue(31);
         }
