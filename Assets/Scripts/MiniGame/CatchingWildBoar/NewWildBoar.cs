@@ -9,9 +9,10 @@ public class NewWildBoar : MonoBehaviour
     public int n;
     public Vector2 target;
 
+    //쓰다듬기 상황  <-- 이걸 트루로 해주면 된다. 
+    public bool isStrokeMode;
+    public int strokeCount;
 
-
-    // Update is called once per frame
     void Update()
     {
         if (go)
@@ -22,11 +23,9 @@ public class NewWildBoar : MonoBehaviour
             {
                 go = false;
                 Destroy(gameObject);
-            }
-                
+            }                
         }
     }
-
 
     //목적지를 가지고 이동. 많은 부쉬들 중 선택.  
     //지금 부쉬가 선택되는 케이스도 그대로 둠 -> 결과적으로 젠 타이밍의 랜덤성 올라감
@@ -39,20 +38,30 @@ public class NewWildBoar : MonoBehaviour
         n = Random.Range(0, bushes.Count - 1);
         target = bushes[n].transform.position;
 
-        go = true;
-        
+        go = true;        
     }
-
-
 
     private void OnMouseDown()
     {
-        print("s");
         gameObject.GetComponent<SpriteRenderer>().color = Color.red;
     }
     private void OnMouseUp()
     {
-        FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
-        Destroy(gameObject);
+        //만약, 쓰다듬기라면??   클릭 세 번이어야한다! 
+        if (isStrokeMode)
+        {
+            //쓰다듬기 상황일 때.   애니메이션도 여기다 넣으면 된다. 
+            strokeCount++;
+            if(strokeCount >= 3)
+            {
+                FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+            Destroy(gameObject);
+        }
     }
 }

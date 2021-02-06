@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StoryDataBase : DontDestroy<StoryDataBase>
 {
+    public bool test2;
     protected override void OnStart()
     {
         base.OnStart();
@@ -12,5 +13,11 @@ public class StoryDataBase : DontDestroy<StoryDataBase>
     protected override void OnAwake()
     {
         base.OnAwake();
+    }
+
+
+    public void CallingTest()
+    {
+
     }
 }
