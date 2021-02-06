@@ -57,6 +57,7 @@ namespace CatchingWildBoar
             //text.text = " Count : " + catchCount.ToString();
 
 
+            
             if (!isClear && catchCount<50)
             {
                 //커서 변경
@@ -87,6 +88,7 @@ namespace CatchingWildBoar
                 }
                 frameCounter++;
             }
+            
 
         }
 

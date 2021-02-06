@@ -7,7 +7,7 @@ public class Bush : MonoBehaviour
     public bool generateSwitch;
     public GameObject animalFriendsPref;
 
-    //public int frameCounter;
+    public int frameCounter;
     private void Update()
     {
         //동물들 생성
@@ -20,14 +20,16 @@ public class Bush : MonoBehaviour
                 frameCounter = 0;
                 GenerateAnimalFriends();
             }
-            frameCounter++;
-          
+            frameCounter++;          
         }
         */
+
+        
         if (generateSwitch)
         {
             GenerateAnimalFriends();
         }
+        
     }
 
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7171815421371240359}
   - component: {fileID: 2201277527138850158}
   - component: {fileID: 1501677296}
+  - component: {fileID: 2971722944269401368}
   m_Layer: 0
   m_Name: NewWildBoar
   m_TagString: Untagged
@@ -49,6 +50,8 @@ MonoBehaviour:
   go: 0
   n: 0
   target: {x: 0, y: 0}
+  isStrokeMode: 0
+  strokeCount: 0
 --- !u!212 &2201277527138850158
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -88,7 +91,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6508196358345319988, guid: 7994016c6556dc64189c891f1096674d,
+  m_Sprite: {fileID: 6819951991243191440, guid: 7e0519e02acd7e74fa7ba9ac6918f313,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -113,16 +116,35 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.05466944, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 1.96875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.7149099, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &2971722944269401368
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902615189339106961}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57c0c0597f8a14118a2c56ea84cab008, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

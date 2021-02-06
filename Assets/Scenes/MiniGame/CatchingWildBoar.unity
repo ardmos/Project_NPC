@@ -1175,7 +1175,7 @@ PrefabInstance:
     - target: {fileID: 7902615189339106961, guid: ccd6190ee4824714095761949cb07381,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd6190ee4824714095761949cb07381, type: 3}
@@ -1196,36 +1196,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5807075754562113891, guid: 53bfd6dc57b97e04c8914007b7601c02,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807075754562113891, guid: 53bfd6dc57b97e04c8914007b7601c02,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807075754562113891, guid: 53bfd6dc57b97e04c8914007b7601c02,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807075754562113891, guid: 53bfd6dc57b97e04c8914007b7601c02,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.border.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807075754562113891, guid: 53bfd6dc57b97e04c8914007b7601c02,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5807075754562113891, guid: 53bfd6dc57b97e04c8914007b7601c02,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5807075754562113893, guid: 53bfd6dc57b97e04c8914007b7601c02,
         type: 3}
       propertyPath: m_RootOrder
@@ -1239,7 +1209,7 @@ PrefabInstance:
     - target: {fileID: 5807075754562113893, guid: 53bfd6dc57b97e04c8914007b7601c02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 5807075754562113893, guid: 53bfd6dc57b97e04c8914007b7601c02,
         type: 3}

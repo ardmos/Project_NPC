@@ -17,13 +17,24 @@ public class NewWildBoar : MonoBehaviour
     {
         if (go)
         {
-            gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, target, 0.05f);
+            //이동
+            gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, target, 0.05f);                        
 
             if ((Vector2)gameObject.transform.position == target)
             {
                 go = false;
                 Destroy(gameObject);
-            }                
+            }
+            else
+            {
+                //진행 방향에 따른 이미지 방향 전환
+                if (target.x < gameObject.transform.position.x)
+                    //그대로
+                    gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                else
+                    //뒤집
+                    gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
         }
     }
 
@@ -43,25 +54,41 @@ public class NewWildBoar : MonoBehaviour
 
     private void OnMouseDown()
     {
-        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-    }
-    private void OnMouseUp()
-    {
-        //만약, 쓰다듬기라면??   클릭 세 번이어야한다! 
+        //모드별 피격 이미지.
         if (isStrokeMode)
         {
-            //쓰다듬기 상황일 때.   애니메이션도 여기다 넣으면 된다. 
-            strokeCount++;
-            if(strokeCount >= 3)
-            {
-                FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
-                Destroy(gameObject);
-            }
+            //쓰다듬기모드
+            StopAllCoroutines();
+            StartCoroutine(SaveOneSec_Stroked());
         }
         else
         {
+            //잡기모드
+            StartCoroutine(SaveOneSec_Caught());
+        }
+    }
+
+
+    //피격애니메이션 유지용
+    IEnumerator SaveOneSec_Stroked()
+    {
+        gameObject.GetComponent<Animator>().SetTrigger("isStroked");
+        strokeCount++;
+        
+        if (strokeCount >= 3)
+        {
+            go = false;
             FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+            yield return new WaitForSeconds(1f);
             Destroy(gameObject);
         }
+    }
+    IEnumerator SaveOneSec_Caught()
+    {
+        gameObject.GetComponent<Animator>().SetTrigger("isCaught");                
+        go = false;
+        FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }
