@@ -45,6 +45,7 @@ public class ChoiceBox : MonoBehaviour
         for (int i = 0; i < length; i++)
         {
             buttons[i].GetComponentInChildren<Text>().text = choices[i];
+            buttons[i].SetActive(true);
         }
 
         for (int i = length; i < buttons.Length; i++)

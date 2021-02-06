@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioSystem : MonoBehaviour
+public class AudioSystem : DontDestroy<AudioSystem>
 {
     public Dialogue.DialogueSet set;
 

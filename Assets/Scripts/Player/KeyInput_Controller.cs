@@ -115,7 +115,6 @@ public class KeyInput_Controller : MonoBehaviour
                 isrm = false;
                 isArrived = false;
 
-                print("hi"+ gameObject.name);
                 //리모트이동이 아닐 때, 사용자컨트롤을 받는 오브젝트가 아닌 경우. 
                 movement = Vector2.zero;
                 animator.SetFloat("Horizontal", movement.x);

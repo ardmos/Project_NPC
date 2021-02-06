@@ -2,19 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : DontDestroy<GameManager>
 {
-    #region For Singleton
-    public static GameManager instance;
+    #region For Singleton <---- DontDestroy 를 통해 싱글턴. 
+    //public static GameManager instance;
 
-    private void Awake()
-    {
-        instance = this;    
-    }
+    //private void Awake()
+    //{
+    //    instance = this;    
+    //}
     #endregion
 
     [Header("현재 진행중 스토리. 자동진행 스토리 관리")]
     public int storyNumber;
+
+    [Header("선택상자의 선택 결과들.")]
+    public Dictionary<string, int> choiceResults;
+
+    protected override void OnAwake()
+    {
+        base.OnAwake();
+        choiceResults = new Dictionary<string, int>();
+    }
+
+
+    private void Update()
+    {
+        if (choiceResults.Count>0)
+        {
+            foreach (KeyValuePair<string, int> item in choiceResults)
+            {
+                print(item.Key + ", 에서의 선택은 " + item.Value + " 입니다.");
+            }
+        }
+    }
 
     //스토리 이벤트 
     public void StartStoryEvent()

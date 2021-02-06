@@ -17,7 +17,7 @@ public class SensorField : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             //이벤트 시작! *(GameManager 내부에서 자동으로 현재 스토리 진행상황에 맞는 다이얼로그 이벤트가 발동됨. )
-            GameManager.instance.StartStoryEvent();
+            GameManager.Instance.StartStoryEvent();
             gameObject.SetActive(false);
         }
     }

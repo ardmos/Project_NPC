@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryDataBase : DontDestroy<StoryDataBase>
+public class CutScene : DontDestroy<CutScene>
 {
 
 }

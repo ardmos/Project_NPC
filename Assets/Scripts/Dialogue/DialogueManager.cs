@@ -38,6 +38,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     [HideInInspector]
     public Dialogue.DialogueSet curDialogSet;
+    public int curStoryId;
+    public string curStorySmallTitle;
 
     bool activeChoiceBox, isNPCresponding;
     int npcResponseNum;
@@ -108,20 +110,16 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             //그 개체의 Dialogue 클래스를 꺼내와서
             dialogue = dialogueData_Dic[objid];
-            //그 중 sentences 스트링 배열에 접근한다.
-            Dialogue.DialogueSet[] sentences_ = dialogue.dialogue;
-            //얻어낸 string[]를 Queue에 순차적으로 Enqueue 한다.
-            dialogueSetsQue.Clear();
-            foreach (Dialogue.DialogueSet item in sentences_)
-            {
-                dialogueSetsQue.Enqueue(item);
-            }
-        }
-        else
-        {
-            Debug.Log("정보가 없는 녀석입니다.");
-        }
+            curStorySmallTitle = dialogue.smallTitle_;
+            curStoryId = dialogue.storyId;
 
+            //그 중 dialogueSet 배열에 접근한다.
+            Dialogue.DialogueSet[] dialogueSet = dialogue.dialogue;
+            //얻어낸 dialogueSet을 Queue에 순차적으로 Enqueue 한다.
+            dialogueSetsQue.Clear();
+            foreach (Dialogue.DialogueSet item in dialogueSet) dialogueSetsQue.Enqueue(item);
+        }
+        else   Debug.Log("정보가 없는 녀석입니다.");
         DisplayNextSentence();
     }
 
@@ -245,6 +243,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //3.결과문 출력
     public void PrintTheChoiceResult(int valueToReturn)
     {
+        //선택된 답 저장. 5. 정해진 루트 진행을 위한. 
+        //선택 결과들은 딕셔너리 형태로 저장될것임. 
+        //Key값은 (현 다이얼로그 SmallTitle값 스토리id값 + _ + 현 DialogueSet의 SmallTitle값 + _ +현 선택상자의 Question값), Value값은 int로, 어떤 선택을 했는지 저장. 
+        GameManager.Instance.choiceResults.Add(curStorySmallTitle + " " + curStoryId.ToString()+'_'+curDialogSet.smallTitle_+'_'+ curDialogSet.detail.selectionPopupSettings.selectionPopupData.question, valueToReturn);
+
         activeChoiceBox = false;
         npcResponseNum = valueToReturn;//npc 응답연결을 위한 저장.  
         isNPCresponding = true;
