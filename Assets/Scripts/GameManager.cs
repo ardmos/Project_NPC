@@ -28,6 +28,7 @@ public class GameManager : DontDestroy<GameManager>
 
     private void Update()
     {
+        //딕셔너리에 선택상자 선택 결과물이 잘 들어왔는지 확인을 위한 프린트.
         if (choiceResults.Count>0)
         {
             foreach (KeyValuePair<string, int> item in choiceResults)
