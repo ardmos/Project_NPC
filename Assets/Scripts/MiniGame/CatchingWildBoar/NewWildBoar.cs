@@ -45,8 +45,12 @@ public class NewWildBoar : MonoBehaviour
         foreach (GameObject bushObj in GameObject.FindGameObjectsWithTag("Bush"))
         {
             bushes.Add(bushObj);
-        }
+        }       
         n = Random.Range(0, bushes.Count - 1);
+        if (bushes[n].transform.position == transform.position)
+        {            
+            DecideWhereToGo();
+        }
         target = bushes[n].transform.position;
 
         go = true;        
