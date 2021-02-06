@@ -120,7 +120,7 @@ namespace CatchingWildBoar
         void StartChoice()
         {
             //다이얼로그 시작
-            DialogueManager.instance.StartDialogue(31);
+            DialogueManager.Instance.StartDialogue(31);
         }
     }
 }

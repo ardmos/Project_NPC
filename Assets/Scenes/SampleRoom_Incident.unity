@@ -1864,7 +1864,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1293882305}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3302,7 +3303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3631,6 +3632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79c6b07d90c5c24c89ed62fda6447db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test2: 0
 --- !u!1 &853463470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3703,9 +3705,74 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
       soundNumber: 0
       name: "\uACBD\uCC301"
       sentence: "\uC544\uC57C! \uC65C\uADF8\uB7EC\uC2DC\uC8E0?"
+    - smallTitle_: "\uCEF7\uC52C \uD14C\uC2A4\uD2B8"
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 1
+          image: {fileID: 21300000, guid: 9f0ea21766ffa5a4fa9c78dab9af205d, type: 3}
+      soundNumber: 0
+      name: "\uAE40\uC2B9\uD6C8\uD0D0\uC815"
+      sentence: "\uC774 \uC0AC\uB78C \uC774\uC57C\uAE30\uC778\uB370..."
+    - smallTitle_: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: "\uACBD\uCC301"
+      sentence: 333
 --- !u!1 &937402247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4114,6 +4181,9 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
       soundNumber: 0
       name: "\uAE4C\uB9CC \uBC15\uC2A4"
       sentence: "\uAE4C\uB9CC \uBC15\uC2A4\uB2E4."
@@ -4168,7 +4238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5657,6 +5727,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1293882304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293882305}
+  m_Layer: 0
+  m_Name: CutScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1293882305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293882304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1475225945}
+  m_Father: {fileID: 150088134}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1360427044
 GameObject:
   m_ObjectHideFlags: 0
@@ -5865,6 +5966,179 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388081232}
   m_CullTransparentMesh: 0
+--- !u!1 &1475225944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475225945}
+  - component: {fileID: 1475225948}
+  - component: {fileID: 1475225947}
+  - component: {fileID: 1475225946}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1475225945
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475225944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1498294515}
+  m_Father: {fileID: 1293882305}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1475225946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475225944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1475225947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475225944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1475225948
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475225944}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
+--- !u!1 &1498294514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498294515}
+  - component: {fileID: 1498294517}
+  - component: {fileID: 1498294516}
+  m_Layer: 5
+  m_Name: CutSceneImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1498294515
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498294514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475225945}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 121}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1498294516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498294514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1498294517
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498294514}
+  m_CullTransparentMesh: 0
 --- !u!1 &1502509901
 GameObject:
   m_ObjectHideFlags: 0
@@ -5901,6 +6175,7 @@ MonoBehaviour:
   dialogSentence: {fileID: 1959286226}
   dialogPortrait_Left: {fileID: 1204332598}
   dialogPortrait_Right: {fileID: 714163986}
+  cutSceneImage: {fileID: 1498294516}
   choiceBox: {fileID: 31794538}
   audioSource: {fileID: 1556139920}
   audioSystem: {fileID: 1556139922}
@@ -5944,6 +6219,9 @@ MonoBehaviour:
         audioClip: {fileID: 0}
         playTime: 0
         delayTime: 0
+      cutSceneSettings:
+        activateCutScene: 0
+        image: {fileID: 0}
     soundNumber: 0
     name: 
     sentence: 
@@ -6127,6 +6405,9 @@ MonoBehaviour:
         audioClip: {fileID: 0}
         playTime: 0
         delayTime: 0
+      cutSceneSettings:
+        activateCutScene: 0
+        image: {fileID: 0}
     soundNumber: 0
     name: 
     sentence: 
@@ -7005,7 +7286,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807504350}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7242,6 +7523,9 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                cutSceneSettings:
+                  activateCutScene: 0
+                  image: {fileID: 0}
               soundNumber: 0
               name: "\uBA67\uB3FC\uC9C0"
               sentence: "\uACE0\uB9D9\uC2B5\uB2C8\uB2E4!!"
@@ -7271,6 +7555,9 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                cutSceneSettings:
+                  activateCutScene: 0
+                  image: {fileID: 0}
               soundNumber: 0
               name: "\uBA67\uB3FC\uC9C0"
               sentence: "\uD751\uD751 "
@@ -7300,6 +7587,9 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                cutSceneSettings:
+                  activateCutScene: 0
+                  image: {fileID: 0}
               soundNumber: 0
               name: 
               sentence: 
@@ -7328,6 +7618,9 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                cutSceneSettings:
+                  activateCutScene: 0
+                  image: {fileID: 0}
               soundNumber: 0
               name: 
               sentence: 
@@ -7340,6 +7633,9 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
       soundNumber: 0
       name: 
       sentence: "\uBA67\uB3FC\uC9C0\uB97C \uC5B4\uB5BB\uAC8C \uD560\uAE4C?"
@@ -7497,6 +7793,9 @@ MonoBehaviour:
           audioClip: {fileID: 8300000, guid: 926bb4805025159478b43fb2ae5d237d, type: 3}
           playTime: 2
           delayTime: 0.5
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
       soundNumber: 0
       name: '?'
       sentence: "(\uB69C\uBC85\uB69C\uBC85)"
@@ -7525,6 +7824,9 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
       soundNumber: 0
       name: '?'
       sentence: "\uC5EC\uAE30\uC778\uAC00... \uC0AC\uAC74 \uD604\uC7A5\uC774..."
@@ -7570,6 +7872,9 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                cutSceneSettings:
+                  activateCutScene: 0
+                  image: {fileID: 0}
               soundNumber: 0
               name: '?'
               sentence: "\uC5EC\uAE30\uC788\uC2B5\uB2C8\uB2E4."
@@ -7603,6 +7908,9 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                cutSceneSettings:
+                  activateCutScene: 0
+                  image: {fileID: 0}
               soundNumber: 0
               name: "\uACBD\uCC301"
               sentence: "\uC557, \uD0D0\uC815\uB2D8\uC774\uC168\uAD70\uC694! \uB4E4\uC5B4\uC624\uC2ED\uC1FC!!"
@@ -7619,6 +7927,9 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
       soundNumber: 0
       name: "\uACBD\uCC301"
       sentence: "\uC5B4\uC5B4~ \uC5EC\uAE30 \uD568\uBD80\uB85C \uB4E4\uC5B4\uC624\uC2DC\uBA74
@@ -7648,6 +7959,9 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
       soundNumber: 0
       name: "\uAE40\uC2B9\uD6C8 \uD0D0\uC815"
       sentence: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC..."

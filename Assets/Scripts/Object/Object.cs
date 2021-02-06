@@ -11,8 +11,8 @@ public class Object : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (!DialogueManager.instance.isDialogueActive)
-            DialogueManager.instance.StartDialogue(id);
+        if (!DialogueManager.Instance.isDialogueActive)
+            DialogueManager.Instance.StartDialogue(id);
     }
 
     private void OnMouseDown()  //터치 감지

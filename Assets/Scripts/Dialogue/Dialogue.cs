@@ -19,7 +19,7 @@ public class Dialogue
         {
             [Range(0f, 1f), Header("- 대사 출력 속도")]
             public float letterSpeed;
-   
+
             //스타일선택
             public enum Styles
             {
@@ -43,7 +43,7 @@ public class Dialogue
             [Header("- 초상화 설정"), Space(5)]
             public PortraitSettings portraitSettings;
 
-
+            //선택창팝업
             [System.Serializable]
             public struct SelectionPopupSettings
             {
@@ -69,7 +69,7 @@ public class Dialogue
             public SelectionPopupSettings selectionPopupSettings;
 
 
-
+            //애니메이션 세팅
             [System.Serializable]
             public struct AnimationSettings
             {
@@ -117,7 +117,7 @@ public class Dialogue
             [Header("- 애니메이션 설정"), Space(5)]
             public AnimationSettings animationSettings;
 
-
+            //효과음 설정
             [System.Serializable]
             public struct SFXSettings
             {
@@ -135,6 +135,17 @@ public class Dialogue
             [Header("- 사운드 효과 설정"), Space(5)]
             public SFXSettings sFXSettings;
 
+            //이벤트 컷신 설정
+            [System.Serializable]
+            public struct CutSceneSettings
+            {
+                [Header("- 컷씬 활성화"), Space(5)]
+                public bool activateCutScene;
+                [Header("- 컷씬에 사용할 이미지"), Space(5)]
+                public Sprite image;
+            }
+            [Header("- 이벤트 컷신 설정"), Space(5)]
+            public CutSceneSettings cutSceneSettings;
         }
 
         [Header("- ↑ 이 \'Dialog\'의 제목")]

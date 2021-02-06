@@ -30,7 +30,7 @@ public class ChoiceBox : MonoBehaviour
         choices = mChoices;
         curNum = 0;
         tmp = 0;
-        choicesLength = DialogueManager.instance.curDialogSet.detail.selectionPopupSettings.selectionPopupData.choices.Length;
+        choicesLength = DialogueManager.Instance.curDialogSet.detail.selectionPopupSettings.selectionPopupData.choices.Length;
 
         //각 텍스트를 오브젝트텍스트에 넣어주는 과정.
         questionText.text = question;
@@ -62,7 +62,7 @@ public class ChoiceBox : MonoBehaviour
         isChoiceBox = false;
         animator.SetBool("isOpen", isChoiceBox);
         //DialogueManager에 보내기. 
-        DialogueManager.instance.PrintTheChoiceResult(valueToReturn);
+        DialogueManager.Instance.PrintTheChoiceResult(valueToReturn);
     }
 
     private void Update()
@@ -171,7 +171,7 @@ public class ChoiceBox : MonoBehaviour
                 SetCurNum(tmp);
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && !DialogueManager.instance.isDuringTyping)
+            if (Input.GetKeyDown(KeyCode.Space) && !DialogueManager.Instance.isDuringTyping)
                 GetChoice(curNum);
         }
     }

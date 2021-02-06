@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager : DontDestroy<DialogueManager>
 {
     public Animator dialog_animator;
     public RuntimeAnimatorController stable, slide;
     public Text dialogObjName, dialogSentence;
-    public Image dialogPortrait_Left, dialogPortrait_Right;
+    public Image dialogPortrait_Left, dialogPortrait_Right, cutSceneImage;
     public ChoiceBox choiceBox;
     public AudioSource audioSource;
     public AudioSystem audioSystem;
@@ -44,23 +44,22 @@ public class DialogueManager : MonoBehaviour
     //선택상자에대한 응답에서 문장 빨리넘기기 했을 시 사용할 문장.  이미 도도도 찍고있던 문장을 담고있다.
     string printingSentence;
 
-    #region For Signleton
-    //싱글턴
-    public static DialogueManager instance;
+    #region For Signleton <<-- DontDestory 쓸거라서 잠시 주석 처리 
+    //싱글턴 <<-- DontDestory 쓸거라서 잠시 주석 처리 .
+    //public static DialogueManager instance;
 
-    private void Awake()
+    override protected void OnAwake()
     {
         //싱글턴
-        instance = this;
+        //instance = this;
         dialogueData_Dic = new Dictionary<int, Dialogue>();
     }
     #endregion
 
     // Start is called before the first frame update
-    void Start()
+    override protected void OnStart()
     {       
         dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
-
 
         foreach (AttachThis attachThis in 스토리정리.GetComponentsInChildren<AttachThis>())
         {
@@ -72,7 +71,6 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-
         //딕셔너리에 넣는 과정 
         if (dialogues.Count != 0)
         {
@@ -81,22 +79,17 @@ public class DialogueManager : MonoBehaviour
                 dialogueData_Dic.Add(item.storyId, item);
             }
         }
-
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
-        {
             isCtrlKeyDowned = true;
-        }
 
         if (isCtrlKeyDowned)
         {
-            if (isDuringTyping)
-                PrintAtOnce(curDialogSet);
-            else
-                DisplayNextSentence();
+            if (isDuringTyping) PrintAtOnce(curDialogSet);
+            else DisplayNextSentence();
         }
     }
 
@@ -219,7 +212,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         //Object 애니메이션
-        if (dialogueSet.detail.animationSettings.activateObjAnimate)
+        if (dialogueSet.detail.animationSettings.activateObjAnimate)        
         {
             foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.animationSettings.objectAnimationData)
             {
@@ -230,9 +223,19 @@ public class DialogueManager : MonoBehaviour
         //효과음 실행
         audioSystem.DialogSFXHelper(dialogueSet);
 
+        //컷씬 출력 
+        if (dialogueSet.detail.cutSceneSettings.activateCutScene)
+        {
+            cutSceneImage.color = new Color(1, 1, 1, 1);
+            cutSceneImage.sprite = dialogueSet.detail.cutSceneSettings.image;
+            cutSceneImage.SetNativeSize();
+        }
+        else cutSceneImage.color = new Color(1, 1, 1, 0);
+
+
         ///
         ///Details Ends
-        
+
 
         //문장 도도도 출력하는 부분
         StopAllCoroutines();

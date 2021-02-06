@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             case 4:
                 
             case 5:
-                DialogueManager.instance.StartDialogue(storyNumber);
+                DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
             default:
                 break;

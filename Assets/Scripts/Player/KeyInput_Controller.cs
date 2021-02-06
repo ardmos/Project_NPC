@@ -152,8 +152,8 @@ public class KeyInput_Controller : MonoBehaviour
         if(isControllable && !isrm)
         {
             //사용자 입력값 수집.
-            movement.x = DialogueManager.instance.isDialogueActive ? 0 : Input.GetAxisRaw("Horizontal");
-            movement.y = DialogueManager.instance.isDialogueActive ? 0 : Input.GetAxisRaw("Vertical");
+            movement.x = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Horizontal");
+            movement.y = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Vertical");
         }
 
         animator.SetFloat("Horizontal", movement.x);
