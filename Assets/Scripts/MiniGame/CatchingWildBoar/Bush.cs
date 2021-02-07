@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bush : MonoBehaviour
 {
+    public AudioClip audioClip;
     public bool generateSwitch;
     public GameObject animalFriendsPref;
     public string[] prefabNames;
@@ -37,6 +38,8 @@ public class Bush : MonoBehaviour
     IEnumerator GenerateAnimalFriends()
     {
         gameObject.GetComponent<Animator>().SetTrigger("IsGrassMoving");
+        //부쉬 사운드 일단 보류.
+        //gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
 
         //한 마리씩만 생성.
         generateSwitch = false;

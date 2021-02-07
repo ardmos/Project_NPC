@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewWildBoar : MonoBehaviour
 {
+    public AudioClip audioClip;
     public float speed;
     public List<GameObject> bushes;
     public bool go, hasCaught;
@@ -121,6 +122,7 @@ public class NewWildBoar : MonoBehaviour
             if (wildBoar) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
             else if (goldenWildBoar) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount += 5;
             else if (squirrel) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount--;
+            gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
             yield return new WaitForSeconds(1f);
             Destroy(gameObject);
         }
@@ -137,6 +139,7 @@ public class NewWildBoar : MonoBehaviour
         else if (squirrel) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount--;
         yield return new WaitForSeconds(0.3f);
         particleSystems[2].Play();
+        gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
         yield return new WaitForSeconds(0.7f);     
         Destroy(gameObject);
     }
