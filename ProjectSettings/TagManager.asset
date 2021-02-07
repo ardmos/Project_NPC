@@ -54,3 +54,6 @@ TagManager:
   - name: NPC
     uniqueID: 3758488885
     locked: 0
+  - name: FX
+    uniqueID: 1907403191
+    locked: 0

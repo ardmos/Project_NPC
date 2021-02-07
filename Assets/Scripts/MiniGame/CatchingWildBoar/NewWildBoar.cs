@@ -17,6 +17,8 @@ public class NewWildBoar : MonoBehaviour
     //피격 이펙트
     ParticleSystem[] particleSystems;
 
+    public bool goldenWildBoar, wildBoar, squirrel;
+
     void Update()
     {
         if (go)
@@ -70,27 +72,34 @@ public class NewWildBoar : MonoBehaviour
     }
 
     private void OnMouseDown()
-    {
-        //동물별 피격 효과.지금 여기서부터 해야함.  셋트리거 없는애들떄문에.  일단 다르게 처리를 해줘야겠다. 
+    {        
         //그리고 동물별 잡았을 때 결과 다르게. 
-        //때렸을 때 쑥 팡 살짝 차이나게. 
-
 
         if (hasCaught)
         {
             return;
         }
 
-        //모드별 피격 이미지.
+        //모드별 피격 효과.
         if (isStrokeMode)
         {
             //쓰다듬기모드
+            GameObject prefObj = Instantiate(Resources.Load("Prefabs/MiniGame/CatchingWildBoar/Feather") as GameObject);
+            //Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //prefObj.transform.position = new Vector3(pos.x, pos.y, 0f);
+            prefObj.transform.SetParent(gameObject.transform);
+            prefObj.transform.localPosition = new Vector3(-0.55f, -0.55f);
             StopAllCoroutines();
             StartCoroutine(SaveOneSec_Stroked());
         }
         else
         {
             //잡기모드
+            GameObject prefObj = Instantiate(Resources.Load("Prefabs/MiniGame/CatchingWildBoar/Sword") as GameObject);
+            //Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //prefObj.transform.position = new Vector3(pos.x, pos.y, 0f);
+            prefObj.transform.SetParent(gameObject.transform);
+            prefObj.transform.localPosition = new Vector3(0.6f, -0.2f);
             StartCoroutine(SaveOneSec_Caught());
         }
     }
@@ -109,21 +118,26 @@ public class NewWildBoar : MonoBehaviour
         {
             hasCaught = true;
             go = false;
-            FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+            if (wildBoar) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+            else if (goldenWildBoar) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount += 5;
+            else if (squirrel) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount--;
             yield return new WaitForSeconds(1f);
             Destroy(gameObject);
         }
     }
     IEnumerator SaveOneSec_Caught()
-    {
-        hasCaught = true;
+    { 
         particleSystems[1].Play();
-        particleSystems[2].Play();
-        gameObject.GetComponent<Animator>().SetTrigger("isCaught");                
+        gameObject.GetComponent<Animator>().SetTrigger("isCaught");
+
+        hasCaught = true;
         go = false;
-        FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
-        yield return new WaitForSeconds(1f);
-        
+        if (wildBoar) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+        else if (goldenWildBoar) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount += 5;
+        else if (squirrel) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount--;
+        yield return new WaitForSeconds(0.3f);
+        particleSystems[2].Play();
+        yield return new WaitForSeconds(0.7f);     
         Destroy(gameObject);
     }
 }

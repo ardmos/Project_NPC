@@ -55,8 +55,11 @@ MonoBehaviour:
   hasCaught: 0
   n: 0
   target: {x: 0, y: 0}
-  isStrokeMode: 0
+  isStrokeMode: 1
   strokeCount: 0
+  goldenWildBoar: 1
+  wildBoar: 0
+  squirrel: 0
 --- !u!212 &2201277527138850158
 SpriteRenderer:
   m_ObjectHideFlags: 0

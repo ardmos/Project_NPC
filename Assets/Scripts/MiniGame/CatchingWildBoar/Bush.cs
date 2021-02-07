@@ -28,28 +28,33 @@ public class Bush : MonoBehaviour
         
         if (generateSwitch)
         {
-            gameObject.GetComponent<Animator>().SetTrigger("IsGrassMoving");
-            GenerateAnimalFriends();
+            StartCoroutine(GenerateAnimalFriends());
         }
         
     }
 
 
-
-    public void GenerateAnimalFriends()
+    IEnumerator GenerateAnimalFriends()
     {
-        prefabNames = new string[] { "NewWildBoar", "NewWildBoar", "GoldenWildBoar", "Squirrel" };
+        gameObject.GetComponent<Animator>().SetTrigger("IsGrassMoving");
+
+        //한 마리씩만 생성.
+        generateSwitch = false;
+
+        yield return new WaitForSeconds(0.5f);
+
+        prefabNames = new string[] { "NewWildBoar", "NewWildBoar", "NewWildBoar", "NewWildBoar", "NewWildBoar", "NewWildBoar", "GoldenWildBoar", "Squirrel", "Squirrel", "Squirrel" };
 
         //동물친구들 생성.  
         //animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/WildBoar") as GameObject;
         //animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/NewWildBoar") as GameObject;
-        animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/"+prefabNames[Random.Range(0, prefabNames.Length)]) as GameObject;
-        GameObject prefObj = Instantiate(animalFriendsPref) as GameObject;
+        animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/" + prefabNames[Random.Range(0, prefabNames.Length)]) as GameObject;
+        GameObject prefObj = Instantiate(animalFriendsPref);
         prefObj.transform.SetParent(gameObject.transform);
         prefObj.transform.localPosition = Vector3.zero;
         prefObj.GetComponent<NewWildBoar>().DecideWhereToGo();
 
-        //한 마리씩만 생성.
-        generateSwitch = false;
+
     }
+
 }

@@ -57,6 +57,9 @@ MonoBehaviour:
   target: {x: 0, y: 0}
   isStrokeMode: 0
   strokeCount: 0
+  goldenWildBoar: 0
+  wildBoar: 1
+  squirrel: 0
 --- !u!212 &2201277527138850158
 SpriteRenderer:
   m_ObjectHideFlags: 0
