@@ -5,13 +5,16 @@ using UnityEngine;
 public class NewWildBoar : MonoBehaviour
 {
     public List<GameObject> bushes;
-    public bool go;
+    public bool go, hasCaught;
     public int n;
     public Vector2 target;
 
     //쓰다듬기 상황  <-- 이걸 트루로 해주면 된다. 
     public bool isStrokeMode;
     public int strokeCount;
+
+    //피격 이펙트
+    ParticleSystem[] particleSystems;
 
     void Update()
     {
@@ -29,11 +32,18 @@ public class NewWildBoar : MonoBehaviour
             {
                 //진행 방향에 따른 이미지 방향 전환
                 if (target.x < gameObject.transform.position.x)
+                {
                     //그대로
                     gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                    particleSystems[0].gameObject.transform.localPosition = new Vector3(-0.45f, 0.23f, 0);
+                }
                 else
+                {
                     //뒤집
                     gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                    particleSystems[0].gameObject.transform.localPosition = new Vector3(0.45f, 0.23f, 0);
+                }
+
             }
         }
     }
@@ -42,6 +52,8 @@ public class NewWildBoar : MonoBehaviour
     //지금 부쉬가 선택되는 케이스도 그대로 둠 -> 결과적으로 젠 타이밍의 랜덤성 올라감
     public void DecideWhereToGo()
     {
+        particleSystems = gameObject.GetComponentsInChildren<ParticleSystem>();
+
         foreach (GameObject bushObj in GameObject.FindGameObjectsWithTag("Bush"))
         {
             bushes.Add(bushObj);
@@ -58,6 +70,11 @@ public class NewWildBoar : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (hasCaught)
+        {
+            return;
+        }
+
         //모드별 피격 이미지.
         if (isStrokeMode)
         {
@@ -78,9 +95,13 @@ public class NewWildBoar : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetTrigger("isStroked");
         strokeCount++;
-        
+
+        //쓰다듬 피격 이펙트 
+        particleSystems[0].Play();
+
         if (strokeCount >= 3)
         {
+            hasCaught = true;
             go = false;
             FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
             yield return new WaitForSeconds(1f);
@@ -89,10 +110,14 @@ public class NewWildBoar : MonoBehaviour
     }
     IEnumerator SaveOneSec_Caught()
     {
+        hasCaught = true;
+        particleSystems[1].Play();
+        particleSystems[2].Play();
         gameObject.GetComponent<Animator>().SetTrigger("isCaught");                
         go = false;
         FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
         yield return new WaitForSeconds(1f);
+        
         Destroy(gameObject);
     }
 }
