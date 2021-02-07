@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BoarStroked
+  m_Name: GrassMoving
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 973558131159063802, guid: a33770528a170b045b7d2f48687c0e21,
-        type: 3}
-    - time: 1.4
-      value: {fileID: 973558131159063802, guid: a33770528a170b045b7d2f48687c0e21,
-        type: 3}
+      value: {fileID: 21300000, guid: a7086ae2995dcb445bef43f4fd20f947, type: 3}
+    - time: 0.2
+      value: {fileID: 21300000, guid: fef8c0e095739ee48ac4d136140329de, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,14 +42,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 973558131159063802, guid: a33770528a170b045b7d2f48687c0e21, type: 3}
-    - {fileID: 973558131159063802, guid: a33770528a170b045b7d2f48687c0e21, type: 3}
+    - {fileID: 21300000, guid: a7086ae2995dcb445bef43f4fd20f947, type: 3}
+    - {fileID: 21300000, guid: fef8c0e095739ee48ac4d136140329de, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.6
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -6,6 +6,7 @@ public class Bush : MonoBehaviour
 {
     public bool generateSwitch;
     public GameObject animalFriendsPref;
+    public string[] prefabNames;
 
     public int frameCounter;
     private void Update()
@@ -27,6 +28,7 @@ public class Bush : MonoBehaviour
         
         if (generateSwitch)
         {
+            gameObject.GetComponent<Animator>().SetTrigger("IsGrassMoving");
             GenerateAnimalFriends();
         }
         
@@ -36,10 +38,12 @@ public class Bush : MonoBehaviour
 
     public void GenerateAnimalFriends()
     {
+        prefabNames = new string[] { "NewWildBoar", "NewWildBoar", "GoldenWildBoar", "Squirrel" };
 
         //동물친구들 생성.  
         //animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/WildBoar") as GameObject;
-        animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/NewWildBoar") as GameObject;
+        //animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/NewWildBoar") as GameObject;
+        animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/"+prefabNames[Random.Range(0, prefabNames.Length)]) as GameObject;
         GameObject prefObj = Instantiate(animalFriendsPref) as GameObject;
         prefObj.transform.SetParent(gameObject.transform);
         prefObj.transform.localPosition = Vector3.zero;

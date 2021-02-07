@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1501677296}
   - component: {fileID: 2971722944269401368}
   m_Layer: 0
-  m_Name: NewWildBoar
+  m_Name: GoldenWildBoar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f5fe5ed590b864bb599ae29db229ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.08
   bushes: []
   go: 0
   hasCaught: 0
@@ -96,8 +96,7 @@ SpriteRenderer:
   m_SortingLayerID: -1119815369
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3379055427739019791, guid: a33770528a170b045b7d2f48687c0e21,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 19a2d1784ec139e4a9829025886c50af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.96875}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 0.64, y: 0.63}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,7 +143,7 @@ Animator:
   m_GameObject: {fileID: 7902615189339106961}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 57c0c0597f8a14118a2c56ea84cab008, type: 2}
+  m_Controller: {fileID: 9100000, guid: bceb2fc39bee4864898772e33cc20188, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

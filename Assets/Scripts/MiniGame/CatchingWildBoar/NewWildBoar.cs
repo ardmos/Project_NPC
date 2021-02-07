@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewWildBoar : MonoBehaviour
 {
+    public float speed;
     public List<GameObject> bushes;
     public bool go, hasCaught;
     public int n;
@@ -21,7 +22,7 @@ public class NewWildBoar : MonoBehaviour
         if (go)
         {
             //이동
-            gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, target, 0.05f);                        
+            gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, target, speed);                        
 
             if ((Vector2)gameObject.transform.position == target)
             {
@@ -49,7 +50,7 @@ public class NewWildBoar : MonoBehaviour
     }
 
     //목적지를 가지고 이동. 많은 부쉬들 중 선택.  
-    //지금 부쉬가 선택되는 케이스도 그대로 둠 -> 결과적으로 젠 타이밍의 랜덤성 올라감
+    //지금 부쉬가 선택되는 케이스도 그대로 둠 -> 결과적으로 젠 타이밍의 랜덤성 올라감   <--- 은 그냥 해결했음.
     public void DecideWhereToGo()
     {
         particleSystems = gameObject.GetComponentsInChildren<ParticleSystem>();
@@ -58,7 +59,7 @@ public class NewWildBoar : MonoBehaviour
         {
             bushes.Add(bushObj);
         }       
-        n = Random.Range(0, bushes.Count - 1);
+        n = Random.Range(0, bushes.Count);
         if (bushes[n].transform.position == transform.position)
         {            
             DecideWhereToGo();
@@ -70,6 +71,11 @@ public class NewWildBoar : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //동물별 피격 효과.지금 여기서부터 해야함.  셋트리거 없는애들떄문에.  일단 다르게 처리를 해줘야겠다. 
+        //그리고 동물별 잡았을 때 결과 다르게. 
+        //때렸을 때 쑥 팡 살짝 차이나게. 
+
+
         if (hasCaught)
         {
             return;
