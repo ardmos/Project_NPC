@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NewWildBoar : MonoBehaviour
 {
-    public AudioClip audioClip;
+    public AudioClip audioClip_PointCounterUp, audioClip_PointCounterSuperUp, audioClip_PointCounterDown;
     public float speed;
     public List<GameObject> bushes;
     public bool go, hasCaught;
@@ -115,14 +115,26 @@ public class NewWildBoar : MonoBehaviour
         //쓰다듬 피격 이펙트 
         particleSystems[0].Play();
 
-        if (strokeCount >= 3)
+        if (strokeCount >= 2)
         {
             hasCaught = true;
             go = false;
-            if (wildBoar) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
-            else if (goldenWildBoar) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount += 5;
-            else if (squirrel) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount--;
-            gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
+            if (wildBoar)
+            {
+                FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+                gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip_PointCounterUp);
+            }
+            else if (goldenWildBoar) 
+            {
+                FindObjectOfType<CatchingWildBoar.GameManager>().catchCount += 5;
+                gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip_PointCounterSuperUp);
+            }
+
+            else if (squirrel)
+            {
+                FindObjectOfType<CatchingWildBoar.GameManager>().catchCount++;
+                gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip_PointCounterUp);
+            }
             yield return new WaitForSeconds(1f);
             Destroy(gameObject);
         }
@@ -139,7 +151,9 @@ public class NewWildBoar : MonoBehaviour
         else if (squirrel) FindObjectOfType<CatchingWildBoar.GameManager>().catchCount--;
         yield return new WaitForSeconds(0.3f);
         particleSystems[2].Play();
-        gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
+        if (wildBoar) gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip_PointCounterUp);
+        else if (goldenWildBoar) gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip_PointCounterSuperUp);
+        else if (squirrel) gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip_PointCounterDown);
         yield return new WaitForSeconds(0.7f);     
         Destroy(gameObject);
     }

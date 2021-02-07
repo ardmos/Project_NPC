@@ -50,14 +50,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f5fe5ed590b864bb599ae29db229ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 814c98261dbb5ef4e89c5b0cc0711b17, type: 3}
+  audioClip_PointCounterUp: {fileID: 8300000, guid: 814c98261dbb5ef4e89c5b0cc0711b17,
+    type: 3}
+  audioClip_PointCounterSuperUp: {fileID: 8300000, guid: d45142cd72d23e246b7be6942f92e604,
+    type: 3}
+  audioClip_PointCounterDown: {fileID: 8300000, guid: 61f901c07e414c84ea95ff6bde9805a2,
+    type: 3}
   speed: 0.05
   bushes: []
   go: 0
   hasCaught: 0
   n: 0
   target: {x: 0, y: 0}
-  isStrokeMode: 0
+  isStrokeMode: 1
   strokeCount: 0
   goldenWildBoar: 0
   wildBoar: 1
