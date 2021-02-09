@@ -150,6 +150,8 @@ public class Dialogue
 
         [Header("- ↑ 이 \'Dialog\'의 제목")]
         public string smallTitle_;
+        [HideInInspector]
+        public string dialogueSetName;  //인스펙터상에서는 숨겨둠. 나중에 혹시 다이얼로그셋 접근하고싶으면 이걸 찾아서 접근하기. 
         [Header("- \'Dialog\'세부 설정"), Space(5)]
         public Details detail;
 

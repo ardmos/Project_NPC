@@ -38,6 +38,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     [HideInInspector]
     public Dialogue.DialogueSet curDialogSet;
+    public int curDialogSetCountNumber;
     public int curStoryId;
     public string curStorySmallTitle;
 
@@ -112,8 +113,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
             dialogue = dialogueData_Dic[objid];
             curStorySmallTitle = dialogue.smallTitle_;
             curStoryId = dialogue.storyId;
+            curDialogSetCountNumber = 0;    //넘버 초기화. 
 
-            //그 중 dialogueSet 배열에 접근한다.
+            //그 중 dialogueSet 배열에 접근한다.  배열을 큐로 변환시키기 위함. 편의를 위해서. 
             Dialogue.DialogueSet[] dialogueSet = dialogue.dialogue;
             //얻어낸 dialogueSet을 Queue에 순차적으로 Enqueue 한다.
             dialogueSetsQue.Clear();
@@ -145,6 +147,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             NPCResponseToTheChoiceResult(npcResponseNum);
             return;
         }
+
         if (dialogueSetsQue.Count == 0)
         {
             EndDialogue();
@@ -153,7 +156,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
         //curDialogSet 갱신.
         curDialogSet = dialogueSetsQue.Dequeue();
-
+        //dialogueSetName을 설정해주자.  Story아이디_카운트
+        curDialogSet.dialogueSetName = curStoryId.ToString() + "_" + curDialogSetCountNumber.ToString();
+        curDialogSetCountNumber++;  //1씩 더해줌. 
 
         BatchService(curDialogSet);
     }
@@ -245,8 +250,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
     {
         //선택된 답 저장. 5. 정해진 루트 진행을 위한. 
         //선택 결과들은 딕셔너리 형태로 저장될것임. 
-        //Key값은 (현 다이얼로그 SmallTitle값 스토리id값 + _ + 현 DialogueSet의 SmallTitle값 + _ +현 선택상자의 Question값), Value값은 int로, 어떤 선택을 했는지 저장. 
-        GameManager.Instance.choiceResults.Add(curStorySmallTitle + " " + curStoryId.ToString()+'_'+curDialogSet.smallTitle_+'_'+ curDialogSet.detail.selectionPopupSettings.selectionPopupData.question, valueToReturn);
+        //Key값은 string으로 dialogueSetName을 넣어주고(스토리아이디값_몇번째다이얼로그인지카운트) , Value값은 int로 어떤 선택을 했는지 번호를 저장(0번부터 시작).
+                                                //잡고나서 선택 31_물어보기_행동결정
+        GameManager.Instance.AddChoiceResults(curDialogSet.dialogueSetName, valueToReturn);
 
         activeChoiceBox = false;
         npcResponseNum = valueToReturn;//npc 응답연결을 위한 저장.  
@@ -352,6 +358,18 @@ public class DialogueManager : DontDestroy<DialogueManager>
     {
         isDialogueActive = false;
         dialog_animator.SetBool("isOpen", false);
+
+        //특정 이벤트 연계 위한 부분.
+        switch (curStoryId)
+        {
+            case 31:
+                //멧돼지게임
+                GameManager.Instance.storyNumber = 31;
+                GameManager.Instance.StartStoryEvent();                
+                break;
+            default:
+                break;
+        }
     }
 
 

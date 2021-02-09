@@ -12,33 +12,73 @@ namespace CatchingWildBoar
         public int catchCount;
         public bool isClear;
 
+        //성공or실패 팝업
+        public GameObject popupObj;
+
         //잡고나서 어떻게 할지 선택상자 다이얼로그 호출. 
-        //멧돼지 어떻게할지 선택상자 id번호 31
+        //멧돼지 어떻게할지 선택상자 id번호 31_0        
 
         //동물 생성할 부쉬 계속 바꿔주기 위한 부분
+        [HideInInspector]
         public List<GameObject> bushes;
+        [HideInInspector]
         public int n;
+        [HideInInspector]
         public int m;
+        [HideInInspector]
         public int j;
+        [HideInInspector]
         public int frameCounter, genTiming;
 
         //상단 정보 표시를 위한 텍스트UI
         public Text timerText, countText;
 
-        //커서 변경을 위한 부분
+        /* //커서 변경을 위한 부분. 지금은 안씀.
         public Texture2D cursorTexture;
         public CursorMode cursorMode = CursorMode.Auto;
         public Vector2 hotSpot = Vector2.zero;
+        */
 
         //타이머
+        [HideInInspector]
         public float time;
+        bool isTimeZero;
+
+
+        //때려서 쫒을것인가, 간지럽혀서 쫒을것인가.
+        public bool isStrokeMode;        
 
         private void Start()
+        {
+            StartMiniGame();       
+        }
+
+        public void StartMiniGame()
         {
             countText.text = "Pase 1  Count : 0";
             foreach (GameObject bush in GameObject.FindGameObjectsWithTag("Bush"))
             {
                 bushes.Add(bush);
+            }
+
+            time = 60;
+            catchCount = 0;
+            isClear = false;
+            isTimeZero = false;
+
+            //GameManager로부터 사용자의 선택 결과를 읽어와서 isStrokeMode를 설정해준다.            
+            switch (global::GameManager.Instance.GetChoiceResults("31_0"))
+            {
+                case 0:
+                    //쓰다듬는다
+                    isStrokeMode = true;
+                    break;
+                case 1:
+                    //때린다
+                    isStrokeMode = false;
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -46,7 +86,17 @@ namespace CatchingWildBoar
         {
             //타이머
             if (time > 0) time -= Time.deltaTime;
-            //else if(time ==0) //실패!!! 팝업!!띄우기.! 재도전? 나가기? 
+            else if (time == 0 && isTimeZero==false)
+            {
+                //실패시 과정 처리.
+                //1. 실패 결과 팝업을 띄우고
+                //2. 다시하기를 누르면 미니게임 다시 시작해주고 (살리기 or 죽이기 선택해서. -  GameManager의 31_0의 값을 바꿔주자. 그럼 시작시에 자동으로 변경 적용 될 것.  )
+                //2. 나가기를 누르면 그냥 이 전 씬으로 이동한다. 여기서는 인덱스 -1 해주면 됨. 지금 이곳은 그렇다.
+                isTimeZero = true;
+                //실패 팝업 0
+                FindObjectOfType<ResultPopup>().MakePopup(0);
+
+            }   //실패!!! 팝업!!띄우기.! 재도전? 나가기? 
 
             timerText.text = Mathf.Ceil(time).ToString();
 
@@ -59,9 +109,8 @@ namespace CatchingWildBoar
                 countText.text = "Clear!  Count : " + catchCount.ToString();
                 isClear = true;
                 //다이얼로그 시작 
-                StartChoice();
-            }
-            //text.text = " Count : " + catchCount.ToString();
+                StartPopup();
+            }   //시간 내 잡기 성공           
        
             if (!isClear && catchCount<50)
             {
@@ -92,7 +141,7 @@ namespace CatchingWildBoar
                     }
                 }
                 frameCounter++;
-            }
+            }   //멧돼지 페이스 조절
             
         }
 
@@ -123,10 +172,10 @@ namespace CatchingWildBoar
             bushes[j].GetComponent<Bush>().generateSwitch = true;
         }
 
-        void StartChoice()
+        void StartPopup()
         {
-            //다이얼로그 시작
-            DialogueManager.Instance.StartDialogue(31);
+            //성공 팝업 1
+            FindObjectOfType<ResultPopup>().MakePopup(1);
         }
     }
 }

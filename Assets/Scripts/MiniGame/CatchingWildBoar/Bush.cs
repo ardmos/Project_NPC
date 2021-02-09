@@ -52,12 +52,11 @@ public class Bush : MonoBehaviour
         //animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/WildBoar") as GameObject;
         //animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/NewWildBoar") as GameObject;
         animalFriendsPref = Resources.Load("Prefabs/MiniGame/CatchingWildBoar/" + prefabNames[Random.Range(0, prefabNames.Length)]) as GameObject;
-        GameObject prefObj = Instantiate(animalFriendsPref);
+        GameObject prefObj = Instantiate(animalFriendsPref);        
+        prefObj.GetComponent<NewWildBoar>().isStrokeMode = FindObjectOfType<CatchingWildBoar.GameManager>().isStrokeMode;
         prefObj.transform.SetParent(gameObject.transform);
         prefObj.transform.localPosition = Vector3.zero;
         prefObj.GetComponent<NewWildBoar>().DecideWhereToGo();
-
-
     }
 
 }
