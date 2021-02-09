@@ -36,6 +36,7 @@ public class ResultPopup : MonoBehaviour
 
     public void EndMiniGame()
     {
+        print("EndMiniGame");
         //이전 씬으로 이동. 
         SceneManager.LoadScene("SampleRoom_Incident");
     }

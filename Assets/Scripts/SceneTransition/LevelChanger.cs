@@ -30,6 +30,7 @@ public class LevelChanger : MonoBehaviour
 
     public void FadeToNextLevel()   //이걸 호출하면 빌드세팅 씬 넘버 순서상 다음 씬으로 넘어감.! 
     {
+        print("FadeToNextLevel");
         FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -41,6 +42,7 @@ public class LevelChanger : MonoBehaviour
 
     public void OnFadeComplete()    //애니메이션이벤트를 사용했음.
     {
+        print("OnFadeComplete");
         SceneManager.LoadScene(levelToLoad);
     }
 

@@ -271,6 +271,7 @@ MonoBehaviour:
   animator: {fileID: 20024209}
   movement: {x: 0, y: 0}
   rayDir: {x: 0, y: 0}
+  scanObject: {fileID: 0}
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
@@ -2654,6 +2655,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   movement: {x: 0, y: 0}
   rayDir: {x: 0, y: 0}
+  scanObject: {fileID: 0}
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
@@ -7387,9 +7389,9 @@ GameObject:
   - component: {fileID: 1807504354}
   - component: {fileID: 1807504353}
   - component: {fileID: 1807504352}
-  - component: {fileID: 1807504355}
   - component: {fileID: 1807504356}
   - component: {fileID: 1807504357}
+  - component: {fileID: 1807504355}
   m_Layer: 8
   m_Name: JiHyun
   m_TagString: Untagged
@@ -7517,15 +7519,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1807504350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e93c82bb2515a44f8329bf5b1f91a0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ef8de7bccf384c2bb7cb05d06ad92d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isControllable: 0
   movespeed: 5
   rb: {fileID: 1807504352}
   animator: {fileID: 1807504356}
   movement: {x: 0, y: 0}
-  rayDir: {x: 0, y: 0}
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
@@ -7921,7 +7921,7 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 1
           objectAnimationData:
-          - objToMakeMove: {fileID: 20024210}
+          - objToMakeMove: {fileID: 20024207}
             dir: 1
             distance: 3
             endDir: 0
@@ -8040,7 +8040,7 @@ MonoBehaviour:
                 animationSettings:
                   activateObjAnimate: 1
                   objectAnimationData:
-                  - objToMakeMove: {fileID: 1807504355}
+                  - objToMakeMove: {fileID: 1807504350}
                     dir: 4
                     distance: 2
                     endDir: 2
@@ -8059,7 +8059,7 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 1
           objectAnimationData:
-          - objToMakeMove: {fileID: 1807504355}
+          - objToMakeMove: {fileID: 1807504350}
             dir: 3
             distance: 2
             endDir: 1
@@ -8198,9 +8198,9 @@ GameObject:
   - component: {fileID: 2066939047}
   - component: {fileID: 2066939046}
   - component: {fileID: 2066939045}
-  - component: {fileID: 2066939044}
   - component: {fileID: 2066939043}
   - component: {fileID: 2066939042}
+  - component: {fileID: 2066939044}
   m_Layer: 8
   m_Name: JiHyun (1)
   m_TagString: Untagged
@@ -8263,15 +8263,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2066939040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e93c82bb2515a44f8329bf5b1f91a0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ef8de7bccf384c2bb7cb05d06ad92d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isControllable: 0
   movespeed: 5
   rb: {fileID: 2066939045}
   animator: {fileID: 2066939043}
   movement: {x: 0, y: 0}
-  rayDir: {x: 0, y: 0}
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}

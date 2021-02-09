@@ -2,22 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyInput_Controller : MonoBehaviour
+public class NPC : MonoBehaviour
 {
-    //키인풋 컨트롤 만들기! 아무 오브젝트에나 이거 붙이면 방향키 입력 받아서 움직임! 
-    //타일맵의 셀 사이즈를 1로 했기 때문에,  이동도 1만큼 시키면 딱 딱 맞음. <-- 바람의나라 방식
-    //스타듀밸리방식은 translate * 속도 이용
-
-
-
-        //메인캐릭터만 쓰는 스크립트가 필요하겠다!! NPC는 NPC.cs로 제작. 
-        //혹은, 다른애들은 이동만 가능하게끔 만들어주던가.
-        //현재 레이캐스트 문제가 있다 .
-
-
-
-    //현재 컨트롤할 대상 선택
-    public bool isControllable;
+    //NPC 전용 Controller
 
 
     public float movespeed = 5f;
@@ -25,8 +12,7 @@ public class KeyInput_Controller : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    public Vector2 movement, rayDir;
-    public GameObject scanObject;
+    public Vector2 movement;    
 
 
     //리모트무브
@@ -39,11 +25,11 @@ public class KeyInput_Controller : MonoBehaviour
     void Update()
     {
         //컨트롤체크 안되어있는 뇨속은 컨트롤 불가!
- 
+
         //리모트컨트롤 구현부분
         if (isrm)
         {
-            Vector2 curpos = gameObject.transform.position;         
+            Vector2 curpos = gameObject.transform.position;
             switch (animData.dir)
             {
                 //도착했는지 확인.
@@ -131,91 +117,30 @@ public class KeyInput_Controller : MonoBehaviour
                 //Idle방향 따로 설정해줄 수 있음.
                 if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down)
                 {
-                    animator.SetInteger("Direction", 0);
-                    rayDir = Vector2.down;
+                    animator.SetInteger("Direction", 0);                    
                 }
                 else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up)
                 {
-                    animator.SetInteger("Direction", 1);
-                    rayDir = Vector2.up;
+                    animator.SetInteger("Direction", 1);                    
                 }
                 else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right)
                 {
-                    animator.SetInteger("Direction", 2);
-                    rayDir = Vector2.right;
+                    animator.SetInteger("Direction", 2);                    
                 }
                 else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left)
                 {
-                    animator.SetInteger("Direction", 3);
-                    rayDir = Vector2.left;
+                    animator.SetInteger("Direction", 3);                    
                 }
 
                 return;
-            }                        
-        }
-        
-        
-        if(isControllable && !isrm)
-        {
-            //사용자 입력값 수집.
-            movement.x = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Horizontal");
-            movement.y = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Vertical");
-        }
-
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
-        //대각선 이동 속도 조절 
-        if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
-            movespeed = 4f;
-        else
-            movespeed = 5f;
-
-        //Idle방향
-        if (movement.y == -1)
-        {
-            animator.SetInteger("Direction", 0);
-            rayDir = Vector2.down;
-        }
-        else if (movement.y == 1)
-        {
-            animator.SetInteger("Direction", 1);
-            rayDir = Vector2.up;
-        }
-        else if (movement.x == 1)
-        {
-            animator.SetInteger("Direction", 2);
-            rayDir = Vector2.right;
-        }
-        else if (movement.x == -1)
-        {
-            animator.SetInteger("Direction", 3);
-            rayDir = Vector2.left;
-        }
-
-
-        //스캔 발동. 스페이스 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
-        if (Input.GetButtonDown("Jump") && scanObject != null)
-        {
-            print("scanObject: " + scanObject);
-            //다이얼로그 발동시키자.
-            scanObject.GetComponent<Object>().TriggerDialogue();
+            }
         }
     }
 
     private void FixedUpdate()
     {
         //실질적 이동
-        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);        
-
-        //Ray
-        Debug.DrawRay(rb.position, rayDir, Color.green, 0.7f);
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(rb.position, rayDir, 0.7f, LayerMask.GetMask("Object"));
-
-        if (raycastHit2D.collider != null)
-            scanObject = raycastHit2D.collider.gameObject;
-        else
-            scanObject = null;
+        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
     }
 
     public void MoveAnimStart(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
@@ -227,7 +152,7 @@ public class KeyInput_Controller : MonoBehaviour
         switch (animData.dir)
         {
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
-                destinationPos = originalPos + Vector2.up*animData.distance;
+                destinationPos = originalPos + Vector2.up * animData.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Down:
                 destinationPos = originalPos + Vector2.down * animData.distance;
@@ -255,12 +180,5 @@ public class KeyInput_Controller : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //충돌체크.
-    //print(collision.gameObject.name + "here");
-    //}
+  
 }
-
-
-

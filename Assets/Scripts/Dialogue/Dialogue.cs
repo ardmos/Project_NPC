@@ -78,7 +78,7 @@ public class Dialogue
                 public struct ObjectAnimData
                 {
                     [Header("- 움직이고싶은 Object를 드래그해서 넣어주세요")]
-                    public KeyInput_Controller objToMakeMove;
+                    public GameObject objToMakeMove;                    
 
                     public enum MoveDir
                     {
@@ -109,7 +109,7 @@ public class Dialogue
                     [Header("- 정지시 쳐다볼 방향")]
                     public EndDir endDir;
                 }
-                [Header("- NPC 애니메이션 활성화"), Space(5)]
+                [Header("- 애니메이션 활성화"), Space(5)]
                 public bool activateObjAnimate;
                 [Header("- 활성화시킬 애니메이션의 데이터를 넣는 곳")]
                 public ObjectAnimData[] objectAnimationData;
