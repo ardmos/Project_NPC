@@ -40,9 +40,9 @@ namespace CatchingWildBoar
         */
 
         //타이머
-        [HideInInspector]
+        //[HideInInspector]
         public float time;
-        bool isTimeZero;
+        public bool isTimeZero;
 
 
         //때려서 쫒을것인가, 간지럽혀서 쫒을것인가.
@@ -60,12 +60,19 @@ namespace CatchingWildBoar
             {
                 bushes.Add(bush);
             }
+            
+            foreach (GameObject animals in GameObject.FindGameObjectsWithTag("Animal"))
+            {
+                //재시작할경우를 대비해서. 이미 있는 동물들 다 없애고 시작. 
+                Destroy(animals);
+            }
 
             time = 60;
             catchCount = 0;
             isClear = false;
             isTimeZero = false;
 
+            print("StartMiniGame()");
             //GameManager로부터 사용자의 선택 결과를 읽어와서 isStrokeMode를 설정해준다.            
             switch (global::GameManager.Instance.GetChoiceResults("31_0"))
             {
@@ -85,8 +92,8 @@ namespace CatchingWildBoar
         private void Update()
         {
             //타이머
-            if (time > 0) time -= Time.deltaTime;
-            else if (time == 0 && isTimeZero==false)
+            if (time > 0 && !isClear) time -= Time.deltaTime;
+            else if (time <= 0 && isTimeZero==false)
             {
                 //실패시 과정 처리.
                 //1. 실패 결과 팝업을 띄우고
@@ -95,6 +102,7 @@ namespace CatchingWildBoar
                 isTimeZero = true;
                 //실패 팝업 0
                 FindObjectOfType<ResultPopup>().MakePopup(0);
+                print("으악!실패!");
 
             }   //실패!!! 팝업!!띄우기.! 재도전? 나가기? 
 
@@ -108,8 +116,10 @@ namespace CatchingWildBoar
 
                 countText.text = "Clear!  Count : " + catchCount.ToString();
                 isClear = true;
-                //다이얼로그 시작 
+                //성공 팝업 시작 
                 StartPopup();
+
+                print("와! 성공!");
             }   //시간 내 잡기 성공           
        
             if (!isClear && catchCount<50)

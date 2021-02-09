@@ -9,6 +9,13 @@ public class KeyInput_Controller : MonoBehaviour
     //스타듀밸리방식은 translate * 속도 이용
 
 
+
+        //메인캐릭터만 쓰는 스크립트가 필요하겠다!!
+        //혹은, 다른애들은 이동만 가능하게끔 만들어주던가.
+        //현재 레이캐스트 문제가 있다 .
+
+
+
     //현재 컨트롤할 대상 선택
     public bool isControllable;
 
@@ -19,7 +26,7 @@ public class KeyInput_Controller : MonoBehaviour
     public Animator animator;
 
     public Vector2 movement, rayDir;
-    GameObject scanObject;
+    public GameObject scanObject;
 
 
     //리모트무브
@@ -190,6 +197,7 @@ public class KeyInput_Controller : MonoBehaviour
         //스캔 발동. 스페이스 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
         if (Input.GetButtonDown("Jump") && scanObject != null)
         {
+            print("scanObject: " + scanObject);
             //다이얼로그 발동시키자.
             scanObject.GetComponent<Object>().TriggerDialogue();
         }
@@ -198,7 +206,7 @@ public class KeyInput_Controller : MonoBehaviour
     private void FixedUpdate()
     {
         //실질적 이동
-        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);        
 
         //Ray
         Debug.DrawRay(rb.position, rayDir, Color.green, 0.7f);

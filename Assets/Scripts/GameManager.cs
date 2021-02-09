@@ -33,7 +33,7 @@ public class GameManager : DontDestroy<GameManager>
         {
             foreach (KeyValuePair<string, int> item in choiceResults)
             {
-                print("선택지 " + item.Key + ", 에서의 선택은 " + item.Value + " 입니다.");
+                //print("선택지 " + item.Key + ", 에서의 선택은 " + item.Value + " 입니다.");
             }
         }
     }

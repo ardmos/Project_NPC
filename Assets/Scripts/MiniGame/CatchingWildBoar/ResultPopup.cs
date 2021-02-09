@@ -18,14 +18,16 @@ public class ResultPopup : MonoBehaviour
     public void SetModeNumber()
     {
         //드롭다운의 모드넘버값이 바뀌면 그 값을 저장해둔다. 
-        selectedModeNumber = gameObject.GetComponent<Dropdown>().value;
+        selectedModeNumber = gameObject.GetComponentInChildren<Dropdown>().value;
         print("selectedModeNumber: " + selectedModeNumber);        
     }
 
     public void RestartMiniGame()
     {
+        print("before Change"+GameManager.Instance.choiceResults["31_0"]);
         //바뀐 값을 새로 넣어준다
         GameManager.Instance.choiceResults["31_0"] = selectedModeNumber;
+        print("after Change" + GameManager.Instance.choiceResults["31_0"]);
         //게임을 새로 시작해준다.
         FindObjectOfType<CatchingWildBoar.GameManager>().StartMiniGame();
         //팝업을 다시 닫아준다.
@@ -35,11 +37,12 @@ public class ResultPopup : MonoBehaviour
     public void EndMiniGame()
     {
         //이전 씬으로 이동. 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+        SceneManager.LoadScene("SampleRoom_Incident");
     }
 
     public void MakePopup(int n)
     {
+        print("MakePopup Called");
         switch (n)
         {
             case 0:
