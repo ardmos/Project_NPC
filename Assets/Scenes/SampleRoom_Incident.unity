@@ -300,12 +300,12 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 1450160335}
-            dir: 4
-            distance: 2
+            dir: 1
+            distance: 8
             endDir: 3
           - objToMakeMove: {fileID: 580652749}
-            dir: 4
-            distance: 2
+            dir: 1
+            distance: 8
             endDir: 3
         sFXSettings:
           turnOffTypingSound: 0
@@ -319,6 +319,105 @@ MonoBehaviour:
       soundNumber: 0
       name: 4
       sentence: 
+    - smallTitle_: "\uC560\uB2C8\uBA54\uC774\uC158 \uC774\uD6C4 \uCD08\uC0C1\uD654
+        \uB4F1\uC7A5"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 1
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 4
+      sentence: "\uC81C\uBCF5\uC785\uC740 \uACBD\uCC30\uC774 \uD314\uC9F1\uC744 \uB080
+        \uCC44 \uB0A0 \uBE64\uD788 \uCCD0\uB2E4\uBCF4\uACE0 \uC788\uB2E4."
+    - smallTitle_: "\uB208\uB9E4\uAC00 \uC0AC\uB0A9\uAD70"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "(\uB208\uB9E4\uAC00 \uC0AC\uB0A9\uAD70...)"
+    - smallTitle_: "\uC5F0\uB77D\uBC1B\uACE0\uC628 \uD0D0\uC815\uC785\uB2C8\uB2E4."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uC548\uB155\uD558\uC2ED\uB2C8\uAE4C, \uC5F0\uB77D\uBC1B\uACE0 \uC628
+        \uAE40\uD0D0\uC815 \uC785\uB2C8\uB2E4."
 --- !u!1 &20024207
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,8 +430,8 @@ GameObject:
   - component: {fileID: 20024213}
   - component: {fileID: 20024212}
   - component: {fileID: 20024211}
-  - component: {fileID: 20024210}
   - component: {fileID: 20024209}
+  - component: {fileID: 20024210}
   m_Layer: 0
   m_Name: SeungHoon_Main
   m_TagString: Player
@@ -3642,7 +3741,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyNumber: 0
-  "\uC2A4\uD1A0\uB9AC\uC815\uB9AC": {fileID: 0}
+  "\uC2A4\uD1A0\uB9AC\uC815\uB9AC": {fileID: 806612663}
+  "\uCC9C\uD615\uC0AC": {fileID: 1450160342}
+  "\uACBD\uCC302": {fileID: 580652756}
 --- !u!4 &476082682
 Transform:
   m_ObjectHideFlags: 0
@@ -3926,7 +4027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580652749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.1, y: -2.36, z: 0}
+  m_LocalPosition: {x: -2.38, y: -10.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1613328308}
@@ -7949,7 +8050,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450160335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.56, y: -3.18, z: 0}
+  m_LocalPosition: {x: -1.8400002, y: -9.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1613328308}
@@ -8472,11 +8573,18 @@ MonoBehaviour:
   isCtrlKeyDowned: 0
   isDuringTyping: 0
   portraits:
-  - {fileID: 21300000, guid: 9f0ea21766ffa5a4fa9c78dab9af205d, type: 3}
-  - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
-  - {fileID: 21300000, guid: 0b43ed29b6541044a95aecd9345d7972, type: 3}
   - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
+  - {fileID: 21300000, guid: e3ba94f404c7eac41abe2dc841854cfd, type: 3}
+  - {fileID: 21300000, guid: 9f0ea21766ffa5a4fa9c78dab9af205d, type: 3}
+  - {fileID: 21300000, guid: 0b43ed29b6541044a95aecd9345d7972, type: 3}
+  - {fileID: 21300000, guid: c05f0c7d21a10e14dbdfdf4abbc20ed4, type: 3}
+  - {fileID: 21300000, guid: 69105d281f800774e91e61429dffdf23, type: 3}
+  - {fileID: 21300000, guid: 34698ed30c2c1244d934058fc36064c8, type: 3}
+  - {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
   - {fileID: 21300000, guid: 243ab710f9a0547499f0cf389bcf25f4, type: 3}
+  - {fileID: 21300000, guid: 3e910a480c78c4f47a9b4e1645601156, type: 3}
+  - {fileID: 21300000, guid: 372b96d95a09e8a49bbd6712a25526ea, type: 3}
+  - {fileID: 21300000, guid: 372d5fae76831cf49bac308f6aa31f0e, type: 3}
   - {fileID: 21300000, guid: 372d5fae76831cf49bac308f6aa31f0e, type: 3}
   typingSounds:
   - {fileID: 8300000, guid: 74e2200ce23787b44915f6800bf7df9d, type: 3}
@@ -8516,9 +8624,10 @@ MonoBehaviour:
   curDialogSetCountNumber: 0
   curStoryId: 0
   curStorySmallTitle: 
-  animateAlone: 0
   duringAnimation_AnimateAlone: 0
   endedAnimation_AnimateAlone: 0
+  nPCs: []
+  keyInput_Controllers: []
 --- !u!4 &1502509903
 Transform:
   m_ObjectHideFlags: 0
@@ -11104,7 +11213,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           showRightPortrait: 1
-          rightPortraitNumber: 5
+          rightPortraitNumber: 11
         selectionPopupSettings:
           activateSelectionPopup: 1
           selectionPopupData:
@@ -11154,8 +11263,8 @@ MonoBehaviour:
                 portraitSettings:
                   showLeftPortrait: 0
                   leftPortraitNumber: 0
-                  showRightPortrait: 0
-                  rightPortraitNumber: 0
+                  showRightPortrait: 1
+                  rightPortraitNumber: 11
                 selectionPopupSettings:
                   activateSelectionPopup: 0
                   selectionPopupData:
@@ -11211,7 +11320,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           showRightPortrait: 1
-          rightPortraitNumber: 3
+          rightPortraitNumber: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:

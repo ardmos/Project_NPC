@@ -27,7 +27,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     [Header("- 대화 보따리 저장소."), Space(20)]
     Dictionary<int, Dialogue> dialogueData_Dic;
-    [Header("- 초상화 저장소. 사용될 초상화들을 모두 이곳에 저장해주세요.~")]
+    [Header("- 초상화 저장소. 사용될 초상화들을 모두 이곳에 저장해주세요.~  김탐정, 천지현, 백강, 베라, 플라키, 청마, 대학생4, 대학생5, 오상식, 흰강아지수인, 흰상아지수인_후드, 경찰1, 경찰2")]
     public Sprite[] portraits;
     [Header("- 타이핑 효과음 저장소. 마찬가지로 사용될 효과음들을 모두 저장해주세요. ^^")]
     public AudioClip[] typingSounds;
@@ -46,12 +46,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
     int npcResponseNum;
     //선택상자에대한 응답에서 문장 빨리넘기기 했을 시 사용할 문장.  이미 도도도 찍고있던 문장을 담고있다.
     string printingSentence;
-    //다이얼로그 문장 없이 애니메이션만 실행시키기 위한 부분.
-    public bool animateAlone;
+    //다이얼로그 문장 없이 애니메이션만 실행시키기 위한 부분.    
     public bool duringAnimation_AnimateAlone;
     public bool endedAnimation_AnimateAlone;
-    List<NPC> nPCs;
-    List<KeyInput_Controller> keyInput_Controllers;
+    public List<NPC> nPCs = new List<NPC>();
+    public List<KeyInput_Controller> keyInput_Controllers = new List<KeyInput_Controller>();
 
 
     #region For Signleton <<-- DontDestory 사용해서 구현., OnAwake()
@@ -92,53 +91,49 @@ public class DialogueManager : DontDestroy<DialogueManager>
             else DisplayNextSentence();
         }
 
-
-        if (animateAlone)
-        {
-            //한 번만 실행시키기 위함. 
-            animateAlone = false;
-            duringAnimation_AnimateAlone = true;
-
-
-            foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in curDialogSet.detail.animationSettings.objectAnimationData)
-            {
-                //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
-                if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
-                {
-                    print("it's NPC moving");
-                    nPCs.Add(nPC);                    
-                    nPC.MoveAnimStart(objAnimData);                    
-                }
-                else if (objAnimData.objToMakeMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
-                {
-                    print("it's Player moving");
-                    keyInput_Controllers.Add(keyInput_Controller);
-                    keyInput_Controller.MoveAnimStart(objAnimData);
-                }
-            }
-        }
-
-        if (duringAnimation_AnimateAlone)
-        {
-            //리스트로 써먹는것부터.  다시 해보자. isArrived 접근이 안된다 ㅋㅋ
-            foreach (var item in nPCs)
-            {
-                //if ()
-                //{
-
-                //}
-            }
-            foreach (var item in keyInput_Controllers)
-            {
-
-            }
-        }
+        #region 문장 없을 때 애니메이션만 실행
         //애니메이션 아직 시작 안했으면 문장 없이 애니메이션만 진행
 
         //애니메이션 중이면 대기. 
 
         //애니메이션이 끝났으면 DisplayNextSentence(); 진행.
-
+        if (duringAnimation_AnimateAlone)
+        {
+            //리스트로 써먹는것부터.  다시 해보자. isArrived 접근이 안된다 ㅋㅋ
+            foreach (NPC item in nPCs)
+            {
+                if (item.isArrived)
+                {
+                    print("Arrived");
+                    endedAnimation_AnimateAlone = true;
+                }
+                else
+                {
+                    print("Not Arrived");
+                    endedAnimation_AnimateAlone = false;
+                    return;
+                }
+            }
+            foreach (KeyInput_Controller item in keyInput_Controllers)
+            {
+                if (item.isArrived)
+                {
+                    endedAnimation_AnimateAlone = true;
+                }
+                else
+                {
+                    endedAnimation_AnimateAlone = false;
+                    return;
+                }
+            }
+            if (endedAnimation_AnimateAlone)
+            {
+                print("끝!");
+                duringAnimation_AnimateAlone = false;
+                DisplayNextSentence();
+            }
+        }
+        #endregion         
     }
 
     public void OnBtnClickedByMouse()
@@ -219,8 +214,28 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             if (dialogueSet.detail.animationSettings.activateObjAnimate)
             {
-                //발동할 애니메이션이 존재하면, 해당 애니메이션이 끝나길 기다렸다가  return.
-                animateAlone = true;
+                //발동할 애니메이션이 존재하면, 해당 애니메이션이 끝나길 기다렸다가  return.                
+                foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.animationSettings.objectAnimationData)
+                {
+                    //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
+                    if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
+                    {
+                        print("it's NPC moving");
+                        //print(dialogueSet.smallTitle_ +  ", " + objAnimData.objToMakeMove );
+                        //print(nPC);
+                        //nPCs.Add(objAnimData.objToMakeMove);
+                        nPCs.Add(nPC);
+                        nPC.MoveAnimStart(objAnimData);
+                    }
+                    else if (objAnimData.objToMakeMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
+                    {
+                        print("it's Player moving");
+                        keyInput_Controllers.Add(keyInput_Controller);
+                        keyInput_Controller.MoveAnimStart(objAnimData);
+                    }
+                }
+                duringAnimation_AnimateAlone = true;
+
                 return;
             }
             else
@@ -278,7 +293,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         if (dialogueSet.detail.portraitSettings.showLeftPortrait)
         {
             dialogPortrait_Left.color = new Color(1, 1, 1, 1);
-            dialogPortrait_Left.sprite = portraits[dialogueSet.detail.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
+            dialogPortrait_Left.sprite = portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
         }
         else
             dialogPortrait_Left.color = new Color(1, 1, 1, 0);
@@ -287,7 +302,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         if (dialogueSet.detail.portraitSettings.showRightPortrait)
         {
             dialogPortrait_Right.color = new Color(1, 1, 1, 1);
-            dialogPortrait_Right.sprite = portraits[dialogueSet.detail.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
+            dialogPortrait_Right.sprite = portraits[(int)dialogueSet.detail.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
         }
         else
             dialogPortrait_Right.color = new Color(1, 1, 1, 0);

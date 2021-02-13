@@ -4,12 +4,12 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class Dialogue 
+public class Dialogue
 {
     [Header("- ↑ \'대화묶음\'의 제목")]
     public string smallTitle_;
     [Header("- 대화묶음을 갖게될 오브젝트의 id값을 정해주세요.")]
-    public int storyId;             
+    public int storyId;
 
     [System.Serializable]
     public class DialogueSet
@@ -29,19 +29,40 @@ public class Dialogue
             [Header("- 대화창의 등장 방식")]
             public Styles styles;
 
+
+            //초상화 설정 
+            //김탐정, 천지현, 백강, 베라, 플라키, 청마, 대학생4, 대학생5, 오상식, 흰강아지수인, 흰상아지수인_후드, 경찰1, 경찰2
+            public enum Portraits
+            {
+                김탐정,
+                천지현,
+                백강,
+                베라,
+                플라키,
+                청마,
+                대학생4,
+                대학생5,
+                오상식,
+                흰강아지수인,
+                흰강아지수인_후드,
+                경찰1,
+                경찰2
+            }
             //좌상화, 우상화
             [System.Serializable]
             public struct PortraitSettings
             {
                 [Header("- 좌측 초상화              (체크박스에 체크 후, 원하는 초상화 저장소의 번호를 입력하면 초상화가 출력됩니다.)")]
                 public bool showLeftPortrait;
-                public int leftPortraitNumber;
+                public Portraits leftPortraitNumber;
                 [Header("- 우측 초상화")]
                 public bool showRightPortrait;
-                public int rightPortraitNumber;
+                public Portraits rightPortraitNumber;
             }
             [Header("- 초상화 설정"), Space(5)]
             public PortraitSettings portraitSettings;
+
+
 
             //선택창팝업
             [System.Serializable]
@@ -78,7 +99,7 @@ public class Dialogue
                 public struct ObjectAnimData
                 {
                     [Header("- 움직이고싶은 Object를 드래그해서 넣어주세요")]
-                    public GameObject objToMakeMove;                    
+                    public GameObject objToMakeMove;
 
                     public enum MoveDir
                     {
@@ -160,7 +181,7 @@ public class Dialogue
 
         //스타일선택
         public enum Names
-        {            
+        {
             김탐정,
             천형사,
             경찰1,
@@ -174,7 +195,7 @@ public class Dialogue
         [Header("- Object 이름"), Space(5)]
         public Names name;
         [TextArea(8, 10), Header("- Object 대사")]
-        public string sentence;           
+        public string sentence;
     }
 
     [Header("- 대화묶음에 포함될 대화의 갯수를 정해주세요."), Space(10)]

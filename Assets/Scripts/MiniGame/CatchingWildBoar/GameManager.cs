@@ -20,7 +20,7 @@ namespace CatchingWildBoar
 
         //동물 생성할 부쉬 계속 바꿔주기 위한 부분
         [HideInInspector]
-        public List<GameObject> bushes;
+        public List<GameObject> bushes = new List<GameObject>();
         [HideInInspector]
         public int n;
         [HideInInspector]

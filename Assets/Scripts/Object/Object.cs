@@ -5,7 +5,7 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     public int id;
-    public Dictionary<int, bool> isInteracted;
+    public Dictionary<int, bool> isInteracted;    
 
     //주워지거나 하는 기능이 있는 오브젝트 ex동전. 
     //같은 경우에는 추가적으로 스크립트 만들어서 기능 붙여주자. 
@@ -45,7 +45,7 @@ public class Object : MonoBehaviour
             if (isInteracted[15000] && isInteracted[15100] && isInteracted[15200])
             {
                 //나머지와 모두 대화를 마쳤다.                
-                //씬1 천형사 등장 이벤트 발동. 천형사 등장 스토리 이벤트 넘버 = 1
+                //씬1 천형사 등장 이벤트 발동. 스토리 이벤트 넘버 = 1
                 GameManager.Instance.storyNumber = 1;
                 GameManager.Instance.StartStoryEvent();
                 return true;

@@ -21,12 +21,6 @@ public class NPC : MonoBehaviour
     public Vector2 originalPos, destinationPos;
     public bool isArrived;
 
-    enum AnimationState
-    {
-        
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -107,40 +101,45 @@ public class NPC : MonoBehaviour
                         movement = Vector2.zero;
                         break;
                 }
+
+
             }
             else
             {
+                //print("on");
                 //리모트 이동 도착.
                 isrm = false;
-                isArrived = false;
-
-                //리모트이동일 때, 사용자컨트롤을 받는 오브젝트가 아닌 경우. 
                 movement = Vector2.zero;
-                animator.SetFloat("Horizontal", movement.x);
-                animator.SetFloat("Vertical", movement.y);
-                animator.SetFloat("Speed", movement.sqrMagnitude);
-
-                //Idle방향 따로 설정해줄 수 있음.
-                if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down)
-                {
-                    animator.SetInteger("Direction", 0);                    
-                }
-                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up)
-                {
-                    animator.SetInteger("Direction", 1);                    
-                }
-                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right)
-                {
-                    animator.SetInteger("Direction", 2);                    
-                }
-                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left)
-                {
-                    animator.SetInteger("Direction", 3);                    
-                }
-
                 return;
             }
+
         }
+        //print("on2, x : " + movement.x);
+        //리모트이동일 때, 사용자컨트롤을 받는 오브젝트가 아닌 경우. 
+        
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        //print("on3");
+        //Idle방향 따로 설정해줄 수 있음.
+        if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down)
+        {
+            animator.SetInteger("Direction", 0);
+        }
+        else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up)
+        {
+            animator.SetInteger("Direction", 1);
+        }
+        else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right)
+        {
+            animator.SetInteger("Direction", 2);
+        }
+        else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left)
+        {
+            animator.SetInteger("Direction", 3);
+        }
+
     }
 
     private void FixedUpdate()
@@ -152,6 +151,7 @@ public class NPC : MonoBehaviour
     public void MoveAnimStart(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
     {
         isrm = true;
+        isArrived = false;
         this.animData = animData;
         originalPos = gameObject.transform.position;
 

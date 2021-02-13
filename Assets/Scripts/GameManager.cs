@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : DontDestroy<GameManager>
@@ -25,6 +26,10 @@ public class GameManager : DontDestroy<GameManager>
     public Dictionary<int, bool> isInteracted;
     public GameObject 스토리정리;
 
+    //Scene1 오브젝트들
+    //천형사, 경찰2
+    public SpriteRenderer 천형사, 경찰2;
+
     protected override void OnAwake()
     {
         base.OnAwake();
@@ -42,6 +47,10 @@ public class GameManager : DontDestroy<GameManager>
                 isInteracted.Add(item.storyId, false);
             }
         }
+
+
+        천형사.color = new Color(1, 1, 1, 0);
+        경찰2.color = new Color(1, 1, 1, 0);
     }
 
     private void Update()
@@ -71,7 +80,8 @@ public class GameManager : DontDestroy<GameManager>
                 //천형사 다이얼로그 발동.
                 print("Here is GameManager.StartStoryEvent() 1 천형사 등장");
                 //천형사, 경찰2 sprite 보이게 한 후
-
+                천형사.color = new Color(1, 1, 1, 1);
+                경찰2.color = new Color(1, 1, 1, 1);
                 //천형사 애니메이션 포함된 다이얼로그 시작시키자.
                 DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
