@@ -25,14 +25,14 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //문자출력 도중인지, 끝났는지. 
     public bool isDuringTyping = false;
 
-    [Header("- 대화 보따리 저장소. 만들고자 하는 Dialog 보따리의 갯수를 입력해주세요 ^^"), Space(20)]
-    public List<Dialogue> dialogues;
+    [Header("- 대화 보따리 저장소."), Space(20)]
+    Dictionary<int, Dialogue> dialogueData_Dic;
     [Header("- 초상화 저장소. 사용될 초상화들을 모두 이곳에 저장해주세요.~")]
     public Sprite[] portraits;
     [Header("- 타이핑 효과음 저장소. 마찬가지로 사용될 효과음들을 모두 저장해주세요. ^^")]
     public AudioClip[] typingSounds;
 
-    Dictionary<int, Dialogue> dialogueData_Dic;
+    
     Dialogue dialogue;
     Queue<Dialogue.DialogueSet> dialogueSetsQue;
 
@@ -46,9 +46,16 @@ public class DialogueManager : DontDestroy<DialogueManager>
     int npcResponseNum;
     //선택상자에대한 응답에서 문장 빨리넘기기 했을 시 사용할 문장.  이미 도도도 찍고있던 문장을 담고있다.
     string printingSentence;
+    //다이얼로그 문장 없이 애니메이션만 실행시키기 위한 부분.
+    public bool animateAlone;
+    public bool duringAnimation_AnimateAlone;
+    public bool endedAnimation_AnimateAlone;
+    List<NPC> nPCs;
+    List<KeyInput_Controller> keyInput_Controllers;
 
-    #region For Signleton <<-- DontDestory 쓸거라서 잠시 주석 처리 
-    //싱글턴 <<-- DontDestory 쓸거라서 잠시 주석 처리 .
+
+    #region For Signleton <<-- DontDestory 사용해서 구현., OnAwake()
+    //기존 싱글턴 <<-- DontDestory 사용해서 구현했기때문에 주석 처리.
     //public static DialogueManager instance;
 
     override protected void OnAwake()
@@ -66,22 +73,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
         foreach (AttachThis attachThis in 스토리정리.GetComponentsInChildren<AttachThis>())
         {
-            //dialogues.Add(item);
-            //dialogues.Add()
             foreach (Dialogue item in attachThis.dialogues)
             {
-                dialogues.Add(item);
-            }
-        }
-
-        //딕셔너리에 넣는 과정 
-        if (dialogues.Count != 0)
-        {
-            foreach (Dialogue item in dialogues)
-            {
+                //딕셔너리에 넣는 과정 
                 dialogueData_Dic.Add(item.storyId, item);
             }
-        }
+        }       
     }
 
     private void Update()
@@ -94,6 +91,54 @@ public class DialogueManager : DontDestroy<DialogueManager>
             if (isDuringTyping) PrintAtOnce(curDialogSet);
             else DisplayNextSentence();
         }
+
+
+        if (animateAlone)
+        {
+            //한 번만 실행시키기 위함. 
+            animateAlone = false;
+            duringAnimation_AnimateAlone = true;
+
+
+            foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in curDialogSet.detail.animationSettings.objectAnimationData)
+            {
+                //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
+                if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
+                {
+                    print("it's NPC moving");
+                    nPCs.Add(nPC);                    
+                    nPC.MoveAnimStart(objAnimData);                    
+                }
+                else if (objAnimData.objToMakeMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
+                {
+                    print("it's Player moving");
+                    keyInput_Controllers.Add(keyInput_Controller);
+                    keyInput_Controller.MoveAnimStart(objAnimData);
+                }
+            }
+        }
+
+        if (duringAnimation_AnimateAlone)
+        {
+            //리스트로 써먹는것부터.  다시 해보자. isArrived 접근이 안된다 ㅋㅋ
+            foreach (var item in nPCs)
+            {
+                //if ()
+                //{
+
+                //}
+            }
+            foreach (var item in keyInput_Controllers)
+            {
+
+            }
+        }
+        //애니메이션 아직 시작 안했으면 문장 없이 애니메이션만 진행
+
+        //애니메이션 중이면 대기. 
+
+        //애니메이션이 끝났으면 DisplayNextSentence(); 진행.
+
     }
 
     public void OnBtnClickedByMouse()
@@ -167,21 +212,62 @@ public class DialogueManager : DontDestroy<DialogueManager>
     void BatchService(Dialogue.DialogueSet dialogueSet) {
 
         //기본 글자 속도.
-        if (dialogueSet.detail.letterSpeed == 0f)
-            dialogueSet.detail.letterSpeed = 0.9f;
+        if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.92f;
 
-        //Sentence 비어있을경우 그냥 패스! 
+        //Sentence 비어있을경우, 발동할 애니메이션이 있는지 확인 후 없으면 그냥 패스! 
         if (dialogueSet.sentence == "")
         {
-            DisplayNextSentence();
-            return;
+            if (dialogueSet.detail.animationSettings.activateObjAnimate)
+            {
+                //발동할 애니메이션이 존재하면, 해당 애니메이션이 끝나길 기다렸다가  return.
+                animateAlone = true;
+                return;
+            }
+            else
+            {
+                DisplayNextSentence();
+                return;
+            }
         }
 
 
         //여기서 dialogueSet에 입력된 정보에 따라 처리.
 
         //이름
-        dialogObjName.text = dialogueSet.name;
+        switch (dialogueSet.name)
+        {
+            case Dialogue.DialogueSet.Names.김탐정:
+                dialogObjName.text = "김승훈 탐정";
+                break;
+            case Dialogue.DialogueSet.Names.천형사:
+                dialogObjName.text = "천지현 형사";
+                break;
+            case Dialogue.DialogueSet.Names.경찰1:
+                dialogObjName.text = "경찰1";
+                break;
+            case Dialogue.DialogueSet.Names.경찰2:
+                dialogObjName.text = "경찰2";
+                break;
+            case Dialogue.DialogueSet.Names.익명:
+                dialogObjName.text = "??";
+                break;
+            case Dialogue.DialogueSet.Names.음식:
+                dialogObjName.text = "음식";
+                break;
+            case Dialogue.DialogueSet.Names.침대:
+                dialogObjName.text = "침대";
+                break;
+            case Dialogue.DialogueSet.Names.창문:
+                dialogObjName.text = "창문";
+                break;
+            case Dialogue.DialogueSet.Names.캡슐:
+                dialogObjName.text = "캡슐";
+                break;
+            default:
+                break;
+        }
+
+        
 
         ///Details
         ///

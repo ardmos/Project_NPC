@@ -6,9 +6,9 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue 
 {
-    [Header("- ↑ 이 \'Dialog 보따리\'의 제목")]
+    [Header("- ↑ \'대화묶음\'의 제목")]
     public string smallTitle_;
-    [Header("- 지금 이 대화보따리를 부여하고자 하는 Object의 id값을 입력하거나 // 스토리라인의 번호를 입력하세요.")]
+    [Header("- 대화묶음을 갖게될 오브젝트의 id값을 정해주세요.")]
     public int storyId;             
 
     [System.Serializable]
@@ -17,7 +17,7 @@ public class Dialogue
         [System.Serializable]
         public class Details   //스타일, 좌상화, 우상화, 선택팝업, 글자속도 , 애니메이션
         {
-            [Range(0f, 1f), Header("- 대사 출력 속도")]
+            [Range(0f, 1f), Header("- Object 대사 출력 속도 (기본 0.92)")]
             public float letterSpeed;
 
             //스타일선택
@@ -26,7 +26,7 @@ public class Dialogue
                 Stable,
                 Slide
             }
-            [Header("- \'Dialog\'의 등장 방식")]
+            [Header("- 대화창의 등장 방식")]
             public Styles styles;
 
             //좌상화, 우상화
@@ -47,7 +47,7 @@ public class Dialogue
             [System.Serializable]
             public struct SelectionPopupSettings
             {
-                [Header("- 선택대화창 활성화"), Space(5)]
+                [Header("- 선택대화창(팝업) 활성화"), Space(5)]
                 //선택팝업
                 public bool activateSelectionPopup;
                 [System.Serializable]
@@ -148,21 +148,35 @@ public class Dialogue
             public CutSceneSettings cutSceneSettings;
         }
 
-        [Header("- ↑ 이 \'Dialog\'의 제목")]
+        [Header("- ↑ \'대화\'의 제목")]
         public string smallTitle_;
         [HideInInspector]
         public string dialogueSetName;  //인스펙터상에서는 숨겨둠. 나중에 혹시 다이얼로그셋 접근하고싶으면 이걸 찾아서 접근하기. 
-        [Header("- \'Dialog\'세부 설정"), Space(5)]
+        [Header("- 대화 세부 설정"), Space(5)]
         public Details detail;
 
         [Header("- 사용할 타이핑 사운드 번호. 기본 0"), Space(15)]
         public int soundNumber;
+
+        //스타일선택
+        public enum Names
+        {            
+            김탐정,
+            천형사,
+            경찰1,
+            경찰2,
+            익명,
+            음식,
+            침대,
+            창문,
+            캡슐
+        }
         [Header("- Object 이름"), Space(5)]
-        public string name;
+        public Names name;
         [TextArea(8, 10), Header("- Object 대사")]
         public string sentence;           
     }
 
-    [Header("- 현 \'Dialog보따리\'에 포함될 \'Dialog\'(대화)의 갯수를 입력해주세요."), Space(10)]
+    [Header("- 대화묶음에 포함될 대화의 갯수를 정해주세요."), Space(10)]
     public DialogueSet[] dialogue;
 }

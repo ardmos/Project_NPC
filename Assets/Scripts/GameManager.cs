@@ -15,15 +15,33 @@ public class GameManager : DontDestroy<GameManager>
     #endregion
 
     [Header("현재 진행중 스토리. 자동진행 스토리 관리")]
-    public int storyNumber;
+    public int storyNumber;    
 
     [Header("선택상자의 선택 결과들.")]
     public Dictionary<string, int> choiceResults;
+
+
+    //오브젝트들 상호작용 여부 관리.
+    public Dictionary<int, bool> isInteracted;
+    public GameObject 스토리정리;
 
     protected override void OnAwake()
     {
         base.OnAwake();
         choiceResults = new Dictionary<string, int>();
+        isInteracted = new Dictionary<int, bool>();
+    }
+    protected override void OnStart()
+    {
+        base.OnStart();
+        //foreach는 해보니까 없으면 알아서 안하게끔 처리되어있는듯. 오류없게끔. 사이즈0일때 예외처리 안해줘도 됨
+        foreach (AttachThis attachThis in 스토리정리.GetComponentsInChildren<AttachThis>())
+        {
+            foreach (Dialogue item in attachThis.dialogues)
+            {
+                isInteracted.Add(item.storyId, false);
+            }
+        }
     }
 
     private void Update()
@@ -35,26 +53,35 @@ public class GameManager : DontDestroy<GameManager>
             {
                 //print("선택지 " + item.Key + ", 에서의 선택은 " + item.Value + " 입니다.");
             }
-        }
+        }        
     }
 
+
+    #region 메인 스토리 흐름 제어
     //스토리 이벤트 
     public void StartStoryEvent()
     {
         switch (storyNumber)
         {
             case 0:
-            //첫 뚜벅뚜벅 다이얼로그 발동.                  
+                //첫 뚜벅뚜벅 다이얼로그 발동.
+                DialogueManager.Instance.StartDialogue(storyNumber);
+                break;
             case 1:
+                //천형사 다이얼로그 발동.
+                print("Here is GameManager.StartStoryEvent() 1 천형사 등장");
+                //천형사, 경찰2 sprite 보이게 한 후
 
+                //천형사 애니메이션 포함된 다이얼로그 시작시키자.
+                DialogueManager.Instance.StartDialogue(storyNumber);
+                break;
             case 2:
 
             case 3:
 
             case 4:
 
-            case 5:
-                DialogueManager.Instance.StartDialogue(storyNumber);
+            case 5:                
                 break;
 
             case 31:
@@ -68,16 +95,15 @@ public class GameManager : DontDestroy<GameManager>
         }
     }
 
-
-
     //스토리 클리어
     public void StoryClear()
     {
         storyNumber++;
     }
+    #endregion
 
 
-
+    #region 선택상자 관리
     //choiceResults 추가하는 곳.
     public void AddChoiceResults(string key, int value)
     {
@@ -96,5 +122,16 @@ public class GameManager : DontDestroy<GameManager>
     {
         return choiceResults[key];
     }
+    #endregion
+
+
+    #region 오브젝트들 상호작용여부 관리
+    //상호작용 여부 관리.
+    //상호작용 흐름 기반 이벤트 발동 관리는 각자 오브젝트에서. 
+    public void DidInteracted(int objId)
+    {
+        isInteracted[objId] = true;
+    }        
+    #endregion
 
 }

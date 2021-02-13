@@ -21,6 +21,12 @@ public class NPC : MonoBehaviour
     public Vector2 originalPos, destinationPos;
     public bool isArrived;
 
+    enum AnimationState
+    {
+        
+
+    }
+
     // Update is called once per frame
     void Update()
     {
