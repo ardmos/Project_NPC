@@ -118,17 +118,19 @@ public class DialogueManager : DontDestroy<DialogueManager>
             {
                 if (item.isArrived)
                 {
+                    print("플레이어 Arrived");
                     endedAnimation_AnimateAlone = true;
                 }
                 else
                 {
+                    print("플레이어 Not Arrived");
                     endedAnimation_AnimateAlone = false;
                     return;
                 }
             }
             if (endedAnimation_AnimateAlone)
             {
-                print("끝!");
+                print("끝! end!");
                 duringAnimation_AnimateAlone = false;
                 DisplayNextSentence();
             }
@@ -145,6 +147,13 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public void StartDialogue(int objid)    //다이얼로그의 다양한 부분을 초기화. 
     {
         isDialogueActive = true;
+
+        //다이얼로그 시작하면 플레이어 컨트롤 권한 뺏음.       
+        foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())
+        {
+            item.isControllable = false;
+        }
+
 
         //해당 아이디값 개체 검색       
         if (dialogueData_Dic.ContainsKey(objid))    //해당 id값을 가진 개체가 존자한다면
@@ -220,10 +229,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                     //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
                     if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
                     {
-                        print("it's NPC moving");
-                        //print(dialogueSet.smallTitle_ +  ", " + objAnimData.objToMakeMove );
-                        //print(nPC);
-                        //nPCs.Add(objAnimData.objToMakeMove);
+                        print("it's NPC moving");                      
                         nPCs.Add(nPC);
                         nPC.MoveAnimStart(objAnimData);
                     }
@@ -470,6 +476,14 @@ public class DialogueManager : DontDestroy<DialogueManager>
     {
         isDialogueActive = false;
         dialog_animator.SetBool("isOpen", false);
+
+        //다이얼로그 끝나면 플레이어 컨트롤 권한 돌려줌.       
+        foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())
+        {
+            item.isControllable = true;
+        }
+
+
 
         //특정 이벤트 연계 위한 부분.
         switch (curStoryId)

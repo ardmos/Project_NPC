@@ -10,9 +10,9 @@ public class KeyInput_Controller : MonoBehaviour
 
 
 
-        //메인캐릭터만 쓰는 스크립트가 필요하겠다!! NPC는 NPC.cs로 제작. 
-        //혹은, 다른애들은 이동만 가능하게끔 만들어주던가.
-        //현재 레이캐스트 문제가 있다 .
+    //메인캐릭터만 쓰는 스크립트가 필요하겠다!! NPC는 NPC.cs로 제작. 
+    //혹은, 다른애들은 이동만 가능하게끔 만들어주던가.
+    //현재 레이캐스트 문제가 있다 .
 
 
 
@@ -35,18 +35,22 @@ public class KeyInput_Controller : MonoBehaviour
     public Vector2 originalPos, destinationPos;
     public bool isArrived;
 
+
+    //제자리돌기 위한. 한번만 none에서 속도 주기 위한.
+    public bool isdid;
+
     // Update is called once per frame
     void Update()
     {
         //컨트롤체크 안되어있는 뇨속은 컨트롤 불가!
- 
+
         //리모트컨트롤 구현부분
         if (isrm)
         {
-            Vector2 curpos = gameObject.transform.position;         
+            Vector2 curpos = gameObject.transform.position;
             switch (animData.dir)
             {
-                //도착했는지 확인.
+                //도착했는지 확인.                
                 case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
                     if (curpos.y >= destinationPos.y)
                         isArrived = true;
@@ -115,70 +119,116 @@ public class KeyInput_Controller : MonoBehaviour
                         movement = Vector2.zero;
                         break;
                 }
-            }            
+            }
             else
             {
                 //리모트 이동 도착.
-                isrm = false;                
-
-                return;
+                isrm = false;
+                movement = Vector2.zero;
             }
-            
-        }
 
-        
-        if(isControllable && !isrm)
+
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Speed", movement.sqrMagnitude);
+            //제자리돌기 처리. 진행방향 none인 경우.
+            if (animData.dir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None)
+            {
+                if (!isdid)
+                {
+                    isdid = true;
+                    animator.SetFloat("Speed", 1f);
+                }
+                else
+                {
+                    isArrived = true;
+                    isrm = false;
+                    animator.SetFloat("Speed", 0f);
+                }
+            }
+
+            //Idle방향 따로 설정해줄 수 있음.
+            if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down)
+            {
+                animator.SetInteger("Direction", 0);
+                rayDir = Vector2.down;
+            }
+            else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up)
+            {
+                animator.SetInteger("Direction", 1);
+                rayDir = Vector2.up;
+            }
+            else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right)
+            {
+                animator.SetInteger("Direction", 2);
+                rayDir = Vector2.right;
+            }
+            else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left)
+            {
+                animator.SetInteger("Direction", 3);
+                rayDir = Vector2.left;
+            }
+            //print("arrived, dir:" + animData.endDir + ", speed: " + animator.GetFloat("Speed"));
+
+
+        }
+        else
         {
+            if (!isControllable) return;
+
+            //다이얼로그가 끝나면 조작권 줌. isControllable. <-- 요고. 
+
             //사용자 입력값 수집.
             movement.x = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Horizontal");
             movement.y = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Vertical");
-        }
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
-        //대각선 이동 속도 조절 
-        if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
-            movespeed = 4f;
-        else
-            movespeed = 5f;
+            //Idle방향
+            if (movement.y == -1)
+            {
+                animator.SetInteger("Direction", 0);
+                rayDir = Vector2.down;
+            }
+            else if (movement.y == 1)
+            {
+                animator.SetInteger("Direction", 1);
+                rayDir = Vector2.up;
+            }
+            else if (movement.x == 1)
+            {
+                animator.SetInteger("Direction", 2);
+                rayDir = Vector2.right;
+            }
+            else if (movement.x == -1)
+            {
+                animator.SetInteger("Direction", 3);
+                rayDir = Vector2.left;
+            }
 
-        //Idle방향
-        if (movement.y == -1)
-        {
-            animator.SetInteger("Direction", 0);
-            rayDir = Vector2.down;
-        }
-        else if (movement.y == 1)
-        {
-            animator.SetInteger("Direction", 1);
-            rayDir = Vector2.up;
-        }
-        else if (movement.x == 1)
-        {
-            animator.SetInteger("Direction", 2);
-            rayDir = Vector2.right;
-        }
-        else if (movement.x == -1)
-        {
-            animator.SetInteger("Direction", 3);
-            rayDir = Vector2.left;
-        }
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Speed", movement.sqrMagnitude);
+
+            //대각선 이동 속도 조절 
+            if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
+                movespeed = 4f;
+            else
+                movespeed = 5f;
 
 
-        //스캔 발동. 스페이스 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
-        if (Input.GetButtonDown("Jump") && scanObject != null)
-        {
-            print("scanObject: " + scanObject);
-            //다이얼로그 발동시키자.
-            scanObject.GetComponent<Object>().TriggerDialogue();
+            //스캔 발동. 스페이스 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
+            if (Input.GetButtonDown("Jump") && scanObject != null)
+            {
+                print("scanObject: " + scanObject);
+                //다이얼로그 발동시키자.
+                scanObject.GetComponent<Object>().TriggerDialogue();
+            }
         }
     }
 
     private void FixedUpdate()
     {
         //실질적 이동
-        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);        
+        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
 
         //Ray
         Debug.DrawRay(rb.position, rayDir, Color.green, 0.7f);
@@ -192,15 +242,17 @@ public class KeyInput_Controller : MonoBehaviour
 
     public void MoveAnimStart(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
     {
+        print("PlayerMoveAnimStart");
         isrm = true;
         isArrived = false;
+        isdid = false;
         this.animData = animData;
         originalPos = gameObject.transform.position;
 
         switch (animData.dir)
         {
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
-                destinationPos = originalPos + Vector2.up*animData.distance;
+                destinationPos = originalPos + Vector2.up * animData.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Down:
                 destinationPos = originalPos + Vector2.down * animData.distance;
@@ -224,6 +276,7 @@ public class KeyInput_Controller : MonoBehaviour
                 destinationPos = originalPos + new Vector2(-1, -1) * animData.distance;
                 break;
             default:
+
                 break;
         }
     }
