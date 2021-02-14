@@ -151,7 +151,13 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //다이얼로그 시작하면 플레이어 컨트롤 권한 뺏음.       
         foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())
         {
+            //컨트롤권한도 뺐고
             item.isControllable = false;
+            //진행중이던 무빙 애니메이션도 끝냄
+            item.movement = Vector2.zero;
+            item.animator.SetFloat("Horizontal", item.movement.x);
+            item.animator.SetFloat("Vertical", item.movement.y);
+            item.animator.SetFloat("Speed", item.movement.sqrMagnitude);
         }
 
 
