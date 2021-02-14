@@ -46,6 +46,9 @@ TagManager:
   - name: BG
     uniqueID: 1470934539
     locked: 0
+  - name: Funiture
+    uniqueID: 610542433
+    locked: 0
   - name: Object
     uniqueID: 3175151927
     locked: 0
