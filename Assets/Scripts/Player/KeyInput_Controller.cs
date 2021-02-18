@@ -242,7 +242,7 @@ public class KeyInput_Controller : MonoBehaviour
 
     public void MoveAnimStart(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
     {
-        print("PlayerMoveAnimStart");
+        //print("PlayerMoveAnimStart");
         isrm = true;
         isArrived = false;
         isdid = false;

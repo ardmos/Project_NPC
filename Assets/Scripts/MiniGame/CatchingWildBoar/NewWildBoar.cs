@@ -20,6 +20,11 @@ public class NewWildBoar : MonoBehaviour
 
     public bool goldenWildBoar, wildBoar, squirrel;
 
+    private void Start()
+    {
+        bushes = new List<GameObject>();
+    }
+
     void Update()
     {
         if (go)

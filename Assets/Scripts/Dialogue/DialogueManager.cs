@@ -337,11 +337,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
                 if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC  nPC))
                 {
-                    print("it's NPC moving");
+                    //print("it's NPC moving");
                     nPC.MoveAnimStart(objAnimData);
                 }else if (objAnimData.objToMakeMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
                 {
-                    print("it's Player moving");
+                    //print("it's Player moving");
                     keyInput_Controller.MoveAnimStart(objAnimData);
                 }
             }

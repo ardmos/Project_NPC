@@ -21,7 +21,6 @@ public class GameManager : DontDestroy<GameManager>
     [Header("선택상자의 선택 결과들.")]
     public Dictionary<string, int> choiceResults;
 
-
     //오브젝트들 상호작용 여부 관리.
     public Dictionary<int, bool> isInteracted;
     public GameObject 스토리정리;
@@ -39,6 +38,8 @@ public class GameManager : DontDestroy<GameManager>
     protected override void OnStart()
     {
         base.OnStart();
+
+        //스토리정보 읽어오기.
         //foreach는 해보니까 없으면 알아서 안하게끔 처리되어있는듯. 오류없게끔. 사이즈0일때 예외처리 안해줘도 됨
         foreach (AttachThis attachThis in 스토리정리.GetComponentsInChildren<AttachThis>())
         {
@@ -48,7 +49,7 @@ public class GameManager : DontDestroy<GameManager>
             }
         }
 
-
+        //스토리1 등장인물들 클로킹
         천형사.color = new Color(1, 1, 1, 0);
         경찰2.color = new Color(1, 1, 1, 0);
     }
@@ -64,7 +65,6 @@ public class GameManager : DontDestroy<GameManager>
             }
         }        
     }
-
 
     #region 메인 스토리 흐름 제어
     //스토리 이벤트 
