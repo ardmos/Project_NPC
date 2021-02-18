@@ -24,8 +24,7 @@ public class KeyInput_Controller : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
-
-    public Vector2 movement, rayDir;
+    public Vector2 movement, rayDir, rayPosition;
     public GameObject scanObject;
 
 
@@ -231,8 +230,9 @@ public class KeyInput_Controller : MonoBehaviour
         rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
 
         //Ray
-        Debug.DrawRay(rb.position, rayDir, Color.green, 0.7f);
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(rb.position, rayDir, 0.7f, LayerMask.GetMask("Object"));
+        rayPosition = new Vector2(rb.position.x, rb.position.y+0.4f);
+        Debug.DrawRay(rayPosition, rayDir, Color.green, 0.7f);
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(rayPosition, rayDir, 0.7f, LayerMask.GetMask("Object"));
 
         if (raycastHit2D.collider != null)
             scanObject = raycastHit2D.collider.gameObject;
