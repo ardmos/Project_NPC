@@ -226,6 +226,31 @@ public class KeyInput_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //만약 미로맵일 경우! 
+        //쳐다보는쪽으로 랜턴 비추기. 
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Miro")
+        {
+            GameObject handLight = gameObject.GetComponentInChildren<HandLight>().gameObject;
+            Transform transform = handLight.transform;
+
+            if (rayDir == Vector2.down)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, -180f);
+            }
+            else if(rayDir == Vector2.up)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if(rayDir == Vector2.left)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 90f);
+            }
+            else if (rayDir == Vector2.right)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, -90f);
+            }
+        }
+
         //실질적 이동
         rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
 

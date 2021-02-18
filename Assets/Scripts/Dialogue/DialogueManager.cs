@@ -335,6 +335,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 //objAnimData.objToMakeMove.MoveAnimStart(objAnimData);
 
                 //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
+
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 2) return; //지금 미로(씬빌드인덱스2)씬 테스트 목적으로, 잠시 막아두기 
+
                 if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC  nPC))
                 {
                     //print("it's NPC moving");

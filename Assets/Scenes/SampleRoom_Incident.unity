@@ -710,6 +710,85 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3125, y: 0.3125}
   m_EdgeRadius: 0
+--- !u!1 &30442010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30442011}
+  - component: {fileID: 30442012}
+  m_Layer: 0
+  m_Name: "\uBBF8\uB85C"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &30442011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30442010}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 124837766}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &30442012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30442010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - smallTitle_: "\uD568\uC815\uD14C\uC2A4\uD2B8"
+    storyId: 30
+    dialogue:
+    - smallTitle_: "\uC557\uB530\uAC70"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uC73C\uC557\uB530\uAC70!"
 --- !u!1 &31012874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3649,6 +3728,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1823594665}
+  - {fileID: 30442011}
   m_Father: {fileID: 806612664}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14394,7 +14474,7 @@ PrefabInstance:
     - target: {fileID: 47544085696323191, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 47544087303362654, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
         type: 3}
@@ -14419,6 +14499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012533050028055198, guid: af579edce83354e6f859b60b60e757b6,
+        type: 3}
+      propertyPath: storyNum
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4012533050028055199, guid: af579edce83354e6f859b60b60e757b6,
         type: 3}

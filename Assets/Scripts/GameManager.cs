@@ -50,8 +50,12 @@ public class GameManager : DontDestroy<GameManager>
         }
 
         //스토리1 등장인물들 클로킹
-        천형사.color = new Color(1, 1, 1, 0);
-        경찰2.color = new Color(1, 1, 1, 0);
+        //씬 1인지 씬을 확인하고,  
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            천형사.color = new Color(1, 1, 1, 0);
+            경찰2.color = new Color(1, 1, 1, 0);
+        }
     }
 
     private void Update()
