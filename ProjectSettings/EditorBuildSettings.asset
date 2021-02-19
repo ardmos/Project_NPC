@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleRoom_Incident.unity
     guid: 07e10e72f85071f43931bce3a56d1860
   - enabled: 1
-    path: Assets/Scenes/Miro.unity
+    path: Assets/Scenes/MiniGame/Miro.unity
     guid: 16ef60708c8bddc47bae6046d57f81a2
   - enabled: 1
     path: Assets/Scenes/MiniGame/CatchingWildBoar.unity
