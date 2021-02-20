@@ -5087,6 +5087,12 @@ MonoBehaviour:
   "\uC2A4\uD1A0\uB9AC\uC815\uB9AC": {fileID: 806612663}
   "\uCC9C\uD615\uC0AC": {fileID: 1450160342}
   "\uACBD\uCC302": {fileID: 580652756}
+  cursorDefaultTexture: {fileID: 2800000, guid: 91af6e269677cde4bba78b1b71661a65,
+    type: 3}
+  cursorMagGlassTexture: {fileID: 2800000, guid: eb015520dc062ac42a136c4d6d02993a,
+    type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!4 &476082682
 Transform:
   m_ObjectHideFlags: 0
@@ -8073,7 +8079,7 @@ SpriteRenderer:
   m_Size: {x: 0.25, y: 0.34375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1023926789
@@ -8869,7 +8875,7 @@ SpriteRenderer:
   m_Size: {x: 0.203125, y: 0.203125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1290929846
@@ -12052,7 +12058,7 @@ GameObject:
   - component: {fileID: 1633844316}
   - component: {fileID: 1633844317}
   m_Layer: 5
-  m_Name: mouse_0 (1)
+  m_Name: mouse_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12120,7 +12126,7 @@ SpriteRenderer:
   m_Size: {x: 0.203125, y: 0.203125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1706696167

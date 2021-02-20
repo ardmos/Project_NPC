@@ -7,8 +7,9 @@ public class Object : MonoBehaviour
     public int id;
     public Dictionary<int, bool> isInteracted;    
 
-    //주워지거나 하는 기능이 있는 오브젝트 ex동전. 
+    //주워지거나 하는 상호작용기능이 있는 오브젝트 ex동전. 
     //같은 경우에는 추가적으로 스크립트 만들어서 기능 붙여주자. 
+    //마우스오버시 마우스 커서 이미지 변경. 돋보기로 
 
     public void TriggerDialogue()
     {
@@ -33,6 +34,16 @@ public class Object : MonoBehaviour
     private void OnMouseDown()  //터치 감지
     {
         TriggerDialogue();
+    }
+
+    private void OnMouseOver()  //마우스오버시 커서 이미지 돋보기 이미지로 변경. 
+    {
+        GameManager.Instance.SetGameCursor("MagGlass");
+    }
+
+    private void OnMouseExit()  //마우스 벗어나면 다시 원래 커서 이미지로 변경. 
+    {
+        GameManager.Instance.SetGameCursor("Default");
     }
 
     public bool InteractedEventController()

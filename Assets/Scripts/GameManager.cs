@@ -29,6 +29,11 @@ public class GameManager : DontDestroy<GameManager>
     //천형사, 경찰2
     public SpriteRenderer 천형사, 경찰2;
 
+    //커서 이미지 설정
+    public Texture2D cursorDefaultTexture, cursorMagGlassTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
     protected override void OnAwake()
     {
         base.OnAwake();
@@ -56,7 +61,28 @@ public class GameManager : DontDestroy<GameManager>
             천형사.color = new Color(1, 1, 1, 0);
             경찰2.color = new Color(1, 1, 1, 0);
         }
+
+
+        //커서 이미지 설정
+        SetGameCursor("Default");
     }
+
+    #region 커서 이미지 설정
+    public void SetGameCursor(string type)
+    {
+        switch (type)
+        {
+            case "Default":
+                Cursor.SetCursor(cursorDefaultTexture, hotSpot, cursorMode);
+                break;
+            case "MagGlass":
+                Cursor.SetCursor(cursorMagGlassTexture, hotSpot, cursorMode);
+                break;
+            default:
+                break;
+        }
+    }
+    #endregion
 
     private void Update()
     {
