@@ -18,6 +18,9 @@ public class Dialogue
         [Serializable]
         public class Details   //스타일, 좌상화, 우상화, 선택팝업, 글자속도 , 애니메이션
         {
+            [Header("- 다이얼로그 시작 딜레이 타임")]
+            public float delayTime;
+
             [Range(0f, 1f), Header("- Object 대사 출력 속도 (기본 0.92)")]
             public float letterSpeed;
 

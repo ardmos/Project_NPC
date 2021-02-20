@@ -53,11 +53,11 @@ TagManager:
   - name: Object
     uniqueID: 3175151927
     locked: 0
-  - name: Character
-    uniqueID: 2087208287
-    locked: 0
   - name: NPC
     uniqueID: 3758488885
+    locked: 0
+  - name: Character
+    uniqueID: 2087208287
     locked: 0
   - name: FX
     uniqueID: 1907403191

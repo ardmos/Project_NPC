@@ -295,11 +295,20 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 break;
         }
 
-        
+
         ///Details
         ///
+
+        //다이얼로그 시작 딜레이 타임 부여
+        if (dialogueSet.detail.delayTime != 0f)
+        {
+            //0이 아니면, 딜레이타임을 설정한것. 설정한 시간만큼 기다렸다가 실행시켜준다. 
+
+        }
+
         //스타일
         StartAnimByStyle((int)dialogueSet.detail.styles);
+        
         //초상화 세팅
         //초상화(좌)
         if (dialogueSet.detail.portraitSettings.showLeftPortrait)
@@ -379,7 +388,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
             cutSceneImage.SetNativeSize();
         }
         else cutSceneImage.color = new Color(1, 1, 1, 0);
-
 
         ///
         ///Details Ends
