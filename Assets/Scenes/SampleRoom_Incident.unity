@@ -470,8 +470,7 @@ MonoBehaviour:
           delayTime: 0
         cutSceneSettings:
           activateCutScene: 1
-          image: {fileID: 8544861727215838568, guid: 7994016c6556dc64189c891f1096674d,
-            type: 3}
+          image: {fileID: 21300000, guid: d7dfc22a799f1954a89d98ae8cff0c48, type: 3}
       soundNumber: 0
       name: 0
       sentence: "\uB098\uB294 \uD2B9\uAE30\uC778 '\uC0AC\uB78C \uC88B\uC544\uBCF4\uC774\uB294
@@ -6066,7 +6065,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580652749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.65, y: -10.87, z: 0}
+  m_LocalPosition: {x: -2.13, y: -10.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1613328308}
@@ -11015,7 +11014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450160335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.17, y: -11.51, z: 0}
+  m_LocalPosition: {x: -1.65, y: -11.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1613328308}
@@ -11419,7 +11418,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 121}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498294516
 MonoBehaviour:
@@ -11440,7 +11439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d7dfc22a799f1954a89d98ae8cff0c48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
