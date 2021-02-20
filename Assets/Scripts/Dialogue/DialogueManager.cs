@@ -87,8 +87,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-            isSpaceKeyDowned = true;
+        if(Input.GetKeyDown(KeyCode.Space)) isSpaceKeyDowned = true;
 
         if (isSpaceKeyDowned && isDialogueActive)
         {
@@ -104,41 +103,47 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //애니메이션이 끝났으면 DisplayNextSentence(); 진행.
         if (duringAnimation_AnimateAlone)
         {
-            //리스트로 써먹는것부터.  다시 해보자. isArrived 접근이 안된다 ㅋㅋ  <-- 지금은 해결!
+            string objname = null;
+            
             foreach (NPC item in nPCs)
             {
+                objname = item.gameObject.name;
                 if (item.isArrived)
                 {
-                    //print("Arrived");
+                    print(objname + "Arrived");
                     endedAnimation_AnimateAlone = true;
                 }
                 else
                 {
-                    //print("Not Arrived");
+                    print(objname + "Not Arrived");
                     endedAnimation_AnimateAlone = false;
                     return;
                 }
             }
             foreach (KeyInput_Controller item in keyInput_Controllers)
             {
+                objname = item.gameObject.name;
                 if (item.isArrived)
                 {
-                    //print("플레이어 Arrived");
+                    print(objname + "플레이어 Arrived");
                     endedAnimation_AnimateAlone = true;
                 }
                 else
                 {
-                    //print("플레이어 Not Arrived");
+                    print(objname + "플레이어 Not Arrived");
                     endedAnimation_AnimateAlone = false;
                     return;
                 }
             }
+            print(objname + " 이동애니메이션 진행중.");
+
             if (endedAnimation_AnimateAlone)
             {
                 //print("끝! end!");
                 //혹~시! 사운드LifeTime중인지?
                 if (!isSFXDialogLifeTime)
                 {
+                    print(objname + " 이동애니메이션 도착.끝");
                     duringAnimation_AnimateAlone = false;
                     DisplayNextSentence();
                 }
@@ -262,9 +267,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //기본 글자 속도.
         if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.92f;
 
-        //Sentence 비어있을경우, 발동할 애니메이션 or 사운드가 있는지 확인 후 없으면 그냥 패스! 
+        //Sentence 비어있을경우, 발동할 이동 애니메이션 or 기타 애니메이션 or 사운드가 있는지 확인 후 없으면 그냥 패스! 
         if (dialogueSet.sentence == "")
         {
+            //얘네들...있다 true 변수 
+            bool goreturn = false;
+
             //발동할 애니메이션이 있는지? 
             if (dialogueSet.detail.animationSettings.activateObjAnimate)
             {
@@ -286,27 +294,42 @@ public class DialogueManager : DontDestroy<DialogueManager>
                     }
                 }
                 duringAnimation_AnimateAlone = true;
-
-                //애니메이션이 있으면서 동시에 SFX LifeTime이 있는 경우!
-                if (dialogueSet.detail.sFXSettings.enableSFX && dialogueSet.detail.sFXSettings.dialogueLifeTime != 0)
-                {
-                    //print("넘겨주기!");
-                    //사운드 재생 후 
-                    audioSystem.DialogSFXHelper(dialogueSet);
-                    //설정한 LifeTime만큼 기다렸다가 다음 다이얼로그 호출. 
-                    StartCoroutine(WaitLifeTime(dialogueSet.detail.sFXSettings.dialogueLifeTime));
-                    return;
-                }
-                else return;
+                goreturn = true;
             }
-            //발동할 사운드 이펙트가 있는지?
-            else if(dialogueSet.detail.sFXSettings.enableSFX && dialogueSet.detail.sFXSettings.dialogueLifeTime != 0)
+
+            //Object 기타 애니메이션
+            if (dialogueSet.detail.etcAnimationSettings.etcAnimSets.Length > 0)   //실행/정지 시킬 오브젝트 갯수를 0보다 큰 수로 설정했을 경우
             {
-                print("넘겨주기!");
+                foreach (Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet etcAnimSet in dialogueSet.detail.etcAnimationSettings.etcAnimSets)
+                {
+                    if (etcAnimSet.activateOrDeActiveObjAnimate == Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet.TOTO.실행)
+                    {
+                        //실행
+                        etcAnimSet.objectAnimationData.obj.SetBool(etcAnimSet.objectAnimationData.paramName, true);
+                    }
+                    else if (etcAnimSet.activateOrDeActiveObjAnimate == Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet.TOTO.정지)
+                    {
+                        //정지
+                        etcAnimSet.objectAnimationData.obj.SetBool(etcAnimSet.objectAnimationData.paramName, false);
+                    }
+                }
+                goreturn = true;
+            }
+
+            //발동할 사운드 이펙트가 있는지?
+            if (dialogueSet.detail.sFXSettings.enableSFX && dialogueSet.detail.sFXSettings.dialogueLifeTime != 0)
+            {
                 //사운드 재생 후 
                 audioSystem.DialogSFXHelper(dialogueSet);
                 //설정한 LifeTime만큼 기다렸다가 다음 다이얼로그 호출. 
                 StartCoroutine(WaitLifeTime(dialogueSet.detail.sFXSettings.dialogueLifeTime));
+                goreturn = true;
+            }
+
+
+            if(goreturn)
+            {
+                goreturn = false;
                 return;
             }
             else
@@ -354,12 +377,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
 
 
-        ///Details
-        ///
+        #region Details
 
         //스타일
         StartAnimByStyle((int)dialogueSet.detail.styles);
-        
+
         //초상화 세팅
         //초상화(좌)
         if (dialogueSet.detail.portraitSettings.showLeftPortrait)
@@ -384,11 +406,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
         if (dialogueSet.detail.selectionPopupSettings.activateSelectionPopup)
         {
             //선택지 발동 조건 미리 만족시켜둠.  실행은 타이핑이 끝난 시점에 됨. 
-            activeChoiceBox = true;            
+            activeChoiceBox = true;
         }
 
         //Object 이동 애니메이션
-        if (dialogueSet.detail.animationSettings.activateObjAnimate)        
+        if (dialogueSet.detail.animationSettings.activateObjAnimate)
         {
             foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.animationSettings.objectAnimationData)
             {
@@ -398,11 +420,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
                 if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 2) return; //지금 미로(씬빌드인덱스2)씬 테스트 목적으로, 잠시 막아두기 
 
-                if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC  nPC))
+                if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
                 {
                     //print("it's NPC moving");
                     nPC.MoveAnimStart(objAnimData);
-                }else if (objAnimData.objToMakeMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
+                }
+                else if (objAnimData.objToMakeMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
                 {
                     //print("it's Player moving");
                     keyInput_Controller.MoveAnimStart(objAnimData);
@@ -411,7 +434,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
 
         //Object 기타 애니메이션
-        if (dialogueSet.detail.etcAnimationSettings.etcAnimSets.Length>0)   //실행/정지 시킬 오브젝트 갯수를 0보다 큰 수로 설정했을 경우
+        if (dialogueSet.detail.etcAnimationSettings.etcAnimSets.Length > 0)   //실행/정지 시킬 오브젝트 갯수를 0보다 큰 수로 설정했을 경우
         {
             foreach (Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet etcAnimSet in dialogueSet.detail.etcAnimationSettings.etcAnimSets)
             {
@@ -440,8 +463,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
         else cutSceneImage.color = new Color(1, 1, 1, 0);
 
-        ///
-        ///Details Ends
+        #endregion
 
 
         //문장 도도도 출력하는 부분
