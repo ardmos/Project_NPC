@@ -7,19 +7,31 @@ TextureImporter:
     second: wall3_0
   - first:
       213: -7065756908325363859
-    second: wall3_1
-  - first:
-      213: 706155987847799668
-    second: wall3_2
-  - first:
-      213: 8988345111086981441
     second: wall3_3
   - first:
+      213: 706155987847799668
+    second: wall3_3
+  - first:
+      213: 8988345111086981441
+    second: wall3_1
+  - first:
       213: 7997289785423842276
-    second: wall3_4
+    second: wall3_3
   - first:
       213: 8269227419014341640
-    second: wall3_5
+    second: wall3_4
+  - first:
+      213: -1569066131130109895
+    second: wall3_3
+  - first:
+      213: -3478751615688570684
+    second: wall3_1
+  - first:
+      213: 1466454470390193573
+    second: wall3_4
+  - first:
+      213: 1787366190798134848
+    second: wall3_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,7 +137,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,15 +150,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall3_1
+      name: wall3_6
       rect:
         serializedVersion: 2
         x: 35
         y: 3
         width: 32
-        height: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,15 +171,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall3_2
+      name: wall3_7
       rect:
         serializedVersion: 2
         x: 69
         y: 3
         width: 32
-        height: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,15 +192,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall3_3
+      name: wall3_8
       rect:
         serializedVersion: 2
         x: 103
         y: 3
         width: 32
-        height: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,15 +213,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall3_4
+      name: wall3_9
       rect:
         serializedVersion: 2
         x: 137
         y: 3
         width: 32
-        height: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +242,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,6 +250,90 @@ TextureImporter:
       bones: []
       spriteID: 804254d768232c270800000000000000
       internalID: 8269227419014341640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall3_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 35
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930b4e0caae893ae0800000000000000
+      internalID: -1569066131130109895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall3_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 35
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8011536ddf8bfc0800000000000000
+      internalID: -3478751615688570684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall3_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 35
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad14ea3294e95410800000000000000
+      internalID: 1466454470390193573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall3_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 35
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ed016a4100ec810800000000000000
+      internalID: 1787366190798134848
       vertices: []
       indices: 
       edges: []
