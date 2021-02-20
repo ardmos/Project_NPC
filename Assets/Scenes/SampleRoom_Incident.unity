@@ -266,6 +266,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -311,6 +313,8 @@ MonoBehaviour:
             dir: 0
             distance: 0
             endDir: 2
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -348,6 +352,8 @@ MonoBehaviour:
             dir: 0
             distance: 0
             endDir: 0
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -381,6 +387,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -399,10 +407,10 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 1
+          showLeftPortrait: 0
           leftPortraitNumber: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -417,6 +425,8 @@ MonoBehaviour:
             dir: 3
             distance: 3
             endDir: 2
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -430,6 +440,604 @@ MonoBehaviour:
       name: 0
       sentence: "\uC548\uB155\uD558\uC2ED\uB2C8\uAE4C, \uC5F0\uB77D\uBC1B\uACE0 \uC628
         \uAE40\uD0D0\uC815 \uC785\uB2C8\uB2E4."
+    - smallTitle_: "\uBA85\uD568\uC744 \uB0B4\uBC00\uC5C8\uB2E4."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 1
+          image: {fileID: 8544861727215838568, guid: 7994016c6556dc64189c891f1096674d,
+            type: 3}
+      soundNumber: 0
+      name: 0
+      sentence: "\uB098\uB294 \uD2B9\uAE30\uC778 '\uC0AC\uB78C \uC88B\uC544\uBCF4\uC774\uB294
+        \uBBF8\uC18C'\uB97C \uC9C0\uC5B4\uBCF4\uC774\uBA70 \uADF8\uB140\uC5D0\uAC8C
+        \uBA85\uD568\uC744 \uB0B4\uBC00\uC5C8\uB2E4."
+    - smallTitle_: "\uC5B4\uB9B0 \uC5EC\uC790\uAC00 \uB2F4\uB2F9 \uC218\uC0AC\uAD00\uC774\uB77C\uB2C8?"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 0
+      sentence: "'\uC5B4\uB9B0 \uC5EC\uC790\uAC00 \uB2F4\uB2F9 \uC218\uC0AC\uAD00\uC774\uB77C\uB2C8...?
+        \uAD70\uAE30\uB3C4 \uBC14\uC9DD \uB4E4\uC5B4\uC788\uB294\uAC78 \uBCF4\uB2C8...
+        \uBCF4\uB098\uB9C8\uB098 \uC774\uB807\uAC8C \uB2F4\uB2F9\uC790\uB85C \uBC30\uCE58\uB41C
+        \uAC74 \uCCAB \uACBD\uD5D8\uC774\uACA0\uAD70.'"
+    - smallTitle_: "\uC0AC\uAC74\uB3C4 \uB09C\uD574\uD558\uACE0 \uC5B4\uB824\uC6CC\uBCF4\uC774\uB2C8\uAE4C"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 0
+      sentence: "'\uC0AC\uAC74\uB3C4 \uB09C\uD574\uD558\uACE0 \uC5B4\uB824\uC6CC\uBCF4\uC774\uB2C8\uAE4C
+        \uC5B4\uB9B0 \uC2E0\uC785\uD55C\uD14C \uB5A0\uB118\uAE30\uACE0 \uD574\uACB0\uC774
+        \uC798 \uC548\uB3FC\uB3C4 \uCC45\uC784 \uC804\uAC00 \uD574\uBC84\uB9AC\uB824\uB294
+        \uC18D\uC148\uC774\uACA0\uC9C0.'"
+    - smallTitle_: "\uC9C0\uD604: \uB2F4\uB2F9 \uC218\uC0AC\uAD00 \uCC9C \uC9C0\uD604
+        \uD615\uC0AC\uC785\uB2C8\uB2E4."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 1
+      sentence: "\uB2F4\uB2F9 \uC218\uC0AC\uAD00 \uCC9C \uC9C0\uD604 \uD615\uC0AC\uC785\uB2C8\uB2E4."
+    - smallTitle_: "\uC2B9\uD6C8: \uC544\uD734~ \uC5F0\uCD08\uBD80\uD130 \uC774\uAC8C
+        \uBB34\uC2A8"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 0
+      sentence: "\uC544\uD734~ \uC5F0\uCD08\uBD80\uD130 \uC774\uAC8C \uBB34\uC2A8
+        \uB0A0\uBCBC\uB77D\uC774\uB78D\uB2C8\uAE4C?\n\uB0A8\uB4E4\uC740 \uC1A1\uB144\uD68C\uB2E4,
+        \uC2E0\uB144\uD68C\uB2E4 \uBC14\uC060 \uB550\uB370, \n\uC6B0\uB9AC\uB9CC
+        \uAD6C\uC9C8\uAD6C\uC9C8\uD558\uAC8C \uC369\uC740 \uB0B4 \uB9E1\uC73C\uBA74\uC11C
+        \uACE0\uC0DD\uD558\uAC8C \uC0DD\uACBC\uB124~ \uC548\uADF8\uB798\uC694? "
+    - smallTitle_: "\uC9C0\uD604: \uC0AC\uAC74\uD604\uC7A5\uC5D0\uC11C \uC218\uB2E4
+        \uB5A8 \uC2DC\uAC04 \uC5C6\uC2B5\uB2C8\uB2E4."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 1
+      sentence: "\uC0AC\uAC74\uD604\uC7A5\uC5D0\uC11C \uC218\uB2E4 \uB5A8 \uC2DC\uAC04
+        \uC5C6\uC2B5\uB2C8\uB2E4.\n\uAE09\uD55C\uB300\uB85C \uC0AC\uAC74 \uB0B4\uC6A9\uBD80\uD130
+        \uBA3C\uC800 \uB4E4\uC73C\uC2DC\uC8E0."
+    - smallTitle_: "\uC2B9\uD6C8: \uAC70\uCC38, \uAC19\uC774 \uC77C\uD560 \uC0AC\uC778\uB370
+        \uB108\uBB34 \uB531\uB531\uD558\uAC8C \uAD6C\uC2DC\uB124..."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 0
+      sentence: "\uAC70\uCC38, \uAC19\uC774 \uC77C\uD560 \uC0AC\uC778\uB370 \uB108\uBB34
+        \uB531\uB531\uD558\uAC8C \uAD6C\uC2DC\uB124..."
+    - smallTitle_: "\uADF8\uB140\uAC00 \uC870\uC218\uC5D0\uAC8C \uACE0\uAC2F\uC9D3
+        \uD558\uC790,"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 9
+      sentence: "\uADF8\uB140\uAC00 \uC870\uC218\uC5D0\uAC8C \uACE0\uAC2F\uC9D3 \uD558\uC790,
+        \n\uC5B4\uB9AC\uC219\uD574\uBCF4\uC774\uB294 \uC5B4\uB9B0 \uACBD\uCC30\uC774
+        \uD5C8\uB465\uC9C0\uB465 \uD30C\uC77C\uC744 \uC5F0\uB2E4."
+    - smallTitle_: "\uACBD\uCC302: \uC2E0\uACE0\uAC00 \uB4E4\uC5B4\uC628 \uAC74 ..."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets:
+          - activateOrDeActiveObjAnimate: 0
+            objectAnimationData:
+              obj: {fileID: 580652753}
+              paramName: DoPaperAction
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 3
+      sentence: "\uC2E0\uACE0\uAC00 \uB4E4\uC5B4\uC628 \uAC74 1\uC6D4 3\uC77C \uC624\uB298
+        \uC624\uC804 9\uC2DC\uAD6C\uC694.\n\uC5B4... \uC0AC\uB9DD \uCD94\uC815\uC2DC\uAC04\uC740
+        \uC0C8\uBCBD 5\uC2DC~7\uC2DC \uC815\uB3C4\uB85C..."
+    - smallTitle_: "\uC2B9\uD6C8: \uAE34\uC7A5\uD558\uC9C0 \uB9D0\uACE0 \uC598\uAE30
+        \uD558\uB77C\uACE0~ \uC54C\uC544\uB4E3\uAE30 \uC88B\uAC8C"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 0
+      sentence: "\uAE34\uC7A5\uD558\uC9C0 \uB9D0\uACE0 \uC598\uAE30 \uD558\uB77C\uACE0~
+        \uC54C\uC544\uB4E3\uAE30 \uC88B\uAC8C"
+    - smallTitle_: "\uACBD\uCC302: \uC544... \uC544, \uD53C\uD574\uC790\uB294 38\uC138
+        \uB0A8\uC131. "
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 3
+      sentence: "\uC544... \uC544, \uD53C\uD574\uC790\uB294 38\uC138 \uB0A8\uC131.
+        \uC774\uB984\uC740 \uD55C \uBC31\uAC15."
+    - smallTitle_: "\uACBD\uCC302: \uD2B9\uBCC4\uD788 \uC9C1\uC5C5\uC740 \uC5C6\uC5C8\uACE0..."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 3
+      sentence: "\uD2B9\uBCC4\uD788 \uC9C1\uC5C5\uC740 \uC5C6\uC5C8\uACE0 2\uB144
+        \uC804, \uD55C \uBB3C\uB958\uC5C5\uCCB4\uC5D0\uC11C \uBC30\uC1A1\uC77C\uC744
+        \uD558\uB2E4\uAC00 \uAD6C\uC870\uC870\uC815\uB41C \uC774\uD6C4\uB85C\uB294
+        \uBA87\uBA87 \uC544\uB974\uBC14\uC774\uD2B8 \uC0DD\uD65C\uC744 \uC774\uC5B4\uAC04
+        \uAC83\uC73C\uB85C... \n\uD654... \uD655\uC778 \uB418\uC5C8\uC2B5\uB2C8\uB2E4."
+    - smallTitle_: "\uC2B9\uD6C8: \uC74C... \uB098\uC774\uB3C4 \uB9CE\uC740\uB370
+        \uC774\uB7F0 ..."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 0
+      sentence: "\uC74C... \uB098\uC774\uB3C4 \uB9CE\uC740\uB370 \uC774\uB7F0 \uD3D0\uC778
+        \uC0DD\uD65C\uC744 \uD588\uB2E4\uB2C8. \uD55C\uC2EC\uD55C \uC591\uBC18\uC774\uAD6C\uB9CC. "
+    - smallTitle_: "\uACBD\uCC302: \uADF8..\uADF8\uB9AC\uACE0 \uCD5C\uADFC 3\uAC1C\uC6D4\uAC04"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 3
+      sentence: "\uADF8.. \uADF8\uB9AC\uACE0 \uCD5C\uADFC 3\uAC1C\uC6D4\uAC04 CCTV\uAE30\uB85D\uC744
+        \uC0B4\uD3B4\uBCF8 \uACB0\uACFC, \uAC70\uC758 \uC678\uCD9C\uC744 \uD558\uC9C0
+        \uC54A\uC558\uC2B5\uB2C8\uB2E4.\n\uADF8\uC758 \uC77C\uACFC\uB294 \uB300\uBD80\uBD84
+        [\uB9AC\uC5BC \uBC84\uC2A4\uD2F0\uB4DC]\uAC8C\uC784\uC744 \uD558\uBA70 \uBCF4\uB0B8
+        \uAC83\uC73C\uB85C \uCD94\uC815\uB429\uB2C8\uB2E4. "
+    - smallTitle_: "\uACBD\uCC302: \uC774\uBC88 \uC0AC\uAC74 \uC5ED\uC2DC, [\uB9AC\uC5BC
+        \uBC84\uC2A4\uD2F0\uB4DC]\uC5D0\uC11C..."
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 3
+      sentence: "\uC774\uBC88 \uC0AC\uAC74 \uC5ED\uC2DC, [\uB9AC\uC5BC \uBC84\uC2A4\uD2F0\uB4DC]\uC5D0\uC11C
+        \uC0DD\uCCB4 \uAE30\uB85D\uC744 \uC218\uC2E0 \uD558\uB358 \uC911,  \uBE44\uC815\uC0C1\uC801\uC778
+        \uC2EC\uC7A5 \uBC15\uB3D9 \uC218\uCE58\uAC00 \uC624\uB7AB\uB3D9\uC548 \uC9C0\uC18D\uB418\uC5B4
+        \uB0B4\uC7A5\uB418\uC5B4\uC788\uB294 \uC2DC\uC2A4\uD15C\uC73C\uB85C \uACBD\uCC30\uC5D0
+        \uC790\uB3D9 \uC2E0\uACE0\uAC00 \uB41C \uAC83\uC73C\uB85C \uC54C\uB824\uC84C\uC2B5\uB2C8\uB2E4. "
+    - smallTitle_: "\uC2B9\uD6C8: \uD558! \uAC8C\uC784\uC774 \uC0DD\uC0AC \uD655\uC778\uB3C4
+        \uC2DC\uCF1C\uC8FC\uB294 \uC138\uC0C1\uC774\uAD70!"
+      dialogueSetName: 
+      detail:
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets:
+          - activateOrDeActiveObjAnimate: 1
+            objectAnimationData:
+              obj: {fileID: 580652753}
+              paramName: DoPaperAction
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 0
+      sentence: "\uD558! \uAC8C\uC784\uC774 \uC0DD\uC0AC \uD655\uC778\uB3C4 \uC2DC\uCF1C\uC8FC\uB294
+        \uC138\uC0C1\uC774\uAD70!"
 --- !u!1 &20024207
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +1385,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -1070,39 +1680,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52146085}
   m_CullTransparentMesh: 0
---- !u!1 &91884823
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 91884824}
-  m_Layer: 5
-  m_Name: "\uCEE4\uC11C \uD14C\uC2A4\uD615 "
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &91884824
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91884823}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.51, y: 2.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 981880580}
-  - {fileID: 1214066590}
-  - {fileID: 1633844316}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &98933252
 GameObject:
   m_ObjectHideFlags: 0
@@ -5489,11 +6066,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580652749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.38, y: -11.74, z: 0}
+  m_LocalPosition: {x: -2.65, y: -10.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1613328308}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &580652751
 MonoBehaviour:
@@ -5591,7 +6168,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.0625, y: 2}
+    oldSize: {x: 0.65625, y: 1.96875}
     newSize: {x: 0.6875, y: 1.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5639,7 +6216,8 @@ SpriteRenderer:
   m_SortingLayerID: -536478411
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e036af57aa680ca43815c91a29408361, type: 3}
+  m_Sprite: {fileID: 5438530433522286116, guid: fe05db8c014a846f4abb632c91a2c281,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7260,6 +7838,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -7292,6 +7872,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -7324,6 +7906,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -8000,88 +8584,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 977671939}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &981880579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 981880580}
-  - component: {fileID: 981880581}
-  m_Layer: 5
-  m_Name: mouse_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &981880580
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981880579}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.28999996, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 91884824}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &981880581
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981880579}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1907403191
-  m_SortingLayer: 6
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -3397387025712965628, guid: c21f6e6e6dab74d538e5f54740ea8b34,
-    type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.25, y: 0.34375}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1023926789
 GameObject:
   m_ObjectHideFlags: 0
@@ -8388,6 +8890,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -8420,6 +8924,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -8457,6 +8963,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -8494,6 +9002,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -8529,6 +9039,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -8566,6 +9078,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -8601,6 +9115,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -8796,88 +9312,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204332596}
   m_CullTransparentMesh: 0
---- !u!1 &1214066589
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1214066590}
-  - component: {fileID: 1214066591}
-  m_Layer: 5
-  m_Name: mouse_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1214066590
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214066589}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.13, y: 0.36, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 91884824}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1214066591
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214066589}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1907403191
-  m_SortingLayer: 6
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 4454631428275665778, guid: c21f6e6e6dab74d538e5f54740ea8b34,
-    type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.203125, y: 0.203125}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1001 &1290929846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10581,11 +11015,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450160335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8400002, y: -10.92, z: 0}
+  m_LocalPosition: {x: -2.17, y: -11.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1613328308}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1450160337
 MonoBehaviour:
@@ -11250,6 +11684,8 @@ MonoBehaviour:
       animationSettings:
         activateObjAnimate: 0
         objectAnimationData: []
+      etcAnimationSettings:
+        etcAnimSets: []
       sFXSettings:
         turnOffTypingSound: 0
         enableSFX: 0
@@ -11627,7 +12063,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1556139922
 MonoBehaviour:
@@ -11662,6 +12098,8 @@ MonoBehaviour:
       animationSettings:
         activateObjAnimate: 0
         objectAnimationData: []
+      etcAnimationSettings:
+        etcAnimSets: []
       sFXSettings:
         turnOffTypingSound: 0
         enableSFX: 0
@@ -11964,8 +12402,8 @@ Transform:
   - {fileID: 1807504351}
   - {fileID: 525210959}
   - {fileID: 2066939041}
-  - {fileID: 1450160336}
   - {fileID: 580652750}
+  - {fileID: 1450160336}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12047,88 +12485,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623894227}
   m_CullTransparentMesh: 0
---- !u!1 &1633844315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1633844316}
-  - component: {fileID: 1633844317}
-  m_Layer: 5
-  m_Name: mouse_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1633844316
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633844315}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.06, y: -0.34, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 91884824}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1633844317
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633844315}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1907403191
-  m_SortingLayer: 6
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -3124372832261642726, guid: c21f6e6e6dab74d538e5f54740ea8b34,
-    type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.203125, y: 0.203125}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1706696167
 GameObject:
   m_ObjectHideFlags: 0
@@ -14232,6 +14588,8 @@ MonoBehaviour:
                 animationSettings:
                   activateObjAnimate: 0
                   objectAnimationData: []
+                etcAnimationSettings:
+                  etcAnimSets: []
                 sFXSettings:
                   turnOffTypingSound: 0
                   enableSFX: 0
@@ -14264,6 +14622,8 @@ MonoBehaviour:
                 animationSettings:
                   activateObjAnimate: 0
                   objectAnimationData: []
+                etcAnimationSettings:
+                  etcAnimSets: []
                 sFXSettings:
                   turnOffTypingSound: 0
                   enableSFX: 0
@@ -14297,6 +14657,8 @@ MonoBehaviour:
                 animationSettings:
                   activateObjAnimate: 0
                   objectAnimationData: []
+                etcAnimationSettings:
+                  etcAnimSets: []
                 sFXSettings:
                   turnOffTypingSound: 0
                   enableSFX: 0
@@ -14329,6 +14691,8 @@ MonoBehaviour:
                 animationSettings:
                   activateObjAnimate: 0
                   objectAnimationData: []
+                etcAnimationSettings:
+                  etcAnimSets: []
                 sFXSettings:
                   turnOffTypingSound: 0
                   enableSFX: 0
@@ -14344,6 +14708,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -14789,6 +15155,8 @@ MonoBehaviour:
             dir: 1
             distance: 3
             endDir: 0
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 1
           enableSFX: 1
@@ -14821,6 +15189,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -14871,6 +15241,8 @@ MonoBehaviour:
                 animationSettings:
                   activateObjAnimate: 0
                   objectAnimationData: []
+                etcAnimationSettings:
+                  etcAnimSets: []
                 sFXSettings:
                   turnOffTypingSound: 0
                   enableSFX: 0
@@ -14908,6 +15280,8 @@ MonoBehaviour:
                     dir: 4
                     distance: 2
                     endDir: 2
+                etcAnimationSettings:
+                  etcAnimSets: []
                 sFXSettings:
                   turnOffTypingSound: 0
                   enableSFX: 0
@@ -14927,6 +15301,8 @@ MonoBehaviour:
             dir: 3
             distance: 2
             endDir: 1
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -14960,6 +15336,8 @@ MonoBehaviour:
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -15042,7 +15420,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949190463
 GameObject:
@@ -15780,7 +16158,7 @@ PrefabInstance:
     - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
         type: 3}

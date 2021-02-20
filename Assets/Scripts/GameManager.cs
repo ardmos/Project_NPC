@@ -62,7 +62,6 @@ public class GameManager : DontDestroy<GameManager>
             경찰2.color = new Color(1, 1, 1, 0);
         }
 
-
         //커서 이미지 설정
         SetGameCursor("Default");
     }

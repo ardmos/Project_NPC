@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
-[System.Serializable]
+[Serializable]
 public class Dialogue
 {
     [Header("- ↑ \'대화묶음\'의 제목")]
@@ -11,10 +12,10 @@ public class Dialogue
     [Header("- 대화묶음을 갖게될 오브젝트의 id값을 정해주세요.")]
     public int storyId;
 
-    [System.Serializable]
+    [Serializable]
     public class DialogueSet
     {
-        [System.Serializable]
+        [Serializable]
         public class Details   //스타일, 좌상화, 우상화, 선택팝업, 글자속도 , 애니메이션
         {
             [Range(0f, 1f), Header("- Object 대사 출력 속도 (기본 0.92)")]
@@ -49,7 +50,7 @@ public class Dialogue
                 경찰2
             }
             //좌상화, 우상화
-            [System.Serializable]
+            [Serializable]
             public struct PortraitSettings
             {
                 [Header("- 좌측 초상화              (체크박스에 체크 후, 원하는 초상화 저장소의 번호를 입력하면 초상화가 출력됩니다.)")]
@@ -65,13 +66,13 @@ public class Dialogue
 
 
             //선택창팝업
-            [System.Serializable]
+            [Serializable]
             public struct SelectionPopupSettings
             {
                 [Header("- 선택대화창(팝업) 활성화"), Space(5)]
                 //선택팝업
                 public bool activateSelectionPopup;
-                [System.Serializable]
+                [Serializable]
                 public struct SelectionData
                 {
                     [Header("- 선택팝업창 상단의 질문")]
@@ -90,12 +91,12 @@ public class Dialogue
             public SelectionPopupSettings selectionPopupSettings;
 
 
-            //애니메이션 세팅
-            [System.Serializable]
+            //이동 애니메이션 세팅
+            [Serializable]
             public struct AnimationSettings
             {
                 //npc애니메이션
-                [System.Serializable]
+                [Serializable]
                 public struct ObjectAnimData
                 {
                     [Header("- 움직이고싶은 Object를 드래그해서 넣어주세요")]
@@ -130,16 +131,50 @@ public class Dialogue
                     [Header("- 정지시 쳐다볼 방향")]
                     public EndDir endDir;
                 }
-                [Header("- 애니메이션 활성화"), Space(5)]
+                [Header("- 이동 애니메이션 활성화"), Space(5)]
                 public bool activateObjAnimate;
-                [Header("- 활성화시킬 애니메이션의 데이터를 넣는 곳")]
+                [Header("- 활성화시킬 이동 정보를 넣는 곳")]
                 public ObjectAnimData[] objectAnimationData;
             }
-            [Header("- 애니메이션 설정"), Space(5)]
+            [Header("- 이동 애니메이션 설정"), Space(5)]
             public AnimationSettings animationSettings;
 
+            //이동 제외 기타 애니메이션 세팅 
+            [Serializable]
+            public struct EtcAnimationSettings
+            {
+                [Serializable]
+                public struct EtcAnimSet
+                {
+                    public enum TOTO
+                    {
+                        실행,
+                        정지
+                    }
+                    [Header("- 실행/정지 설정"), Space(5)]
+                    public TOTO activateOrDeActiveObjAnimate;
+
+                    [Serializable]
+                    public struct MyStruct
+                    {
+                        //오브젝트
+                        [Header("- Object를 드래그해서 넣어주세요")]
+                        public Animator obj;
+                        //Bool 파라미터 이름
+                        [Header("- 파라미터의 이름을 넣어주세요")]
+                        public string paramName;
+                    }
+                    [Header("- 정보를 넣는 곳")]
+                    public MyStruct objectAnimationData;
+                }
+                [Header("- 실행/정지 시킬 애니메이션 개체의 갯수")]
+                public EtcAnimSet[] etcAnimSets;
+            }
+            [Header("- 이동 제외 기타 애니메이션 설정"), Space(5)]
+            public EtcAnimationSettings etcAnimationSettings;
+
             //효과음 설정
-            [System.Serializable]
+            [Serializable]
             public struct SFXSettings
             {
                 [Header("- 타이핑사운드 끄려면! 체크"), Space(5)]
@@ -157,7 +192,7 @@ public class Dialogue
             public SFXSettings sFXSettings;
 
             //이벤트 컷신 설정
-            [System.Serializable]
+            [Serializable]
             public struct CutSceneSettings
             {
                 [Header("- 컷씬 활성화"), Space(5)]
@@ -190,7 +225,8 @@ public class Dialogue
             음식,
             침대,
             창문,
-            캡슐
+            캡슐,
+            빈칸
         }
         [Header("- Object 이름"), Space(5)]
         public Names name;

@@ -220,6 +220,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     //배치서비스 시작합니다.   스플릿서비스는 안녕!  일괄 처리.
     void BatchService(Dialogue.DialogueSet dialogueSet) {
+        //여기서 dialogueSet에 입력된 정보에 따라 새 다이얼로그창의 정보를 설정.
 
         //기본 글자 속도.
         if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.92f;
@@ -257,9 +258,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
             }
         }
 
-
-        //여기서 dialogueSet에 입력된 정보에 따라 처리.
-
         //이름
         switch (dialogueSet.name)
         {
@@ -290,12 +288,14 @@ public class DialogueManager : DontDestroy<DialogueManager>
             case Dialogue.DialogueSet.Names.캡슐:
                 dialogObjName.text = "캡슐";
                 break;
+            case Dialogue.DialogueSet.Names.빈칸:
+                dialogObjName.text = "";
+                break;
             default:
                 break;
         }
 
         
-
         ///Details
         ///
         //스타일
@@ -327,7 +327,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             activeChoiceBox = true;            
         }
 
-        //Object 애니메이션
+        //Object 이동 애니메이션
         if (dialogueSet.detail.animationSettings.activateObjAnimate)        
         {
             foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.animationSettings.objectAnimationData)
@@ -346,6 +346,24 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 {
                     //print("it's Player moving");
                     keyInput_Controller.MoveAnimStart(objAnimData);
+                }
+            }
+        }
+
+        //Object 기타 애니메이션
+        if (dialogueSet.detail.etcAnimationSettings.etcAnimSets.Length>0)   //실행/정지 시킬 오브젝트 갯수를 0보다 큰 수로 설정했을 경우
+        {
+            foreach (Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet etcAnimSet in dialogueSet.detail.etcAnimationSettings.etcAnimSets)
+            {
+                if (etcAnimSet.activateOrDeActiveObjAnimate == Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet.TOTO.실행)
+                {
+                    //실행
+                    etcAnimSet.objectAnimationData.obj.SetBool(etcAnimSet.objectAnimationData.paramName, true);
+                }
+                else if (etcAnimSet.activateOrDeActiveObjAnimate == Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet.TOTO.정지)
+                {
+                    //정지
+                    etcAnimSet.objectAnimationData.obj.SetBool(etcAnimSet.objectAnimationData.paramName, false);
                 }
             }
         }
