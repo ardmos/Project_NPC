@@ -172,7 +172,7 @@ public class ChoiceBox : MonoBehaviour
                 SetCurNum(tmp);
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && !DialogueManager.Instance.isDuringTyping)
+            if (Input.GetKeyDown(KeyCode.Return) && !DialogueManager.Instance.isDuringTyping)
                 GetChoice(curNum);
         }
     }

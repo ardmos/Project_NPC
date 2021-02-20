@@ -190,6 +190,8 @@ public class Dialogue
                 public int playTime;
                 [Header("- 반복 사이 시간"), Space(5)]
                 public float delayTime;
+                [Header("- Sentence 없이 효과음만 재생할 경우에만, 몇 초 후에 다음 다이얼로그를 불러올지 정해주세요."), Space(5)]
+                public float dialogueLifeTime;
             }
             [Header("- 사운드 효과 설정"), Space(5)]
             public SFXSettings sFXSettings;

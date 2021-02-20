@@ -275,6 +275,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -323,6 +324,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -363,6 +365,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -399,6 +402,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -438,6 +442,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -474,6 +479,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 1
           image: {fileID: 21300000, guid: d7dfc22a799f1954a89d98ae8cff0c48, type: 3}
@@ -511,6 +517,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -549,6 +556,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -588,6 +596,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -624,6 +633,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -664,6 +674,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -702,6 +713,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -739,6 +751,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -747,10 +760,50 @@ MonoBehaviour:
       sentence: "\uADF8\uB140\uAC00 \uC870\uC218\uC5D0\uAC8C \uACE0\uAC2F\uC9D3 \uD558\uC790,
         \n\uC5B4\uB9AC\uC219\uD574\uBCF4\uC774\uB294 \uC5B4\uB9B0 \uACBD\uCC30\uC774
         \uD5C8\uB465\uC9C0\uB465 \uD30C\uC77C\uC744 \uC5F0\uB2E4."
-    - smallTitle_: "\uACBD\uCC302: \uC2E0\uACE0\uAC00 \uB4E4\uC5B4\uC628 \uAC74 ..."
+    - smallTitle_: "(\uACBD\uCC302 \uD638\uB2E4\uB2E5 \uC774\uB3D9 \uC560\uB2C8\uBA54\uC774\uC158)"
       dialogueSetName: 
       detail:
         delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 1
+          objectAnimationData:
+          - objToMakeMove: {fileID: 580652749}
+            dir: 4
+            distance: 1
+            endDir: 1
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
+      soundNumber: 0
+      name: 9
+      sentence: 
+    - smallTitle_: "\uACBD\uCC302: \uC2E0\uACE0\uAC00 \uB4E4\uC5B4\uC628 \uAC74 ..."
+      dialogueSetName: 
+      detail:
+        delayTime: 0.2
         letterSpeed: 0
         styles: 0
         portraitSettings:
@@ -780,6 +833,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -818,6 +872,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -855,6 +910,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -891,6 +947,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -931,6 +988,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -967,6 +1025,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -1007,6 +1066,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -1051,6 +1111,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 21300000, guid: 98ac026b1890d9c49a34f8502d24cbd7, type: 3}
@@ -1218,7 +1279,8 @@ SpriteRenderer:
   m_SortingLayerID: 2087208287
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3709755bd275f0840861c2e491f2d545, type: 3}
+  m_Sprite: {fileID: -2490419668827604467, guid: 9b19f398cf60e6b438bc45a4d0d6c43b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1414,6 +1476,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -4304,8 +4367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_Color: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 1}
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4502,7 +4565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5585,7 +5648,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7868,6 +7931,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -7903,6 +7967,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 1
           image: {fileID: 21300000, guid: 9f0ea21766ffa5a4fa9c78dab9af205d, type: 3}
@@ -7938,6 +8003,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -8923,6 +8989,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -8958,6 +9025,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -8998,6 +9066,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -9038,6 +9107,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -9076,6 +9146,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -9116,6 +9187,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -9154,6 +9226,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -10839,7 +10912,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11195,7 +11268,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -536478411
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e036af57aa680ca43815c91a29408361, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11676,7 +11749,7 @@ MonoBehaviour:
   audioSystem: {fileID: 1556139922}
   "\uC2A4\uD1A0\uB9AC\uC815\uB9AC": {fileID: 806612663}
   isDialogueActive: 0
-  isCtrlKeyDowned: 0
+  isSpaceKeyDowned: 0
   isDuringTyping: 0
   portraits:
   - {fileID: 21300000, guid: c3717cab6e481c3429db134170e83539, type: 3}
@@ -11724,6 +11797,7 @@ MonoBehaviour:
         audioClip: {fileID: 0}
         playTime: 0
         delayTime: 0
+        dialogueLifeTime: 0
       cutSceneSettings:
         activateCutScene: 0
         image: {fileID: 0}
@@ -12139,6 +12213,7 @@ MonoBehaviour:
         audioClip: {fileID: 0}
         playTime: 0
         delayTime: 0
+        dialogueLifeTime: 0
       cutSceneSettings:
         activateCutScene: 0
         image: {fileID: 0}
@@ -12799,7 +12874,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -14105,7 +14180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
   m_LookaheadTime: 0.8
-  m_LookaheadSmoothing: 5
+  m_LookaheadSmoothing: 7
   m_LookaheadIgnoreY: 0
   m_XDamping: 0
   m_YDamping: 0
@@ -14114,8 +14189,8 @@ MonoBehaviour:
   m_ScreenX: 0.4990234
   m_ScreenY: 0.4986979
   m_CameraDistance: 11
-  m_DeadZoneWidth: 0.8
-  m_DeadZoneHeight: 0.8
+  m_DeadZoneWidth: 0.41
+  m_DeadZoneHeight: 0.41
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 1
@@ -14651,6 +14726,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -14686,6 +14762,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -14722,6 +14799,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -14757,6 +14835,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -14774,6 +14853,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -15189,7 +15269,47 @@ MonoBehaviour:
   - smallTitle_: 
     storyId: 0
     dialogue:
-    - smallTitle_: "\uB69C\uBC85\uB69C\uBC85"
+    - smallTitle_: "(\uB69C\uBC85\uB69C\uBC85 \uC18C\uB9AC)"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 1
+          objectAnimationData:
+          - objToMakeMove: {fileID: 20024207}
+            dir: 0
+            distance: 0
+            endDir: 3
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 1
+          enableSFX: 1
+          audioClip: {fileID: 8300000, guid: 926bb4805025159478b43fb2ae5d237d, type: 3}
+          playTime: 3
+          delayTime: 0.8
+          dialogueLifeTime: 2.2
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 9
+      sentence: 
+    - smallTitle_: "(\uB69C\uBC85\uB69C\uBC85 \uC774\uB3D9)"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -15218,20 +15338,21 @@ MonoBehaviour:
           etcAnimSets: []
         sFXSettings:
           turnOffTypingSound: 1
-          enableSFX: 1
+          enableSFX: 0
           audioClip: {fileID: 8300000, guid: 926bb4805025159478b43fb2ae5d237d, type: 3}
-          playTime: 2
+          playTime: 3
           delayTime: 0.5
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
       name: 9
-      sentence: "(\uB69C\uBC85\uB69C\uBC85)"
+      sentence: 
     - smallTitle_: "\uD63C\uC7A3\uB9D0"
       dialogueSetName: 
       detail:
-        delayTime: 0
+        delayTime: 1
         letterSpeed: 0
         styles: 0
         portraitSettings:
@@ -15261,6 +15382,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -15315,6 +15437,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -15359,6 +15482,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -15380,6 +15504,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -15389,7 +15514,7 @@ MonoBehaviour:
     - smallTitle_: "\uACBD\uCC30 \uC81C\uC9C0"
       dialogueSetName: 
       detail:
-        delayTime: 0
+        delayTime: 2
         letterSpeed: 0
         styles: 0
         portraitSettings:
@@ -15434,6 +15559,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -15478,6 +15604,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -15499,6 +15626,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -15554,6 +15682,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -15598,6 +15727,7 @@ MonoBehaviour:
                   audioClip: {fileID: 0}
                   playTime: 0
                   delayTime: 0
+                  dialogueLifeTime: 0
                 cutSceneSettings:
                   activateCutScene: 0
                   image: {fileID: 0}
@@ -15619,6 +15749,7 @@ MonoBehaviour:
           audioClip: {fileID: 0}
           playTime: 0
           delayTime: 0
+          dialogueLifeTime: 0
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
@@ -15892,7 +16023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
   m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16423,85 +16554,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.71875, y: 1.34375}
   m_EdgeRadius: 0
---- !u!1001 &47544086282334393
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.17514428
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.43296152
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.28125
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323176, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323191, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelChanger
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544085696323191, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 47544087303362654, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 95b8b1ce9cb424e8bbb19c0c72d81ed3, type: 3}
 --- !u!1001 &4012533049901464573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16591,3 +16643,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af579edce83354e6f859b60b60e757b6, type: 3}
+--- !u!1001 &6261429762539101601
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6261429761409021254, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236847, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelChanger_ForScene1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236847, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.17514428
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.43296152
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.28125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3705fcd21edeb79468cc0260fdca0993, type: 3}

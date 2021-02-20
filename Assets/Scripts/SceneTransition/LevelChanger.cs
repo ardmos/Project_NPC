@@ -14,17 +14,17 @@ public class LevelChanger : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        instance = this;        
     }
     #endregion
 
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
-        {
-            FadeToNextLevel();
-        }
+        //if (Input.GetMouseButton(0))
+        //{
+        //    FadeToNextLevel();
+        //}
     }
 
 

@@ -20,7 +20,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     [HideInInspector]
     //ctrl키 눌렸는지 체크. 
-    public bool isCtrlKeyDowned = false;
+    public bool isSpaceKeyDowned = false;
     [HideInInspector]
     //문자출력 도중인지, 끝났는지. 
     public bool isDuringTyping = false;
@@ -51,6 +51,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public bool endedAnimation_AnimateAlone;
     public List<NPC> nPCs = new List<NPC>();
     public List<KeyInput_Controller> keyInput_Controllers = new List<KeyInput_Controller>();
+    //다이얼로그 딜레이 타임 
+    bool isdelayTimeCompleted = false;
+    bool isStartedWatingDelayTime = false;
+    //다이얼로그 사운드이펙트만!! LifeTime 으로 재생중인지!
+    bool isSFXDialogLifeTime = false;
 
 
     #region For Signleton <<-- DontDestory 사용해서 구현., OnAwake()
@@ -82,10 +87,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
-            isCtrlKeyDowned = true;
+        if(Input.GetKeyDown(KeyCode.Space))
+            isSpaceKeyDowned = true;
 
-        if (isCtrlKeyDowned && isDialogueActive)
+        if (isSpaceKeyDowned && isDialogueActive)
         {
             if (isDuringTyping) PrintAtOnce(curDialogSet);
             else DisplayNextSentence();
@@ -99,17 +104,17 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //애니메이션이 끝났으면 DisplayNextSentence(); 진행.
         if (duringAnimation_AnimateAlone)
         {
-            //리스트로 써먹는것부터.  다시 해보자. isArrived 접근이 안된다 ㅋㅋ
+            //리스트로 써먹는것부터.  다시 해보자. isArrived 접근이 안된다 ㅋㅋ  <-- 지금은 해결!
             foreach (NPC item in nPCs)
             {
                 if (item.isArrived)
                 {
-                    print("Arrived");
+                    //print("Arrived");
                     endedAnimation_AnimateAlone = true;
                 }
                 else
                 {
-                    print("Not Arrived");
+                    //print("Not Arrived");
                     endedAnimation_AnimateAlone = false;
                     return;
                 }
@@ -118,21 +123,25 @@ public class DialogueManager : DontDestroy<DialogueManager>
             {
                 if (item.isArrived)
                 {
-                    print("플레이어 Arrived");
+                    //print("플레이어 Arrived");
                     endedAnimation_AnimateAlone = true;
                 }
                 else
                 {
-                    print("플레이어 Not Arrived");
+                    //print("플레이어 Not Arrived");
                     endedAnimation_AnimateAlone = false;
                     return;
                 }
             }
             if (endedAnimation_AnimateAlone)
             {
-                print("끝! end!");
-                duringAnimation_AnimateAlone = false;
-                DisplayNextSentence();
+                //print("끝! end!");
+                //혹~시! 사운드LifeTime중인지?
+                if (!isSFXDialogLifeTime)
+                {
+                    duringAnimation_AnimateAlone = false;
+                    DisplayNextSentence();
+                }
             }
         }
         #endregion         
@@ -140,7 +149,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     public void OnBtnClickedByMouse()
     {
-        isCtrlKeyDowned = true;
+        isSpaceKeyDowned = true;
     }
 
     //다이얼로그 시작
@@ -183,7 +192,15 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //문자 출력 들어감.
     public void DisplayNextSentence()
     {
-        isCtrlKeyDowned = false;
+        isSpaceKeyDowned = false;
+
+        //혹시 딜레이 대기중이라면 다음 다이얼로그 가면 안됨.
+        if (isStartedWatingDelayTime)
+        {
+            print("딜레이타임 기다리는중!");
+            return;
+        }
+
         ///
         //선택지 흐름
         //1.팝업 오픈 , 2.답안 선택, 3.결과문 출력, 4.결과문에 엔피씨가 응답 (분기점 스탯 적용), 5.정해진 루트 진행
@@ -192,7 +209,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             //초이스박스 열려있는 상태에서는 다음 다이얼로그 가면 안됨. 
             return;
-        }
+        }                
         ///
         //혹시 NPC가 선택지에 대답중이라면? 
         //바로 통화 연결 됩니다!  바로 여기서요!~! 
@@ -222,12 +239,33 @@ public class DialogueManager : DontDestroy<DialogueManager>
     void BatchService(Dialogue.DialogueSet dialogueSet) {
         //여기서 dialogueSet에 입력된 정보에 따라 새 다이얼로그창의 정보를 설정.
 
+        //다이얼로그 시작 딜레이 타임 부여
+        if (dialogueSet.detail.delayTime != 0f)
+        {
+            //0이 아니면, 딜레이타임을 설정한것. 설정한 시간만큼 기다렸다가 실행시켜준다. 
+            //설정한시간 다 기다렸는지
+            if (isdelayTimeCompleted)
+            {
+                isdelayTimeCompleted = false;
+                //다이얼로그 실행.
+            }
+            else
+            {
+                //딜레이타임 코루틴 실행, 
+                StartCoroutine(WaitTime(dialogueSet.detail.delayTime));
+                //return.
+                return;
+            }
+        }
+
+
         //기본 글자 속도.
         if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.92f;
 
-        //Sentence 비어있을경우, 발동할 애니메이션이 있는지 확인 후 없으면 그냥 패스! 
+        //Sentence 비어있을경우, 발동할 애니메이션 or 사운드가 있는지 확인 후 없으면 그냥 패스! 
         if (dialogueSet.sentence == "")
         {
+            //발동할 애니메이션이 있는지? 
             if (dialogueSet.detail.animationSettings.activateObjAnimate)
             {
                 //발동할 애니메이션이 존재하면, 해당 애니메이션이 끝나길 기다렸다가  return.                
@@ -236,19 +274,39 @@ public class DialogueManager : DontDestroy<DialogueManager>
                     //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
                     if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
                     {
-                        print("it's NPC moving");                      
+                        //print("it's NPC moving");                      
                         nPCs.Add(nPC);
                         nPC.MoveAnimStart(objAnimData);
                     }
                     else if (objAnimData.objToMakeMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
                     {
-                        print("it's Player moving");
+                        //print("it's Player moving");
                         keyInput_Controllers.Add(keyInput_Controller);
                         keyInput_Controller.MoveAnimStart(objAnimData);
                     }
                 }
                 duringAnimation_AnimateAlone = true;
 
+                //애니메이션이 있으면서 동시에 SFX LifeTime이 있는 경우!
+                if (dialogueSet.detail.sFXSettings.enableSFX && dialogueSet.detail.sFXSettings.dialogueLifeTime != 0)
+                {
+                    //print("넘겨주기!");
+                    //사운드 재생 후 
+                    audioSystem.DialogSFXHelper(dialogueSet);
+                    //설정한 LifeTime만큼 기다렸다가 다음 다이얼로그 호출. 
+                    StartCoroutine(WaitLifeTime(dialogueSet.detail.sFXSettings.dialogueLifeTime));
+                    return;
+                }
+                else return;
+            }
+            //발동할 사운드 이펙트가 있는지?
+            else if(dialogueSet.detail.sFXSettings.enableSFX && dialogueSet.detail.sFXSettings.dialogueLifeTime != 0)
+            {
+                print("넘겨주기!");
+                //사운드 재생 후 
+                audioSystem.DialogSFXHelper(dialogueSet);
+                //설정한 LifeTime만큼 기다렸다가 다음 다이얼로그 호출. 
+                StartCoroutine(WaitLifeTime(dialogueSet.detail.sFXSettings.dialogueLifeTime));
                 return;
             }
             else
@@ -298,13 +356,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
         ///Details
         ///
-
-        //다이얼로그 시작 딜레이 타임 부여
-        if (dialogueSet.detail.delayTime != 0f)
-        {
-            //0이 아니면, 딜레이타임을 설정한것. 설정한 시간만큼 기다렸다가 실행시켜준다. 
-
-        }
 
         //스타일
         StartAnimByStyle((int)dialogueSet.detail.styles);
@@ -488,11 +539,30 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }            
     }
 
+    //다이얼로그 딜레이타임 체크
+    IEnumerator WaitTime(float time)
+    {
+        isStartedWatingDelayTime = true;
+        yield return new WaitForSeconds(time);
+        isStartedWatingDelayTime = false;
+        isdelayTimeCompleted = true;
+        BatchService(curDialogSet);
+    }
+
+    //다이얼로그 Sentence 없이 사운드만 실행 시 LifeTime 계산.
+    IEnumerator WaitLifeTime(float time)
+    {
+        isSFXDialogLifeTime = true;
+        yield return new WaitForSeconds(time);
+        isSFXDialogLifeTime = false;
+        DisplayNextSentence();
+    }
+
     //글자 출력 한방에 뙇 
     void PrintAtOnce(Dialogue.DialogueSet dialogueSet)
     {
         StopAllCoroutines();
-        isCtrlKeyDowned = false;
+        isSpaceKeyDowned = false;
 
         dialogSentence.text = printingSentence;
 
