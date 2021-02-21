@@ -607,11 +607,15 @@ public class DialogueManager : DontDestroy<DialogueManager>
             item.isControllable = true;
         }
 
-
-
         //특정 이벤트 연계 위한 부분.
         switch (curStoryId)
         {
+            case 1:
+                //씬1 다이얼로그 모두 끝난 시점 
+                //씬2로 이동.
+                GameManager.Instance.storyNumber = 2;
+                GameManager.Instance.StartStoryEvent();
+                break;
             case 31:
                 //멧돼지게임
                 GameManager.Instance.storyNumber = 31;

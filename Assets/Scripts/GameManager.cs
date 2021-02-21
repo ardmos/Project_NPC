@@ -66,22 +66,6 @@ public class GameManager : DontDestroy<GameManager>
         SetGameCursor("Default");
     }
 
-    #region 커서 이미지 설정
-    public void SetGameCursor(string type)
-    {
-        switch (type)
-        {
-            case "Default":
-                Cursor.SetCursor(cursorDefaultTexture, hotSpot, cursorMode);
-                break;
-            case "MagGlass":
-                Cursor.SetCursor(cursorMagGlassTexture, hotSpot, cursorMode);
-                break;
-            default:
-                break;
-        }
-    }
-    #endregion
 
     private void Update()
     {
@@ -115,7 +99,11 @@ public class GameManager : DontDestroy<GameManager>
                 DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
             case 2:
-
+                //페이드 아웃, 씬 이동 
+                LevelChanger_ForScene1.instance.FadeToNextLevel();
+                //다음날, 경찰서 취조실
+                SceneManager.LoadScene("Scene2_InterrogationRoom");
+                break;
             case 3:
 
             case 4:
@@ -141,7 +129,6 @@ public class GameManager : DontDestroy<GameManager>
     }
     #endregion
 
-
     #region 선택상자 관리
     //choiceResults 추가하는 곳.
     public void AddChoiceResults(string key, int value)
@@ -163,7 +150,6 @@ public class GameManager : DontDestroy<GameManager>
     }
     #endregion
 
-
     #region 오브젝트들 상호작용여부 관리
     //상호작용 여부 관리.
     //상호작용 흐름 기반 이벤트 발동 관리는 각자 오브젝트에서. 
@@ -173,4 +159,20 @@ public class GameManager : DontDestroy<GameManager>
     }        
     #endregion
 
+    #region 커서 이미지 설정
+    public void SetGameCursor(string type)
+    {
+        switch (type)
+        {
+            case "Default":
+                Cursor.SetCursor(cursorDefaultTexture, hotSpot, cursorMode);
+                break;
+            case "MagGlass":
+                Cursor.SetCursor(cursorMagGlassTexture, hotSpot, cursorMode);
+                break;
+            default:
+                break;
+        }
+    }
+    #endregion
 }
