@@ -96,10 +96,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
 
         #region 문장 없을 때 애니메이션만 실행
-        //애니메이션 아직 시작 안했으면 문장 없이 애니메이션만 진행
-
         //애니메이션 중이면 대기. 
-
         //애니메이션이 끝났으면 DisplayNextSentence(); 진행.
         if (duringAnimation_AnimateAlone)
         {
