@@ -11159,7 +11159,7 @@ MonoBehaviour:
   - smallTitle_: 
     storyId: 10000
     dialogue:
-    - smallTitle_: "\uACBD\uCC30 \uC81C\uC9C02"
+    - smallTitle_: "\uACBD\uCC30 \uC81C\uC9C0"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -11175,13 +11175,13 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC9C0\uAC11\uC5D0\uC11C \uAEBC\uB0BC \uAC74..."
             choices:
-            - sentence: 
+            - sentence: "\uD604\uAE08"
               storyJump: 0
-            - sentence: 
+            - sentence: "\uC8FC\uBBFC\uB4F1\uB85D\uC99D"
               storyJump: 0
-            - sentence: 
+            - sentence: "\uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568"
               storyJump: 0
-            - sentence: 
+            - sentence: "\uC544\uBB34\uAC83\uB3C4 \uC8FC\uC9C0 \uC54A\uB294\uB2E4"
               storyJump: 0
             choice_results:
             - smallTitle_: "\uD604\uAE08 \uAC74\uB124\uAE30 "
@@ -20573,14 +20573,14 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC9C0\uAC11\uC5D0\uC11C \uAEBC\uB0BC \uAC74..."
             choices:
-            - sentence: 1
+            - sentence: "\uD604\uAE08"
               storyJump: 0
-            - sentence: 2
-              storyJump: 1
-            - sentence: 3
-              storyJump: 2
-            - sentence: 4
-              storyJump: 3
+            - sentence: "\uC8FC\uBBFC\uB4F1\uB85D\uC99D"
+              storyJump: 0
+            - sentence: "\uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568"
+              storyJump: 0
+            - sentence: "\uC544\uBB34\uAC83\uB3C4 \uC8FC\uC9C0 \uC54A\uB294\uB2E4"
+              storyJump: 0
             choice_results:
             - smallTitle_: "\uD604\uAE08 \uAC74\uB124\uAE30 "
               dialogueSetName: 
