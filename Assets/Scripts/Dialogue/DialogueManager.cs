@@ -37,7 +37,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     Queue<Dialogue.DialogueSet> dialogueSetsQue;
 
     [HideInInspector]
-    public Dialogue.DialogueSet curDialogSet;
+    public Dialogue.DialogueSet curDialogSet, curDialogSet_ForChoiceBox;
     public int curDialogSetCountNumber;
     public int curStoryId;
     public string curStorySmallTitle;
@@ -107,12 +107,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 objname = item.gameObject.name;
                 if (item.isArrived)
                 {
-                    print(objname + "Arrived");
+                    //print(objname + "Arrived");
                     endedAnimation_AnimateAlone = true;
                 }
                 else
                 {
-                    print(objname + "Not Arrived");
+                    //print(objname + "Not Arrived");
                     endedAnimation_AnimateAlone = false;
                     return;
                 }
@@ -122,17 +122,17 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 objname = item.gameObject.name;
                 if (item.isArrived)
                 {
-                    print(objname + "플레이어 Arrived");
+                    //print(objname + "플레이어 Arrived");
                     endedAnimation_AnimateAlone = true;
                 }
                 else
                 {
-                    print(objname + "플레이어 Not Arrived");
+                    //print(objname + "플레이어 Not Arrived");
                     endedAnimation_AnimateAlone = false;
                     return;
                 }
             }
-            print(objname + " 이동애니메이션 진행중.");
+            //print(objname + " 이동애니메이션 진행중.");
 
             if (endedAnimation_AnimateAlone)
             {
@@ -140,7 +140,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 //혹~시! 사운드LifeTime중인지?
                 if (!isSFXDialogLifeTime)
                 {
-                    print(objname + " 이동애니메이션 도착.끝");
+                    //print(objname + " 이동애니메이션 도착.끝");
                     duringAnimation_AnimateAlone = false;
                     DisplayNextSentence();
                 }
@@ -233,6 +233,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //dialogueSetName을 설정해주자.  Story아이디_카운트
         curDialogSet.dialogueSetName = curStoryId.ToString() + "_" + curDialogSetCountNumber.ToString();
         curDialogSetCountNumber++;  //1씩 더해줌. 
+        //선택상자 전용 현재 다이얼로그. (점프때문에 얘네 전용이 필요해짐)
+        curDialogSet_ForChoiceBox = curDialogSet;
 
         BatchService(curDialogSet);
     }
@@ -259,7 +261,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 return;
             }
         }
-
 
         //기본 글자 속도.
         if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.94f;
@@ -484,19 +485,40 @@ public class DialogueManager : DontDestroy<DialogueManager>
     }
 
     //3.결과문 출력
-    public void PrintTheChoiceResult(int valueToReturn)
+    public void PrintTheChoiceResult(int valueToReturn, int jump)
     {
-        //선택된 답 저장. 5. 정해진 루트 진행을 위한. 
+        print("valueToReturn : " + valueToReturn + ", StoryJump : " + jump);
+        //5. 정해진 루트 진행을 위한. 
+        //기본정보 설정 이전에,  선택창 결과에 따른 다음 대화내용 번호 직행 설정 여부 체크. 
+        //후 처리 
+        //여기서 jumpTo의 값에 따라. 이 시점에 이미 선택상자 이후 실행될 다이얼로그가 결정. 준비되어있는것임. 
+        if (jump == 0)
+        {
+            //0점프면 기존과 똑같음.  그냥냅두기.
+        }
+        else
+        {
+            for (int i = 0; i < jump; i++)
+            {
+                if (dialogueSetsQue.Count == 0)
+                {
+                    
+                }
+                else curDialogSet = dialogueSetsQue.Dequeue();
+            }
+        }
+
+        //선택된 답 저장. 
         //선택 결과들은 딕셔너리 형태로 저장될것임. 
         //Key값은 string으로 dialogueSetName을 넣어주고(스토리아이디값_몇번째다이얼로그인지카운트) , Value값은 int로 어떤 선택을 했는지 번호를 저장(0번부터 시작).
-                                                //잡고나서 선택 31_물어보기_행동결정
-        GameManager.Instance.AddChoiceResults(curDialogSet.dialogueSetName, valueToReturn);
+        //잡고나서 선택 31_물어보기_행동결정
+        GameManager.Instance.AddChoiceResults(curDialogSet_ForChoiceBox.dialogueSetName, valueToReturn);
 
         activeChoiceBox = false;
         npcResponseNum = valueToReturn;//npc 응답연결을 위한 저장.  
         isNPCresponding = true;
         //SplitStringServiceSir(dialogue.choice_results[valueToReturn]);
-        BatchService(curDialogSet.detail.selectionPopupSettings.selectionPopupData.choice_results[valueToReturn]);
+        BatchService(curDialogSet_ForChoiceBox.detail.selectionPopupSettings.selectionPopupData.choice_results[valueToReturn]);
     }
 
     //4.결과문에 엔피씨가 응답한다.(분기점 스탯도 적용도 여기서 구현하면 될듯)
@@ -509,14 +531,14 @@ public class DialogueManager : DontDestroy<DialogueManager>
         ///
         isNPCresponding = false;
 
-        if (curDialogSet.sentence == "")
+        if (curDialogSet_ForChoiceBox.sentence == "")
         {
             //여기서도 sentece 공백이면 그냥 패스하는 부분 추가.
             DisplayNextSentence();
             return;
         }
 
-        BatchService(curDialogSet.detail.selectionPopupSettings.selectionPopupData.responses[valueToResponse]);
+        BatchService(curDialogSet_ForChoiceBox.detail.selectionPopupSettings.selectionPopupData.responses[valueToResponse]);
     }
 
     //다이얼로그 출현 방식에 따른 애니메이션 실행. 

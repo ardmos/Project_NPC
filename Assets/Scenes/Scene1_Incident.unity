@@ -11175,10 +11175,14 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC9C0\uAC11\uC5D0\uC11C \uAEBC\uB0BC \uAC74..."
             choices:
-            - "1. \uD604\uAE08"
-            - "2. \uC8FC\uBBFC\uB4F1\uB85D\uC99D"
-            - "3. \uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568"
-            - "4. \uC544\uBB34\uAC83\uB3C4 \uC548 \uC900\uB2E4"
+            - sentence: 
+              storyJump: 0
+            - sentence: 
+              storyJump: 0
+            - sentence: 
+              storyJump: 0
+            - sentence: 
+              storyJump: 0
             choice_results:
             - smallTitle_: "\uD604\uAE08 \uAC74\uB124\uAE30 "
               dialogueSetName: 
@@ -11542,8 +11546,8 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
             choices:
-            - "1. \uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568\uC744 \uBCF4\uC5EC\uC900\uB2E4.
-              (\uD0A4\uBCF4\uB4DC space\uD0A4)"
+            - sentence: 
+              storyJump: 0
             choice_results:
             - smallTitle_: "\uC2E0\uBD84\uC99D\uC81C\uCD9C"
               dialogueSetName: 
@@ -11664,8 +11668,8 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
             choices:
-            - "1. \uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568\uC744 \uBCF4\uC5EC\uC900\uB2E4.
-              (\uD0A4\uBCF4\uB4DC space\uD0A4)"
+            - sentence: 
+              storyJump: 0
             choice_results:
             - smallTitle_: "\uC2E0\uBD84\uC99D\uC81C\uCD9C"
               dialogueSetName: 
@@ -15975,6 +15979,43 @@ MonoBehaviour:
     soundNumber: 0
     name: 0
     sentence: 
+  curDialogSet_ForChoiceBox:
+    smallTitle_: 
+    dialogueSetName: 
+    detail:
+      delayTime: 0
+      letterSpeed: 0
+      styles: 0
+      portraitSettings:
+        showLeftPortrait: 0
+        leftPortraitNumber: 0
+        showRightPortrait: 0
+        rightPortraitNumber: 0
+      selectionPopupSettings:
+        activateSelectionPopup: 0
+        selectionPopupData:
+          question: 
+          choices: []
+          choice_results: []
+          responses: []
+      animationSettings:
+        activateObjAnimate: 0
+        objectAnimationData: []
+      etcAnimationSettings:
+        etcAnimSets: []
+      sFXSettings:
+        turnOffTypingSound: 0
+        enableSFX: 0
+        audioClip: {fileID: 0}
+        playTime: 0
+        delayTime: 0
+        dialogueLifeTime: 0
+      cutSceneSettings:
+        activateCutScene: 0
+        image: {fileID: 0}
+    soundNumber: 0
+    name: 0
+    sentence: 
   curDialogSetCountNumber: 0
   curStoryId: 0
   curStorySmallTitle: 
@@ -19654,8 +19695,10 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uD589\uB3D9 \uACB0\uC815"
             choices:
-            - "\uC4F0\uB2E4\uB4EC\uC5B4\uC904\uAC70\uC57C"
-            - "\uB54C\uB824\uC904\uAC70\uC57C"
+            - sentence: 
+              storyJump: 0
+            - sentence: 
+              storyJump: 0
             choice_results:
             - smallTitle_: "\uC4F0\uB2E4\uB4EC\uC5B4\uC92C\uC744 \uB54C"
               dialogueSetName: 
@@ -20408,8 +20451,8 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
             choices:
-            - "1. \uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568\uC744 \uBCF4\uC5EC\uC900\uB2E4.
-              (\uD0A4\uBCF4\uB4DC space\uD0A4)"
+            - sentence: 
+              storyJump: 0
             choice_results:
             - smallTitle_: "\uC2E0\uBD84\uC99D\uC81C\uCD9C"
               dialogueSetName: 
@@ -20530,10 +20573,14 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC9C0\uAC11\uC5D0\uC11C \uAEBC\uB0BC \uAC74..."
             choices:
-            - "1. \uD604\uAE08"
-            - "2. \uC8FC\uBBFC\uB4F1\uB85D\uC99D"
-            - "3. \uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568"
-            - "4. \uC544\uBB34\uAC83\uB3C4 \uC548 \uC900\uB2E4"
+            - sentence: 1
+              storyJump: 0
+            - sentence: 2
+              storyJump: 1
+            - sentence: 3
+              storyJump: 2
+            - sentence: 4
+              storyJump: 3
             choice_results:
             - smallTitle_: "\uD604\uAE08 \uAC74\uB124\uAE30 "
               dialogueSetName: 
@@ -20898,8 +20945,8 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
             choices:
-            - "1. \uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568\uC744 \uBCF4\uC5EC\uC900\uB2E4.
-              (\uD0A4\uBCF4\uB4DC space\uD0A4)"
+            - sentence: 
+              storyJump: 0
             choice_results:
             - smallTitle_: "\uC2E0\uBD84\uC99D\uC81C\uCD9C"
               dialogueSetName: 
@@ -21020,8 +21067,8 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
             choices:
-            - "1. \uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568\uC744 \uBCF4\uC5EC\uC900\uB2E4.
-              (\uD0A4\uBCF4\uB4DC space\uD0A4)"
+            - sentence: 
+              storyJump: 0
             choice_results:
             - smallTitle_: "\uC2E0\uBD84\uC99D\uC81C\uCD9C"
               dialogueSetName: 

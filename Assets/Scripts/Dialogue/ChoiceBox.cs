@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ChoiceBox : MonoBehaviour
 {
     ///여기서 하는 일
@@ -14,7 +15,7 @@ public class ChoiceBox : MonoBehaviour
 
     public bool isChoiceBox;
     public string question;
-    public string[] choices;
+    public Dialogue.DialogueSet.Details.Choices[] choices;
 
     public GridLayoutGroup gridleft;
     public Animator animator;
@@ -23,8 +24,12 @@ public class ChoiceBox : MonoBehaviour
 
     int curNum, tmp, choicesLength;
 
-    public void InitChioceBox(string mAsk, string[] mChoices) 
+    //JumpTo 정보들 저장.
+    List<int> arrJump;
+
+    public void InitChioceBox(string mAsk, Dialogue.DialogueSet.Details.Choices[] mChoices) 
     {
+        arrJump = new List<int>();
         isChoiceBox = true;
         question = mAsk;
         choices = mChoices;
@@ -37,6 +42,12 @@ public class ChoiceBox : MonoBehaviour
 
         int length = choices.Length;
 
+        //JumpTo 정보들 저장.
+        foreach (Dialogue.DialogueSet.Details.Choices item in mChoices)
+        {
+            arrJump.Add(item.storyJump);
+        }
+
         if (length<=4)        
             gridleft.cellSize = new Vector2(280f, 45f);    
         else
@@ -44,7 +55,7 @@ public class ChoiceBox : MonoBehaviour
 
         for (int i = 0; i < length; i++)
         {
-            buttons[i].GetComponentInChildren<Text>().text = choices[i];
+            buttons[i].GetComponentInChildren<Text>().text = choices[i].sentence;
             buttons[i].SetActive(true);
         }
 
@@ -57,13 +68,13 @@ public class ChoiceBox : MonoBehaviour
         animator.SetBool("isOpen", isChoiceBox);
     }
 
-    public void ReturnTheAnswer(int valueToReturn)  //이 함수 호출은 버튼들에서. 
+    public void ReturnTheAnswer(int valueToReturn, int jump)  //이 함수 호출은 버튼들에서. 
     {
         //ChoiceBox 닫기. 애니메이션. 
         isChoiceBox = false;
         animator.SetBool("isOpen", isChoiceBox);
         //DialogueManager에 보내기. 
-        DialogueManager.Instance.PrintTheChoiceResult(valueToReturn);
+        DialogueManager.Instance.PrintTheChoiceResult(valueToReturn, jump);
     }
 
     private void Update()
@@ -199,7 +210,7 @@ public class ChoiceBox : MonoBehaviour
                 item.GetComponent<Image>().color = new Color(1, 1, 1, 0);
             }
             buttons[n].GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            ReturnTheAnswer(n);
+            ReturnTheAnswer(n, arrJump[n]);
         }
     }
 

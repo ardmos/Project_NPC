@@ -70,6 +70,12 @@ public class Dialogue
 
             //선택창팝업
             [Serializable]
+            public struct Choices
+            {
+                public string sentence;
+                public int storyJump;
+            }
+            [Serializable]
             public struct SelectionPopupSettings
             {
                 [Header("- 선택대화창(팝업) 활성화"), Space(5)]
@@ -81,7 +87,8 @@ public class Dialogue
                     [Header("- 선택팝업창 상단의 질문")]
                     public string question;
                     [Header("- 보기(최대 8개)                     주의!  Choices와 Choice_results와 Responses의 size는 반드시 같아야 한다.")]
-                    public string[] choices;
+                    //public string[] choices;
+                    public Choices[] choices;
                     [Header("- 보기(Choices)중 하나가 선택됐을시 출력되는 Dialog _ 빈 칸 가능")]
                     public DialogueSet[] choice_results;
                     [Header("- Choice_results의 뒤를 이어 출력되는 Dialog _ 빈 칸 가능")]
