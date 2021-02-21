@@ -17,7 +17,7 @@ public class ChoiceBox : MonoBehaviour
     public string question;
     public Dialogue.DialogueSet.Details.Choices[] choices;
 
-    public GridLayoutGroup gridleft;
+    public GridLayoutGroup gridLeft, gridRight;
     public Animator animator;
     public Text questionText;
     public GameObject[] buttons;
@@ -48,10 +48,12 @@ public class ChoiceBox : MonoBehaviour
             arrJump.Add(item.storyJump);
         }
 
+        //기본 너비 세팅 
+        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300f, 234f);
         if (length<=4)        
-            gridleft.cellSize = new Vector2(280f, 45f);    
+            gridLeft.cellSize = new Vector2(280f, 45f);    
         else
-            gridleft.cellSize = new Vector2(140f, 45f);
+            gridLeft.cellSize = new Vector2(140f, 45f);
 
         for (int i = 0; i < length; i++)
         {
@@ -63,6 +65,69 @@ public class ChoiceBox : MonoBehaviour
         {
             buttons[i].SetActive(false);
         }
+
+        #region 보기 문장의 길이에 맞춰서 전체 width 조정
+        bool needBiggerCase = false;
+        float sizeToNeed = 0f;
+        //보기 문장의 길이에 맞춰서 전체 width 조정.
+        ///// 1~4번까지 보기만 존재할 경우.
+        ///1. 만약, Text.preferredWidth가 280보다 크다면, Text.preferredWidth-280 한 만큼 바탕의 width를 늘린다. 
+        ///2. Text.preferredWidth-280한 만큼 그리드1, 버튼의 너비도 각 각 늘린다.
+        if (length <= 4)
+        {
+            foreach (GameObject buttonObj in buttons)
+            {
+                if (buttonObj.GetComponentInChildren<Text>().preferredWidth > 280f)
+                {
+                    needBiggerCase = true;
+                    sizeToNeed = buttonObj.GetComponentInChildren<Text>().preferredWidth - 280f;
+                }
+            }
+
+            if (needBiggerCase)
+            {
+                //바탕 크기
+                RectTransform caseRT = gameObject.GetComponent<RectTransform>();
+                caseRT.sizeDelta = new Vector2(caseRT.sizeDelta.x + sizeToNeed, caseRT.sizeDelta.y);
+                //gridLeft
+                RectTransform gridLeftRT = gridLeft.gameObject.GetComponent<RectTransform>();
+                gridLeftRT.sizeDelta = new Vector2(gridLeftRT.sizeDelta.x + sizeToNeed, gridLeftRT.sizeDelta.y);
+                //버튼들 크기
+                gridLeft.cellSize = new Vector2(gridLeft.cellSize.x + sizeToNeed, gridLeft.cellSize.y);
+            }
+        }
+        ///// 1~8번까지의 보기가 존재할 경우.
+        ///1. 만약, Text.preferredWidth가 140보다 크다면, Text.preferredWidth-140 한 만큼 바탕의 width를 늘린다. 
+        ///2. Text.preferredWidth-140한 만큼 그리드1, 그리드2, 버튼의 너비도 각 각 늘린다.
+        else
+        {
+            foreach (GameObject buttonObj in buttons)
+            {
+                if (buttonObj.GetComponentInChildren<Text>().preferredWidth > 140f)
+                {
+                    needBiggerCase = true;
+                    sizeToNeed = buttonObj.GetComponentInChildren<Text>().preferredWidth - 140f;
+                }
+            }
+
+            if (needBiggerCase)
+            {
+                //바탕 크기
+                RectTransform caseRT = gameObject.GetComponent<RectTransform>();
+                caseRT.sizeDelta = new Vector2(caseRT.sizeDelta.x + sizeToNeed, caseRT.sizeDelta.y);
+                //gridLeft
+                RectTransform gridLeftRT = gridLeft.gameObject.GetComponent<RectTransform>();
+                gridLeftRT.sizeDelta = new Vector2(gridLeftRT.sizeDelta.x + sizeToNeed, gridLeftRT.sizeDelta.y);
+                //버튼들 크기
+                gridLeft.cellSize = new Vector2(gridLeft.cellSize.x + sizeToNeed, gridLeft.cellSize.y);
+                //gridRight
+                RectTransform gridRightRT = gridRight.gameObject.GetComponent<RectTransform>();
+                gridRightRT.sizeDelta = new Vector2(gridRightRT.sizeDelta.x + sizeToNeed, gridRightRT.sizeDelta.y);
+                //버튼들 크기
+                gridRight.cellSize = new Vector2(gridRight.cellSize.x + sizeToNeed, gridRight.cellSize.y);
+            }
+        }
+        #endregion
 
         //ChoiceBox 열기. 애니메이션.
         animator.SetBool("isOpen", isChoiceBox);

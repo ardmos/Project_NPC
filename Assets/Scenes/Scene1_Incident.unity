@@ -3089,7 +3089,8 @@ MonoBehaviour:
   isChoiceBox: 0
   question: 
   choices: []
-  gridleft: {fileID: 306523137}
+  gridLeft: {fileID: 306523137}
+  gridRight: {fileID: 2123239347}
   animator: {fileID: 31794539}
   questionText: {fileID: 1706696169}
   buttons:
@@ -20573,7 +20574,7 @@ MonoBehaviour:
           selectionPopupData:
             question: "\uC9C0\uAC11\uC5D0\uC11C \uAEBC\uB0BC \uAC74..."
             choices:
-            - sentence: "\uD604\uAE08"
+            - sentence: "\uD600\uC5B4\uC5B4\uC5B4\uC5B4\uC5B4\uC5B4\uC5B4\uC5B4\uC5B4\uC5B4\uC5C9\uC5B4\uC5B4\uC5B4\uC5B4\uC5C9\uC5B4\uC5B4\uC5B4\uC5B4\uC5B4\uC5B4"
               storyJump: 0
             - sentence: "\uC8FC\uBBFC\uB4F1\uB85D\uC99D"
               storyJump: 0
@@ -21943,11 +21944,11 @@ RectTransform:
   m_Father: {fileID: 31794535}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 165, y: -50}
-  m_SizeDelta: {x: 150, y: 100}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 15, y: 17}
+  m_SizeDelta: {x: 150, y: -134}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &2123239347
 MonoBehaviour:
   m_ObjectHideFlags: 0
