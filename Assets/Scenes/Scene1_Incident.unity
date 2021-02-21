@@ -1428,7 +1428,7 @@ MonoBehaviour:
       name: 9
       sentence: "\uC9C0\uD604\uC740 \uAC00\uC0C1\uD604\uC2E4 \uC811\uC18D\uAE30\uC758
         \uBB38\uC744 \uC5F4\uC5B4 \uBCF4\uC600\uB2E4. \uADF8 \uC548\uC5D0\uB294 \uAE30\uAD34\uD55C
-        \uD615\uD0DC\uC758 \uC2DC\uC2E0\uC774 \uC788\uC5C8\uB2E4."
+        \uD615\uD0DC\uC758 \uC2DC\uC2E0\uC774 \uC788\uB2E4."
     - smallTitle_: "\uC2B9\uD6C8: \uC774... \uC774\uAC74..."
       dialogueSetName: 
       detail:
@@ -1576,8 +1576,8 @@ MonoBehaviour:
           delayTime: 0
           dialogueLifeTime: 0
         cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
+          activateCutScene: 1
+          image: {fileID: 21300000, guid: d4e91ea59e5d91344ab7bd67c95137e9, type: 3}
       soundNumber: 0
       name: 9
       sentence: "\uB354 \uC774\uC0C1 \uC124\uBA85\uD558\uC9C0 \uC54A\uC544\uB3C4
@@ -6622,7 +6622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - smallTitle_: "\uB300\uD559\uC0DD \uCDE8\uC870"
-    storyId: 0
+    storyId: 9999
     dialogue:
     - smallTitle_: 
       dialogueSetName: 
@@ -19252,7 +19252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - smallTitle_: 
-    storyId: 323232
+    storyId: 0
     dialogue:
     - smallTitle_: "\uB0A1\uC740 \uBE4C\uB77C\uC5D0 \uB3C4\uCC29\uD588\uB2E4. \uAC74\uBB3C
         \uB0B4\uBB34 \uACF3\uACF3\uC774 \uBCC0\uC0C9 \uB418\uC5C8\uACE0 \uAC70\uBBF8\uC904\uC774..."
@@ -19537,7 +19537,7 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 9
+      name: 14
       sentence: 
     - smallTitle_: "\uACBD\uCC30 \uC81C\uC9C0"
       dialogueSetName: 
@@ -19660,7 +19660,7 @@ MonoBehaviour:
           image: {fileID: 0}
       soundNumber: 0
       name: 2
-      sentence: "\uC5B4\uC5B4~ \uC5EC\uAE30 \uD568\uBD80\uB85C \uB4E4\uC5B4\uC624\uC2DC\uBA74
+      sentence: "\uC5B4\uC5B4, \uC5EC\uAE30 \uD568\uBD80\uB85C \uB4E4\uC5B4\uC624\uC2DC\uBA74
         \uC548\uB429\uB2C8\uB2E4~!"
     - smallTitle_: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC"
       dialogueSetName: 
@@ -19783,7 +19783,7 @@ MonoBehaviour:
           image: {fileID: 0}
       soundNumber: 0
       name: 0
-      sentence: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC"
+      sentence: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC..."
 --- !u!1 &1937210129
 GameObject:
   m_ObjectHideFlags: 0
