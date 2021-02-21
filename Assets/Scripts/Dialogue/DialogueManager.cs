@@ -262,7 +262,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
 
         //기본 글자 속도.
-        if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.92f;
+        if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.94f;
 
         //Sentence 비어있을경우, 발동할 이동 애니메이션 or 기타 애니메이션 or 사운드가 있는지 확인 후 없으면 그냥 패스! 
         if (dialogueSet.sentence == "")
@@ -365,6 +365,21 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 break;
             case Dialogue.DialogueSet.Names.캡슐:
                 dialogObjName.text = "캡슐";
+                break;
+            case Dialogue.DialogueSet.Names.학생1:
+                dialogObjName.text = "학생1";
+                break;
+            case Dialogue.DialogueSet.Names.학생2:
+                dialogObjName.text = "학생2";
+                break;
+            case Dialogue.DialogueSet.Names.학생3:
+                dialogObjName.text = "학생3";
+                break;
+            case Dialogue.DialogueSet.Names.학생4:
+                dialogObjName.text = "학생4";
+                break;
+            case Dialogue.DialogueSet.Names.학생5:
+                dialogObjName.text = "학생5";
                 break;
             case Dialogue.DialogueSet.Names.빈칸:
                 dialogObjName.text = "";

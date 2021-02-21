@@ -231,6 +231,11 @@ public class Dialogue
             침대,
             창문,
             캡슐,
+            학생1,
+            학생2,
+            학생3,
+            학생4,
+            학생5,
             빈칸
         }
         [Header("- Object 이름"), Space(5)]
