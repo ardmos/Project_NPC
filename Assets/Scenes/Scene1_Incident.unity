@@ -10395,7 +10395,7 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 0
+      name: 9
       sentence: "'\uC73D, \uBB34\uC2A8 \uB0C4\uC0C8\uC57C?!'"
     - smallTitle_: "\uC815\uBCF4"
       dialogueSetName: 
@@ -10431,7 +10431,7 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 0
+      name: 9
       sentence: "\uC74C\uC2DD \uC369\uC740 \uB0C4\uC0C8\uAC00 \uC9C4\uB3D9\uC744
         \uD558\uACE0\uC788\uB2E4.\n\uBA39\uB2E4\uB0A8\uC740 \uD53C\uC790\uC870\uAC01\uC5D0
         \uACF0\uD321\uC774\uAC00 \uC794\uB729 \uD53C\uC5B4\uC788\uB2E4."
@@ -10472,7 +10472,7 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 0
+      name: 9
       sentence: "\uC0B4\uC778\uD604\uC7A5\uC5D0\uC11C \uD754\uD788 \uBCFC \uC218
         \uC788\uB294 \uD608\uD754\uC774\uB098 \uBAB8\uC2F8\uC6C0\uC758 \uD754\uC801\uC740
         \uC5C6\uB2E4."
@@ -10513,7 +10513,7 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 0
+      name: 9
       sentence: "\uC678\uBD80\uC778\uC758 \uCE68\uC785 \uD754\uC801\uC740 \uC5C6\uB2E4."
   - smallTitle_: "\uCEA1\uC290"
     storyId: 15300
@@ -10552,7 +10552,7 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 0
+      name: 9
       sentence: "\uBC29 \uD55C \uCF20\uC5D0 \uAC00\uC0C1\uD604\uC2E4 \uC811\uC18D\uAE30\uAC00
         \uB193\uC5EC\uC788\uB2E4.\n\uB2E4\uB978 \uC218\uC0C1\uD55C \uC810\uC740 \uC5C6\uB294
         \uAC83 \uAC19\uB2E4."
@@ -10593,7 +10593,7 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 0
+      name: 9
       sentence: "\uCC45\uC774 \uB9CE\uB2E4."
   - smallTitle_: "\uCC45\uC0C1"
     storyId: 15500
@@ -10632,7 +10632,7 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 0
+      name: 9
       sentence: "\uB108\uC800\uBD84\uD558\uAD6C\uB9CC"
 --- !u!1 &1190785469
 GameObject:
@@ -18277,16 +18277,6 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1556139920}
-    - target: {fileID: 4062764418430449684, guid: 3705fcd21edeb79468cc0260fdca0993,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6261429761409021254, guid: 3705fcd21edeb79468cc0260fdca0993,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6261429763025236847, guid: 3705fcd21edeb79468cc0260fdca0993,
         type: 3}
       propertyPath: m_Name
