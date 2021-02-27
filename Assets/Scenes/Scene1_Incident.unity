@@ -8263,7 +8263,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.5508474, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8280,7 +8280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315965341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.939992, y: -9.488738, z: -10.042969}
+  m_LocalPosition: {x: -10.937293, y: -9.488738, z: -10.042969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1792519942}
@@ -12274,7 +12274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937402247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.863461, y: -9.936539, z: -11}
+  m_LocalPosition: {x: -10.860762, y: -9.936539, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15435,7 +15435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1463901923
 Transform:
   m_ObjectHideFlags: 0
@@ -20309,7 +20309,7 @@ MonoBehaviour:
           image: {fileID: 0}
       soundNumber: 0
       name: 14
-      sentence: "\uB0A1\uC740 \uBE4C\uB77C\uC5D0 \uB3C4\uCC29\uD588\uB2E4. \uAC74\uBB3C
+      sentence: "\uB0A1\uC740 \uBE4C\uB77C\uC5D0 \uB3C4\uCC29\uD588\uB2E4. \n\uAC74\uBB3C
         \uB0B4\uBB34 \uACF3\uACF3\uC774 \uBCC0\uC0C9 \uB418\uC5C8\uACE0 \uAC70\uBBF8\uC904\uC774
         \uD749\uD558\uAC8C \uB298\uC5B4\uC838 \uC788\uB2E4."
     - smallTitle_: "(\uB69C\uBC85\uB69C\uBC85 \uC18C\uB9AC)"

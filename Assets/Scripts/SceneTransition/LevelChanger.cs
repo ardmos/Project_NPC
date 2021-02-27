@@ -21,10 +21,10 @@ public class LevelChanger : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetMouseButton(0))
-        //{
-        //    FadeToNextLevel();
-        //}
+        if (Input.GetMouseButton(0))
+        {
+            FadeToNextLevel();
+        }
     }
 
 
