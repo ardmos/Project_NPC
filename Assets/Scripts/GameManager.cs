@@ -70,13 +70,13 @@ public class GameManager : DontDestroy<GameManager>
     private void Update()
     {
         //딕셔너리에 선택상자 선택 결과물이 잘 들어왔는지 확인을 위한 프린트.
-        if (choiceResults.Count > 0)
-        {
-            foreach (KeyValuePair<string, int> item in choiceResults)
-            {
+        //if (choiceResults.Count > 0)
+        //{
+        //    foreach (KeyValuePair<string, int> item in choiceResults)
+        //    {
                 //print("선택지 " + item.Key + ", 에서의 선택은 " + item.Value + " 입니다.");
-            }
-        }        
+        //    }
+        //}        
     }
 
     #region 메인 스토리 흐름 제어
@@ -161,7 +161,7 @@ public class GameManager : DontDestroy<GameManager>
 
     #region 커서 이미지 설정
     public void SetGameCursor(string type)
-    {
+    {        
         switch (type)
         {
             case "Default":

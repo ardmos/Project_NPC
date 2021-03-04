@@ -56,6 +56,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     bool isStartedWatingDelayTime = false;
     //다이얼로그 사운드이펙트만!! LifeTime 으로 재생중인지!
     bool isSFXDialogLifeTime = false;
+    //첫 다이얼로그 열리고 0.5초 지났는지 체크
+    public bool is05Sec = false;
 
 
     #region For Signleton <<-- DontDestory 사용해서 구현., OnAwake()
@@ -87,7 +89,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) isSpaceKeyDowned = true;
+        if(Input.GetKeyDown(KeyCode.Space) && is05Sec == true) isSpaceKeyDowned = true;
 
         if (isSpaceKeyDowned && isDialogueActive)
         {
@@ -158,6 +160,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public void StartDialogue(int objid)    //다이얼로그의 다양한 부분을 초기화. 
     {
         isDialogueActive = true;
+
+        //다이얼로그 처음 대화 시작하면, 0.5초정도 있다가 빨리넘기기 작동 가능하게끔.
+        StartCoroutine(Count005Sec());
 
         //다이얼로그 시작하면 플레이어 컨트롤 권한 뺏음.       
         foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())
@@ -612,6 +617,16 @@ public class DialogueManager : DontDestroy<DialogueManager>
         yield return new WaitForSeconds(time);
         isSFXDialogLifeTime = false;
         DisplayNextSentence();
+    }
+
+    //첫 다이얼로그 띄우고나서, 0.5초 카운트
+    IEnumerator Count005Sec()
+    {        
+        is05Sec = false;
+        print("CountStarted , is05Sec=" + is05Sec);
+        yield return new WaitForSeconds(1f);
+        is05Sec = true;
+        print("CountEnded , is05Sec=" + is05Sec);
     }
 
     //글자 출력 한방에 뙇 

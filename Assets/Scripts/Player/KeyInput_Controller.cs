@@ -214,8 +214,8 @@ public class KeyInput_Controller : MonoBehaviour
                 movespeed = 5f;
 
 
-            //스캔 발동. F키 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
-            if (Input.GetKeyDown(KeyCode.F) && scanObject != null)
+            //스캔 발동. Space키 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
+            if (Input.GetKeyDown(KeyCode.Space) && scanObject != null && DialogueManager.Instance.isDialogueActive == false)
             {
                 print("scanObject: " + scanObject);
                 //다이얼로그 발동시키자.
