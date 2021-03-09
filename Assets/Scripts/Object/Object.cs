@@ -13,7 +13,7 @@ public class Object : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (!DialogueManager.Instance.isDialogueActive && IsThePlayerNear())
+        if (!DialogueManager.Instance.isDialogueActive)
         {
             //대화시 작동되는 부분.
 
@@ -27,22 +27,8 @@ public class Object : MonoBehaviour
             DialogueManager.Instance.StartDialogue(id);
             //게임매니져에 보고를 한다.
             GameManager.Instance.DidInteracted(id);
-        }            
-    }
-
-    private bool IsThePlayerNear()
-    {
-        Vector3 playerPos = FindObjectOfType<KeyInput_Controller>().gameObject.transform.position;
-        if (Mathf.Abs(playerPos.x-transform.position.x)<=2.5f && Mathf.Abs(playerPos.y-transform.position.y)<=2.5f)
-        {
-            Debug.Log("Player is near");
-            return true;
         }
-        else
-        {
-            Debug.Log("Player isn't near. x:" + Mathf.Abs(playerPos.x - transform.position.x) + ", y:" + Mathf.Abs(playerPos.y - transform.position.y));
-            return false;
-        }
+            
     }
 
     private void OnMouseDown()  //터치 감지
@@ -52,8 +38,7 @@ public class Object : MonoBehaviour
 
     private void OnMouseOver()  //마우스오버시 커서 이미지 돋보기 이미지로 변경. 
     {
-        if(IsThePlayerNear()) GameManager.Instance.SetGameCursor("MagGlass");
-
+        GameManager.Instance.SetGameCursor("MagGlass");
     }
 
     private void OnMouseExit()  //마우스 벗어나면 다시 원래 커서 이미지로 변경. 
