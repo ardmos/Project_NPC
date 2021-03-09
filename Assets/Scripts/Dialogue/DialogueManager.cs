@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : DontDestroy<DialogueManager>
 {
@@ -12,7 +13,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public ChoiceBox choiceBox;
     public AudioSource audioSource;
     public AudioSystem audioSystem;
-    public GameObject 스토리정리;
+    
+    //Continue버튼
+    public GameObject continueBtn;
 
     //다이얼로그 열려있는지 체크 
     [HideInInspector]
@@ -59,6 +62,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //첫 다이얼로그 열리고 0.5초 지났는지 체크
     public bool is05Sec = false;
 
+    
+
 
     #region For Signleton <<-- DontDestory 사용해서 구현., OnAwake()
     //기존 싱글턴 <<-- DontDestory 사용해서 구현했기때문에 주석 처리.
@@ -76,15 +81,27 @@ public class DialogueManager : DontDestroy<DialogueManager>
     override protected void OnStart()
     {       
         dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
+               
+    }
 
-        foreach (AttachThis attachThis in 스토리정리.GetComponentsInChildren<AttachThis>())
-        {
-            foreach (Dialogue item in attachThis.dialogues)
-            {
-                //딕셔너리에 넣는 과정 
-                dialogueData_Dic.Add(item.storyId, item);
-            }
-        }       
+    private void OnEnable()
+    {
+        //Debug.Log("OnEnable called");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        //Debug.Log(mode);
+        //새롭게 읽어오기.
+        AddDialogueData();
+    }
+
+    void OnDisable()
+    {
+        //Debug.Log("OnDisable");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void Update()
@@ -93,6 +110,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
         if (isSpaceKeyDowned && isDialogueActive)
         {
+            //Continue버튼 비활성화
+            continueBtn.SetActive(false);
+
+            //빨리넘기기 처리
             if (isDuringTyping) PrintAtOnce(curDialogSet);
             else DisplayNextSentence();
         }
@@ -151,6 +172,27 @@ public class DialogueManager : DontDestroy<DialogueManager>
         #endregion         
     }
 
+    public void AddDialogueData()
+    {        
+        foreach (AttachThis attachThis in FindObjectsOfType<AttachThis>())
+        {
+            foreach (Dialogue item in attachThis.dialogues)
+            {
+                //딕셔너리에 넣는 과정
+                //이미 id값이 존재할경우, 스킵
+                if (dialogueData_Dic.ContainsKey(item.storyId))
+                {
+                    //스킵
+                    Debug.Log("id값이 이미 존재" + item.storyId + ", " + item.smallTitle_);
+                }
+                else
+                {
+                    dialogueData_Dic.Add(item.storyId, item);
+                }
+            }
+        }
+    }
+
     public void OnBtnClickedByMouse()
     {
         isSpaceKeyDowned = true;
@@ -161,6 +203,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     {
         isDialogueActive = true;
 
+        //Continue버튼 비활성화
+        continueBtn.SetActive(false);
         //다이얼로그 처음 대화 시작하면, 0.5초정도 있다가 빨리넘기기 작동 가능하게끔.
         StartCoroutine(Count005Sec());
 
@@ -485,7 +529,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
 
         //문장 도도도 출력하는 부분
-        StopAllCoroutines();
+        //StopAllCoroutines();
         StartCoroutine(TypeSentence(dialogueSet));
     }
 
@@ -568,7 +612,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     IEnumerator TypeSentence(Dialogue.DialogueSet dialogueSet)
     {
         ///출력중       
-        isDuringTyping = true;
+        isDuringTyping = true;        
 
         //선택상자 팝업에서 빨리넘기기 할 때 쓰이는 변수. 
         printingSentence = dialogueSet.sentence;
@@ -591,7 +635,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
         ///출력 끝났을 때
         isDuringTyping = false;
-
+        //Continue버튼 활성화 (비활성화는 다이얼로그 넘길 때, 처음 시작 때.     활성화는 여기랑 한번에 출력부분.) 
+        continueBtn.SetActive(true);
         //선택상자 실행
         if (activeChoiceBox)
         {
@@ -624,7 +669,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     {        
         is05Sec = false;
         print("CountStarted , is05Sec=" + is05Sec);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         is05Sec = true;
         print("CountEnded , is05Sec=" + is05Sec);
     }
@@ -638,6 +683,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
         dialogSentence.text = printingSentence;
 
         isDuringTyping = false;
+        //Continue버튼 활성화
+        continueBtn.SetActive(true);
         //선택상자 실행
         if (activeChoiceBox)
         {
