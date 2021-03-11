@@ -635,14 +635,18 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
         ///출력 끝났을 때
         isDuringTyping = false;
-        //Continue버튼 활성화 (비활성화는 다이얼로그 넘길 때, 처음 시작 때.     활성화는 여기랑 한번에 출력부분.) 
-        continueBtn.SetActive(true);
+
         //선택상자 실행
         if (activeChoiceBox)
         {
             choiceBox.isChoiceBox = true;
             choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupSettings.selectionPopupData.question, dialogueSet.detail.selectionPopupSettings.selectionPopupData.choices);
-        }            
+        }
+        else
+        {
+            //Continue버튼 활성화 (비활성화는 다이얼로그 넘길 때, 처음 시작 때.     활성화는 여기랑 한번에 출력부분.) 
+            continueBtn.SetActive(true);
+        }
     }
 
     //다이얼로그 딜레이타임 체크
@@ -683,13 +687,17 @@ public class DialogueManager : DontDestroy<DialogueManager>
         dialogSentence.text = printingSentence;
 
         isDuringTyping = false;
-        //Continue버튼 활성화
-        continueBtn.SetActive(true);
+
         //선택상자 실행
         if (activeChoiceBox)
         {
             choiceBox.isChoiceBox = true;
             choiceBox.InitChioceBox(dialogueSet.detail.selectionPopupSettings.selectionPopupData.question, dialogueSet.detail.selectionPopupSettings.selectionPopupData.choices);
+        }
+        else
+        {
+            //Continue버튼 활성화
+            continueBtn.SetActive(true);
         }
             
     }

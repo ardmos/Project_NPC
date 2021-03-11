@@ -47,7 +47,7 @@ public class KeyInput_Controller : MonoBehaviour
         if (isrm)
         {
             Vector2 curpos = gameObject.transform.position;
-            switch (animData.dir)
+            switch (animData.moveSet.dir)
             {
                 //도착했는지 확인.                
                 case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
@@ -88,7 +88,7 @@ public class KeyInput_Controller : MonoBehaviour
             if (!isArrived)
             {
                 //아직 도착한게 아니면 계속 가.
-                switch (animData.dir)
+                switch (animData.moveSet.dir)
                 {
                     case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
                         movement = Vector2.up;
@@ -131,7 +131,7 @@ public class KeyInput_Controller : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
             //제자리돌기 처리. 진행방향 none인 경우.
-            if (animData.dir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None)
+            if (animData.moveSet.dir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None)
             {
                 if (!isdid)
                 {
@@ -274,31 +274,31 @@ public class KeyInput_Controller : MonoBehaviour
         this.animData = animData;
         originalPos = gameObject.transform.position;
 
-        switch (animData.dir)
+        switch (animData.moveSet.dir)
         {
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Up:
-                destinationPos = originalPos + Vector2.up * animData.distance;
+                destinationPos = originalPos + Vector2.up * animData.moveSet.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Down:
-                destinationPos = originalPos + Vector2.down * animData.distance;
+                destinationPos = originalPos + Vector2.down * animData.moveSet.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Left:
-                destinationPos = originalPos + Vector2.left * animData.distance;
+                destinationPos = originalPos + Vector2.left * animData.moveSet.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.Right:
-                destinationPos = originalPos + Vector2.right * animData.distance;
+                destinationPos = originalPos + Vector2.right * animData.moveSet.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.UpRight:
-                destinationPos = originalPos + new Vector2(1, 1) * animData.distance;
+                destinationPos = originalPos + new Vector2(1, 1) * animData.moveSet.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.UpLeft:
-                destinationPos = originalPos + new Vector2(-1, 1) * animData.distance;
+                destinationPos = originalPos + new Vector2(-1, 1) * animData.moveSet.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownRight:
-                destinationPos = originalPos + new Vector2(1, -1) * animData.distance;
+                destinationPos = originalPos + new Vector2(1, -1) * animData.moveSet.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownLeft:
-                destinationPos = originalPos + new Vector2(-1, -1) * animData.distance;
+                destinationPos = originalPos + new Vector2(-1, -1) * animData.moveSet.distance;
                 break;
             default:
 

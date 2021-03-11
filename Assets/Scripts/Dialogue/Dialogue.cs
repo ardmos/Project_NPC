@@ -18,7 +18,7 @@ public class Dialogue
         [Serializable]
         public class Details   //스타일, 좌상화, 우상화, 선택팝업, 글자속도 , 애니메이션
         {
-            [Header("- 다이얼로그 시작 딜레이 타임")]
+            [Header("- 다이얼로그 시작 딜레이 타임(초)")]
             public float delayTime;
 
             [Range(0f, 1f), Header("- Object 대사 출력 속도 (기본 0.92)")]
@@ -124,12 +124,20 @@ public class Dialogue
                         DownRight,
                         DownLeft
                     }
-                    [Header("- 이동할 방향")]
-                    public MoveDir dir;
-                    //public bool up;
-                    //public bool down, left, right;
-                    [Header("- 이동할 거리(m)")]
-                    public int distance;
+                    [Serializable]
+                    public struct MoveSet
+                    {
+                        [Header("- 이 이동이 시작하기 전에 주고싶은 딜레이(초)")]
+                        public float delayTime;
+                        [Header("- 이동할 방향")]
+                        public MoveDir dir;
+                        [Header("- 이동할 거리(m)")]
+                        public int distance;
+
+                    }
+
+                    [Header("- 총 이동 횟수")]
+                    public MoveSet[] moveSet;
 
                     public enum EndDir
                     {
