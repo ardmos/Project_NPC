@@ -383,6 +383,707 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &137810078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 137810079}
+  - component: {fileID: 137810080}
+  m_Layer: 0
+  m_Name: "\uD558\uC580\uAC1C3\uACFC \uB300\uD654"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &137810079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137810078}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1657014251}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &137810080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137810078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - smallTitle_: "\uD558\uC580\uAC1C3 \uB300\uD654 "
+    storyId: 0
+    dialogue:
+    - smallTitle_: "\uD0D0\uC815: '\uBC31\uAC15'\uC758 \uC5EC\uC790\uCE5C\uAD6C\uC5D0
+        \uB300\uD574"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "'\uBC31\uAC15'\uC758 \uC5EC\uC790\uCE5C\uAD6C\uC5D0 \uB300\uD574
+        \uC544\uB294 \uAC8C \uC788\uB098?"
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC54C\uB2E4\uB9C8\uB2E4\uC694!"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 17
+      sentence: "\uC544! \uC774\uB984\uB3C4 \uC544\uB984\uB2E4\uC6B0\uC2E0 '\uBC31\uAC15'\uB2D8
+        \uB9D0\uC500\uC774\uC2ED\uB2C8\uAE4C?\n\uC54C\uB2E4\uB9C8\uB2E4\uC694!\n\uC5EC\uC790\uCE5C\uAD6C\uBD84\uB3C4
+        \uC815\uB9D0 \uC544\uB984\uB2E4\uC6B0\uC168\uC8E0."
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC54C\uB2E4\uB9C8\uB2E4\uC694!2"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 17
+      sentence: "\uC774\uB984\uC774 'S2\uADC0\uC694\uBBF8\uD751\uBC95\uC2DCS2'\uC600\uB358\uAC00..."
+    - smallTitle_: "\uD0D0\uC815:'\uC0AC\uC2E4\uC774\uC5C8\uB098\uBCF4\uAD70'"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "'\uC5EC\uC790\uCE5C\uAD6C\uB791 \uD568\uAED8 \uC654\uB2E4\uB294
+        \uAC74 \uC0AC\uC2E4\uC778\uAC00\uBCF4\uAD70.\n\uADF8\uB098\uC800\uB098 \uC758\uC678\uC57C.
+        \uADF8\uB7F0 \uBC29\uAD6C\uC11D \uD3D0\uC778\uC774 \uC5EC\uC790\uCE5C\uAD6C\uB77C\uB2C8.\n\n\uB098\uB3C4
+        \uC5C6\uB294 \uAC78\u2026\uD06C\uC73C\uC73D\u2026\u2019"
+    - smallTitle_: "\uD558\uC580\uAC1C3: \uB450\uBD84 \uC0AC\uC774\uAC00 \uC88B\uC544\uBCF4\uC774\uC168\uC5B4\uC694."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 17
+      sentence: "\uB450 \uBD84\uC774 \uC0AC\uC774\uAC00 \uAD49\uC7A5\uD788 \uC88B\uC544\uBCF4\uC774\uC168\uC5B4\uC694.\n\uCEE4\uD50C\uB9C1\uB3C4
+        \uD56D\uC0C1 \uB07C\uACE0 \uACC4\uC2DC\uB358\uAC78\uC694."
+    - smallTitle_: "\uD0D0\uC815: \uCEE4\uD50C\uB9C1? \u314E\u314F\uD558.."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uCEE4\uD50C\uB9C1? \uD558\uD558...\n'\uC548 \uBD80\uB7FD\uB2E4.
+        \uC548 \uBD80\uB7EC\uC6CC...'"
+    - smallTitle_: "\uD558\uC580\uAC1C3: \uADF8\uB7F0\uB370 \uC791\uB144\uBD80\uD130\uB294"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 17
+      sentence: "\uADF8\uB7F0\uB370 \uC791\uB144\uBD80\uD130\uB294 \uB450 \uBD84
+        \uB2E4 \uC544\uC608 \uBCF4\uC774\uC9C0 \uC54A\uC73C\uC2DC\uB354\uB77C\uAD6C\uC694.\n\uC5B4\uB514
+        \uBA40\uB9AC \uBAA8\uD5D8\uC774\uB77C\uB3C4 \uB5A0\uB098\uC2E0 \uAC78\uAE4C\uC694?"
+--- !u!1 &179149917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179149918}
+  - component: {fileID: 179149919}
+  m_Layer: 0
+  m_Name: "\uD558\uC580\uAC1C1\uACFC \uB300\uD654"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179149918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179149917}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1657014251}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179149919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179149917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - smallTitle_: "\uD558\uC580\uAC1C1 \uB300\uD654 "
+    storyId: 0
+    dialogue:
+    - smallTitle_: "\uD558\uC580\uAC1C1: \uC774\uBC29\uC778 \u314E\u3147"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 15
+      sentence: "\uC774\uBC29\uC778\uC774\uC2DC\uAD70\uC694!\n\uC800\uD76C \uAC38\uC6B0\uD150
+        \uB9C8\uC744\uC5D4 \uC5B4\uCA50 \uC77C\uC774\uC2E0\uAC00\uC694?"
+    - smallTitle_: "\uD0D0\uC815: \uBE44\uBC00\uC758 \uC232\uC744 \uC9C0\uB098\uB824\uACE0"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uC544, '\uBE44\uBC00\uC758 \uC232'\uC744 \uC9C0\uB098\uB824\uACE0
+        \uD558\uB294\uB370..."
+    - smallTitle_: "\uD558\uC580\uAC1C1: \uAC70\uAE38 \uAC00\uB824\uBA74"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 15
+      sentence: "\uC624, \uAC70\uAE38 \uAC00\uB824\uBA74 \uBC14\uB85C \uC606 \uD544\uB4DC\uC778
+        '\uC218\uC778\uB4E4\uC758 \uAC70\uB9AC'\uB97C \uC9C0\uB098\uC57C \uD574\uC694.\n\uADF8
+        \uACF3 \uB140\uC11D\uB4E4\uC740 \uC6B0\uB9AC\uB4E4\uACFC\uB294 \uB2E4\uB974\uAC8C
+        \uC544\uC8FC \uC0AC\uB098\uC6B4 \uB140\uC11D\uB4E4\uC774\uC8E0."
+    - smallTitle_: "\uD0D0\uC815: \uBB50\uAC00 \uB2E4\uB978\uAC70\uC9C0?"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uB2F9\uC2E0\uB4E4\uACFC \uADF8 \uAC80\uC740 \uD138\uC774\uB77C\uB294
+        \uB140\uC11D\uB4E4\uACFC\uB294 \uBB50\uAC00 \uB2E4\uB978\uAC70\uC9C0?"
+    - smallTitle_: "\uD558\uC580\uAC1C1: \uC6D0\uB798\uB294 \uBAA8\uB450 \uD558\uC580
+        \uD138\uC774\uC5C8\uC5B4\uC694."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 15
+      sentence: "\uC6D0\uB798\uB294 \uBAA8\uB450 \uD558\uC580 \uD138\uC758 \uAC15\uC544\uC9C0\uB4E4
+        \uBFD0\uC774\uC5C8\uC5B4\uC694.\n\uB2E4 \uAC19\uC774 \uC0AC\uC774\uB3C4 \uC88B\uC558\uC8E0.\n\uADF8\uB7F0\uB370
+        \uC5B8\uC820\uAC00\uBD80\uD130 \uAC80\uC740 \uD138\uC758 \uB3CC\uC5F0\uBCC0\uC774\uAC00
+        \uC0DD\uAE30\uAE30 \uC2DC\uC791\uD588\uC5B4\uC694."
+    - smallTitle_: "\uD558\uC580\uAC1C1: \uADF8 \uB140\uC11D\uB4E4\uC740 \uACF5\uACA9"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 15
+      sentence: "\uADF8 \uB140\uC11D\uB4E4\uC740 \uC6B0\uB9AC \uD558\uC580 \uD138
+        \uC218\uC778\uBD80\uC871 \uBFD0 \uC544\uB2C8\uB77C \uBAA8\uB4E0 \uC0AC\uB78C\uB4E4\uC744
+        \uBCF4\uBA74 \uACF5\uACA9\uC801\uC73C\uB85C \uB2EC\uB824\uB4E4\uC5C8\uC8E0.\n\uC5B4\uCA54
+        \uC218 \uC5C6\uC774 \uC774\uB807\uAC8C \uB9C8\uC744\uC560\uC11C \uCAD2\uC544\uB0B4\uACE0
+        \uB530\uB85C \uC9C0\uB0B4\uAC8C \uB418\uC5C8\uB294\uB370..."
+    - smallTitle_: "\uD558\uC580\uAC1C1: \uC218\uAC00 \uBD88\uC5B4\uB098\uBC84\uB838\uC5B4\uC694"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 15
+      sentence: "\uADF8 \uB140\uC11D\uB4E4\uB07C\uB9AC \uAE08\uBC29 \uC99D\uC2DD\uD558\uB354\uB2C8
+        \uADF8 \uC218\uAC00 \uAC89\uC7A1\uC744 \uC218 \uC5C6\uC774 \uBD88\uC5B4\uB098
+        \uBC84\uB838\uC5B4\uC694."
+    - smallTitle_: "\uD0D0\uC815: \uC65C \uC0DD\uACBC\uB294\uC9C0\uB294 \uBAA8\uB984?"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uADF8 \uB3CC\uC5F0\uBCC0\uC774\uB4E4\uC774 \uC65C \uC0DD\uACA8\uB0AC\uB294\uC9C0\uB294
+        \uBAA8\uB974\uB294 \uAC70\uACE0?"
+    - smallTitle_: "\uD558\uC580\uAC1C1: \uB9DE\uC544\uC694."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 15
+      sentence: "\uB9DE\uC544\uC694.\n\uADF8\uAC8C \uC5B4\uB5A4 \uB098\uC05C \uB9C8\uBC95\uC0AC\uAC00
+        \uC77C\uBD80\uB7EC \uC800\uC8FC\uB97C \uD37C\uD2B8\uB9B0 \uAC70\uB780 \uC774\uC57C\uAE30\uB3C4
+        \uC788\uACE0...\n\uADFC\uB370 \uB2E4 \uC18C\uBB38 \uBFD0\uC774\uC9C0 \uC9C4\uC9DC
+        \uC774\uC720\uB294 \uC544\uBB34\uB3C4 \uBAB0\uB77C\uC694."
 --- !u!1 &214227222
 GameObject:
   m_ObjectHideFlags: 0
@@ -17750,6 +18451,764 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &920949871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920949872}
+  - component: {fileID: 920949873}
+  m_Layer: 0
+  m_Name: "\uD558\uC580\uAC1C2\uACFC \uB300\uD654"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &920949872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920949871}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1657014251}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920949873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920949871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - smallTitle_: "\uD558\uC580\uAC1C2 \uB300\uD654 "
+    storyId: 0
+    dialogue:
+    - smallTitle_: "\uD0D0\uC815: \uAC80\uC740 \uD138 \uC18C\uAD74\uC744 \uC9C0\uB098\uB824\uBA74?"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uAC80\uC740 \uD138 \uAC15\uC544\uC9C0\uB4E4\uC758 \uC18C\uAD74\uC744
+        \uC9C0\uB098\uB824\uBA74 \uC5B4\uB5BB\uAC8C \uD574\uC57C \uB418\uC9C0?"
+    - smallTitle_: "\uD558\uC580\uAC1C2:\uAC80\uC740\uD138\uC740 \uC815\uB9D0 \uAC15\uD574\uC694"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uAC80\uC740 \uD138 \uB140\uC11D\uB4E4\uC740 \uC815\uB9D0 \uAC15\uD574\uC694!
+        \n\uC6B0\uB9AC\uB3C4 \uC190 \uC4F8 \uBC29\uB3C4\uAC00 \uC5C6\uC5B4\uC11C
+        \uADF8\uB0E5 \uB9C8\uC8FC\uCE58\uC9C0 \uC54A\uB294 \uAC8C \uCD5C\uC120\uC774\uB77C
+        \uC0DD\uAC01\uD558\uBA70 \uD53C\uD574\uC11C \uC9C0\uB0B4\uB294 \uC218 \uBC16\uC5D4
+        \uC5C6\uC5C8\uC5B4\uC694."
+    - smallTitle_: "\uD0D0\uC815:\uAF2D \uC9C0\uB098\uC57C\uD55C\uB2E4\uBA74?"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uC74C...\n\uAC70\uAE38 \uAF2D \uC9C0\uB098\uAC00\uC57C \uD55C\uB2E4\uBA74?"
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uAC15\uD574\uC838\uC11C \uC624\uC154\uC57C\uD574"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uC5C4\uCCAD \uAC15\uD574\uC838\uC11C \uC624\uC154\uC57C \uD560
+        \uAC81\uB2C8\uB2E4!\n\uBAA8\uD5D8\uAC00\uB2D8 \uC9C0\uAE08\uC758 \uD798\uC73C\uB85C\uB294...\n\uC808\uB300
+        \uC0B4\uC544\uB0A8\uC744 \uC218 \uC5C6\uC744 \uAC70\uC608\uC694!"
+    - smallTitle_: "\uD0D0\uC815: \uD558\uD558, \uB0A0 \uBB34\uC2DC\uD558\uB124 "
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uD558\uD558, \uC774 \uB625\uAC1C\uB140\uC11D\uC774 \uB0A0 \uBB34\uC2DC\uD558\uB124.\n\uB0B4
+        \uAC8C\uC784\uC9EC\uBC25\uC774 \uC5BC\uB9CC\uB370?!"
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC804\uD22C\uB825\uC774..."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uBAA8\uD5D8\uAC00\uB2D8\uC758 \uC804\uD22C\uB825\uC740 \uD604\uC7AC
+        107, \uAC80\uC740 \uD138 \uC218\uC778\uC758 \uD3C9\uADE0 \uC804\uD22C\uB825\uC740
+        3200...\n\uC544\uBB34\uB798\uB3C4 \uBB34\uB9AC\uC774\uC9C0 \uC54A\uC744\uAE4C\uC694...?"
+    - smallTitle_: "\uD0D0\uC815: \uBE44\uAC81\uD558\uAC8C \uD329\uD2B8\uB85C;"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uC774...\uC774\uAC8C \uBE44\uAC81\uD558\uAC8C \uD329\uD2B8\uB85C...\n\uC774\uAC74
+        \uC218\uC0AC\uC6A9 \uACC4\uC815\uC77C \uBFD0\uC774\uACE0, \uC0AC\uC2E4 \uC5C4\uCCAD
+        \uAC15\uD558\uAC70\uB4E0 \uB0B4\uAC00!"
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC640! \uADF8\uB7EC\uC2E0\uAC00\uC694?"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uC640! \uADF8\uB7EC\uC2E0\uAC00\uC694?\n\uADF8\uB098\uC800\uB098
+        \uC218\uC0AC\uB77C\uB2C8! \uD0D0\uC815\uB180\uC774\uB97C \uD558\uACE0 \uACC4\uC2E0
+        \uAC74\uAC00\uC694?"
+    - smallTitle_: "\uD0D0\uC815: \uB180\uC774\uB77C\uB2C8,"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uD0D0\uC815 \uB180\uC774\uB77C\uB2C8, \uC774 \uBAB8\uC774 \uC9C4\uC9DC
+        \uC720\uBA85\uD55C \uD0D0\uC815\uC774\uAC70\uB4E0."
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC815\uB9D0 \uBA4B\uC9C0\uB124\uC694!"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uC815\uB9D0 \uBA4B\uC9C0\uB124\uC694!\n\uC5B4\uB5A4 \uC0AC\uAC74\uC744
+        \uC218\uC0AC\uC911\uC774\uC2E0\uAC00\uC694?"
+    - smallTitle_: "\uD0D0\uC815: \uADF8\uB798, \uD639\uC2DC \uBC31\uAC15\uC544\uB2C8?"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uADF8\uB798, \uD639\uC2DC '\uBC31\uAC15'\uC774\uB77C\uB294 \uC0AC\uB78C\uC5D0
+        \uB300\uD574 \uB4E3\uAC70\uB098 \uC54C\uACE0\uC788\uB294 \uAC8C \uC788\uB098?"
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC624, \uBC31\uAC15\uB2D8\uC774\uB77C\uBA74!"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uC624, \uBC31\uAC15\uB2D8\uC774\uB77C\uBA74 \uD558\uC580(\uBC31)
+        \uAC15\uC544\uC9C0(\uAC15)\uC778 \uC6B0\uB9AC\uAC00 \uBAA8\uB97C \uB9AC\uAC00
+        \uC5C6\uC8E0!"
+    - smallTitle_: "\uD0D0\uC815: '\uC5B5\uC9C0\uC790\uB098..'"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "'\uC644\uC804 \uC5B5\uC9C0\uC796\uC544...'"
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC774\uB984\uC774 \uB118 \uBA4B\uC788\uC5B4\uC11C
+        \uAE30\uC5B5\uD574"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uB984\uC774 \uB108\uBB34 \uBA4B\uC788\uC5B4\uC11C \uAE30\uC5B5\uD558\uACE0
+        \uC788\uC2B5\uB2C8\uB2E4! \uC544\uB984\uB2F5\uC9C0 \uC54A\uB098\uC694? \n\uD558\uC580
+        \uAC15\uC544\uC9C0\uB97C \uC774\uB984\uC73C\uB85C \uD0DD\uD558\uC2DC\uB2E4\uB2C8\u2026\n\uC815\uB9D0
+        \uC778\uD488\uB3C4 \uD6CC\uB96D\uD558\uC2E0 \uBD84\uC774\uB77C\uACE0 \uC0DD\uAC01\uB429\uB2C8\uB2E4.\n"
+    - smallTitle_: "\uD0D0\uC815: \uD5DB\uC18C\uB9AC\uD558\uC9C0\uB9D0\uACE0 "
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uD5DB\uC18C\uB9AC \uD558\uC9C0 \uB9D0\uACE0.\n\uC5B4\uB5A4 \uC0AC\uB78C\uC774\uC5C8\uB294\uC9C0
+        \uAE30\uC5B5\uB098\uB294 \uB300\uB85C \uB2E4 \uC774\uC57C\uAE30 \uD574 \uB2EC\uB77C\uACE0."
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC0AC\uC2E4 \uBC31\uAC15\uB2D8\uC744 \uC790\uC8FC\uBCF8\uAC74.."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uC0AC\uC2E4 \uBC31\uAC15\uB2D8\uC744 \uC790\uC8FC\uBCF8 \uAC83\uC740
+        \uC544\uB2C8\uC5C8\uC5B4\uC694.\n\uC6B0\uB9AC \uAC38\uC6B0\uD150\uB9C8\uC744\uC5D4
+        \uCD5C\uADFC 1\uB144 \uB118\uAC8C \uBC29\uBB38\uD55C \uC801\uC774 \uC5C6\uC73C\uC2DC\uAC70\uB4E0\uC694."
+    - smallTitle_: "\uD0D0\uC815: \uADF8\uB807\uAD70."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uADF8\uB807\uAD70."
+    - smallTitle_: "\uD558\uC580\uAC1C2: \uC544 \uADF8\uB9AC\uACE0 \uD56D\uC0C1 \uC5EC\uC790\uCE5C\uAD6C\uBD84\uACFC"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 16
+      sentence: "\uC544, \uADF8\uB9AC\uACE0 \uD56D\uC0C1 \uC5EC\uC790\uCE5C\uAD6C\uBD84\uACFC
+        \uD568\uAED8 \uB4E4\uB974\uC168\uC5B4\uC694."
+    - smallTitle_: "\uD0D0\uC815: '\uC5EC\uC790\uCE5C\uAD6C?'"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 9
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "'\uC5EC\uC790\uCE5C\uAD6C...?'"
 --- !u!1 &1136139298
 GameObject:
   m_ObjectHideFlags: 0
@@ -17935,6 +19394,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1888680054}
+  - {fileID: 179149918}
+  - {fileID: 920949872}
+  - {fileID: 137810079}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19955,47 +21417,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - smallTitle_: "\uC5D0\uADF8\uBBF8\uB9C8\uC744 \uC8FC\uC810\uC5D0\uC11C..."
+  - smallTitle_: "\uAC38\uC6B0\uD150\uB9C8\uC744"
     storyId: 0
     dialogue:
-    - smallTitle_: "npc: \uC548\uB155\uD558\uC2ED\uB2C8\uAE4C"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: "\uC548\uB155\uD558\uC2ED\uB2C8\uAE4C.\n\uC774 \uACF3\uC758 \uC8FC\uC778,
-        \uBC45\uD06C\uC785\uB2C8\uB2E4.\n\uC26C\uC5C8\uB2E4 \uAC00\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
-    - smallTitle_: "\uC9C0\uD604: \uB124, \uC548\uB155\uD558\uC138\uC694."
+    - smallTitle_: "\uC2B9\uD6C8: \uC544 \uAE5C\uC9DD\uC774\uC57C!"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -20003,43 +21428,6 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 1
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 1
-      sentence: "\uB124, \uC548\uB155\uD558\uC138\uC694.\n\uC2DC\uC6D0\uD55C \uB9E5\uC8FC
-        \uB450 \uC794\uB9CC \uC8FC\uC2DC\uACA0\uC5B4\uC694?"
-    - smallTitle_: "\uBC45\uD06C: \uC8C4\uC1A1\uD569\uB2C8\uB2E4\uB9CC,,"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
           leftPortraitNumber: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
@@ -20066,10 +21454,9 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 14
-      sentence: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4\uB9CC, \uC800\uD76C \uC8FC\uC810\uC5D0\uC11C\uB294
-        \uC74C\uB8CC\uB97C \uD310\uB9E4\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4..."
-    - smallTitle_: "\uD0D0\uC815: ?\uBB54\uC18C\uB9AC\uC5EC "
+      name: 0
+      sentence: "\uAE5C\uC9DD\uC774\uC57C! \uBB50\uC57C \uC5EC\uAE34?"
+    - smallTitle_: "\uC9C0\uD604: \uC774\uCABD\uC774\uC5D0\uC694."
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -20077,128 +21464,9 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 1
+          leftPortraitNumber: 0
           showRightPortrait: 1
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 0
-      sentence: "\uC5E5? \uC8FC\uC810\uC774 \uC220\uC744 \uC548 \uD310\uB2E4\uB2C8,
-        \uBB54 \uC18C\uB9AC\uC57C?"
-    - smallTitle_: "\uBC45\uD06C: \uC800\uD76C \uC5D0\uADF8\uBBF8\uB9C8\uC744\uC740
-        6\uB144 \uC804\uBD80\uD130..."
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: "\uC800\uD76C \uC5D0\uADF8\uBBF8\uB9C8\uC744\uC740 6\uB144 \uC804\uBD80\uD130
-        \uC2DD\uC218\uB97C \uAD6C\uD558\uAE30\uAC00 \uC5B4\uB824\uC6CC\uC84C\uC2B5\uB2C8\uB2E4.\n\n\u2018\uC13C\uD2B8\uB9AC\uC628
-        \uC655\uAD6D\u2019\uACFC \uD56D\uC0C1 \uACBD\uC7C1\uAD6C\uB3C4\uC5D0 \uC788\uB358
-        \u2018\uD50C\uB808\uC624\uC2A4 \uC655\uAD6D\u2019\uC740 \uC9C0\uC18D\uC801\uC73C\uB85C
-        \uC804\uC7C1\uC744 \uD574 \uC654\uC8E0.\n"
-    - smallTitle_: "\uBC45\uD06C: \uC800\uD76C \uC5D0\uADF8\uBBF8\uB9C8\uC744\uC740
-        6\uB144 \uC804\uBD80\uD130...2"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: "\uADF8\uB7F0 \uC911\uC5D0 \uD56D\uC0C1 \uB450 \uC655\uAD6D \uC0AC\uC774\uC758
-        \uC804\uC7C1\uC9C0\uC5ED \uADFC\uBC29\uC5D0 \uC704\uCE58\uD574\uC11C \uD53C\uD574\uB97C
-        \uBC1B\uB358 \uC6B0\uB9AC \uB9C8\uC744\uC740,\n\n\uACB0\uAD6D\uC5D4\u2026
-        \uD3ED\uACA9\uB54C\uBB38\uC5D0 \uC544\uC608 \uBB3C\uAE38\uC774 \uB04A\uC5B4\uC838
-        \uBC84\uB838\uB2F5\uB2C8\uB2E4\u2026\n"
-    - smallTitle_: "\uC9C0\uD604: \uC800\uB7F0... \uADF8\uB7FC \uBB3C\uC740 \uC5B4\uB514\uC11C?"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 1
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
+          rightPortraitNumber: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -20223,8 +21491,8 @@ MonoBehaviour:
           image: {fileID: 0}
       soundNumber: 0
       name: 1
-      sentence: "\uC800\uB7F0...\n\uADF8\uB7FC \uBB3C\uC740 \uC5B4\uB514\uC11C \uAD6C\uD574\uC624\uC2ED\uB2C8\uAE4C?"
-    - smallTitle_: "\uBC45\uD06C: \uC800 \uBA40\uB9AC \uB2E4\uB978 \uB9C8\uC744\uC5D0"
+      sentence: "\uC774\uCABD\uC774\uC5D0\uC694."
+    - smallTitle_: "\uD3AB\uB9D0\uC5D0\uC4F0\uC5EC\uC9C4\uAC70"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -20232,7 +21500,7 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 1
+          leftPortraitNumber: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
         selectionPopupSettings:
@@ -20259,12 +21527,11 @@ MonoBehaviour:
           image: {fileID: 0}
       soundNumber: 0
       name: 14
-      sentence: "\uC800 \uBA40\uB9AC \uB2E4\uB978 \uB9C8\uC744\uC5D0 \uAC00\uC11C
-        \uBE44\uC2FC \uB3C8\uC744 \uC8FC\uACE0 \uC0AC\uC624\uB294 \uC218\uBC16\uC5D0\uB294
-        \uC5C6\uC2B5\uB2C8\uB2E4.\n\uADF8\uB798\uC11C \uC800\uD76C \uC8FC\uC810\uC740
-        \uC774\uC81C \uC0AC\uC2E4\uC0C1 \uC5EC\uAD00\uC758 \uC5ED\uD560\uB9CC \uD574
-        \uC624\uACE0 \uC788\uC8E0\u2026\n"
-    - smallTitle_: "\uBC45\uD06C: \uC800 \uBA40\uB9AC \uB2E4\uB978 \uB9C8\uC744\uC5D02"
+      sentence: "\uAC38\uC6B0\uD150 \uB9C8\uC744\uC740 \uC5ED\uC0AC\uC640 \uC804\uD1B5\uC774
+        \uC788\uB294 \uC218\uC778\uB4E4\uC758 \uB9C8\uC744\uC785\uB2C8\uB2E4.\n\uD558\uC580
+        \uD138\uC758 \uAC1C \uC5BC\uAD74\uC744 \uD55C \uC774\uACF3 \uC0AC\uB78C\uB4E4\uC740
+        \uBAA8\uB450\uC5D0\uAC8C \uCE5C\uC808\uD558\uB2F5\uB2C8\uB2E4."
+    - smallTitle_: "\uD3AB\uB9D0\uC5D0\uC4F0\uC5EC\uC9C4\uAC702"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -20272,7 +21539,7 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 1
+          leftPortraitNumber: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
         selectionPopupSettings:
@@ -20299,10 +21566,10 @@ MonoBehaviour:
           image: {fileID: 0}
       soundNumber: 0
       name: 14
-      sentence: "\uC815\uB9D0 \uBABB \uC0B4\uACA0\uC2B5\uB2C8\uB2E4.\n\uB450 \uC655\uAD6D\uC758
-        \uC804\uC7C1\uC774 \uC5B8\uC81C\uCBE4 \uB05D\uB0A0\uB294\uC9C0..."
-    - smallTitle_: "\uD0D0\uC815: \uC124\uB9C8 \uBE44\uBC00\uC758\uC232\uAE4C\uC9C0
-        \uAC00\uB294"
+      sentence: "\uD558\uC9C0\uB9CC \uC774 \uB9C8\uC744 \uBC16\uC758 '\uAC80\uC740
+        \uD138'\uC758 \uAC1C \uC5BC\uAD74\uC744 \uD55C \uC218\uC778\uB4E4\uC740\n\uC544\uC8FC
+        \uD3EC\uC545\uD558\uACE0 \uC131\uC9C8\uC774 \uB354\uB7FD\uB2F5\uB2C8\uB2E4."
+    - smallTitle_: "\uD3AB\uB9D0\uC5D0\uC4F0\uC5EC\uC9C4\uAC703"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -20310,272 +21577,158 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 1
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 14
+      sentence: "\uB2F9\uC2E0\uC744 \uACF5\uACA9\uD560 \uC218\uB3C4 \uC788\uC73C\uB2C8
+        \uC870\uC2EC\uD558\uC138\uC694!"
+    - smallTitle_: "\uD0D0\uC815: \uC774\uACF3\uB3C4 \uC815\uC0C1\uC740 \uC544\uB2CC
+        \uAC83\uAC19\uAD70."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uC774\uACF3\uB3C4 \uC815\uC0C1\uC740 \uC544\uB2CC \uAC83 \uAC19\uAD70."
+    - smallTitle_: "\uC9C0\uD604: \uB370\uB9AD\uC528\uAC00 \uB9D0\uD588\uB358."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uB370\uB9AD\uC528\uAC00 \uB9D0 \uD588\uB358 '\uC218\uC778\uB4E4\uC758
+        \uAC70\uB9AC'\uAC00 \n\uC5EC\uAE30\uC11C \uB9D0 \uD558\uB294 \uAC80\uC740\uD138\uC758
+        \uAC1C \uC5BC\uAD74\uC744 \uD558\uACE0 \uC788\uB098\uBD10\uC694."
+    - smallTitle_: "\uD0D0\uC815: \uBB50 \uC5B4\uCA0C\uB4E0,"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+            choice_results: []
+            responses: []
+        animationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+      soundNumber: 0
+      name: 0
+      sentence: "\uBB50 \uC5B4\uCA0C\uB4E0 \uC5EC\uAE30 \uD558\uC580 \uAC15\uC544\uC9C0\uB4E4\uC740
+        \uBAA8\uB450 \uC548\uC2EC\uD574\uB3C4 \uB41C\uB2E4\uB294 \uB73B\uC774\uACA0\uC9C0."
+    - smallTitle_: "\uC9C0\uD604: \uD769\uC5B4\uC84C\uB2E4\uAC00 \uBAA8\uC785\uC2DC\uB2E4."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
           showRightPortrait: 1
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 0
-      sentence: "\uD558\u2026 \uC124\uB9C8 \u2018\uBE44\uBC00\uC758 \uC232\u2019\uAE4C\uC9C0
-        \uAC00\uB294 \uB0B4\uB0B4 \uBB3C\uC744 \uAD6C\uD560 \uC218 \uC5C6\uB294 \uAC74
-        \uC544\uB2C8\uACA0\uC9C0?"
-    - smallTitle_: "\uBC45\uD06C: \uAD1C\uCC2E\uC744\uAC81\uB2C8\uB2E4."
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: "\uC544, \uB2E4\uB978 \uC9C0\uC5ED\uC740 \uAD1C\uCC2E\uC73C\uC2E4
-        \uAC81\uB2C8\uB2E4. \n\n\uADF8\uB098\uC800\uB098 \uBE44\uBC00\uC758 \uC232\uC5D0
-        \uAC00\uC2E0\uB2E4\uACE0 \uD558\uC168\uC2B5\uB2C8\uAE4C?"
-    - smallTitle_: "\uC9C0\uD604: \uB124/"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 1
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: "\uB124, \uBE44\uBC00\uC758 \uC232\uC5D0 \uB300\uD574\uC11C \uC544\uC2DC\uB098\uC694?"
-    - smallTitle_: "\uBC45\uD06C: \uC544\uB1E8 \uC798 \uC544\uB294\uAC74 \uC548\u3163\u3134\uB370"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: "\uC544\uB2C8\uC694, \uC798 \uC544\uB294\uAC74 \uC544\uB2CC\uB370\u2026\n\uCD5C\uADFC\uC5D0\uB3C4
-        \uC800\uD76C \uAC00\uAC8C\uC5D0 \uC640\uC11C \uBE44\uBC00\uC758 \uC232\uC758
-        \uC704\uCE58\uB97C \uBB3B\uB294 \uC790 \uC788\uC5C8\uAC70\uB4E0\uC694."
-    - smallTitle_: "\uBC45\uD06C: \uC544\uB1E8 \uC798 \uC544\uB294\uAC74 \uC544\uB2CC\uB3702"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: "\uBCF4\uD1B5 \uC798 \uCC3E\uC9C0 \uC54A\uB294 \uACF3\uC774\uAE30\uB3C4
-        \uD558\uACE0, \uC6CC\uB099 \uADF8 \uC790\uC758 \uC0DD\uAE40\uC0C8\uAC00 \uB208\uC5D0
-        \uB744\uC5C8\uB358\uC9C0\uB77C\u2026"
-    - smallTitle_: "\uD0D0\uC815: \uB204\uAD70\uC9C0 \uAE30\uC5B5\uD568?"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 0
-      sentence: "\uADF8\uAC8C \uB204\uAD6C\uC600\uB294\uC9C0 \uAE30\uC5B5\uD558\uB098?"
-    - smallTitle_: "\uBC45\uD06C: \u3134\u3134\uBAA8\uB985\uB2C8"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: 
-            choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: "\uC774\uB984\uC740 \uBAA8\uB985\uB2C8\uB2E4. \n\uC0C8\uAE4C\uB9E3\uACE0
-        \uCEE4\uB2E4\uB780 \uBAB8\uC9D1\uC5D0, \uBFD4\uC774 \uB450\uAC1C\u2026 \uC544\uB2C8
-        \uD558\uB098\uC600\uB358\uAC00?\n\uADF8\uB9AC\uACE0 \uBAA9\uC18C\uB9AC\uB3C4
-        \uC774\uC0C1\uD55C \uAC8C, \uAF2D \uAD34\uBB3C\uAC19\uC558\uC2B5\uB2C8\uB2E4."
-    - smallTitle_: "\uC9C0\uD604: \uD2B9\uC774\uD558\uAC8C\uC0DD\uACBC"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 1
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
+          rightPortraitNumber: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -20600,9 +21753,11 @@ MonoBehaviour:
           image: {fileID: 0}
       soundNumber: 0
       name: 1
-      sentence: "\uD2B9\uC774\uD55C \uC678\uD615\uC744 \uD55C \uC790\uC600\uAD70\uC694.\n\uD639\uC2DC
-        \uADF8 \uB300\uD559\uC0DD 5\uC778\uB4E4 \uC911 \uD558\uB098\uC600\uC744\uAE4C\uC694?"
-    - smallTitle_: "\uD0D0\uC815: \uC544\uB2C8,,"
+      sentence: "\uC0AC\uB78C\uB4E4\uC774 \uAC00\uC7A5 \uB9CE\uC774 \uBAA8\uC77C
+        \uAC83 \uAC19\uC740 \uACF3\uC5D0\uC11C \uC815\uBCF4\uB97C \uBAA8\uC544\uBCF4\uB294\uAC8C
+        \uC88B\uACA0\uC5B4\uC694.\n\uD769\uC5B4\uC84C\uB2E4\uAC00 30\uBD84 \uD6C4\uC5D0
+        \uC5EC\uAE30\uC5D0\uC11C \uB2E4\uC2DC \uBAA8\uC774\uAE30\uB85C \uD569\uC2DC\uB2E4."
+    - smallTitle_: "\uD0D0\uC815: \uC26C\uC5C4\uC26C\uC5C4 \uD569\uC2DC\uB2E4.."
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -20610,9 +21765,9 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 1
+          leftPortraitNumber: 0
           showRightPortrait: 0
-          rightPortraitNumber: 0
+          rightPortraitNumber: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -20637,20 +21792,19 @@ MonoBehaviour:
           image: {fileID: 0}
       soundNumber: 0
       name: 0
-      sentence: "\uC544\uB2C8, \uADF8 \uB140\uC11D\uB4E4\uC758 \uC778\uAC8C\uC784
-        \uCE90\uB9AD\uD130\uB4E4\uC744 \uBCF8 \uC801 \uC788\uB294\uB370,\n\uADF8
-        \uC815\uB3C4\uB85C \uAD34\uC0C1\uD558\uC9C4 \uC54A\uC558\uC5B4\uC694."
-    - smallTitle_: "\uC9C0\uD604: \uACE0\uB9C8\uC6CC\uC694 \uBC45\uD06C."
+      sentence: "\uAC70 \uC26C\uC5C4\uC26C\uC5C4 \uD569\uC2DC\uB2E4, \uC5EC\uAE30
+        \uBC29\uAE08 \uB3C4\uCC29\uD588\uC796\uC544\uC694?"
+    - smallTitle_: "\uC9C0\uD604: ..."
       dialogueSetName: 
       detail:
         delayTime: 0
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 1
-          leftPortraitNumber: 1
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
           showRightPortrait: 0
-          rightPortraitNumber: 0
+          rightPortraitNumber: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -20674,10 +21828,9 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 1
-      sentence: "\uADF8\uB807\uAD70\uC694.\n\uC5B4\uCA0C\uB4E0, \uACE0\uB9C8\uC6CC\uC694
-        \uBC45\uD06C\uC528."
-    - smallTitle_: "\uBC45\uD06C: \uC720\uC5B4\uC6F0\uCEF4!"
+      name: 0
+      sentence: "...\uADF8\uB7FC \uC774\uB530 \uBD59\uACA0\uC2B5\uB2C8\uB2E4."
+    - smallTitle_: "\uD0D0\uC815: \uC73C\uD734 \uB300\uB2E8\uD55C \uC5F4\uC815\uC774\uAD70"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -20685,9 +21838,9 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 1
+          leftPortraitNumber: 0
           showRightPortrait: 0
-          rightPortraitNumber: 0
+          rightPortraitNumber: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -20711,49 +21864,9 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
       soundNumber: 0
-      name: 14
-      sentence: "\uCC9C\uB9CC\uC5D0\uC694, \uBAA8\uD5D8\uAC00\uB2D8.\n\uD3B8\uD788\uB4E4
-        \uC26C\uB2E4 \uAC00\uC2ED\uC2DC\uC624."
-    - smallTitle_: "\uC8FC\uC810\uC744 \uB354 \uB458\uB7EC\uBCFC\uAE4C?"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 1
-          selectionPopupData:
-            question: 
-            choices:
-            - sentence: "\uC608"
-              storyJump: 0
-            - sentence: "\uC544\uB2C8\uC624"
-              storyJump: 0
-            choice_results: []
-            responses: []
-        animationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        etcAnimationSettings:
-          etcAnimSets: []
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-      soundNumber: 0
-      name: 14
-      sentence: 
+      name: 0
+      sentence: "'\uC73C\uD734! \uB300\uB2E8\uD55C \uC5F4\uC815\uC774\uC2DC\uAD70
+        \uADF8\uB798.'"
 --- !u!1 &2008167755
 GameObject:
   m_ObjectHideFlags: 0
