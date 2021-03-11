@@ -345,7 +345,7 @@ public class KeyInput_Controller : MonoBehaviour
         //다시 출발. 딜레이타임 고려해서 출발해야한다. 
         else
         {
-            print("다시 출발!");
+            print("다시 출발! 딜레이타임: " + curMoveSet.delayTime + ", 방향: " +curMoveSet.dir+ ", 거리: " + curMoveSet.distance);
             if (curMoveSet.delayTime != 0f) StartCoroutine(StartNextMoveAfterDelayTime(curMoveSet.delayTime));
             else StartNextMove();
         }

@@ -16070,8 +16070,8 @@ MonoBehaviour:
   curDialogSetCountNumber: 0
   curStoryId: 0
   curStorySmallTitle: 
-  duringAnimation_AnimateAlone: 0
-  endedAnimation_AnimateAlone: 0
+  isDuringMoveAnimation: 0
+  isEndedMoveAnimation: 0
   nPCs: []
   keyInput_Controllers: []
   is05Sec: 0
@@ -20382,8 +20382,14 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 20024207}
-            moveSet: []
-            endDir: 3
+            moveSet:
+            - delayTime: 0
+              dir: 2
+              distance: 1
+            - delayTime: 4
+              dir: 4
+              distance: 7
+            endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
         sFXSettings:

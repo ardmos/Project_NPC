@@ -35,12 +35,12 @@ public class Object : MonoBehaviour
         Vector3 playerPos = FindObjectOfType<KeyInput_Controller>().gameObject.transform.position;
         if (Mathf.Abs(playerPos.x-transform.position.x)<=2.5f && Mathf.Abs(playerPos.y-transform.position.y)<=2.5f)
         {
-            Debug.Log("Player is near");
+            //Debug.Log("Player is near");
             return true;
         }
         else
         {
-            Debug.Log("Player isn't near. x:" + Mathf.Abs(playerPos.x - transform.position.x) + ", y:" + Mathf.Abs(playerPos.y - transform.position.y));
+            //Debug.Log("Player isn't near. x:" + Mathf.Abs(playerPos.x - transform.position.x) + ", y:" + Mathf.Abs(playerPos.y - transform.position.y));
             return false;
         }
     }

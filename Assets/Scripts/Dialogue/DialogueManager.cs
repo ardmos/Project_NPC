@@ -50,8 +50,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //선택상자에대한 응답에서 문장 빨리넘기기 했을 시 사용할 문장.  이미 도도도 찍고있던 문장을 담고있다.
     string printingSentence;
     //다이얼로그 문장 없이 애니메이션만 실행시키기 위한 부분.    
-    public bool duringAnimation_AnimateAlone;
-    public bool endedAnimation_AnimateAlone;
+    public bool isDuringMoveAnimation;
+    public bool isEndedMoveAnimation;
     public List<NPC> nPCs = new List<NPC>();
     public List<KeyInput_Controller> keyInput_Controllers = new List<KeyInput_Controller>();
     //다이얼로그 딜레이 타임 
@@ -118,53 +118,51 @@ public class DialogueManager : DontDestroy<DialogueManager>
             else DisplayNextSentence();
         }
 
-        #region 문장 없을 때 애니메이션만 실행
+        #region 다이얼로그는 이동 애니메이션 끝나길 기다렸다가 출력하기.
         //애니메이션 중이면 대기. 
         //애니메이션이 끝났으면 DisplayNextSentence(); 진행.
-        if (duringAnimation_AnimateAlone)
+        if (isDuringMoveAnimation)
         {
             string objname = null;
             
-            foreach (NPC item in nPCs)
+            foreach (NPC npc in nPCs)
             {
-                objname = item.gameObject.name;
-                if (item.isArrived)
+                objname = npc.gameObject.name;
+                if (npc.isMoveSetOn == false)
                 {
                     //print(objname + "Arrived");
-                    endedAnimation_AnimateAlone = true;
+                    isEndedMoveAnimation = true;
                 }
                 else
                 {
-                    //print(objname + "Not Arrived");
-                    endedAnimation_AnimateAlone = false;
+                    //print(objname + "Not Arrived  이동애니메이션 진행중.");
+                    isEndedMoveAnimation = false;
                     return;
                 }
             }
-            foreach (KeyInput_Controller item in keyInput_Controllers)
+            foreach (KeyInput_Controller player in keyInput_Controllers)
             {
-                objname = item.gameObject.name;
-                if (item.isArrived)
+                objname = player.gameObject.name;
+                if (player.isMoveSetOn == false)
                 {
-                    //print(objname + "플레이어 Arrived");
-                    endedAnimation_AnimateAlone = true;
+                    print(objname + "플레이어 Arrived");
+                    isEndedMoveAnimation = true;
                 }
                 else
                 {
-                    //print(objname + "플레이어 Not Arrived");
-                    endedAnimation_AnimateAlone = false;
+                    //print(objname + "플레이어 Not Arrived  이동애니메이션 진행중.");                    
+                    isEndedMoveAnimation = false;
                     return;
                 }
-            }
-            //print(objname + " 이동애니메이션 진행중.");
+            }            
 
-            if (endedAnimation_AnimateAlone)
-            {
-                //print("끝! end!");
+            if (isEndedMoveAnimation)
+            {                
                 //혹~시! 사운드LifeTime중인지?
                 if (!isSFXDialogLifeTime)
                 {
-                    //print(objname + " 이동애니메이션 도착.끝");
-                    duringAnimation_AnimateAlone = false;
+                    print(objname + " 이동애니메이션 도착.끝");
+                    isDuringMoveAnimation = false;
                     DisplayNextSentence();
                 }
             }
@@ -317,7 +315,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //Sentence 비어있을경우, 발동할 이동 애니메이션 or 기타 애니메이션 or 사운드가 있는지 확인 후 없으면 그냥 패스! 
         if (dialogueSet.sentence == "")
         {
-            //얘네들...있다 true 변수 
+            //얘네들 sentence가 비어있을 때, 애니메이션이든 뭐든 있으면 그것만 하고 되돌아가기...있다 true 변수 
             bool goreturn = false;
 
             //발동할 애니메이션이 있는지? 
@@ -340,7 +338,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                         keyInput_Controller.MoveAnimStart(objAnimData);
                     }
                 }
-                duringAnimation_AnimateAlone = true;
+                isDuringMoveAnimation = true;
                 goreturn = true;
             }
 
