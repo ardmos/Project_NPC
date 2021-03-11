@@ -92,7 +92,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoaded: " + scene.name);
+        //Debug.Log("OnSceneLoaded: " + scene.name);
         //Debug.Log(mode);
         //새롭게 읽어오기.
         AddDialogueData();
@@ -404,17 +404,17 @@ public class DialogueManager : DontDestroy<DialogueManager>
             case Dialogue.DialogueSet.Names.익명:
                 dialogObjName.text = "??";
                 break;
-            case Dialogue.DialogueSet.Names.음식:
-                dialogObjName.text = "음식";
+            case Dialogue.DialogueSet.Names.경비병:
+                dialogObjName.text = "경비병";
                 break;
-            case Dialogue.DialogueSet.Names.침대:
-                dialogObjName.text = "침대";
+            case Dialogue.DialogueSet.Names.농부:
+                dialogObjName.text = "농부";
                 break;
-            case Dialogue.DialogueSet.Names.창문:
-                dialogObjName.text = "창문";
+            case Dialogue.DialogueSet.Names.데릭:
+                dialogObjName.text = "데릭";
                 break;
-            case Dialogue.DialogueSet.Names.캡슐:
-                dialogObjName.text = "캡슐";
+            case Dialogue.DialogueSet.Names.뱅크:
+                dialogObjName.text = "뱅크";
                 break;
             case Dialogue.DialogueSet.Names.학생1:
                 dialogObjName.text = "학생1";
@@ -433,6 +433,24 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 break;
             case Dialogue.DialogueSet.Names.빈칸:
                 dialogObjName.text = "";
+                break;
+            case Dialogue.DialogueSet.Names.하얀개1:
+                dialogObjName.text = "하얀개1";
+                break;
+            case Dialogue.DialogueSet.Names.하얀개2:
+                dialogObjName.text = "하얀개2";
+                break;
+            case Dialogue.DialogueSet.Names.하얀개3:
+                dialogObjName.text = "하얀개3";
+                break;
+            case Dialogue.DialogueSet.Names.수상한개:
+                dialogObjName.text = "수상한 개";
+                break;
+            case Dialogue.DialogueSet.Names.GM청마:
+                dialogObjName.text = "GM청마";
+                break;
+            case Dialogue.DialogueSet.Names.베라:
+                dialogObjName.text = "베라";
                 break;
             default:
                 break;
@@ -670,12 +688,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     //첫 다이얼로그 띄우고나서, 0.5초 카운트
     IEnumerator Count005Sec()
-    {        
+    {
         is05Sec = false;
-        print("CountStarted , is05Sec=" + is05Sec);
+        //print("CountStarted , is05Sec=" + is05Sec);
         yield return new WaitForSeconds(0.5f);
         is05Sec = true;
-        print("CountEnded , is05Sec=" + is05Sec);
+        //print("CountEnded , is05Sec=" + is05Sec);
     }
 
     //글자 출력 한방에 뙇 

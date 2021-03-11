@@ -20,12 +20,13 @@ public class NPC : MonoBehaviour
     public Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData;
     public Vector2 originalPos, destinationPos, curpos;
     public bool isArrived;
-    //복합이동 끝났는지 체크
-    public bool isMoveSetOn;
+   
 
     //제자리돌기 위한. 한번만 none에서 속도 주기 위한.
     public bool isdid;
 
+    //복합이동 끝났는지 체크
+    public bool isMoveSetOn;
     //복합이동 위한 큐
     Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet> moveSets;
     //복합이동 중 현 moveSet
@@ -72,14 +73,24 @@ public class NPC : MonoBehaviour
         this.animData = animData;
 
         moveSets.Clear();
+
         //여기서 moveSet을 차례차례 큐에 넣기. 
         foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet in animData.moveSet)
         {
             moveSets.Enqueue(moveSet);
         }
-        StartNextMove();
-        
-        SetDestinationPos(curMoveSet);
+
+        //시작부터 등록되어있는 큐가 없으면?  등록을 안한것이니, 그냥 패스 ~!
+        if (moveSets.Count == 0)
+        {
+            Debug.Log("moveSet 큐가 비어있습니다.");
+        }
+        else
+        {
+            StartNextMove();
+
+            SetDestinationPos(curMoveSet);
+        }
     }
 
     public void SetDestinationPos(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet)

@@ -305,16 +305,13 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 1450160335}
-            dir: 1
-            distance: 8
+            moveSet: []
             endDir: 3
           - objToMakeMove: {fileID: 580652749}
-            dir: 1
-            distance: 8
+            moveSet: []
             endDir: 3
           - objToMakeMove: {fileID: 20024207}
-            dir: 0
-            distance: 0
+            moveSet: []
             endDir: 2
         etcAnimationSettings:
           etcAnimSets: []
@@ -354,8 +351,7 @@ MonoBehaviour:
           activateObjAnimate: 0
           objectAnimationData:
           - objToMakeMove: {fileID: 0}
-            dir: 0
-            distance: 0
+            moveSet: []
             endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
@@ -431,8 +427,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 20024207}
-            dir: 3
-            distance: 3
+            moveSet: []
             endDir: 2
         etcAnimationSettings:
           etcAnimSets: []
@@ -854,8 +849,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 580652749}
-            dir: 4
-            distance: 1
+            moveSet: []
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -1324,8 +1318,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 580652749}
-            dir: 2
-            distance: 9
+            moveSet: []
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -1365,8 +1358,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 1450160335}
-            dir: 4
-            distance: 4
+            moveSet: []
             endDir: 3
         etcAnimationSettings:
           etcAnimSets: []
@@ -1406,8 +1398,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 20024207}
-            dir: 0
-            distance: 0
+            moveSet: []
             endDir: 3
         etcAnimationSettings:
           etcAnimSets: []
@@ -1682,8 +1673,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 1450160335}
-            dir: 0
-            distance: 0
+            moveSet: []
             endDir: 2
         etcAnimationSettings:
           etcAnimSets: []
@@ -2630,13 +2620,14 @@ MonoBehaviour:
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
-    dir: 0
-    distance: 0
+    moveSet: []
     endDir: 0
   originalPos: {x: 0, y: 0}
   destinationPos: {x: 0, y: 0}
+  curpos: {x: 0, y: 0}
   isArrived: 0
   isdid: 0
+  isMoveSetOn: 0
 --- !u!50 &20024211
 Rigidbody2D:
   serializedVersion: 4
@@ -9008,13 +8999,14 @@ MonoBehaviour:
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
-    dir: 0
-    distance: 0
+    moveSet: []
     endDir: 0
   originalPos: {x: 0, y: 0}
   destinationPos: {x: 0, y: 0}
+  curpos: {x: 0, y: 0}
   isArrived: 0
   isdid: 0
+  isMoveSetOn: 0
 --- !u!1 &530049466
 GameObject:
   m_ObjectHideFlags: 0
@@ -9247,13 +9239,14 @@ MonoBehaviour:
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
-    dir: 0
-    distance: 0
+    moveSet: []
     endDir: 0
   originalPos: {x: 0, y: 0}
   destinationPos: {x: 0, y: 0}
+  curpos: {x: 0, y: 0}
   isArrived: 0
   isdid: 0
+  isMoveSetOn: 0
 --- !u!114 &580652752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11377,8 +11370,7 @@ MonoBehaviour:
                   activateObjAnimate: 0
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets: []
@@ -11419,8 +11411,7 @@ MonoBehaviour:
                   activateObjAnimate: 0
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -11465,8 +11456,7 @@ MonoBehaviour:
                   activateObjAnimate: 1
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -11510,8 +11500,7 @@ MonoBehaviour:
                   activateObjAnimate: 0
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets: []
@@ -11534,8 +11523,7 @@ MonoBehaviour:
           activateObjAnimate: 0
           objectAnimationData:
           - objToMakeMove: {fileID: 1807504350}
-            dir: 3
-            distance: 2
+            moveSet: []
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -11630,8 +11618,7 @@ MonoBehaviour:
                   activateObjAnimate: 1
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -11656,8 +11643,7 @@ MonoBehaviour:
           activateObjAnimate: 0
           objectAnimationData:
           - objToMakeMove: {fileID: 1807504350}
-            dir: 3
-            distance: 2
+            moveSet: []
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -11752,8 +11738,7 @@ MonoBehaviour:
                   activateObjAnimate: 1
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -11778,8 +11763,7 @@ MonoBehaviour:
           activateObjAnimate: 0
           objectAnimationData:
           - objToMakeMove: {fileID: 1807504350}
-            dir: 3
-            distance: 2
+            moveSet: []
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -15349,13 +15333,14 @@ MonoBehaviour:
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
-    dir: 0
-    distance: 0
+    moveSet: []
     endDir: 0
   originalPos: {x: 0, y: 0}
   destinationPos: {x: 0, y: 0}
+  curpos: {x: 0, y: 0}
   isArrived: 0
   isdid: 0
+  isMoveSetOn: 0
 --- !u!114 &1450160338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19473,13 +19458,14 @@ MonoBehaviour:
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
-    dir: 0
-    distance: 0
+    moveSet: []
     endDir: 0
   originalPos: {x: 0, y: 0}
   destinationPos: {x: 0, y: 0}
+  curpos: {x: 0, y: 0}
   isArrived: 0
   isdid: 0
+  isMoveSetOn: 0
 --- !u!95 &1807504356
 Animator:
   serializedVersion: 3
@@ -20353,8 +20339,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 20024207}
-            dir: 0
-            distance: 0
+            moveSet: []
             endDir: 3
         etcAnimationSettings:
           etcAnimSets:
@@ -20397,8 +20382,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 20024207}
-            dir: 4
-            distance: 3
+            moveSet: []
             endDir: 3
         etcAnimationSettings:
           etcAnimSets: []
@@ -20437,8 +20421,7 @@ MonoBehaviour:
           activateObjAnimate: 0
           objectAnimationData:
           - objToMakeMove: {fileID: 20024207}
-            dir: 4
-            distance: 7
+            moveSet: []
             endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
@@ -20533,8 +20516,7 @@ MonoBehaviour:
                   activateObjAnimate: 1
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -20559,8 +20541,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 20024207}
-            dir: 4
-            distance: 6
+            moveSet: []
             endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
@@ -20773,8 +20754,7 @@ MonoBehaviour:
                   activateObjAnimate: 0
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets: []
@@ -20815,8 +20795,7 @@ MonoBehaviour:
                   activateObjAnimate: 0
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -20861,8 +20840,7 @@ MonoBehaviour:
                   activateObjAnimate: 1
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -20906,8 +20884,7 @@ MonoBehaviour:
                   activateObjAnimate: 0
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets: []
@@ -20930,8 +20907,7 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 1807504350}
-            dir: 3
-            distance: 2
+            moveSet: []
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -21027,8 +21003,7 @@ MonoBehaviour:
                   activateObjAnimate: 1
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -21053,8 +21028,7 @@ MonoBehaviour:
           activateObjAnimate: 0
           objectAnimationData:
           - objToMakeMove: {fileID: 1807504350}
-            dir: 3
-            distance: 2
+            moveSet: []
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -21149,8 +21123,7 @@ MonoBehaviour:
                   activateObjAnimate: 1
                   objectAnimationData:
                   - objToMakeMove: {fileID: 1807504350}
-                    dir: 4
-                    distance: 2
+                    moveSet: []
                     endDir: 2
                 etcAnimationSettings:
                   etcAnimSets:
@@ -21175,8 +21148,7 @@ MonoBehaviour:
           activateObjAnimate: 0
           objectAnimationData:
           - objToMakeMove: {fileID: 1807504350}
-            dir: 3
-            distance: 2
+            moveSet: []
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -21792,13 +21764,14 @@ MonoBehaviour:
   isrm: 0
   animData:
     objToMakeMove: {fileID: 0}
-    dir: 0
-    distance: 0
+    moveSet: []
     endDir: 0
   originalPos: {x: 0, y: 0}
   destinationPos: {x: 0, y: 0}
+  curpos: {x: 0, y: 0}
   isArrived: 0
   isdid: 0
+  isMoveSetOn: 0
 --- !u!50 &2066939045
 Rigidbody2D:
   serializedVersion: 4
