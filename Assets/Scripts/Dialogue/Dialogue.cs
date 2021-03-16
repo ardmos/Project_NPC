@@ -132,7 +132,7 @@ public class Dialogue
                         [Header("- 이동할 방향")]
                         public MoveDir dir;
                         [Header("- 이동할 거리(m)")]
-                        public int distance;
+                        public float distance;
 
                     }
 
