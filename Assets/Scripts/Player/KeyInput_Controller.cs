@@ -36,7 +36,7 @@ public class KeyInput_Controller : MonoBehaviour
 
 
     //제자리돌기 위한. 한번만 none에서 속도 주기 위한.
-    public bool isdid;
+    public bool isJustTurnCompleted;
 
     //복합이동 끝났는지 체크
     public bool isMoveSetOn;
@@ -171,6 +171,8 @@ public class KeyInput_Controller : MonoBehaviour
 
         moveSets.Clear();
 
+        Debug.Log("animData.moveSet[] Length: " + animData.moveSet.Length);
+
         //여기서 moveSet을 차례차례 큐에 넣기. 
         foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet in animData.moveSet)
         {
@@ -182,10 +184,8 @@ public class KeyInput_Controller : MonoBehaviour
             Debug.Log("moveSet 큐가 비어있습니다.");
         }
         else
-        {
+        {            
             StartNextMove();
-
-            SetDestinationPos(curMoveSet);
         }
     }
 
@@ -218,34 +218,32 @@ public class KeyInput_Controller : MonoBehaviour
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownLeft:
                 destinationPos = originalPos + new Vector2(-1, -1) * moveSet.distance;
                 break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None:
+                Debug.Log("제자리 돌기");                
+                break;
             default:
                 Debug.Log("최종목적지 설정 실패");
                 destinationPos = Vector2.zero;
                 break;
         }
+        Debug.Log(moveSet.dir+", "+moveSet.distance+"목적지:"+destinationPos);
     }
 
     public void MoveMaker(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet)
     {
         if (IsArrivedChecker(moveSet))      //도착여부 확인 
         {
-            //아직 도착한게 아니면 계속 이동 진행
-            KeepGoing(moveSet);
-        }
-        else
-        {
             //이동 도착 처리.
             Arrived();
         }
+        else
+        {
+            //아직 도착한게 아니면 계속 이동 진행
+            KeepGoing(moveSet);            
+        }
 
         //걷기 애니메이션 처리
-        MakeWalkingAnimation();
-
-        //제자리돌기 처리. 진행방향 none인 경우.
-        if (moveSet.dir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None)
-        {
-            JustTurn();
-        }
+        MakeWalkingAnimation();        
     }
 
     public bool IsArrivedChecker(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet)
@@ -285,6 +283,9 @@ public class KeyInput_Controller : MonoBehaviour
                 if (curpos.x <= destinationPos.x && curpos.y <= destinationPos.y)
                     isArrived = true;
                 break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None:
+                JustTurn();
+                break;
             default:
                 isArrived = false;
                 break;
@@ -320,15 +321,23 @@ public class KeyInput_Controller : MonoBehaviour
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownLeft:
                 movement = new Vector2(-1, -1);
                 break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None:
+                //부드러운 회전을 위해.  EndDir 방향에 맞춰서 movement를 설정해준다. 안그러면movement가 0이어서 무조건 회전시 왼쪽을 한 번 바라보고 회전하게된다.
+                if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down) movement = Vector2.down;
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up) movement = Vector2.up;
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right) movement = Vector2.right;
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left) movement = Vector2.left;                
+                Debug.Log("제자리돌기 킵고잉 movement:" + movement);
+                break;
             default:
-                movement = Vector2.zero;
+                Debug.Log("KeepGoing MoveDir Set Error");
                 break;
         }
     }
 
     public void Arrived()
     {
-        print("도착!");
+        print(curMoveSet.dir+", "+curMoveSet.distance+" 도착!");
         isrm = false;
         movement = Vector2.zero;
 
@@ -345,7 +354,7 @@ public class KeyInput_Controller : MonoBehaviour
         //다시 출발. 딜레이타임 고려해서 출발해야한다. 
         else
         {
-            print("다시 출발! 딜레이타임: " + curMoveSet.delayTime + ", 방향: " +curMoveSet.dir+ ", 거리: " + curMoveSet.distance);
+            //print("다시 출발! 딜레이타임: " + curMoveSet.delayTime + ", 방향: " +curMoveSet.dir+ ", 거리: " + curMoveSet.distance);
             if (curMoveSet.delayTime != 0f) StartCoroutine(StartNextMoveAfterDelayTime(curMoveSet.delayTime));
             else StartNextMove();
         }
@@ -355,21 +364,23 @@ public class KeyInput_Controller : MonoBehaviour
     {
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        if (!isJustTurnCompleted) animator.SetFloat("Speed", movement.sqrMagnitude);    //제자리 회전이 아닐 시에만 무브먼트 기반으로 스피드 설정.                    
     }
 
     public void JustTurn()
     {
-        if (!isdid)
+        if (!isJustTurnCompleted)
         {
-            isdid = true;
+            isJustTurnCompleted = true;
             animator.SetFloat("Speed", 1f);
+            Debug.Log("회전!! Speed = 1f");
         }
         else
         {
             isArrived = true;
-            isrm = false;
+            //isrm = false;
             animator.SetFloat("Speed", 0f);
+            Debug.Log("회전 완료. Speed = 0f");
         }
     }
 
@@ -378,27 +389,33 @@ public class KeyInput_Controller : MonoBehaviour
         if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down)
         {
             animator.SetInteger("Direction", 0);
+            Debug.Log("마지막 바라볼 곳 : Down");
         }
         else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up)
         {
             animator.SetInteger("Direction", 1);
+            Debug.Log("마지막 바라볼 곳 : Up");
         }
         else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right)
         {
             animator.SetInteger("Direction", 2);
+            Debug.Log("마지막 바라볼 곳 : Right");
         }
         else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left)
         {
             animator.SetInteger("Direction", 3);
+            Debug.Log("마지막 바라볼 곳 : Left");
         }
     }
 
     public void StartNextMove()
-    {
+    {        
         isrm = true;    //리모트이동 시작 스위치 ON
         isArrived = false;
-        isdid = false;
+        isJustTurnCompleted = false;
         curMoveSet = moveSets.Dequeue();
+        SetDestinationPos(curMoveSet);
+        print("출발! 딜레이타임: " + curMoveSet.delayTime + ", 방향: " + curMoveSet.dir + ", 거리: " + curMoveSet.distance);
     }
 
     IEnumerator StartNextMoveAfterDelayTime(float delayTime)

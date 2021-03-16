@@ -2626,7 +2626,7 @@ MonoBehaviour:
   destinationPos: {x: 0, y: 0}
   curpos: {x: 0, y: 0}
   isArrived: 0
-  isdid: 0
+  isJustTurnCompleted: 0
   isMoveSetOn: 0
 --- !u!50 &20024211
 Rigidbody2D:
@@ -9005,7 +9005,7 @@ MonoBehaviour:
   destinationPos: {x: 0, y: 0}
   curpos: {x: 0, y: 0}
   isArrived: 0
-  isdid: 0
+  isJustTurnCompleted: 0
   isMoveSetOn: 0
 --- !u!1 &530049466
 GameObject:
@@ -9245,7 +9245,7 @@ MonoBehaviour:
   destinationPos: {x: 0, y: 0}
   curpos: {x: 0, y: 0}
   isArrived: 0
-  isdid: 0
+  isJustTurnCompleted: 0
   isMoveSetOn: 0
 --- !u!114 &580652752
 MonoBehaviour:
@@ -15339,7 +15339,7 @@ MonoBehaviour:
   destinationPos: {x: 0, y: 0}
   curpos: {x: 0, y: 0}
   isArrived: 0
-  isdid: 0
+  isJustTurnCompleted: 0
   isMoveSetOn: 0
 --- !u!114 &1450160338
 MonoBehaviour:
@@ -19464,7 +19464,7 @@ MonoBehaviour:
   destinationPos: {x: 0, y: 0}
   curpos: {x: 0, y: 0}
   isArrived: 0
-  isdid: 0
+  isJustTurnCompleted: 0
   isMoveSetOn: 0
 --- !u!95 &1807504356
 Animator:
@@ -20389,7 +20389,7 @@ MonoBehaviour:
             - delayTime: 4
               dir: 4
               distance: 7
-            endDir: 0
+            endDir: 3
         etcAnimationSettings:
           etcAnimSets: []
         sFXSettings:
@@ -20547,7 +20547,10 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 20024207}
-            moveSet: []
+            moveSet:
+            - delayTime: 0
+              dir: 0
+              distance: 0
             endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
@@ -20913,7 +20916,13 @@ MonoBehaviour:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 1807504350}
-            moveSet: []
+            moveSet:
+            - delayTime: 0
+              dir: 2
+              distance: 2
+            - delayTime: 0
+              dir: 3
+              distance: 2
             endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
@@ -21776,7 +21785,7 @@ MonoBehaviour:
   destinationPos: {x: 0, y: 0}
   curpos: {x: 0, y: 0}
   isArrived: 0
-  isdid: 0
+  isJustTurnCompleted: 0
   isMoveSetOn: 0
 --- !u!50 &2066939045
 Rigidbody2D:

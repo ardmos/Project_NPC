@@ -23,7 +23,7 @@ public class NPC : MonoBehaviour
    
 
     //제자리돌기 위한. 한번만 none에서 속도 주기 위한.
-    public bool isdid;
+    public bool isJustTurnCompleted;
 
     //복합이동 끝났는지 체크
     public bool isMoveSetOn;
@@ -87,9 +87,7 @@ public class NPC : MonoBehaviour
         }
         else
         {
-            StartNextMove();
-
-            SetDestinationPos(curMoveSet);
+            StartNextMove();            
         }
     }
 
@@ -122,6 +120,9 @@ public class NPC : MonoBehaviour
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownLeft:
                 destinationPos = originalPos + new Vector2(-1, -1) * moveSet.distance;
                 break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None:
+                Debug.Log("제자리 돌기");
+                break;
             default:
                 Debug.Log("최종목적지 설정 실패");
                 destinationPos = Vector2.zero;
@@ -133,23 +134,17 @@ public class NPC : MonoBehaviour
     {
         if (IsArrivedChecker(moveSet))      //도착여부 확인 
         {
-            //아직 도착한게 아니면 계속 이동 진행
-            KeepGoing(moveSet);
+            //이동 도착 처리.
+            Arrived();            
         }
         else
         {
-            //이동 도착 처리.
-            Arrived();
+            //아직 도착한게 아니면 계속 이동 진행
+            KeepGoing(moveSet);
         }
 
         //걷기 애니메이션 처리
         MakeWalkingAnimation();
-
-        //제자리돌기 처리. 진행방향 none인 경우.
-        if (moveSet.dir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None)
-        {
-            JustTurn();
-        }
     }
 
     public bool IsArrivedChecker(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet)
@@ -189,6 +184,9 @@ public class NPC : MonoBehaviour
                 if (curpos.x <= destinationPos.x && curpos.y <= destinationPos.y)
                     isArrived = true;
                 break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None:
+                JustTurn();
+                break;
             default:
                 isArrived = false;
                 break;
@@ -224,8 +222,16 @@ public class NPC : MonoBehaviour
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.DownLeft:
                 movement = new Vector2(-1, -1);
                 break;
+            case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None:
+                //부드러운 회전을 위해.  EndDir 방향에 맞춰서 movement를 설정해준다. 안그러면movement가 0이어서 무조건 회전시 왼쪽을 한 번 바라보고 회전하게된다.
+                if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down) movement = Vector2.down;
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up) movement = Vector2.up;
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right) movement = Vector2.right;
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left) movement = Vector2.left;
+                Debug.Log("제자리돌기 킵고잉 movement:" + movement);
+                break;
             default:
-                movement = Vector2.zero;
+                Debug.Log("KeepGoing MoveDir Set Error");
                 break;
         }
     }
@@ -259,21 +265,23 @@ public class NPC : MonoBehaviour
     {
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        if (!isJustTurnCompleted) animator.SetFloat("Speed", movement.sqrMagnitude);    //제자리 회전이 아닐 시에만 무브먼트 기반으로 스피드 설정.  
     }
 
     public void JustTurn()
     {
-        if (!isdid)
+        if (!isJustTurnCompleted)
         {
-            isdid = true;
+            isJustTurnCompleted = true;
             animator.SetFloat("Speed", 1f);
+            Debug.Log("회전!! Speed = 1f");
         }
         else
         {
             isArrived = true;
-            isrm = false;
+            //isrm = false;
             animator.SetFloat("Speed", 0f);
+            Debug.Log("회전 완료. Speed = 0f");
         }
     }
 
@@ -301,8 +309,9 @@ public class NPC : MonoBehaviour
     {
         isrm = true;    //리모트이동 시작 스위치 ON
         isArrived = false;
-        isdid = false;
+        isJustTurnCompleted = false;
         curMoveSet = moveSets.Dequeue();
+        SetDestinationPos(curMoveSet);
     }
 
     IEnumerator StartNextMoveAfterDelayTime(float delayTime)

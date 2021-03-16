@@ -144,9 +144,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
             {
                 objname = player.gameObject.name;
                 if (player.isMoveSetOn == false)
-                {
-                    print(objname + "플레이어 Arrived");
+                {                    
                     isEndedMoveAnimation = true;
+                    //print(objname + "플레이어 Arrived, isEndedMoveAnimation=" + isEndedMoveAnimation);
                 }
                 else
                 {
@@ -157,14 +157,19 @@ public class DialogueManager : DontDestroy<DialogueManager>
             }            
 
             if (isEndedMoveAnimation)
-            {                
+            {
+                //Debug.Log("isEndedMoveAnimation is True!");
                 //혹~시! 사운드LifeTime중인지?
                 if (!isSFXDialogLifeTime)
                 {
-                    print(objname + " 이동애니메이션 도착.끝");
+                    //print(objname + " 이동애니메이션 도착.끝");
                     isDuringMoveAnimation = false;
                     DisplayNextSentence();
                 }
+            }
+            else
+            {
+                Debug.Log("isEndedMoveAnimation is False!");
             }
         }
         #endregion         
