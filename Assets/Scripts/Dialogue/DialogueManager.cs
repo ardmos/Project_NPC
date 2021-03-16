@@ -45,8 +45,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public int curStoryId;
     public string curStorySmallTitle;
 
-    bool activeChoiceBox, isNPCresponding;
-    int npcResponseNum;
+    bool activeChoiceBox;
     //선택상자에대한 응답에서 문장 빨리넘기기 했을 시 사용할 문장.  이미 도도도 찍고있던 문장을 담고있다.
     string printingSentence;
     //다이얼로그 문장 없이 애니메이션만 실행시키기 위한 부분.    
@@ -264,15 +263,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
             //초이스박스 열려있는 상태에서는 다음 다이얼로그 가면 안됨. 
             return;
         }                
-        ///
-        //혹시 NPC가 선택지에 대답중이라면? 
-        //바로 통화 연결 됩니다!  바로 여기서요!~! 
-        ///
-        if (isNPCresponding)
-        {
-            NPCResponseToTheChoiceResult(npcResponseNum);
-            return;
-        }
 
         if (dialogueSetsQue.Count == 0)
         {
@@ -554,62 +544,27 @@ public class DialogueManager : DontDestroy<DialogueManager>
         StartCoroutine(TypeSentence(dialogueSet));
     }
 
-    //3.결과문 출력
-    public void PrintTheChoiceResult(int valueToReturn, int jump)
+    //3.결과 출력
+    public void PrintTheChoiceResult(Dialogue.DialogueSet.Details.Choices choice)
     {
-        print("valueToReturn : " + valueToReturn + ", StoryJump : " + jump);
-        //5. 정해진 루트 진행을 위한. 
-        //기본정보 설정 이전에,  선택창 결과에 따른 다음 대화내용 번호 직행 설정 여부 체크. 
-        //후 처리 
-        //여기서 jumpTo의 값에 따라. 이 시점에 이미 선택상자 이후 실행될 다이얼로그가 결정. 준비되어있는것임. 
-        if (jump == 0)
-        {
-            //0점프면 기존과 똑같음.  그냥냅두기.
-        }
-        else
-        {
-            for (int i = 0; i < jump; i++)
-            {
-                if (dialogueSetsQue.Count == 0)
-                {
-                    
-                }
-                else curDialogSet = dialogueSetsQue.Dequeue();
-            }
-        }
+        //선택 결과들은 딕셔너리 형태로 저장될것임. 추후 엔딩 다르게 할 때 필요.  
+        //Key값은 string으로 선택상자의 question을 넣어주고, Value값은 이후 진행된 스토리id로 어떤 선택을 했는지 번호를 저장.        
+        GameManager.Instance.AddChoiceResults(curDialogSet_ForChoiceBox.detail.selectionPopupSettings.selectionPopupData.question, choice.linkedStoryDialogueIdNumber);
 
-        //선택된 답 저장. 
-        //선택 결과들은 딕셔너리 형태로 저장될것임. 
-        //Key값은 string으로 dialogueSetName을 넣어주고(스토리아이디값_몇번째다이얼로그인지카운트) , Value값은 int로 어떤 선택을 했는지 번호를 저장(0번부터 시작).
-        //잡고나서 선택 31_물어보기_행동결정
-        GameManager.Instance.AddChoiceResults(curDialogSet_ForChoiceBox.dialogueSetName, valueToReturn);
+        //5. 선택 결과에 따른 스토리다이얼로그 정보 읽어와서 열어주기. 
+        StartDialogue(choice.linkedStoryDialogueIdNumber);
 
-        activeChoiceBox = false;
-        npcResponseNum = valueToReturn;//npc 응답연결을 위한 저장.  
-        isNPCresponding = true;
-        //SplitStringServiceSir(dialogue.choice_results[valueToReturn]);
-        BatchService(curDialogSet_ForChoiceBox.detail.selectionPopupSettings.selectionPopupData.choice_results[valueToReturn]);
+        //만약, 해당 선택지가 정답이라면. GameManager의 메인 스토리 id도 해당 스토리 id로 변경.
+        if (choice.isItCorrectAnswer)
+        {
+            GameManager.Instance.storyNumber = choice.linkedStoryDialogueIdNumber;
+            Debug.Log("정답! 해당 스토리 넘버로 메인 스토리가 진행됩니다.");
+        }
+        else Debug.Log("오답! 다시 해보세요~");
+
+        activeChoiceBox = false;        
     }
 
-    //4.결과문에 엔피씨가 응답한다.(분기점 스탯도 적용도 여기서 구현하면 될듯)
-    public void NPCResponseToTheChoiceResult(int valueToResponse)
-    {
-        ///
-        //분기점 관련 기록 부분 추가 필요
-        //
-        //그리고 분기가 나뉘면,  id값을 다르게 해서 다른 이야기팩으로 새로 시작하게끔 하자. 
-        ///
-        isNPCresponding = false;
-
-        if (curDialogSet_ForChoiceBox.sentence == "")
-        {
-            //여기서도 sentece 공백이면 그냥 패스하는 부분 추가.
-            DisplayNextSentence();
-            return;
-        }
-
-        BatchService(curDialogSet_ForChoiceBox.detail.selectionPopupSettings.selectionPopupData.responses[valueToResponse]);
-    }
 
     //다이얼로그 출현 방식에 따른 애니메이션 실행. 
     void StartAnimByStyle(int a)

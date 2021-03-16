@@ -131,22 +131,22 @@ public class GameManager : DontDestroy<GameManager>
 
     #region 선택상자 관리
     //choiceResults 추가하는 곳.
-    public void AddChoiceResults(string key, int value)
+    public void AddChoiceResults(string questionSentence, int linkedStoryDialogueIdNumber)
     {
-        if (choiceResults.ContainsKey(key))
+        if (choiceResults.ContainsKey(questionSentence))
         {
             //이미 해당 키값의 딕셔너리가 존재한다면, 벨류값을 바꿔라
-            choiceResults[key] = value;
+            choiceResults[questionSentence] = linkedStoryDialogueIdNumber;
         }
         else
             //해당 키값의 데이터가 이미 존재하는게 아니라면, 그냥 새로 추가.
-            choiceResults.Add(key, value);
+            choiceResults.Add(questionSentence, linkedStoryDialogueIdNumber);
     }
 
     //choiceResults 가져오는 곳.
-    public int GetChoiceResults(string key)
+    public int GetChoiceResults(string questionSentence)
     {
-        return choiceResults[key];
+        return choiceResults[questionSentence];
     }
     #endregion
 

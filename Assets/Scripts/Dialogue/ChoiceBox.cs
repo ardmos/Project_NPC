@@ -24,12 +24,9 @@ public class ChoiceBox : MonoBehaviour
 
     int curNum, tmp, choicesLength;
 
-    //JumpTo 정보들 저장.
-    List<int> arrJump;
 
     public void InitChioceBox(string mAsk, Dialogue.DialogueSet.Details.Choices[] mChoices) 
-    {
-        arrJump = new List<int>();
+    {        
         isChoiceBox = true;
         question = mAsk;
         choices = mChoices;
@@ -41,12 +38,6 @@ public class ChoiceBox : MonoBehaviour
         questionText.text = question;
 
         int length = choices.Length;
-
-        //JumpTo 정보들 저장.
-        foreach (Dialogue.DialogueSet.Details.Choices item in mChoices)
-        {
-            arrJump.Add(item.storyJump);
-        }
 
         //기본 너비 세팅 
         gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300f, 234f);
@@ -133,14 +124,6 @@ public class ChoiceBox : MonoBehaviour
         animator.SetBool("isOpen", isChoiceBox);
     }
 
-    public void ReturnTheAnswer(int valueToReturn, int jump)  //이 함수 호출은 버튼들에서. 
-    {
-        //ChoiceBox 닫기. 애니메이션. 
-        isChoiceBox = false;
-        animator.SetBool("isOpen", isChoiceBox);
-        //DialogueManager에 보내기. 
-        DialogueManager.Instance.PrintTheChoiceResult(valueToReturn, jump);
-    }
 
     private void Update()
     {
@@ -275,8 +258,18 @@ public class ChoiceBox : MonoBehaviour
                 item.GetComponent<Image>().color = new Color(1, 1, 1, 0);
             }
             buttons[n].GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            ReturnTheAnswer(n, arrJump[n]);
+            ReturnTheAnswer(choices[n]);
         }
     }
+
+    public void ReturnTheAnswer(Dialogue.DialogueSet.Details.Choices choice)  //이 함수 호출은 버튼들에서. or 여기 Update 리턴키 처리 부분에서.
+    {
+        //ChoiceBox 닫기. 애니메이션. 
+        //isChoiceBox = false;
+        animator.SetBool("isOpen", isChoiceBox = false);
+        //DialogueManager에 보내기. 
+        DialogueManager.Instance.PrintTheChoiceResult(choice);
+    }
+
 
 }
