@@ -13,14 +13,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public ChoiceBox choiceBox;
     public AudioSource audioSource;
     public AudioSystem audioSystem;
-    
     //Continue버튼
     public GameObject continueBtn;
-
     //다이얼로그 열려있는지 체크 
     [HideInInspector]
     public bool isDialogueActive;
-
     [HideInInspector]
     //ctrl키 눌렸는지 체크. 
     public bool isSpaceKeyDowned = false;
@@ -63,7 +60,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     
 
-
     #region For Signleton <<-- DontDestory 사용해서 구현., OnAwake()
     //기존 싱글턴 <<-- DontDestory 사용해서 구현했기때문에 주석 처리.
     //public static DialogueManager instance;
@@ -79,8 +75,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     // Start is called before the first frame update
     override protected void OnStart()
     {       
-        dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
-               
+        dialogueSetsQue = new Queue<Dialogue.DialogueSet>();              
     }
 
     private void OnEnable()
@@ -307,24 +302,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //기본 글자 속도.
         if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.94f;
 
-        //글자 색깔 설정.
-        if (dialogueSet.detail.fontColorSettings.changeColor)
-        {
-            //혹시 실수로 글씨 투명으로 설정했으면 불투명하게 처리 
-            if (dialogueSet.detail.fontColorSettings.fontColor.a == 0f)
-                dialogSentence.color = new Color(dialogueSet.detail.fontColorSettings.fontColor.r, dialogueSet.detail.fontColorSettings.fontColor.g, dialogueSet.detail.fontColorSettings.fontColor.b, 1);
-            else
-                dialogSentence.color = dialogueSet.detail.fontColorSettings.fontColor;
-        }
-        else dialogSentence.color = Color.black;    //기본은 검은색
-
-        //글자 크기 설정
-        if (dialogueSet.detail.fontSizeSettings.changeSize)
-        {
-            dialogSentence.fontSize = dialogueSet.detail.fontSizeSettings.fontSize;
-        }
-        else dialogSentence.fontSize = 30;
-
         //Sentence 비어있을경우, 발동할 이동 애니메이션 or 기타 애니메이션 or 사운드가 있는지 확인 후 없으면 그냥 패스! 
         if (dialogueSet.sentence == "")
         {
@@ -373,6 +350,24 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 }
                 goreturn = true;
             }
+
+
+            //발동할 감정표현 애니메이션이 있는지?
+            if (dialogueSet.detail.emotionSettings.activeEmotion)
+            {
+                Dialogue.DialogueSet.Details.EmotionSettings emotionSettings = dialogueSet.detail.emotionSettings;
+
+                foreach (Animator animator in emotionSettings.object_.GetComponentsInChildren<Animator>())
+                {
+                    if (animator.gameObject.name == "EmotionSprite")
+                    {
+                        Debug.Log(animator + ", " + emotionSettings.animation.ToString());
+                        animator.SetTrigger(emotionSettings.animation.ToString());
+                    }
+                }
+                goreturn = true;
+            }
+
 
             //발동할 사운드 이펙트가 있는지?
             if (dialogueSet.detail.sFXSettings.enableSFX && dialogueSet.detail.sFXSettings.dialogueLifeTime != 0)
@@ -525,22 +520,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
 
         //Object 기타 애니메이션
-        if (dialogueSet.detail.etcAnimationSettings.etcAnimSets.Length > 0)   //실행/정지 시킬 오브젝트 갯수를 0보다 큰 수로 설정했을 경우
-        {
-            foreach (Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet etcAnimSet in dialogueSet.detail.etcAnimationSettings.etcAnimSets)
-            {
-                if (etcAnimSet.activateOrDeActiveObjAnimate == Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet.TOTO.실행)
-                {
-                    //실행
-                    etcAnimSet.objectAnimationData.obj.SetBool(etcAnimSet.objectAnimationData.paramName, true);
-                }
-                else if (etcAnimSet.activateOrDeActiveObjAnimate == Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet.TOTO.정지)
-                {
-                    //정지
-                    etcAnimSet.objectAnimationData.obj.SetBool(etcAnimSet.objectAnimationData.paramName, false);
-                }
-            }
-        }
+        EtcAnimation(dialogueSet);
+
+        //Object 감정표현 애니메이션
+        EmotionAnimation(dialogueSet);
+
 
         //효과음 실행
         audioSystem.DialogSFXHelper(dialogueSet);
@@ -553,6 +537,24 @@ public class DialogueManager : DontDestroy<DialogueManager>
             cutSceneImage.SetNativeSize();
         }
         else cutSceneImage.color = new Color(1, 1, 1, 0);
+
+        //글자 색깔 설정.
+        if (dialogueSet.detail.fontColorSettings.changeColor)
+        {
+            //혹시 실수로 글씨 투명으로 설정했으면 불투명하게 처리 
+            if (dialogueSet.detail.fontColorSettings.fontColor.a == 0f)
+                dialogSentence.color = new Color(dialogueSet.detail.fontColorSettings.fontColor.r, dialogueSet.detail.fontColorSettings.fontColor.g, dialogueSet.detail.fontColorSettings.fontColor.b, 1);
+            else
+                dialogSentence.color = dialogueSet.detail.fontColorSettings.fontColor;
+        }
+        else dialogSentence.color = Color.black;    //기본은 검은색
+
+        //글자 크기 설정
+        if (dialogueSet.detail.fontSizeSettings.changeSize)
+        {
+            dialogSentence.fontSize = dialogueSet.detail.fontSizeSettings.fontSize;
+        }
+        else dialogSentence.fontSize = 30;
 
         #endregion
 
@@ -583,6 +585,44 @@ public class DialogueManager : DontDestroy<DialogueManager>
         activeChoiceBox = false;        
     }
 
+    //기타 애니메이션 실행
+    public void EtcAnimation(Dialogue.DialogueSet dialogueSet)
+    {
+        if (dialogueSet.detail.etcAnimationSettings.etcAnimSets.Length > 0)   //실행/정지 시킬 오브젝트 갯수를 0보다 큰 수로 설정했을 경우
+        {
+            foreach (Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet etcAnimSet in dialogueSet.detail.etcAnimationSettings.etcAnimSets)
+            {
+                if (etcAnimSet.activateOrDeActiveObjAnimate == Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet.TOTO.실행)
+                {
+                    //실행
+                    etcAnimSet.objectAnimationData.obj.SetBool(etcAnimSet.objectAnimationData.paramName, true);
+                }
+                else if (etcAnimSet.activateOrDeActiveObjAnimate == Dialogue.DialogueSet.Details.EtcAnimationSettings.EtcAnimSet.TOTO.정지)
+                {
+                    //정지
+                    etcAnimSet.objectAnimationData.obj.SetBool(etcAnimSet.objectAnimationData.paramName, false);
+                }
+            }
+        }
+    }
+
+    //감정표현 애니메이션 실행
+    public void EmotionAnimation(Dialogue.DialogueSet dialogueSet)
+    {
+        if (dialogueSet.detail.emotionSettings.activeEmotion)
+        {
+            Dialogue.DialogueSet.Details.EmotionSettings emotionSettings = dialogueSet.detail.emotionSettings;
+
+            foreach (Animator animator in emotionSettings.object_.GetComponentsInChildren<Animator>())
+            {
+                if (animator.gameObject.name == "EmotionSprite")
+                {
+                    Debug.Log(animator + ", " + emotionSettings.animation.ToString());
+                    animator.SetTrigger(emotionSettings.animation.ToString());
+                }
+            }
+        }
+    }
 
     //다이얼로그 출현 방식에 따른 애니메이션 실행. 
     void StartAnimByStyle(int a)
@@ -700,7 +740,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     void EndDialogue()
     {
         isDialogueActive = false;
-        dialog_animator.SetBool("isOpen", false);
+        dialog_animator.SetBool("isOpen", false);        
 
         //다이얼로그 끝나면 플레이어 컨트롤 권한 돌려줌.       
         foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())

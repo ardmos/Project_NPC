@@ -190,6 +190,26 @@ public class Dialogue
             [Header("- 이동 제외 기타 애니메이션 설정"), Space(5)]
             public EtcAnimationSettings etcAnimationSettings;
 
+            //감정표현 애니메이션 설정
+            public enum Emotions
+            {
+                Emotion_0,
+                Emotion_10,
+                Emotion_16
+            }
+            [Serializable]
+            public struct EmotionSettings
+            {
+                [Header("- 감정표현을 원하면 체크해주세요")]
+                public bool activeEmotion;
+                [Header("- 감정표현 시키고 싶은 오브젝트를 넣어주세요")]
+                public GameObject object_;
+                [Header("- 발동시키고싶은 감정표현 애니메이션을 선택하세요")]
+                public Emotions animation;
+            }
+            [Header("- 감정표현 애니메이션 설정")]
+            public EmotionSettings emotionSettings;
+
             //효과음 설정
             [Serializable]
             public struct SFXSettings
@@ -257,7 +277,7 @@ public class Dialogue
         [Header("- 사용할 타이핑 사운드 번호. 기본 0"), Space(15)]
         public int soundNumber;
 
-        //스타일선택
+        //이름 선택
         public enum Names
         {
             김탐정,
