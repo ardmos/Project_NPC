@@ -221,6 +221,30 @@ public class Dialogue
             }
             [Header("- 이벤트 컷신 설정"), Space(5)]
             public CutSceneSettings cutSceneSettings;
+
+            //글씨 색 설정
+            [Serializable]
+            public struct FontColorSettings 
+            {
+                [Header("- 글씨 색 변경을 원하면 체크해주세요")]
+                public bool changeColor;
+                [Header("- 원하시는 색 선택")]
+                public Color fontColor;
+            }
+            [Header("- 글씨 색 설정")]
+            public FontColorSettings fontColorSettings;
+
+            //글씨 크기 설정
+            [Serializable]
+            public struct FontSizeSettings
+            {
+                [Header("- 글씨 크기 변경을 원하면 체크해주세요")]
+                public bool changeSize;
+                [Header("- 글씨 크기 입력(기본 30)")]
+                public int fontSize;
+            }
+            [Header("- 글씨 크기 설정")]
+            public FontSizeSettings fontSizeSettings;
         }
 
         [Header("- ↑ \'대화\'의 제목")]

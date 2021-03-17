@@ -307,6 +307,24 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //기본 글자 속도.
         if (dialogueSet.detail.letterSpeed == 0f) dialogueSet.detail.letterSpeed = 0.94f;
 
+        //글자 색깔 설정.
+        if (dialogueSet.detail.fontColorSettings.changeColor)
+        {
+            //혹시 실수로 글씨 투명으로 설정했으면 불투명하게 처리 
+            if (dialogueSet.detail.fontColorSettings.fontColor.a == 0f)
+                dialogSentence.color = new Color(dialogueSet.detail.fontColorSettings.fontColor.r, dialogueSet.detail.fontColorSettings.fontColor.g, dialogueSet.detail.fontColorSettings.fontColor.b, 1);
+            else
+                dialogSentence.color = dialogueSet.detail.fontColorSettings.fontColor;
+        }
+        else dialogSentence.color = Color.black;    //기본은 검은색
+
+        //글자 크기 설정
+        if (dialogueSet.detail.fontSizeSettings.changeSize)
+        {
+            dialogSentence.fontSize = dialogueSet.detail.fontSizeSettings.fontSize;
+        }
+        else dialogSentence.fontSize = 30;
+
         //Sentence 비어있을경우, 발동할 이동 애니메이션 or 기타 애니메이션 or 사운드가 있는지 확인 후 없으면 그냥 패스! 
         if (dialogueSet.sentence == "")
         {
