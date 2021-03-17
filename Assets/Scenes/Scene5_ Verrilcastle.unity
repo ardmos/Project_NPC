@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 533480955}
   - component: {fileID: 533480956}
   m_Layer: 0
-  m_Name: "\uC2B9\uD6C8"
+  m_Name: "\uB370\uB9AD"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -401,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533480954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.64, y: -7.88, z: 0}
+  m_LocalPosition: {x: 11.64, y: -8.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1274323445}
@@ -446,13 +446,12 @@ SpriteRenderer:
   m_SortingLayerID: -536478411
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2490419668827604467, guid: 9b19f398cf60e6b438bc45a4d0d6c43b,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 303b32dc4777a43469ea60405717c140, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0625, y: 2}
+  m_Size: {x: 1.34375, y: 2.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -42378,7 +42377,7 @@ GameObject:
   - component: {fileID: 1437056940}
   - component: {fileID: 1437056941}
   m_Layer: 0
-  m_Name: "\uC9C0\uD604 (3)"
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42460,7 +42459,7 @@ GameObject:
   - component: {fileID: 1440847366}
   - component: {fileID: 1440847367}
   m_Layer: 0
-  m_Name: "\uC9C0\uD604 (1)"
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42750,7 +42749,7 @@ GameObject:
   - component: {fileID: 1658109573}
   - component: {fileID: 1658109574}
   m_Layer: 0
-  m_Name: "\uC9C0\uD604"
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42946,7 +42945,7 @@ GameObject:
   - component: {fileID: 1844620222}
   - component: {fileID: 1844620223}
   m_Layer: 0
-  m_Name: "\uC9C0\uD604 (2)"
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43080,13 +43079,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43097,6 +43098,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uBB50\uC57C! \uCEE4\uC2A4\uD130\uB9C8\uC774\uC9D5\uC774 \uC5C9\uB9DD\uC73C\uB85C
@@ -43118,17 +43125,18 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 1
           objectAnimationData:
           - objToMakeMove: {fileID: 315735684}
-            dir: 4
-            distance: 3
+            moveSet: []
             endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43139,6 +43147,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 14
       sentence: 
@@ -43158,13 +43172,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43175,6 +43191,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC81C\uAC00... \uC9C0\uAE08 \uC811\uC18D \uB41C\uAC74\uAC00\uC694?"
@@ -43194,13 +43216,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43211,6 +43235,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: ...
@@ -43230,13 +43260,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43247,6 +43279,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC640... \uC2E0\uAE30\uD558\uB124\uC694.\n\n\uB9C8\uCE58..."
@@ -43266,13 +43304,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43283,6 +43323,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uB610 \uB2E4\uB978 \uD604\uC2E4\uC778 \uAC83 \uAC19\uC544\uC694."
@@ -43302,13 +43348,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43319,6 +43367,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "...\n\uD06C\uD760! \uC2E4\uC81C\uB85C\uB3C4 \uC774 \uACF3\uC744
@@ -43340,13 +43394,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43357,6 +43413,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uC5B4\uC11C\uC624\uC2ED\uC2DC\uC624. \uC5EC\uAE30\uB294 '\uC13C\uD2B8\uB9AC\uC628
@@ -43377,13 +43439,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43394,6 +43458,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uBAA8\uD5D8\uAC00\uB2D8~~~!!!!"
@@ -43413,13 +43483,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43430,6 +43502,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uBB50...\uBB50\uC57C?!"
@@ -43449,13 +43527,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43466,6 +43546,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uBAA8\uD5D8\uAC00\uB2D8, \uD070\uC77C\uB0AC\uC2B5\uB2C8\uB2E4!"
@@ -43485,13 +43571,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43502,6 +43590,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uBB34\uC2A8\uC77C\uC774\uC8E0? \uB610 \uC0B4\uC778\uC0AC\uAC74\uC778\uAC00\uC694?"
@@ -43521,13 +43615,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43538,6 +43634,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC544, \uC6B0\uB9AC\uB294 \uAC8C\uC784\uC744 \uD558\uB7EC \uC628
@@ -43559,13 +43661,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43576,6 +43680,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uADFC\uCC98 \uBA67\uB3FC\uC9C0\uB4E4\uC774 \uB610 \uBBFC\uAC00\uB97C
@@ -43597,13 +43707,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43614,6 +43726,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC544 \uAE00\uC384, \uC774\uB7F4 \uC2DC\uAC04 \uC5C6\uB2E4\uB2C8\uAE4C
@@ -43634,13 +43752,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43651,6 +43771,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uBD80\uD0C1\uD569\uB2C8\uB2E4\uC694~!\n\uC774 \uB188\uB4E4\uC774
@@ -43672,13 +43798,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43689,6 +43817,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC0AC\uC815\uC774 \uB531\uD558\uB2C8 \uC77C\uB2E8 \uB3C4\uC640\uC8FC\uC8E0!\n\uC5B4\uB514\uB85C
@@ -43709,13 +43843,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43726,6 +43862,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: ?!
@@ -43745,13 +43887,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43762,6 +43906,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 14
       sentence: "[\uC218\uB77D] \uAC10\uC0AC\uD569\uB2C8\uB2E4! \uC5ED\uC2DC \uBAA8\uD5D8\uAC00\uB2D8\uC774\uB77C\uBA74
@@ -43782,13 +43932,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43799,6 +43951,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 14
       sentence: "[\uC644\uB8CC\uBCF4\uC0C1] EXP 150, 400G, \uCCB4\uB825 \uD68C\uBCF5
@@ -43819,13 +43977,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43836,6 +43996,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uBA67\uB3FC\uC9C0 50\uB9C8\uB9AC\uB97C \uC7A1\uACE0 \uB2E4\uC2DC
@@ -43856,13 +44022,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43873,6 +44041,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uBB34...\uBB34\uC2A8....\n\uC800\uAE30 \uAE40 \uD0D0\uC815\uB2D8,
@@ -43893,13 +44067,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43910,6 +44086,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uB2F5\uB2F5\uD558\uAE34, \uB2F9\uC2E0\uC740 \uC9C0\uAE08 \uC800
@@ -43930,13 +44112,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43947,6 +44131,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "NPC\uC694?"
@@ -43966,13 +44156,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -43983,6 +44175,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uB17C\uD50C\uB808\uC774\uC5B4 \uCE90\uB9AD\uD130(Non-player character)!
@@ -44005,13 +44203,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44022,6 +44222,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uBCF4\uD1B5 \uC800\uB7F0 \uC2DD\uC73C\uB85C \uD018\uC2A4\uD2B8\uB97C
@@ -44044,13 +44250,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44061,6 +44269,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC544... \uADF8\uB7FC \uC0AC\uB78C\uC774 \uC544\uB2C8\uC5C8\uAD70\uC694..."
@@ -44080,13 +44294,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44097,6 +44313,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC694\uC998 \uAC8C\uC784\uB4E4\uC740 \uC800\uB807\uAC8C npc\uB791
@@ -44120,13 +44342,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44137,6 +44361,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4..."
@@ -44156,13 +44386,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44173,6 +44405,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uB410\uC2B5\uB2C8\uB2E4.\n\uC5B4\uCA54 \uC218 \uC5C6\uC774 \uBA67\uB3FC\uC9C0\uB098
@@ -44193,13 +44431,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44210,6 +44450,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uB2E4\uC2DC \uB3CC\uC544\uAC00\uC11C \uBABB\uD558\uACA0\uB2E4\uACE0
@@ -44230,13 +44476,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44247,6 +44495,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC544, \uC544~ \uD55C\uBC88 \uD018\uC2A4\uD2B8\uB97C \uBC1B\uC73C\uBA74
@@ -44269,13 +44523,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44286,6 +44542,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC774 \uAC8C\uC784, \uCC98\uC74C\uC774\uC8E0?"
@@ -44305,13 +44567,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44322,6 +44586,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC544, \uC608..."
@@ -44341,13 +44611,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44358,6 +44630,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uAC11\uC2DC\uB2E4. \uBA67\uB3FC\uC9C0 \uC7A1\uC73C\uB7EC!"
@@ -44377,13 +44655,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44394,6 +44674,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 14
       sentence: "\uBB3C\uB860 \uD018\uC2A4\uD2B8\uB97C \uCDE8\uC18C\uD560 \uC218
@@ -44416,13 +44702,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44433,6 +44721,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 14
       sentence: "\uADF8\uC800 \uAC8C\uC784\uC758 g\uC790\uB3C4 \uBAA8\uB974\uBA74\uC11C
@@ -44460,13 +44754,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44477,6 +44773,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uAC10\uC0AC\uD569\uB2C8\uB2E4 \uBAA8\uD5D8\uAC00\uB2D8! \uB2E4\uC74C\uC5D0\uB3C4
@@ -44498,13 +44800,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44515,6 +44819,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "'npc\uB140\uC11D\uB4E4\uC740 \uC720\uC800\uB9CC \uBCF4\uBA74 \uBD80\uB824\uBA39\uC744
@@ -44535,13 +44845,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44552,6 +44864,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC544, \uD639\uC2DC \uC131\uD568\uC774 \uC5B4\uB5BB\uAC8C \uB418\uC2ED\uB2C8\uAE4C?"
@@ -44571,13 +44889,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44588,6 +44908,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uB124??"
@@ -44607,13 +44933,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44624,6 +44952,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC544 \uAE00\uC384, \uC774\uAC74 \uADF8\uB0E5 npc\uB77C\uC11C \uB530\uB85C
@@ -44644,13 +44978,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44661,6 +44997,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uB370\uB9AD\uC785\uB2C8\uB2E4."
@@ -44680,13 +45022,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44697,6 +45041,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: ?!
@@ -44716,13 +45066,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44733,6 +45085,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC544, \uB370\uB9AD\uC528.\n\uD639\uC2DC '\uBE44\uBC00\uC758 \uC232'\uC774
@@ -44753,13 +45111,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44770,6 +45130,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\u2018\uBE44\uBC00\uC758 \uC232\u2019\uC774\uB77C\uACE0\uC694? \uC608
@@ -44795,13 +45161,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44812,6 +45180,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uAC70\uAE30\uAC00 \u2018\uBE44\uBC00\uC758 \uC232\u2019\uC778\uB370,
@@ -44834,13 +45208,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44851,6 +45227,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC790\u2026 \uC7A0\uAE50\uB9CC, \uBC1B\uC544 \uC801\uACE0 \uC788\uC73C\uB2C8\uAE4C
@@ -44871,13 +45253,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44888,6 +45272,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uADF8\uBCF4\uB2E4\u2026 \uCD5C\uADFC\uC5D0 \uC218\uC778\uB4E4\uC758
@@ -44910,13 +45300,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44927,6 +45319,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC545\uB784\uD55C \uB140\uC11D?"
@@ -44946,13 +45344,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44963,6 +45363,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "'\uB610 \uD018\uC2A4\uD2B8 \uC8FC\uB824\uACE0 \uAC01 \uC7A1\uB294\uAD6C\uB9CC...'"
@@ -44982,13 +45388,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -44999,6 +45407,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uC608\uC5D0, \uADF8 \u2018\uC678\uB208\uC758 \uAC80\uC740 \uC545\uB9C8\u2019\uB77C\uB358\uAC00?
@@ -45021,13 +45435,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45038,6 +45454,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uADF8\uB7F0\uAC00\uC694?"
@@ -45057,13 +45479,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45074,6 +45498,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "'\uCC98\uC74C \uB4E3\uB294 \uC774\uB984\uC778\uB370... \uCD5C\uADFC\uC5D0
@@ -45094,13 +45524,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45111,6 +45543,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uC544 \uADFC\uB370 \uADF8 \uB140\uC11D\uC774 \uAE00\uC384...."
@@ -45130,13 +45568,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45147,6 +45587,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC774\uC57C\uAE30\uB294 \uB098\uC911\uC5D0 \uB4E3\uC9C0. \n\uC6B0\uB9B0
@@ -45167,13 +45613,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45184,6 +45632,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC774\uBD10\uC694 \uACC4\uC18D \uADF8\uB807\uAC8C \uB4E3\uACE0\uB9CC
@@ -45207,13 +45661,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45224,6 +45680,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: "\uC544. \uC8C4\uC1A1\uD569\uB2C8\uB2E4. \n\uB370\uB9AD\uC528 \uACE0\uB9C8\uC6CC\uC694."
@@ -45243,13 +45705,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45260,6 +45724,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 4
       sentence: "\uC544\uC774\uACE0 \uCC9C\uB9CC\uC5D0\uC694! \uBAA8\uD5D8\uAC00\uB2D8\uC740
@@ -45282,13 +45752,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45299,6 +45771,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 1
       sentence: '?'
@@ -45318,13 +45796,15 @@ MonoBehaviour:
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
         animationSettings:
           activateObjAnimate: 0
           objectAnimationData: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -45335,6 +45815,12 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
       soundNumber: 0
       name: 0
       sentence: "\uC790, \uC790!\n\uC800 npc\uAC00 \uB9D0\uD574\uC900 \uACF3\uC73C\uB85C
