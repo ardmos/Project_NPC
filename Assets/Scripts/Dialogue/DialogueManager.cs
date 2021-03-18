@@ -109,7 +109,16 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
             //빨리넘기기 처리
             if (isDuringTyping) PrintAtOnce(curDialogSet);
-            else DisplayNextSentence();
+            else
+            {
+                if (!isStartedWatingDelayTime && !choiceBox.isChoiceBox)
+                {
+                    //다이얼로그 넘기는 효과음
+                    AudioSystem.Instance.PlayDialogueFlipSFX();
+                }
+
+                DisplayNextSentence();
+            }                
         }
 
         #region 다이얼로그는 이동 애니메이션 끝나길 기다렸다가 출력하기.
@@ -528,6 +537,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
         //효과음 실행
         audioSystem.DialogSFXHelper(dialogueSet);
+
+
 
         //컷씬 출력 
         if (dialogueSet.detail.cutSceneSettings.activateCutScene)

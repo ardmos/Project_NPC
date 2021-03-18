@@ -33,6 +33,9 @@ public class Object : MonoBehaviour
 
     private void OnMouseDown()  //터치 감지
     {
+        //사운드
+        if (IsThePlayerNear()) AudioSystem.Instance.PlayFurnitureClickSFX();
+
         TriggerDialogue();
     }
 
