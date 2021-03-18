@@ -27,7 +27,7 @@ public class GameManager : DontDestroy<GameManager>
 
     //Scene1 오브젝트들
     //천형사, 경찰2
-    public SpriteRenderer 천형사, 경찰2;
+    public GameObject 천형사, 경찰2;
 
     //커서 이미지 설정
     public Texture2D cursorDefaultTexture, cursorMagGlassTexture, cursorMagGlassTexture_HighLighted;
@@ -58,8 +58,15 @@ public class GameManager : DontDestroy<GameManager>
         //씬 1인지 씬을 확인하고,  
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
-            천형사.color = new Color(1, 1, 1, 0);
-            경찰2.color = new Color(1, 1, 1, 0);
+            //그림자까지 클로킹하기위해
+            foreach (SpriteRenderer spriteRenderer in 천형사.GetComponentsInChildren<SpriteRenderer>())
+            {
+                spriteRenderer.color = new Color(1, 1, 1, 0);
+            }
+            foreach (SpriteRenderer spriteRenderer in 경찰2.GetComponentsInChildren<SpriteRenderer>())
+            {
+                spriteRenderer.color = new Color(1, 1, 1, 0);
+            }
         }
 
         //커서 이미지 설정
@@ -93,8 +100,14 @@ public class GameManager : DontDestroy<GameManager>
                 //천형사 다이얼로그 발동.
                 print("Here is GameManager.StartStoryEvent() 1 천형사 등장");
                 //천형사, 경찰2 sprite 보이게 한 후
-                천형사.color = new Color(1, 1, 1, 1);
-                경찰2.color = new Color(1, 1, 1, 1);
+                foreach (SpriteRenderer spriteRenderer in 천형사.GetComponentsInChildren<SpriteRenderer>())
+                {
+                    spriteRenderer.color = new Color(1, 1, 1, 1);
+                }
+                foreach (SpriteRenderer spriteRenderer in 경찰2.GetComponentsInChildren<SpriteRenderer>())
+                {
+                    spriteRenderer.color = new Color(1, 1, 1, 1);
+                }
                 //천형사 애니메이션 포함된 다이얼로그 시작시키자.
                 DialogueManager.Instance.StartDialogue(storyNumber);
                 break;

@@ -9579,8 +9579,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyNumber: 0
   "\uC2A4\uD1A0\uB9AC\uC815\uB9AC": {fileID: 806612663}
-  "\uCC9C\uD615\uC0AC": {fileID: 1450160342}
-  "\uACBD\uCC302": {fileID: 580652756}
+  "\uCC9C\uD615\uC0AC": {fileID: 1450160335}
+  "\uACBD\uCC302": {fileID: 580652749}
   cursorDefaultTexture: {fileID: 2800000, guid: 90ee018e46dbffe4a9e7d5f3b59a4b83,
     type: 3}
   cursorMagGlassTexture: {fileID: 2800000, guid: 87c6565c7546f6845a1f84ed178a92c0,

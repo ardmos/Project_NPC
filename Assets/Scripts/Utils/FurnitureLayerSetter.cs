@@ -16,8 +16,10 @@ public class FurnitureLayerSetter : MonoBehaviour
     public GameObject parentsObj, playerObj;
     //부모 obj pos
     Vector2 parentsPos;
-    //부모 SpriteRenderer 플레이어 SpriteRenderer
-    SpriteRenderer parentsRenderer, playerRenderer;
+    //부모 SpriteRenderer 
+    SpriteRenderer parentsRenderer;
+    //플레이어 SpriteRenderer.   플레이어의 그림자까지 처리를 위한 List.
+    List<SpriteRenderer> playerSpriteRenderers;
 
     //기존 레이어오더 값
     List<int> defaultLayerOrders;
@@ -34,9 +36,16 @@ public class FurnitureLayerSetter : MonoBehaviour
         parentsObj = gameObject.transform.parent.gameObject;
         parentsPos = parentsObj.transform.position;
         parentsRenderer = parentsObj.GetComponent<SpriteRenderer>();
-
+        playerSpriteRenderers = new List<SpriteRenderer>();
         playerObj = GameObject.FindGameObjectWithTag("Player");
-        playerRenderer = playerObj.GetComponent<SpriteRenderer>();
+        foreach (var item in playerObj.GetComponentsInChildren<SpriteRenderer>())
+        {
+            playerSpriteRenderers.Add(item);
+        }
+        for (int i = 0; i < playerSpriteRenderers.Count; i++)
+        {
+            if (playerSpriteRenderers[i].gameObject.name == "EmotionSprite") playerSpriteRenderers.RemoveAt(i); //Emotion까지 가구랑 레이어 변환 해버리면 안되니까~! 빼주기
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,8 +72,12 @@ public class FurnitureLayerSetter : MonoBehaviour
             {
                 childRenderersArr[count].sortingOrder = newLayerOrders[count];
             }
-            playerRenderer.sortingLayerName = "Furniture";
-            playerRenderer.sortingOrder = parentsRenderer.sortingOrder - 1;
+
+            for (int i = 0; i < playerSpriteRenderers.Count; i++)
+            {
+                playerSpriteRenderers[i].sortingLayerName = "Furniture";
+                playerSpriteRenderers[i].sortingOrder = parentsRenderer.sortingOrder - (i+1);
+            }
         }
         //아래면 그냥 냅두고. 
     }
@@ -76,7 +89,11 @@ public class FurnitureLayerSetter : MonoBehaviour
         {   
             childRenderersArr[count].sortingOrder = defaultLayerOrders[count];
         }
-        playerRenderer.sortingLayerName = "Character";
-        playerRenderer.sortingOrder = 0;
+
+        for (int i = 0; i < playerSpriteRenderers.Count; i++)
+        {
+            playerSpriteRenderers[i].sortingLayerName = "Character";
+            playerSpriteRenderers[i].sortingOrder = parentsRenderer.sortingOrder + (playerSpriteRenderers.Count-1-i);
+        }
     }
 }
