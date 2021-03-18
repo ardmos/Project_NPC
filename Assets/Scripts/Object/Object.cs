@@ -30,10 +30,27 @@ public class Object : MonoBehaviour
         }            
     }
 
+
+    private void OnMouseDown()  //터치 감지
+    {
+        TriggerDialogue();
+    }
+
+    private void OnMouseOver()  //마우스오버시 커서 이미지 돋보기 이미지로 변경. 충분히 가깝다면 하이라이트
+    {
+        if(IsThePlayerNear()) GameManager.Instance.SetGameCursor("MagGlass_HL");
+        else GameManager.Instance.SetGameCursor("MagGlass");       
+    }
+
+    private void OnMouseExit()  //마우스 벗어나면 다시 원래 커서 이미지로 변경. 
+    {
+        GameManager.Instance.SetGameCursor("Default");
+    }
+
     private bool IsThePlayerNear()
     {
         Vector3 playerPos = FindObjectOfType<KeyInput_Controller>().gameObject.transform.position;
-        if (Mathf.Abs(playerPos.x-transform.position.x)<=2.5f && Mathf.Abs(playerPos.y-transform.position.y)<=2.5f)
+        if (Mathf.Abs(playerPos.x - transform.position.x) <= 2.5f && Mathf.Abs(playerPos.y - transform.position.y) <= 2.5f)
         {
             //Debug.Log("Player is near");
             return true;
@@ -43,22 +60,6 @@ public class Object : MonoBehaviour
             //Debug.Log("Player isn't near. x:" + Mathf.Abs(playerPos.x - transform.position.x) + ", y:" + Mathf.Abs(playerPos.y - transform.position.y));
             return false;
         }
-    }
-
-    private void OnMouseDown()  //터치 감지
-    {
-        TriggerDialogue();
-    }
-
-    private void OnMouseOver()  //마우스오버시 커서 이미지 돋보기 이미지로 변경. 
-    {
-        if(IsThePlayerNear()) GameManager.Instance.SetGameCursor("MagGlass");
-
-    }
-
-    private void OnMouseExit()  //마우스 벗어나면 다시 원래 커서 이미지로 변경. 
-    {
-        GameManager.Instance.SetGameCursor("Default");
     }
 
     public bool InteractedEventController()

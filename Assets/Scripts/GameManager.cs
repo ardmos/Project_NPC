@@ -30,7 +30,7 @@ public class GameManager : DontDestroy<GameManager>
     public SpriteRenderer 천형사, 경찰2;
 
     //커서 이미지 설정
-    public Texture2D cursorDefaultTexture, cursorMagGlassTexture;
+    public Texture2D cursorDefaultTexture, cursorMagGlassTexture, cursorMagGlassTexture_HighLighted;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
@@ -169,6 +169,9 @@ public class GameManager : DontDestroy<GameManager>
                 break;
             case "MagGlass":
                 Cursor.SetCursor(cursorMagGlassTexture, hotSpot, cursorMode);
+                break;
+            case "MagGlass_HL":
+                Cursor.SetCursor(cursorMagGlassTexture_HighLighted, hotSpot, cursorMode);
                 break;
             default:
                 break;

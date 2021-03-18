@@ -35,7 +35,10 @@ public class LevelChanger_ForScene1 : MonoBehaviour
         text.text = "";
         foreach (char letter in str.ToCharArray())
         {
+            
             text.text += letter;
+
+            Debug.Log(text.text);
 
             //타이핑 효과음 출력 부분.  스페이스는 거른다. 
             if (letter != System.Convert.ToChar(32))
