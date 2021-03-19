@@ -171,7 +171,7 @@ public class KeyInput_Controller : MonoBehaviour
 
         moveSets.Clear();
 
-        Debug.Log("animData.moveSet[] Length: " + animData.moveSet.Length);
+        //Debug.Log("animData.moveSet[] Length: " + animData.moveSet.Length);
 
         //여기서 moveSet을 차례차례 큐에 넣기. 
         foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet in animData.moveSet)
@@ -181,7 +181,7 @@ public class KeyInput_Controller : MonoBehaviour
         //시작부터 등록되어있는 큐가 없으면?  등록을 안한것이니, 그냥 패스 ~!
         if (moveSets.Count == 0)
         {
-            Debug.Log("moveSet 큐가 비어있습니다.");
+        //    Debug.Log("moveSet 큐가 비어있습니다.");
         }
         else
         {            
@@ -219,14 +219,14 @@ public class KeyInput_Controller : MonoBehaviour
                 destinationPos = originalPos + new Vector2(-1, -1) * moveSet.distance;
                 break;
             case Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveDir.None:
-                Debug.Log("제자리 돌기");                
+                //Debug.Log("제자리 돌기");                
                 break;
             default:
                 Debug.Log("최종목적지 설정 실패");
                 destinationPos = Vector2.zero;
                 break;
         }
-        Debug.Log(moveSet.dir+", "+moveSet.distance+"목적지:"+destinationPos);
+        //Debug.Log(moveSet.dir+", "+moveSet.distance+"목적지:"+destinationPos);
     }
 
     public void MoveMaker(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet)
@@ -337,7 +337,7 @@ public class KeyInput_Controller : MonoBehaviour
 
     public void Arrived()
     {
-        print(curMoveSet.dir+", "+curMoveSet.distance+" 도착!");
+        //print(curMoveSet.dir+", "+curMoveSet.distance+" 도착!");
         isrm = false;
         movement = Vector2.zero;
 
@@ -345,7 +345,7 @@ public class KeyInput_Controller : MonoBehaviour
         if (moveSets.Count == 0)
         {
             //남은 큐가 없음.  그럼 이동 완전 끝~!
-            print("!!완전 도착!!");
+            //print("!!완전 도착!!");
             isMoveSetOn = false;
             //최종 이동 끝나면, 
             //Idle방향 따로 설정해줄 수 있음.
@@ -373,14 +373,14 @@ public class KeyInput_Controller : MonoBehaviour
         {
             isJustTurnCompleted = true;
             animator.SetFloat("Speed", 1f);
-            Debug.Log("회전!! Speed = 1f");
+           // Debug.Log("회전!! Speed = 1f");
         }
         else
         {
             isArrived = true;
             //isrm = false;
             animator.SetFloat("Speed", 0f);
-            Debug.Log("회전 완료. Speed = 0f");
+            //Debug.Log("회전 완료. Speed = 0f");
         }
     }
 
@@ -389,22 +389,22 @@ public class KeyInput_Controller : MonoBehaviour
         if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down)
         {
             animator.SetInteger("Direction", 0);
-            Debug.Log("마지막 바라볼 곳 : Down");
+            //Debug.Log("마지막 바라볼 곳 : Down");
         }
         else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up)
         {
             animator.SetInteger("Direction", 1);
-            Debug.Log("마지막 바라볼 곳 : Up");
+            //Debug.Log("마지막 바라볼 곳 : Up");
         }
         else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right)
         {
             animator.SetInteger("Direction", 2);
-            Debug.Log("마지막 바라볼 곳 : Right");
+            //Debug.Log("마지막 바라볼 곳 : Right");
         }
         else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left)
         {
             animator.SetInteger("Direction", 3);
-            Debug.Log("마지막 바라볼 곳 : Left");
+            //Debug.Log("마지막 바라볼 곳 : Left");
         }
     }
 
@@ -415,7 +415,7 @@ public class KeyInput_Controller : MonoBehaviour
         isJustTurnCompleted = false;
         curMoveSet = moveSets.Dequeue();
         SetDestinationPos(curMoveSet);
-        print("출발! 딜레이타임: " + curMoveSet.delayTime + ", 방향: " + curMoveSet.dir + ", 거리: " + curMoveSet.distance);
+        //print("출발! 딜레이타임: " + curMoveSet.delayTime + ", 방향: " + curMoveSet.dir + ", 거리: " + curMoveSet.distance);
     }
 
     IEnumerator StartNextMoveAfterDelayTime(float delayTime)

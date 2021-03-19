@@ -58,7 +58,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //첫 다이얼로그 열리고 0.5초 지났는지 체크
     public bool is05Sec = false;
 
-    
+    //Sentence 없이 다른것만 진행할 때 true되는 변수
+    public bool goreturn;
+
 
     #region For Signleton <<-- DontDestory 사용해서 구현., OnAwake()
     //기존 싱글턴 <<-- DontDestory 사용해서 구현했기때문에 주석 처리.
@@ -104,6 +106,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
         if (isSpaceKeyDowned && isDialogueActive)
         {
+            //Debug.Log("넘기기버튼 눌림");
+
             //Continue버튼 비활성화
             continueBtn.SetActive(false);
 
@@ -111,9 +115,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
             if (isDuringTyping) PrintAtOnce(curDialogSet);
             else
             {
-                if (!isStartedWatingDelayTime && !choiceBox.isChoiceBox)
+                if (!isStartedWatingDelayTime && !choiceBox.isChoiceBox && !goreturn)
                 {
                     //다이얼로그 넘기는 효과음
+                    Debug.Log("newlog: isStartedWatingDelayTime: " + isStartedWatingDelayTime);
                     AudioSystem.Instance.PlayDialogueFlipSFX();
                 }
 
@@ -315,7 +320,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         if (dialogueSet.sentence == "")
         {
             //얘네들 sentence가 비어있을 때, 애니메이션이든 뭐든 있으면 그것만 하고 되돌아가기...있다 true 변수 
-            bool goreturn = false;
+            goreturn = false;
 
             //발동할 애니메이션이 있는지? 
             if (dialogueSet.detail.animationSettings.activateObjAnimate)
@@ -670,7 +675,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
             //타이핑 효과음 출력 부분.  스페이스는 거른다.  turnOffTypingSound 체크해제 되어있는지도 확인
             if (letter != System.Convert.ToChar(32) && dialogueSet.detail.sFXSettings.turnOffTypingSound == false)
             {
-                audioSource.PlayOneShot(typingSounds[dialogueSet.soundNumber]);
+                //audioSource.PlayOneShot(typingSounds[dialogueSet.soundNumber]);
+                audioSource.PlayOneShot(typingSounds[(int)dialogueSet.soundType]);
             }
             //else
             //print("스페이스 감지!");

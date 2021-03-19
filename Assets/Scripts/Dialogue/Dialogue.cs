@@ -274,8 +274,15 @@ public class Dialogue
         [Header("- 대화 세부 설정"), Space(5)]
         public Details detail;
 
+
+        //타이핑 사운드 설정
+        public enum TypingSounds
+        {
+            One,
+            Two
+        }
         [Header("- 사용할 타이핑 사운드 번호. 기본 0"), Space(15)]
-        public int soundNumber;
+        public TypingSounds soundType;
 
         //이름 선택
         public enum Names

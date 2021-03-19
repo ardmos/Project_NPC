@@ -59,15 +59,19 @@ public class GameManager : DontDestroy<GameManager>
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
             //그림자까지 클로킹하기위해
-            foreach (SpriteRenderer spriteRenderer in 천형사.GetComponentsInChildren<SpriteRenderer>())
-            {
-                spriteRenderer.color = new Color(1, 1, 1, 0);
-            }
-            foreach (SpriteRenderer spriteRenderer in 경찰2.GetComponentsInChildren<SpriteRenderer>())
-            {
-                spriteRenderer.color = new Color(1, 1, 1, 0);
-            }
+            //foreach (SpriteRenderer spriteRenderer in 천형사.GetComponentsInChildren<SpriteRenderer>())
+            //{
+            //    spriteRenderer.color = new Color(1, 1, 1, 0);
+            //}
+            //foreach (SpriteRenderer spriteRenderer in 경찰2.GetComponentsInChildren<SpriteRenderer>())
+            //{
+            //    spriteRenderer.color = new Color(1, 1, 1, 0);
+            //}
+
+            천형사.SetActive(false);
+            경찰2.SetActive(false);
         }
+
 
         //커서 이미지 설정
         SetGameCursor("Default");
@@ -100,14 +104,17 @@ public class GameManager : DontDestroy<GameManager>
                 //천형사 다이얼로그 발동.
                 print("Here is GameManager.StartStoryEvent() 1 천형사 등장");
                 //천형사, 경찰2 sprite 보이게 한 후
-                foreach (SpriteRenderer spriteRenderer in 천형사.GetComponentsInChildren<SpriteRenderer>())
-                {
-                    spriteRenderer.color = new Color(1, 1, 1, 1);
-                }
-                foreach (SpriteRenderer spriteRenderer in 경찰2.GetComponentsInChildren<SpriteRenderer>())
-                {
-                    spriteRenderer.color = new Color(1, 1, 1, 1);
-                }
+                //foreach (SpriteRenderer spriteRenderer in 천형사.GetComponentsInChildren<SpriteRenderer>())
+                //{
+                //    spriteRenderer.color = new Color(1, 1, 1, 1);
+                //}
+                //foreach (SpriteRenderer spriteRenderer in 경찰2.GetComponentsInChildren<SpriteRenderer>())
+                //{
+                //    spriteRenderer.color = new Color(1, 1, 1, 1);
+                //}
+                천형사.SetActive(true);
+                경찰2.SetActive(true);
+
                 //천형사 애니메이션 포함된 다이얼로그 시작시키자.
                 DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
