@@ -638,8 +638,39 @@ public class DialogueManager : DontDestroy<DialogueManager>
             {
                 if (animator.gameObject.name == "EmotionSprite")
                 {
-                    Debug.Log(animator + ", " + emotionSettings.animation.ToString());
-                    animator.SetTrigger(emotionSettings.animation.ToString());
+                    string triggerName;
+
+                    switch (emotionSettings.animation.ToString())
+                    {
+                        case "물음표_띠용":
+                            triggerName = "물음표(띠용)";
+                            break;
+                        case "느낌표_떠오름":
+                            triggerName = "느낌표(떠오름)";
+                            break;
+                        case "점점점_황당":
+                            triggerName = "점점점(황당)";
+                            break;
+                        case "빠직_화남":
+                            triggerName = "빠직(화남)";
+                            break;
+                        case "보글보글_복잡":
+                            triggerName = "보글보글(복잡)";
+                            break;
+                        case "느낌표_놀람":
+                            triggerName = "느낌표(놀람)";
+                            break;
+                        case "느낌표_엄청놀람":
+                            triggerName = "느낌표(엄청놀람)";
+                            break;
+                        default:
+                            triggerName = null;
+                            Debug.Log("감정애니메이션 실행하려는 부분에서 문제가 발생되었습니다.");
+                            break;
+                    }
+                    Debug.Log(animator + ", " + triggerName);
+
+                    animator.SetTrigger(triggerName);
                 }
             }
         }

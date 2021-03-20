@@ -193,9 +193,13 @@ public class Dialogue
             //감정표현 애니메이션 설정
             public enum Emotions
             {
-                Emotion_0,
-                Emotion_10,
-                Emotion_16
+                물음표_띠용,
+                점점점_황당,
+                빠직_화남,
+                보글보글_복잡,
+                느낌표_떠오름,
+                느낌표_놀람,
+                느낌표_엄청놀람
             }
             [Serializable]
             public struct EmotionSettings
