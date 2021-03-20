@@ -9025,7 +9025,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 3.0949366, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9042,7 +9042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315965341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.918139, y: -9.488738, z: -10.042969}
+  m_LocalPosition: {x: -10.939992, y: -9.488738, z: -10.042969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1792519942}
@@ -10104,6 +10104,13 @@ MonoBehaviour:
   isArrived: 0
   isJustTurnCompleted: 0
   isMoveSetOn: 0
+  followMode: 0
+  isItMiro: 0
+  desObj: {fileID: 0}
+  xDis: 0
+  yDis: 0
+  desPos: {x: 0, y: 0}
+  "\uB3C4\uCC29\uBC94\uC704": 1
 --- !u!114 &580652752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12715,7 +12722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937402247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.841608, y: -9.936539, z: -11}
+  m_LocalPosition: {x: -10.863461, y: -9.936539, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16058,6 +16065,13 @@ MonoBehaviour:
   isArrived: 0
   isJustTurnCompleted: 0
   isMoveSetOn: 0
+  followMode: 0
+  isItMiro: 0
+  desObj: {fileID: 0}
+  xDis: 0
+  yDis: 0
+  desPos: {x: 0, y: 0}
+  "\uB3C4\uCC29\uBC94\uC704": 1
 --- !u!114 &1450160338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20246,6 +20260,7 @@ GameObject:
   - component: {fileID: 1807504357}
   - component: {fileID: 1807504355}
   - component: {fileID: 1807504358}
+  - component: {fileID: 1807504359}
   m_Layer: 8
   m_Name: "\uACBD\uCC301"
   m_TagString: Untagged
@@ -20393,6 +20408,13 @@ MonoBehaviour:
   isArrived: 0
   isJustTurnCompleted: 0
   isMoveSetOn: 0
+  followMode: 0
+  isItMiro: 0
+  desObj: {fileID: 0}
+  xDis: 0
+  yDis: 0
+  desPos: {x: 0, y: 0}
+  "\uB3C4\uCC29\uBC94\uC704": 1
 --- !u!95 &1807504356
 Animator:
   serializedVersion: 3
@@ -20451,6 +20473,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65625, y: 1.96875}
   m_EdgeRadius: 0
+--- !u!114 &1807504359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807504350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba655eab189b0440688c090702eb3453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisNPCObj: {fileID: 0}
+  playerObj: {fileID: 0}
+  childRenderersArr: []
 --- !u!1 &1808558872
 GameObject:
   m_ObjectHideFlags: 0
@@ -22277,6 +22314,13 @@ MonoBehaviour:
   isArrived: 0
   isJustTurnCompleted: 0
   isMoveSetOn: 0
+  followMode: 0
+  isItMiro: 0
+  desObj: {fileID: 0}
+  xDis: 0
+  yDis: 0
+  desPos: {x: 0, y: 0}
+  "\uB3C4\uCC29\uBC94\uC704": 1
 --- !u!50 &2066939045
 Rigidbody2D:
   serializedVersion: 4
