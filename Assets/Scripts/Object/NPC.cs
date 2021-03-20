@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    public Vector2 movement;    
+    public Vector2 movement;
 
 
     //리모트무브
@@ -20,7 +20,7 @@ public class NPC : MonoBehaviour
     public Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData;
     public Vector2 originalPos, destinationPos, curpos;
     public bool isArrived;
-   
+
 
     //제자리돌기 위한. 한번만 none에서 속도 주기 위한.
     public bool isJustTurnCompleted;
@@ -32,9 +32,21 @@ public class NPC : MonoBehaviour
     //복합이동 중 현 moveSet
     Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet curMoveSet;
 
+    //Fallow모드
+    public bool followMode, isItMiro;
+    public GameObject desObj;
+    public float xDis, yDis;
+    public Vector2 desPos;
+    public float 도착범위 = 1f;
+
     private void Awake()
     {
         moveSets = new Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet>();
+    }
+
+    public void Start()
+    {
+        desObj = FindObjectOfType<KeyInput_Controller>().gameObject;
     }
 
     // Update is called once per frame
@@ -52,12 +64,31 @@ public class NPC : MonoBehaviour
             //1. 순서대로 줄세움(큐 사용)
             //2. 순서대로 차례꺼 이동 처리
             //3. 끝났으면 끝 처리. 안끝났으면 2번
+            //복합이동중인지 확인 변수 isMoveSetOn
             if (isMoveSetOn)
             {
                 //이동 처리
                 MoveMaker(curMoveSet);
-            }                       
+            }
         }
+
+        //Following 구현 부분
+
+        // 미로맵일 경우! 멀어지면 FollowMode 켜주는 부분.
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Miro") isItMiro = true;
+
+        if (isItMiro)
+        {
+            if (IsItFar()) followMode = true;            
+            if (followMode) KeepGoing_Follow();
+        }
+
+
+        //대각선 이동 속도 조절 
+        if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
+            movespeed = 4f;
+        else
+            movespeed = 5f;
     }
 
     private void FixedUpdate()
@@ -66,6 +97,7 @@ public class NPC : MonoBehaviour
         rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
     }
 
+    #region For RemoteMove
     public void MoveAnimStart(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
     {
         isMoveSetOn = true;
@@ -87,12 +119,12 @@ public class NPC : MonoBehaviour
         }
         else
         {
-            StartNextMove();            
+            StartNextMove();
         }
     }
 
     public void SetDestinationPos(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet)
-    {        
+    {
         originalPos = gameObject.transform.position;
         switch (moveSet.dir)
         {
@@ -127,7 +159,7 @@ public class NPC : MonoBehaviour
                 Debug.Log("최종목적지 설정 실패");
                 destinationPos = Vector2.zero;
                 break;
-        }        
+        }
     }
 
     public void MoveMaker(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet)
@@ -135,7 +167,7 @@ public class NPC : MonoBehaviour
         if (IsArrivedChecker(moveSet))      //도착여부 확인 
         {
             //이동 도착 처리.
-            Arrived();            
+            Arrived();
         }
         else
         {
@@ -243,7 +275,7 @@ public class NPC : MonoBehaviour
         movement = Vector2.zero;
 
         //남은 큐가 있는지 확인해서 처리
-        if(moveSets.Count == 0)
+        if (moveSets.Count == 0)
         {
             //남은 큐가 없음.  그럼 이동 완전 끝~!
             print("!!완전 도착!!");
@@ -319,4 +351,71 @@ public class NPC : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         StartNextMove();
     }
+    #endregion
+
+    #region ForFollow
+
+    //따라갈 캐릭터와 현 엔피씨의 거리 체커
+    public bool IsItFar()
+    {
+        desPos = desObj.transform.position;
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
+        if (Mathf.Abs(xDis) > 도착범위 || Mathf.Abs(yDis) > 도착범위) return true;
+        else return false;        
+    }
+
+    //따르기 시작
+    public void StartFollowMode()
+    {
+        followMode = true;
+    }
+
+    //실제 이동
+    public void KeepGoing_Follow()
+    {
+        float x, y;        
+
+        //Left
+        if (xDis < 0)
+        {
+            if (xDis > -도착범위) x = 0f;
+            else x = -1f;
+        }
+        //Right
+        else if (xDis > 0)
+        {
+            if (xDis < 도착범위) x = 0f;
+            else x = 1f;
+        }
+        else
+        {
+            //xDis == 0 인 경우.                
+            x = 0f;
+        }
+        //Down
+        if (yDis < 0)
+        {
+            if (yDis > -도착범위) y = 0f;
+            else y = -1f;
+        }
+        //Up
+        else if (yDis > 0)
+        {
+            if (yDis < 도착범위) y = 0f;
+            else y = 1f;
+        }
+        else
+        {
+            //yDis == 0 인 경우.                
+            y = 0f;
+        }
+
+        movement = new Vector2(x, y);
+
+        MakeWalkingAnimation();
+    }
+
+    #endregion
 }
