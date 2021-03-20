@@ -568,7 +568,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             else
                 dialogSentence.color = dialogueSet.detail.fontColorSettings.fontColor;
         }
-        else dialogSentence.color = Color.black;    //기본은 검은색
+        else dialogSentence.color = Color.white;    //기본은 검은색
 
         //글자 크기 설정
         if (dialogueSet.detail.fontSizeSettings.changeSize)
