@@ -33,11 +33,13 @@ public class NPC : MonoBehaviour
     Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet curMoveSet;
 
     //Fallow모드
-    public bool followMode, isItMiro;
+    public bool followMode, isItMiro, isItFromDialog;
     public GameObject desObj;
     public float xDis, yDis;
     public Vector2 desPos;
     public float 도착범위 = 1f;
+    //다이얼로그 호출 처리
+    public int 다이얼로그호출마지막방향;
 
     private void Awake()
     {
@@ -81,6 +83,13 @@ public class NPC : MonoBehaviour
         {
             if (IsItFar()) followMode = true;            
             if (followMode) KeepGoing_Follow();
+        }
+
+        //다이얼로그 호출 이동일 경우!
+        if (isItFromDialog)
+        {
+            if (IsItFar_ForDialog()) followMode = true;
+            if (followMode) KeepGoing_Follow_ForDialog();
         }
 
 
@@ -355,7 +364,7 @@ public class NPC : MonoBehaviour
 
     #region ForFollow
 
-    //따라갈 캐릭터와 현 엔피씨의 거리 체커
+    //따라갈 캐릭터와 현 엔피씨의 거리 체커 - 미로 전용
     public bool IsItFar()
     {
         desPos = desObj.transform.position;
@@ -366,29 +375,50 @@ public class NPC : MonoBehaviour
         else return false;        
     }
 
-    //따르기 시작
-    public void StartFollowMode()
+    //따라갈 캐릭터와 현 엔피씨의 거리 체커 - 다이얼로그 호출 처리 전용
+    public bool IsItFar_ForDialog()
     {
-        followMode = true;
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
+        if (Mathf.Abs(xDis) > 도착범위 || Mathf.Abs(yDis) > 도착범위) return true;
+        else return false;
+    }
+
+    //따르기 시작 - 다이얼로그로 호출
+    public void StartFollowMode(Vector2 vector2, float 범위, Dialogue.DialogueSet.Details.NewAnimationSettings.EndDir endDir)
+    {
+        isItFromDialog = true;
+        desPos = vector2;
+
+        animator.SetInteger("Direction", (int)endDir);
+
+        도착범위 = 범위;
+
+        //출발 보고 처리 
+        DialogueManager.Instance.isEndedMoveAnimation_ForNew = false;
     }
 
     //실제 이동, SetIdleDir
     public void KeepGoing_Follow()
     {
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
         float x, y;        
 
         //Left
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -1f;
+            else x = -도착범위;
             animator.SetInteger("Direction", 3);
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 1f;
+            else x = 도착범위;
             animator.SetInteger("Direction", 2);
         }
         else
@@ -400,20 +430,80 @@ public class NPC : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -1f;
+            else y = -도착범위;
             animator.SetInteger("Direction", 0);
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 1f;
+            else y = 도착범위;
             animator.SetInteger("Direction", 1);
         }
         else
         {
             //yDis == 0 인 경우.                
             y = 0f;
+        }
+
+        //도착 보고 처리 
+        if (x==0f && y==0f)
+        {
+            DialogueManager.Instance.isEndedMoveAnimation_ForNew = true;
+        }
+
+        movement = new Vector2(x, y);
+
+        MakeWalkingAnimation();
+    }
+
+    //실제 이동, SetIdleDir - 다이얼로그 호출 전용
+    public void KeepGoing_Follow_ForDialog()
+    {
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
+        float x, y;
+
+        //Left
+        if (xDis < 0)
+        {
+            if (xDis > -도착범위) x = 0f;
+            else x = -도착범위;
+        }
+        //Right
+        else if (xDis > 0)
+        {
+            if (xDis < 도착범위) x = 0f;
+            else x = 도착범위;
+        }
+        else
+        {
+            //xDis == 0 인 경우.                
+            x = 0f;
+        }
+        //Down
+        if (yDis < 0)
+        {
+            if (yDis > -도착범위) y = 0f;
+            else y = -도착범위;
+        }
+        //Up
+        else if (yDis > 0)
+        {
+            if (yDis < 도착범위) y = 0f;
+            else y = 도착범위;
+        }
+        else
+        {
+            //yDis == 0 인 경우.                
+            y = 0f;
+        }
+
+        //도착 보고 처리 
+        if (x == 0f && y == 0f)
+        {
+            DialogueManager.Instance.isEndedMoveAnimation_ForNew = true;
         }
 
         movement = new Vector2(x, y);

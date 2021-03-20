@@ -45,6 +45,13 @@ public class KeyInput_Controller : MonoBehaviour
     //복합이동 중 현 moveSet
     Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet curMoveSet;
 
+    //Fallow모드
+    public bool followMode, isItFromDialog;
+    public GameObject desObj;
+    public float xDis, yDis;
+    public Vector2 desPos;
+    public float 도착범위 = 1f;
+
     private void Awake()
     {
         moveSets = new Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet>();
@@ -71,6 +78,20 @@ public class KeyInput_Controller : MonoBehaviour
         }
         else
         {
+            //Following 구현 부분
+            //다이얼로그 호출 이동일 경우!
+            if (isItFromDialog)
+            {
+                if (IsItFar_ForDialog()) followMode = true;
+                if (followMode) KeepGoing_Follow_ForDialog();
+            }
+
+            //대각선 이동 속도 조절 
+            if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
+                movespeed = 4f;
+            else
+                movespeed = 5f;
+
             if (!isControllable) return;
 
             //다이얼로그가 끝나면 조작권 줌. isControllable. <-- 요고. 
@@ -104,13 +125,6 @@ public class KeyInput_Controller : MonoBehaviour
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
-
-            //대각선 이동 속도 조절 
-            if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
-                movespeed = 4f;
-            else
-                movespeed = 5f;
-
 
             //스캔 발동. Space키 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
             if (Input.GetKeyDown(KeyCode.Space) && scanObject != null && DialogueManager.Instance.isDialogueActive == false)
@@ -163,6 +177,8 @@ public class KeyInput_Controller : MonoBehaviour
             scanObject = null;
     }
 
+
+    #region For RemoteMode
     public void MoveAnimStart(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData animData)
     {
         isMoveSetOn = true;
@@ -423,6 +439,160 @@ public class KeyInput_Controller : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         StartNextMove();
     }
+
+
+    #endregion
+
+
+    #region ForFollow
+
+    //따라갈 캐릭터와 현 엔피씨의 거리 체커(나중에 필요시 사용)
+    public bool IsItFar(GameObject desObj)
+    {
+        desPos = desObj.transform.position;
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
+        if (Mathf.Abs(xDis) > 도착범위 || Mathf.Abs(yDis) > 도착범위) return true;
+        else return false;
+    }
+    //따라갈 캐릭터와 현 엔피씨의 거리 체커 - 다이얼로그 호출 처리 전용
+    public bool IsItFar_ForDialog()
+    {
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
+        if (Mathf.Abs(xDis) > 도착범위 || Mathf.Abs(yDis) > 도착범위) return true;
+        else return false;
+    }
+    //따르기 시작 - 다이얼로그로 호출
+    public void StartFollowMode(Vector2 vector2, float 범위, Dialogue.DialogueSet.Details.NewAnimationSettings.EndDir endDir)
+    {
+        isItFromDialog = true;
+        desPos = vector2;
+        도착범위 = 범위;
+        animator.SetInteger("Direction", (int)endDir);
+
+        //출발 보고 처리 
+        DialogueManager.Instance.isEndedMoveAnimation_ForNew = false;
+    }
+
+    //실제 이동, SetIdleDir
+    public void KeepGoing_Follow()
+    {
+        //print("KeepGoing_Follow");
+
+        float x, y;
+
+        //Left
+        if (xDis < 0)
+        {
+            if (xDis > -도착범위) x = 0f;
+            else x = -도착범위;
+            animator.SetInteger("Direction", 3);
+            print("3");
+        }
+        //Right
+        else if (xDis > 0)
+        {
+            if (xDis < 도착범위) x = 0f;
+            else x = 도착범위;
+            animator.SetInteger("Direction", 2);
+            print("2");
+        }
+        else
+        {
+            //xDis == 0 인 경우.                
+            x = 0f;
+        }
+        //Down
+        if (yDis < 0)
+        {
+            if (yDis > -도착범위) y = 0f;
+            else y = -도착범위;
+            animator.SetInteger("Direction", 0);
+            print("0");
+        }
+        //Up
+        else if (yDis > 0)
+        {
+            if (yDis < 도착범위) y = 0f;
+            else y = 도착범위;
+            animator.SetInteger("Direction", 1);
+            print("1");
+        }
+        else
+        {
+            //yDis == 0 인 경우.                
+            y = 0f;
+        }
+
+        //도착 보고 처리 
+        if (x == 0f && y == 0f)
+        {
+            DialogueManager.Instance.isEndedMoveAnimation_ForNew = true;
+        }
+
+        movement = new Vector2(x, y);
+
+        MakeWalkingAnimation();
+    }
+    //실제 이동, SetIdleDir - 다이얼로그 호출 전용
+    public void KeepGoing_Follow_ForDialog()
+    {
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
+        float x, y;
+
+        //Left
+        if (xDis < 0)
+        {
+            if (xDis > -도착범위) x = 0f;
+            else x = -도착범위;
+        }
+        //Right
+        else if (xDis > 0)
+        {
+            if (xDis < 도착범위) x = 0f;
+            else x = 도착범위;
+        }
+        else
+        {
+            //xDis == 0 인 경우.                
+            x = 0f;
+        }
+        //Down
+        if (yDis < 0)
+        {
+            if (yDis > -도착범위) y = 0f;
+            else y = -도착범위;
+        }
+        //Up
+        else if (yDis > 0)
+        {
+            if (yDis < 도착범위) y = 0f;
+            else y = 도착범위;
+        }
+        else
+        {
+            //yDis == 0 인 경우.                
+            y = 0f;
+        }
+
+        //도착 보고 처리 
+        if (x == 0f && y == 0f)
+        {
+            DialogueManager.Instance.isEndedMoveAnimation_ForNew = true;
+        }
+
+        movement = new Vector2(x, y);
+
+        MakeWalkingAnimation();
+    }
+    #endregion
+
+
 }
 
 

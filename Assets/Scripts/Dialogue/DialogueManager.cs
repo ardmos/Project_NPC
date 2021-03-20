@@ -46,8 +46,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //선택상자에대한 응답에서 문장 빨리넘기기 했을 시 사용할 문장.  이미 도도도 찍고있던 문장을 담고있다.
     string printingSentence;
     //다이얼로그 문장 없이 애니메이션만 실행시키기 위한 부분.    
-    public bool isDuringMoveAnimation;
-    public bool isEndedMoveAnimation;
+    public bool isDuringMoveAnimation, isDuringMoveAnimation_ForNew;
+    public bool isEndedMoveAnimation, isEndedMoveAnimation_ForNew;
     public List<NPC> nPCs = new List<NPC>();
     public List<KeyInput_Controller> keyInput_Controllers = new List<KeyInput_Controller>();
     //다이얼로그 딜레이 타임 
@@ -134,11 +134,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //애니메이션이 끝났으면 DisplayNextSentence(); 진행.
         if (isDuringMoveAnimation)
         {
-            string objname = null;
+            //string objname = null;
             
             foreach (NPC npc in nPCs)
             {
-                objname = npc.gameObject.name;
+                //objname = npc.gameObject.name;
                 if (npc.isMoveSetOn == false)
                 {
                     //print(objname + "Arrived");
@@ -153,7 +153,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             }
             foreach (KeyInput_Controller player in keyInput_Controllers)
             {
-                objname = player.gameObject.name;
+                //objname = player.gameObject.name;
                 if (player.isMoveSetOn == false)
                 {                    
                     isEndedMoveAnimation = true;
@@ -180,9 +180,29 @@ public class DialogueManager : DontDestroy<DialogueManager>
             }
             else
             {
-                Debug.Log("isEndedMoveAnimation is False!");
+                //Debug.Log("isEndedMoveAnimation is False!");
             }
         }
+
+        //New Anim
+        if(isDuringMoveAnimation_ForNew)
+        {
+            //isEndedMoveAnimation_ForNew 각각의 오브젝트에서 호출해줌. New는 동시에 여럿이 움직일 가능성이 없기 때문에 개별 처리.
+            if (isEndedMoveAnimation_ForNew)
+            {
+
+                //혹~시! 사운드LifeTime중인지?
+                if (!isSFXDialogLifeTime)
+                {
+                    isDuringMoveAnimation_ForNew = false;
+                    DisplayNextSentence();
+                }
+            }
+            else
+            {
+                //Debug.Log("isEndedMoveAnimation_ForNew is False!");
+            }
+        }     
         #endregion         
     }
 
@@ -328,10 +348,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
             goreturn = false;
 
             //발동할 애니메이션이 있는지? 
-            if (dialogueSet.detail.animationSettings.activateObjAnimate)
+            if (dialogueSet.detail.oldAnimationSettings.activateObjAnimate && !dialogueSet.detail.newAnimationSettings.activeNewAnimate)
             {
                 //발동할 애니메이션이 존재하면, 해당 애니메이션이 끝나길 기다렸다가  return.                
-                foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.animationSettings.objectAnimationData)
+                foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.oldAnimationSettings.objectAnimationData)
                 {
                     //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
                     if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
@@ -348,6 +368,21 @@ public class DialogueManager : DontDestroy<DialogueManager>
                     }
                 }
                 isDuringMoveAnimation = true;
+                goreturn = true;
+            }
+            if (!dialogueSet.detail.oldAnimationSettings.activateObjAnimate && dialogueSet.detail.newAnimationSettings.activeNewAnimate)
+            {
+                //New
+
+                if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<NPC>(out NPC nPC))
+                {
+                    nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
+                }
+                else if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
+                {
+                    keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
+                }
+                isDuringMoveAnimation_ForNew = true;
                 goreturn = true;
             }
 
@@ -515,9 +550,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
 
         //Object 이동 애니메이션
-        if (dialogueSet.detail.animationSettings.activateObjAnimate)
+        if (dialogueSet.detail.oldAnimationSettings.activateObjAnimate && !dialogueSet.detail.newAnimationSettings.activeNewAnimate)
         {
-            foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.animationSettings.objectAnimationData)
+            //Old
+            foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.oldAnimationSettings.objectAnimationData)
             {
                 //objAnimData.objToMakeMove.MoveAnimStart(objAnimData);
 
@@ -536,7 +572,21 @@ public class DialogueManager : DontDestroy<DialogueManager>
                     keyInput_Controller.MoveAnimStart(objAnimData);
                 }
             }
+        }        
+        if (!dialogueSet.detail.oldAnimationSettings.activateObjAnimate && dialogueSet.detail.newAnimationSettings.activeNewAnimate)
+        {
+            //New
+
+            if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<NPC>(out NPC nPC))
+            {
+                nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
+            }
+            else if(dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
+            {
+                keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
+            }
         }
+
 
         //Object 기타 애니메이션
         EtcAnimation(dialogueSet);

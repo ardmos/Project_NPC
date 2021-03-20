@@ -154,7 +154,25 @@ public class Dialogue
                 public ObjectAnimData[] objectAnimationData;
             }
             [Header("- 이동 애니메이션 설정"), Space(5)]
-            public AnimationSettings animationSettings;
+            public AnimationSettings oldAnimationSettings;
+            //이동 애니메이션 세팅 - New (Follow Ver.)
+            [Serializable]
+            public struct NewAnimationSettings
+            {
+                public bool activeNewAnimate;
+                public Vector2 destinationPos;
+                public GameObject objToMove;
+                public enum EndDir
+                {
+                    Down,
+                    Up,
+                    Right,
+                    Left
+                }
+                [Header("- 정지시 쳐다볼 방향")]
+                public EndDir endDir;
+            }
+            public NewAnimationSettings newAnimationSettings;
 
             //이동 제외 기타 애니메이션 세팅 
             [Serializable]
