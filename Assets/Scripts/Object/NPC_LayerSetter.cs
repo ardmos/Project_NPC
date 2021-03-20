@@ -12,11 +12,9 @@ public class NPC_LayerSetter : MonoBehaviour
     //isTrigger가 체크된 레이어 세팅용 박스콜라이더가 달린 오브제트를 자식으 하나 더 추가해서, 
     //isTrigger로 체크 받아서 계산.
 
-    //부모 obj, 플레이어 obj
+    //NPC obj, 플레이어 obj
     public GameObject thisNPCObj, playerObj;
-    //부모 obj pos
-    Vector2 parentsPos;
-    //부모 SpriteRenderer 
+    //NPC SpriteRenderer 
     SpriteRenderer thisNPCSpriteRenderer;
     //플레이어 SpriteRenderer.   플레이어의 그림자까지 처리를 위한 List.
     List<SpriteRenderer> playerSpriteRenderers;
@@ -34,13 +32,13 @@ public class NPC_LayerSetter : MonoBehaviour
         newLayerOrders = new List<int>();
         defaultLayerOrders = new List<int>();
         thisNPCObj = gameObject;
-        parentsPos = thisNPCObj.transform.position;
         thisNPCSpriteRenderer = thisNPCObj.GetComponent<SpriteRenderer>();
         playerSpriteRenderers = new List<SpriteRenderer>();
         playerObj = GameObject.FindGameObjectWithTag("Player");
         foreach (var item in playerObj.GetComponentsInChildren<SpriteRenderer>())
         {
             playerSpriteRenderers.Add(item);
+            Debug.Log(item);
         }
         for (int i = 0; i < playerSpriteRenderers.Count; i++)
         {
@@ -50,6 +48,7 @@ public class NPC_LayerSetter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         //새로운 레이어 오더값
         //리스트 초기화 해주고, 
         newLayerOrders.Clear();
@@ -65,8 +64,11 @@ public class NPC_LayerSetter : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        //꼭 플레이어한테만 이걸 적용시킬 필욘 없어서 주석 처리
+        //if (!collision.CompareTag("Player")) return;
+
         //위거나 같으면. 순간 가구 레이어 오더 50만큼 올리고 자식 가구 있으면 같이 올려준다.,  가구 아래로 플레이어가 들어가고
-        if (parentsPos.y <= playerObj.transform.position.y)
+        if (gameObject.transform.position.y <= playerObj.transform.position.y)
         {
             for (int count = 0; count < childRenderersArr.Length; count++)
             {
@@ -75,6 +77,7 @@ public class NPC_LayerSetter : MonoBehaviour
 
             for (int i = 0; i < playerSpriteRenderers.Count; i++)
             {
+                Debug.Log(playerSpriteRenderers[i] + "Here!");
                 playerSpriteRenderers[i].sortingLayerName = "NPC";
                 playerSpriteRenderers[i].sortingOrder = thisNPCSpriteRenderer.sortingOrder - (i + 1);
             }
