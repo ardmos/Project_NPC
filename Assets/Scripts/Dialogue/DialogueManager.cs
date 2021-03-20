@@ -121,7 +121,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 if (!isStartedWatingDelayTime && !choiceBox.isChoiceBox && !goreturn && !dialogueFlipSFXBlocker)
                 {
                     //다이얼로그 넘기는 효과음
-                    Debug.Log("newlog: isStartedWatingDelayTime: " + isStartedWatingDelayTime);
+                    //Debug.Log("newlog: isStartedWatingDelayTime: " + isStartedWatingDelayTime);
                     AudioSystem.Instance.PlayDialogueFlipSFX();
                 }
 

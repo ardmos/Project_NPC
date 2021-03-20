@@ -270,7 +270,7 @@ public class NPC : MonoBehaviour
 
     public void Arrived()
     {
-        print("도착!");
+        //print("도착!");
         isrm = false;
         movement = Vector2.zero;
 
@@ -278,7 +278,7 @@ public class NPC : MonoBehaviour
         if (moveSets.Count == 0)
         {
             //남은 큐가 없음.  그럼 이동 완전 끝~!
-            print("!!완전 도착!!");
+            //print("!!완전 도착!!");
             isMoveSetOn = false;
             //최종 이동 끝나면, 
             //Idle방향 따로 설정해줄 수 있음.
@@ -287,7 +287,7 @@ public class NPC : MonoBehaviour
         //다시 출발. 딜레이타임 고려해서 출발해야한다. 
         else
         {
-            print("다시 출발!");
+            //print("다시 출발!");
             if (curMoveSet.delayTime != 0f) StartCoroutine(StartNextMoveAfterDelayTime(curMoveSet.delayTime));
             else StartNextMove();
         }
@@ -306,14 +306,14 @@ public class NPC : MonoBehaviour
         {
             isJustTurnCompleted = true;
             animator.SetFloat("Speed", 1f);
-            Debug.Log("회전!! Speed = 1f");
+            //Debug.Log("회전!! Speed = 1f");
         }
         else
         {
             isArrived = true;
             //isrm = false;
             animator.SetFloat("Speed", 0f);
-            Debug.Log("회전 완료. Speed = 0f");
+            //Debug.Log("회전 완료. Speed = 0f");
         }
     }
 
@@ -372,7 +372,7 @@ public class NPC : MonoBehaviour
         followMode = true;
     }
 
-    //실제 이동
+    //실제 이동, SetIdleDir
     public void KeepGoing_Follow()
     {
         float x, y;        
@@ -382,12 +382,14 @@ public class NPC : MonoBehaviour
         {
             if (xDis > -도착범위) x = 0f;
             else x = -1f;
+            animator.SetInteger("Direction", 3);
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
             else x = 1f;
+            animator.SetInteger("Direction", 2);
         }
         else
         {
@@ -399,12 +401,14 @@ public class NPC : MonoBehaviour
         {
             if (yDis > -도착범위) y = 0f;
             else y = -1f;
+            animator.SetInteger("Direction", 0);
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
             else y = 1f;
+            animator.SetInteger("Direction", 1);
         }
         else
         {
