@@ -576,7 +576,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
         if (!dialogueSet.detail.oldAnimationSettings.activateObjAnimate && dialogueSet.detail.newAnimationSettings.activeNewAnimate)
         {
             //New
-
             if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<NPC>(out NPC nPC))
             {
                 nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
