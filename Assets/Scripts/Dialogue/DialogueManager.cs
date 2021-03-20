@@ -61,6 +61,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //Sentence 없이 다른것만 진행할 때 true되는 변수
     public bool goreturn;
 
+    //다이얼로그 넘기는 효과음 여러번 나오는걸 막기 위한 변수
+    private bool dialogueFlipSFXBlocker;
+
 
     #region For Signleton <<-- DontDestory 사용해서 구현., OnAwake()
     //기존 싱글턴 <<-- DontDestory 사용해서 구현했기때문에 주석 처리.
@@ -115,7 +118,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             if (isDuringTyping) PrintAtOnce(curDialogSet);
             else
             {
-                if (!isStartedWatingDelayTime && !choiceBox.isChoiceBox && !goreturn)
+                if (!isStartedWatingDelayTime && !choiceBox.isChoiceBox && !goreturn && !dialogueFlipSFXBlocker)
                 {
                     //다이얼로그 넘기는 효과음
                     Debug.Log("newlog: isStartedWatingDelayTime: " + isStartedWatingDelayTime);
@@ -254,6 +257,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //문자 출력 들어감.
     public void DisplayNextSentence()
     {
+        dialogueFlipSFXBlocker = true;
+
         isSpaceKeyDowned = false;
 
         //혹시 딜레이 대기중이라면 다음 다이얼로그 가면 안됨.
@@ -697,6 +702,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             //Continue버튼 활성화 (비활성화는 다이얼로그 넘길 때, 처음 시작 때.     활성화는 여기랑 한번에 출력부분.) 
             continueBtn.SetActive(true);
+            //Continue버튼 활성활될 때 dialogueFlipSFXBlocker = false 처리 
+            dialogueFlipSFXBlocker = false;
         }
     }
 
@@ -749,6 +756,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             //Continue버튼 활성화
             continueBtn.SetActive(true);
+            dialogueFlipSFXBlocker = false;
         }
             
     }
