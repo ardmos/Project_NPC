@@ -37,7 +37,11 @@ public class NPC : MonoBehaviour
     public GameObject desObj;
     public float xDis, yDis;
     public Vector2 desPos;
-    public float 도착범위 = 1f;
+    public float 도착범위;
+    public float 따라가기위치생성거리;
+    public float 이동속도;
+    //public float 메인캐리터의이전위치;
+    public Vector2 총이동량;
     //다이얼로그 호출 처리
     public int 다이얼로그호출마지막방향;
 
@@ -49,6 +53,9 @@ public class NPC : MonoBehaviour
     public void Start()
     {
         desObj = FindObjectOfType<KeyInput_Controller>().gameObject;
+        도착범위 = 0.1f;
+        이동속도 = 1f;
+        따라가기위치생성거리 = 0.5f;
     }
 
     // Update is called once per frame
@@ -81,7 +88,27 @@ public class NPC : MonoBehaviour
 
         if (isItMiro)
         {
-            if (IsItFar()) followMode = true;            
+            //Debug.Log("이번프레임이동량:" + desObj.GetComponent<KeyInput_Controller>().이번프레임이동량 + "총이동량:" + 총이동량 + ", followMode:" + followMode + "나의이동량:"+movement);
+            //이동량 일정 이상 되는지 체크.
+            //사실상 거리 0.5f
+            if (Mathf.Abs(총이동량.x) >= 따라가기위치생성거리 || Mathf.Abs(총이동량.y) >= 따라가기위치생성거리)
+            {
+                //이동!
+                if (IsItFar((Vector2)desObj.transform.position - 총이동량)) followMode = true;
+                else
+                {
+                    //도착!
+                    movement = Vector2.zero;
+                    
+                    //followMode = false;
+                }
+                총이동량 = Vector2.zero;
+            }
+            else
+            {
+                총이동량 += desObj.GetComponent<KeyInput_Controller>().이번프레임이동량;
+            }
+                      
             if (followMode) KeepGoing_Follow();
         }
 
@@ -365,9 +392,10 @@ public class NPC : MonoBehaviour
     #region ForFollow
 
     //따라갈 캐릭터와 현 엔피씨의 거리 체커 - 미로 전용
-    public bool IsItFar()
-    {
-        desPos = desObj.transform.position;
+    public bool IsItFar(Vector2 pos)
+    {             
+        desPos = pos;
+        //desPos = desObj.GetComponent<KeyInput_Controller>().이전위치;        
         xDis = desPos.x - transform.position.x;
         yDis = desPos.y - transform.position.y;
 
@@ -411,15 +439,15 @@ public class NPC : MonoBehaviour
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -도착범위;
-            animator.SetInteger("Direction", 3);
+            else x = -이동속도;
+            //animator.SetInteger("Direction", 3);
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 도착범위;
-            animator.SetInteger("Direction", 2);
+            else x = 이동속도;
+            //animator.SetInteger("Direction", 2);
         }
         else
         {
@@ -430,15 +458,15 @@ public class NPC : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -도착범위;
-            animator.SetInteger("Direction", 0);
+            else y = -이동속도;
+            //animator.SetInteger("Direction", 0);
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 도착범위;
-            animator.SetInteger("Direction", 1);
+            else y = 이동속도;
+            //animator.SetInteger("Direction", 1);
         }
         else
         {
@@ -446,10 +474,21 @@ public class NPC : MonoBehaviour
             y = 0f;
         }
 
-        //도착 보고 처리 
-        if (x==0f && y==0f)
+        if (movement.y == -1)
         {
-            DialogueManager.Instance.isEndedMoveAnimation_ForNew = true;
+            animator.SetInteger("Direction", 0);            
+        }
+        else if (movement.y == 1)
+        {
+            animator.SetInteger("Direction", 1);            
+        }
+        else if (movement.x == 1)
+        {
+            animator.SetInteger("Direction", 2);            
+        }
+        else if (movement.x == -1)
+        {
+            animator.SetInteger("Direction", 3);            
         }
 
         movement = new Vector2(x, y);
@@ -469,13 +508,13 @@ public class NPC : MonoBehaviour
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -도착범위;
+            else x = -이동속도;
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 도착범위;
+            else x = 이동속도;
         }
         else
         {
@@ -486,13 +525,13 @@ public class NPC : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -도착범위;
+            else y = -이동속도;
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 도착범위;
+            else y = 이동속도;
         }
         else
         {

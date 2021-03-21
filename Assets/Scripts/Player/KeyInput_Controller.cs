@@ -50,11 +50,20 @@ public class KeyInput_Controller : MonoBehaviour
     public GameObject desObj;
     public float xDis, yDis;
     public Vector2 desPos;
-    public float 도착범위 = 1f;
+    public float 도착범위;
+    public float 이동속도;
+    //public Vector2 이전위치;
+    public Vector2 이번프레임이동량;
 
     private void Awake()
     {
         moveSets = new Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet>();
+    }
+
+    public void Start()
+    {
+        도착범위 = 0.8f;
+        이동속도 = 1f;
     }
 
     // Update is called once per frame
@@ -134,6 +143,9 @@ public class KeyInput_Controller : MonoBehaviour
                 scanObject.GetComponent<Object>().TriggerDialogue();
             }
         }
+
+        //바로 이전 위치를 저장해두고, 따라오는 녀석에게 알려주기
+        //이전 위치
     }
 
     private void FixedUpdate()
@@ -163,8 +175,12 @@ public class KeyInput_Controller : MonoBehaviour
             }
         }
 
+        //이전위치 = transform.position;
+        이번프레임이동량 = movement * movespeed * Time.fixedDeltaTime;
         //실질적 이동
         rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
+
+
 
         //Ray
         rayPosition = new Vector2(rb.position.x, rb.position.y+0.4f);
@@ -446,7 +462,7 @@ public class KeyInput_Controller : MonoBehaviour
 
     #region ForFollow
 
-    //따라갈 캐릭터와 현 엔피씨의 거리 체커(나중에 필요시 사용)
+    //따라갈 캐릭터와 현 엔피씨의 거리 체커(나중에 필요시 사용) -  상대 이번 프레임 이동량, 이동 총 량 처리해서 이동하는 부분 구현 필요함. NPC스크립트 참고~!Update부분 위주로. NPC에서는 여기 FixedUpdate()에서 이번 프레임 이동량 알아갔다. 
     public bool IsItFar(GameObject desObj)
     {
         desPos = desObj.transform.position;
@@ -482,23 +498,26 @@ public class KeyInput_Controller : MonoBehaviour
     {
         //print("KeepGoing_Follow");
 
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
         float x, y;
 
         //Left
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -도착범위;
-            animator.SetInteger("Direction", 3);
-            print("3");
+            else x = -이동속도;
+            //animator.SetInteger("Direction", 3);
+            //print("3");
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 도착범위;
-            animator.SetInteger("Direction", 2);
-            print("2");
+            else x = 이동속도;
+            //animator.SetInteger("Direction", 2);
+            //print("2");
         }
         else
         {
@@ -509,17 +528,17 @@ public class KeyInput_Controller : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -도착범위;
-            animator.SetInteger("Direction", 0);
-            print("0");
+            else y = -이동속도;
+            //animator.SetInteger("Direction", 0);
+            //print("0");
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 도착범위;
-            animator.SetInteger("Direction", 1);
-            print("1");
+            else y = 이동속도;
+            //animator.SetInteger("Direction", 1);
+            //print("1");
         }
         else
         {
@@ -527,10 +546,21 @@ public class KeyInput_Controller : MonoBehaviour
             y = 0f;
         }
 
-        //도착 보고 처리 
-        if (x == 0f && y == 0f)
+        if (movement.y == -1)
         {
-            DialogueManager.Instance.isEndedMoveAnimation_ForNew = true;
+            animator.SetInteger("Direction", 0);
+        }
+        else if (movement.y == 1)
+        {
+            animator.SetInteger("Direction", 1);
+        }
+        else if (movement.x == 1)
+        {
+            animator.SetInteger("Direction", 2);
+        }
+        else if (movement.x == -1)
+        {
+            animator.SetInteger("Direction", 3);
         }
 
         movement = new Vector2(x, y);
@@ -549,13 +579,13 @@ public class KeyInput_Controller : MonoBehaviour
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -도착범위;
+            else x = -이동속도;
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 도착범위;
+            else x = 이동속도;
         }
         else
         {
@@ -566,13 +596,13 @@ public class KeyInput_Controller : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -도착범위;
+            else y = -이동속도;
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 도착범위;
+            else y = 이동속도;
         }
         else
         {
