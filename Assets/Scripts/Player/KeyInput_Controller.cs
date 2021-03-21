@@ -50,11 +50,19 @@ public class KeyInput_Controller : MonoBehaviour
     public GameObject desObj;
     public float xDis, yDis;
     public Vector2 desPos;
-    public float 도착범위 = 1f;
+    public float 도착범위;
+    public float 이동속도;
+    //public Vector2 이전위치;
 
     private void Awake()
     {
         moveSets = new Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet>();
+    }
+
+    public void Start()
+    {
+        도착범위 = 0.8f;
+        이동속도 = 1f;
     }
 
     // Update is called once per frame
@@ -134,6 +142,9 @@ public class KeyInput_Controller : MonoBehaviour
                 scanObject.GetComponent<Object>().TriggerDialogue();
             }
         }
+
+        //바로 이전 위치를 저장해두고, 따라오는 녀석에게 알려주기
+        //이전 위치
     }
 
     private void FixedUpdate()
@@ -162,6 +173,8 @@ public class KeyInput_Controller : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0, 0, -90f);
             }
         }
+
+        //이전위치 = transform.position;
 
         //실질적 이동
         rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
@@ -488,7 +501,7 @@ public class KeyInput_Controller : MonoBehaviour
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -도착범위;
+            else x = -이동속도;
             animator.SetInteger("Direction", 3);
             print("3");
         }
@@ -496,7 +509,7 @@ public class KeyInput_Controller : MonoBehaviour
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 도착범위;
+            else x = 이동속도;
             animator.SetInteger("Direction", 2);
             print("2");
         }
@@ -509,7 +522,7 @@ public class KeyInput_Controller : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -도착범위;
+            else y = -이동속도;
             animator.SetInteger("Direction", 0);
             print("0");
         }
@@ -517,7 +530,7 @@ public class KeyInput_Controller : MonoBehaviour
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 도착범위;
+            else y = 이동속도;
             animator.SetInteger("Direction", 1);
             print("1");
         }
@@ -549,13 +562,13 @@ public class KeyInput_Controller : MonoBehaviour
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -도착범위;
+            else x = -이동속도;
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 도착범위;
+            else x = 이동속도;
         }
         else
         {
@@ -566,13 +579,13 @@ public class KeyInput_Controller : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -도착범위;
+            else y = -이동속도;
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 도착범위;
+            else y = 이동속도;
         }
         else
         {

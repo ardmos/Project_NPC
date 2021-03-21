@@ -37,7 +37,9 @@ public class NPC : MonoBehaviour
     public GameObject desObj;
     public float xDis, yDis;
     public Vector2 desPos;
-    public float 도착범위 = 1f;
+    public float 도착범위;
+    public float 이동속도;
+    //public float 메인캐리터의이전위치;
     //다이얼로그 호출 처리
     public int 다이얼로그호출마지막방향;
 
@@ -49,6 +51,8 @@ public class NPC : MonoBehaviour
     public void Start()
     {
         desObj = FindObjectOfType<KeyInput_Controller>().gameObject;
+        도착범위 = 0.8f;
+        이동속도 = 1f;
     }
 
     // Update is called once per frame
@@ -368,6 +372,7 @@ public class NPC : MonoBehaviour
     public bool IsItFar()
     {
         desPos = desObj.transform.position;
+        //desPos = desObj.GetComponent<KeyInput_Controller>().이전위치;        
         xDis = desPos.x - transform.position.x;
         yDis = desPos.y - transform.position.y;
 
@@ -411,15 +416,15 @@ public class NPC : MonoBehaviour
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -도착범위;
-            animator.SetInteger("Direction", 3);
+            else x = -이동속도;
+            //animator.SetInteger("Direction", 3);
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 도착범위;
-            animator.SetInteger("Direction", 2);
+            else x = 이동속도;
+            //animator.SetInteger("Direction", 2);
         }
         else
         {
@@ -430,15 +435,15 @@ public class NPC : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -도착범위;
-            animator.SetInteger("Direction", 0);
+            else y = -이동속도;
+            //animator.SetInteger("Direction", 0);
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 도착범위;
-            animator.SetInteger("Direction", 1);
+            else y = 이동속도;
+            //animator.SetInteger("Direction", 1);
         }
         else
         {
@@ -450,6 +455,23 @@ public class NPC : MonoBehaviour
         if (x==0f && y==0f)
         {
             DialogueManager.Instance.isEndedMoveAnimation_ForNew = true;
+        }
+
+        if (movement.y == -1)
+        {
+            animator.SetInteger("Direction", 0);            
+        }
+        else if (movement.y == 1)
+        {
+            animator.SetInteger("Direction", 1);            
+        }
+        else if (movement.x == 1)
+        {
+            animator.SetInteger("Direction", 2);            
+        }
+        else if (movement.x == -1)
+        {
+            animator.SetInteger("Direction", 3);            
         }
 
         movement = new Vector2(x, y);
@@ -469,13 +491,13 @@ public class NPC : MonoBehaviour
         if (xDis < 0)
         {
             if (xDis > -도착범위) x = 0f;
-            else x = -도착범위;
+            else x = -이동속도;
         }
         //Right
         else if (xDis > 0)
         {
             if (xDis < 도착범위) x = 0f;
-            else x = 도착범위;
+            else x = 이동속도;
         }
         else
         {
@@ -486,13 +508,13 @@ public class NPC : MonoBehaviour
         if (yDis < 0)
         {
             if (yDis > -도착범위) y = 0f;
-            else y = -도착범위;
+            else y = -이동속도;
         }
         //Up
         else if (yDis > 0)
         {
             if (yDis < 도착범위) y = 0f;
-            else y = 도착범위;
+            else y = 이동속도;
         }
         else
         {
