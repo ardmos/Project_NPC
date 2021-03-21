@@ -40,7 +40,7 @@ public class ChoiceBox : MonoBehaviour
         int length = choices.Length;
 
         //기본 너비 세팅 
-        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(300f, 234f);
+        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(330f, 280f);
         if (length<=4)        
             gridLeft.cellSize = new Vector2(280f, 45f);    
         else
