@@ -77,7 +77,7 @@ public class NPC_LayerSetter : MonoBehaviour
 
             for (int i = 0; i < playerSpriteRenderers.Count; i++)
             {
-                Debug.Log(playerSpriteRenderers[i] + "Here!");
+                //Debug.Log(playerSpriteRenderers[i] + "Here!");
                 playerSpriteRenderers[i].sortingLayerName = "NPC";
                 playerSpriteRenderers[i].sortingOrder = thisNPCSpriteRenderer.sortingOrder - (i + 1);
             }

@@ -12098,7 +12098,7 @@ MonoBehaviour:
   desPos: {x: 0, y: 0}
   "\uB3C4\uCC29\uBC94\uC704": 1
   "\uC774\uB3D9\uC18D\uB3C4": 1
-  "\uC774\uC804\uC704\uCE58": {x: 0, y: 0}
+  "\uC774\uBC88\uD504\uB808\uC784\uC774\uB3D9\uB7C9": {x: 0, y: 0}
 --- !u!50 &363945966118263227
 Rigidbody2D:
   serializedVersion: 4
@@ -12569,7 +12569,7 @@ MonoBehaviour:
   desPos: {x: 0, y: 0}
   "\uB3C4\uCC29\uBC94\uC704": 1
   "\uC774\uB3D9\uC18D\uB3C4": 1
-  "\uBA54\uC778\uCE90\uB9AC\uD130\uC758\uC774\uC804\uC704\uCE58": 0
+  "\uCD1D\uC774\uB3D9\uB7C9": {x: 0, y: 0}
   "\uB2E4\uC774\uC5BC\uB85C\uADF8\uD638\uCD9C\uB9C8\uC9C0\uB9C9\uBC29\uD5A5": 0
 --- !u!4 &5205816960225458757
 Transform:
