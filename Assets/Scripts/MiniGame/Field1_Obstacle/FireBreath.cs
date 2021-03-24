@@ -4,21 +4,47 @@ using UnityEngine;
 
 public class FireBreath : MonoBehaviour
 {
-    public float cooldownTime = 3f;
+    public bool startDelay;
+    public float startDelayTime, cooldownTime, tmpCoolDownTime;
     public AudioClip sfxClip;
+
+    private void Start()
+    {
+        tmpCoolDownTime = cooldownTime;
+        cooldownTime += startDelayTime;
+    }
 
     private void Update()
     {
-        if(Mathf.Floor(cooldownTime) <= 0)
+        //딜레이 주고싶은 경우 맨 처음 한 번 만!
+        if (startDelay)
         {
-            //0일때마다 불 발사.
-            FireFireBreath();
-            cooldownTime = 5f;
+            if (Mathf.Floor(cooldownTime) <= 0)
+            {
+                //0일때마다 불 발사.
+                FireFireBreath();
+                cooldownTime = tmpCoolDownTime;
+                startDelay = false;
+            }
+            else
+            {
+                cooldownTime -= Time.deltaTime;
+                //Debug.Log(Mathf.Floor(cooldownTime));
+            }
         }
         else
         {
-            cooldownTime -= Time.deltaTime;
-            //Debug.Log(Mathf.Floor(cooldownTime));
+            if (Mathf.Floor(cooldownTime) <= 0)
+            {
+                //0일때마다 불 발사.
+                FireFireBreath();
+                cooldownTime = tmpCoolDownTime;
+            }
+            else
+            {
+                cooldownTime -= Time.deltaTime;
+                //Debug.Log(Mathf.Floor(cooldownTime));
+            }
         }
     }
 
