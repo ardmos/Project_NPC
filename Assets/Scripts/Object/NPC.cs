@@ -93,15 +93,28 @@ public class NPC : MonoBehaviour
             //사실상 거리 0.5f
             if (Mathf.Abs(총이동량.x) >= 따라가기위치생성거리 || Mathf.Abs(총이동량.y) >= 따라가기위치생성거리)
             {
-                //이동!
-                if (IsItFar((Vector2)desObj.transform.position - 총이동량)) followMode = true;
+                //플레이어가 NPC쪽으로 이동한것인지? 그게 아닌 경우에만 이동 시작!
+                if (IsItFar2(desObj.transform.position))
+                {
+                    Debug.Log(desObj.name + ".pos: " + desObj.transform.position);
+                    //이동!
+                    if (IsItFar((Vector2)desObj.transform.position - 총이동량)) followMode = true;
+                    else
+                    {
+                        //도착!
+                        movement = Vector2.zero;
+
+                        //followMode = false;
+                    }
+                }
                 else
                 {
-                    //도착!
+                    Debug.Log("플레이어가 NPC쪽으로 이동했어요!");
+                    followMode = false;
                     movement = Vector2.zero;
-                    
-                    //followMode = false;
+                    MakeWalkingAnimation();
                 }
+
                 총이동량 = Vector2.zero;
             }
             else
@@ -399,8 +412,28 @@ public class NPC : MonoBehaviour
         xDis = desPos.x - transform.position.x;
         yDis = desPos.y - transform.position.y;
 
-        if (Mathf.Abs(xDis) > 도착범위 || Mathf.Abs(yDis) > 도착범위) return true;
-        else return false;        
+            if (Mathf.Abs(xDis) > 도착범위 || Mathf.Abs(yDis) > 도착범위) return true;           
+            else return false;        
+    }
+
+    //따라갈 캐릭터와 현 엔피씨의 거리 체커 - NPC가 밀치는거 수정하려고. 
+    public bool IsItFar2(Vector2 pos)
+    {
+        desPos = pos;
+        //desPos = desObj.GetComponent<KeyInput_Controller>().이전위치;        
+        xDis = desPos.x - transform.position.x;
+        yDis = desPos.y - transform.position.y;
+
+        //Debug.Log(desPos+", "+transform.position);
+
+        if (Mathf.Abs(xDis) > 1f || Mathf.Abs(yDis) > 1f)
+        {
+            Debug.Log(xDis + ", " + yDis);
+            //Debug.Log("플레이어가 NPC가 아닌 쪽으로 이동했어요! xDis:" + xDis + ", yDis:" + yDis + ", true, desPos:" + pos + ", npcPos:" + transform.position);
+
+            return true;
+        }
+        else return false;
     }
 
     //따라갈 캐릭터와 현 엔피씨의 거리 체커 - 다이얼로그 호출 처리 전용
