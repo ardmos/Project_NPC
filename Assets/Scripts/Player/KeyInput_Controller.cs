@@ -55,6 +55,12 @@ public class KeyInput_Controller : MonoBehaviour
     //public Vector2 이전위치;
     public Vector2 이번프레임이동량;
 
+    //피격여부
+    public bool isGetHit, is3SecPassed;
+    public Vector3 getHitJumpDesPos;
+
+
+
     private void Awake()
     {
         moveSets = new Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet>();
@@ -63,12 +69,13 @@ public class KeyInput_Controller : MonoBehaviour
     public void Start()
     {
         도착범위 = 0.8f;
-        이동속도 = 1f;
+        이동속도 = 1f;       
     }
 
     // Update is called once per frame
     void Update()
     {
+
         //컨트롤체크 안되어있는 뇨속은 컨트롤 불가!
 
         //리모트컨트롤 구현부분
@@ -143,12 +150,13 @@ public class KeyInput_Controller : MonoBehaviour
                 scanObject.GetComponent<Object>().TriggerDialogue();
             }
         }
+    
 
-        //바로 이전 위치를 저장해두고, 따라오는 녀석에게 알려주기
-        //이전 위치
-    }
 
-    private void FixedUpdate()
+
+}
+
+private void FixedUpdate()
     {
         //만약 미로맵일 경우! 
         //쳐다보는쪽으로 랜턴 비추기. 
@@ -177,8 +185,36 @@ public class KeyInput_Controller : MonoBehaviour
 
         //이전위치 = transform.position;
         이번프레임이동량 = movement * movespeed * Time.fixedDeltaTime;
-        //실질적 이동
-        rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
+
+        //가장먼저, 피격당했는지? 
+        if (isGetHit)
+        {
+            transform.position = Vector3.Slerp(transform.position, getHitJumpDesPos, 0.05f);
+
+            print(Mathf.Floor(transform.position.x) + " vs " + Mathf.Floor(getHitJumpDesPos.x));
+            if (Mathf.Floor(transform.position.x) == Mathf.Floor(getHitJumpDesPos.x))
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+                isGetHit = false;
+                isControllable = true;
+                StopCoroutine(ThreeSecChecker());
+                is3SecPassed = false;
+            }
+            //어떠한 예외적인 상황으로 인해, 피격모션에서 못빠져나오고있을경우를 위해서 2초가 지나면 강제로 피격모션 종료시켜주는 부분.
+            else if (is3SecPassed)
+            {
+                print("is3Sec passed");
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+                isGetHit = false;
+                isControllable = true;
+            }
+        }
+        else
+        {
+            //실질적 이동
+            rb.MovePosition(rb.position + movement * movespeed * Time.fixedDeltaTime);
+        }
+
 
 
 
@@ -623,6 +659,25 @@ public class KeyInput_Controller : MonoBehaviour
     #endregion
 
 
+    #region 피격
+    public void GetHit(Vector3 desPos)
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f, 1f);
+        getHitJumpDesPos = desPos;
+        isGetHit = true;
+        isControllable = false;
+
+        //만일을 위해 카운터 따로 동작. 
+        StartCoroutine(ThreeSecChecker());
+    }
+
+    IEnumerator ThreeSecChecker()
+    {
+        is3SecPassed = false;
+        yield return new WaitForSeconds(3f);
+        is3SecPassed = true;
+    }
+    #endregion
 }
 
 

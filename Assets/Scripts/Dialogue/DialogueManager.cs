@@ -80,7 +80,13 @@ public class DialogueManager : DontDestroy<DialogueManager>
     // Start is called before the first frame update
     override protected void OnStart()
     {       
-        dialogueSetsQue = new Queue<Dialogue.DialogueSet>();              
+        dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
+
+        if (SceneManager.GetActiveScene().name == "Field1_Obstacle" || SceneManager.GetActiveScene().name == "Field1_Obstacle2")
+        {
+            Debug.Log("장애물맵에서는 다이얼로그가 필요 없지!");
+            EndDialogue();
+        }
     }
 
     private void OnEnable()
@@ -123,6 +129,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                     //다이얼로그 넘기는 효과음
                     //Debug.Log("newlog: isStartedWatingDelayTime: " + isStartedWatingDelayTime);
                     AudioSystem.Instance.PlayDialogueFlipSFX();
+
                 }
 
                 DisplayNextSentence();
@@ -247,12 +254,15 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             //컨트롤권한도 뺐고
             item.isControllable = false;
+
             //진행중이던 무빙 애니메이션도 끝냄
             item.movement = Vector2.zero;
             item.animator.SetFloat("Horizontal", item.movement.x);
             item.animator.SetFloat("Vertical", item.movement.y);
             item.animator.SetFloat("Speed", item.movement.sqrMagnitude);
         }
+
+        
 
 
         //해당 아이디값 개체 검색       
@@ -912,6 +922,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())
         {
             item.isControllable = true;
+            print("컨트롤 권한 돌려줌!");
         }
 
         //특정 이벤트 연계 위한 부분.

@@ -96,7 +96,7 @@ public class NPC : MonoBehaviour
                 //플레이어가 NPC쪽으로 이동한것인지? 그게 아닌 경우에만 이동 시작!
                 if (IsItFar2(desObj.transform.position))
                 {
-                    Debug.Log(desObj.name + ".pos: " + desObj.transform.position);
+                    //Debug.Log(desObj.name + ".pos: " + desObj.transform.position);
                     //이동!
                     if (IsItFar((Vector2)desObj.transform.position - 총이동량)) followMode = true;
                     else
@@ -109,7 +109,7 @@ public class NPC : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("플레이어가 NPC쪽으로 이동했어요!");
+                    //Debug.Log("플레이어가 NPC쪽으로 이동했어요!");
                     followMode = false;
                     movement = Vector2.zero;
                     MakeWalkingAnimation();
@@ -428,7 +428,7 @@ public class NPC : MonoBehaviour
 
         if (Mathf.Abs(xDis) > 1f || Mathf.Abs(yDis) > 1f)
         {
-            Debug.Log(xDis + ", " + yDis);
+            //Debug.Log(xDis + ", " + yDis);
             //Debug.Log("플레이어가 NPC가 아닌 쪽으로 이동했어요! xDis:" + xDis + ", yDis:" + yDis + ", true, desPos:" + pos + ", npcPos:" + transform.position);
 
             return true;

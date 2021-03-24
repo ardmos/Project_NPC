@@ -38,7 +38,7 @@ public class NPC_LayerSetter : MonoBehaviour
         foreach (var item in playerObj.GetComponentsInChildren<SpriteRenderer>())
         {
             playerSpriteRenderers.Add(item);
-            Debug.Log(item);
+            //Debug.Log(item);
         }
         for (int i = 0; i < playerSpriteRenderers.Count; i++)
         {
