@@ -62,9 +62,6 @@ public class Dialogue
                 [Header("- 우측 초상화")]
                 public bool showRightPortrait;
                 public Portraits rightPortraitNumber;
-                [Header("- 다이얼로그 내부 초상화")]
-                public bool showInSidePortrait;
-                public Portraits inSidePortraitNumber;
             }
             [Header("- 초상화 설정"), Space(5)]
             public PortraitSettings portraitSettings;

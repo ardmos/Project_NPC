@@ -528,48 +528,28 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             dialogPortrait_Left.color = new Color(1, 1, 1, 1);
             dialogPortrait_Left.sprite = portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
+            ShowInsideDialoguePortrait(false, portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]);
         }
         else
+        {
             dialogPortrait_Left.color = new Color(1, 1, 1, 0);
+            HideInsideDialoguePortrait();
+        }            
 
         //초상화(우)
         if (dialogueSet.detail.portraitSettings.showRightPortrait)
         {
             dialogPortrait_Right.color = new Color(1, 1, 1, 1);
             dialogPortrait_Right.sprite = portraits[(int)dialogueSet.detail.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
+            ShowInsideDialoguePortrait(true, portraits[(int)dialogueSet.detail.portraitSettings.rightPortraitNumber]);
         }
         else
+        {
             dialogPortrait_Right.color = new Color(1, 1, 1, 0);
-
-        //초상화(내부)
-        if (dialogueSet.detail.portraitSettings.showInSidePortrait)
-        {
-            //내부 초상화 표현시.  텍스트 위치들도 이동. 
-            dialogPortrait_InDialogue.color = new Color(1, 1, 1, 1);
-            dialogPortrait_InDialogue.sprite = portraits[(int)dialogueSet.detail.portraitSettings.inSidePortraitNumber]; //초상화(내부) 표정
-
-            RectTransform rectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
-            //내부초상화 존재시 Sentence 위치정보
-            //Left
-            rectTransform.offsetMin = new Vector2(210f, rectTransform.offsetMin.y);
-            //Right
-            rectTransform.offsetMax = new Vector2(30f, rectTransform.offsetMax.y);
-            //PosY
-            rectTransform.localPosition = new Vector2(rectTransform.localPosition.x, 25f);
-            //Height
-            rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, 110f);
-
-            //내부초상화 존재시 Name 위치정보
-
-        }
-        else
-        {
-            //내부 초상화 미표현시.  텍스트 위치들도 이동.
-            dialogPortrait_InDialogue.color = new Color(1, 1, 1, 0);
-
-
+            HideInsideDialoguePortrait();
         }
             
+                    
 
 
         //선택팝업
@@ -771,6 +751,57 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 return;
         }
         dialog_animator.SetBool("isOpen", true);
+    }
+
+    //다이얼로그 내부 초상화
+    private void ShowInsideDialoguePortrait(bool dirIsRight, Sprite portraitSprite)
+    {        
+            //내부 초상화 표현시.
+            dialogPortrait_InDialogue.color = new Color(1, 1, 1, 1);
+            dialogPortrait_InDialogue.sprite = portraitSprite; //초상화(내부) 스프라이트
+
+            //내부초상화 존재시 Sentence 위치정보
+            RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
+            //Left
+            sentenceRectTransform.offsetMin = new Vector2(210f, sentenceRectTransform.offsetMin.y);
+            //내부초상화 존재시 Name 위치정보
+            RectTransform nameRectTransform = dialogObjName.gameObject.GetComponent<RectTransform>();
+            //PosX, PosY
+            nameRectTransform.localPosition = new Vector2(200f, -25f);
+
+            //초상화 좌우변경
+            Quaternion quaternion = dialogPortrait_InDialogue.gameObject.GetComponent<RectTransform>().localRotation;
+
+            //dog2_5, dog5 초상화는 기본 이미지 방향이 다른애들과는 반대이기 때문에, 구분하여 처리해주어야함
+            if (portraitSprite.name.Contains("dog"))
+            {
+                if (dirIsRight)
+                    quaternion = Quaternion.Euler(quaternion.x, 180f, quaternion.z);
+                else
+                    quaternion = Quaternion.Euler(quaternion.x, 0f, quaternion.z);
+            }
+            else
+            {
+                if (dirIsRight)
+                    quaternion = Quaternion.Euler(quaternion.x, 0f, quaternion.z);
+                else
+                    quaternion = Quaternion.Euler(quaternion.x, 180f, quaternion.z);
+            }
+
+    }
+    private void HideInsideDialoguePortrait()
+    {
+        //내부 초상화 미표현시.  
+        dialogPortrait_InDialogue.color = new Color(1, 1, 1, 0);
+
+        //내부초상화 존재시 Sentence 위치정보
+        RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
+        //Left
+        sentenceRectTransform.offsetMin = new Vector2(60f, sentenceRectTransform.offsetMin.y);
+        //내부초상화 존재시 Name 위치정보
+        RectTransform nameRectTransform = dialogObjName.gameObject.GetComponent<RectTransform>();
+        //PosX, PosY
+        nameRectTransform.localPosition = new Vector2(50f, -25f);
     }
 
     //한글자씩 도도도 찍기
