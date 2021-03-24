@@ -9,7 +9,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public Animator dialog_animator;
     public RuntimeAnimatorController stable, slide;
     public Text dialogObjName, dialogSentence;
-    public Image dialogPortrait_Left, dialogPortrait_Right, cutSceneImage;
+    public Image dialogPortrait_Left, dialogPortrait_Right, dialogPortrait_InDialogue, cutSceneImage;
     public ChoiceBox choiceBox;
     public AudioSource audioSource;
     public AudioSystem audioSystem;
@@ -540,6 +540,36 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
         else
             dialogPortrait_Right.color = new Color(1, 1, 1, 0);
+
+        //초상화(내부)
+        if (dialogueSet.detail.portraitSettings.showInSidePortrait)
+        {
+            //내부 초상화 표현시.  텍스트 위치들도 이동. 
+            dialogPortrait_InDialogue.color = new Color(1, 1, 1, 1);
+            dialogPortrait_InDialogue.sprite = portraits[(int)dialogueSet.detail.portraitSettings.inSidePortraitNumber]; //초상화(내부) 표정
+
+            RectTransform rectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
+            //내부초상화 존재시 Sentence 위치정보
+            //Left
+            rectTransform.offsetMin = new Vector2(210f, rectTransform.offsetMin.y);
+            //Right
+            rectTransform.offsetMax = new Vector2(30f, rectTransform.offsetMax.y);
+            //PosY
+            rectTransform.localPosition = new Vector2(rectTransform.localPosition.x, 25f);
+            //Height
+            rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, 110f);
+
+            //내부초상화 존재시 Name 위치정보
+
+        }
+        else
+        {
+            //내부 초상화 미표현시.  텍스트 위치들도 이동.
+            dialogPortrait_InDialogue.color = new Color(1, 1, 1, 0);
+
+
+        }
+            
 
 
         //선택팝업
