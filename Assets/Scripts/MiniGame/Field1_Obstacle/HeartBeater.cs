@@ -37,7 +37,7 @@ public class HeartBeater : MonoBehaviour
         {
             SetPoints(idx, 비트arr);
             gameObject.GetComponent<UILineRenderer>().SetAllDirty();
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.2f);
         }
         print("끝!");
 
