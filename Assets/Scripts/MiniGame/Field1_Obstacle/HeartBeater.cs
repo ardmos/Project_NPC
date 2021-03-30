@@ -68,6 +68,8 @@ public class HeartBeater : MonoBehaviour
                 break;
         }
 
+        //PlayerStat에 현재 비트타입 저장
+        PlayerStat.instance.beatType = beatType;
     }
 
     //실제 Point 배치 처리 부분 

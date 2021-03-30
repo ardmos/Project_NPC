@@ -19552,6 +19552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359159514}
   - component: {fileID: 1359159515}
+  - component: {fileID: 1359159516}
   m_Layer: 0
   m_Name: HP
   m_TagString: Untagged
@@ -19587,6 +19588,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359159513}
   m_CullTransparentMesh: 0
+--- !u!114 &1359159516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359159513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceec741a0d08ba642a310e809bf695db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398583441
 GameObject:
   m_ObjectHideFlags: 0
@@ -36806,6 +36819,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b28246738e0557428d2d89925482caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hP: 0
+  beatType: 0
+  isGotkey: 
 --- !u!4 &363945966118263224
 Transform:
   m_ObjectHideFlags: 0

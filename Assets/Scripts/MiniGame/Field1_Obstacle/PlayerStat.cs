@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PlayerStat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //HP
+    public float hP;
+    //하트비트 타입 BeatType
+    public Dialogue.DialogueSet.Details.BeatBeat.BeatType beatType;
+    //획득 열쇠 
+    public bool[] isGotkey;
+
+
+    public static PlayerStat instance;
+
+    private void Awake()
     {
-        
+        if(instance == null) instance = new PlayerStat();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
