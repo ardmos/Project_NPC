@@ -443,6 +443,19 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 goreturn = true;
             }
 
+            //심장박동이펙트~~~?
+            if (dialogueSet.detail.activeBeat)
+            {
+                if(GameObject.FindObjectOfType<HeartBeater>() != null)
+                {
+                    print("박동박동~!");
+                    FindObjectOfType<HeartBeater>().beatType = dialogueSet.detail.beatType;
+                }
+                else
+                {
+                    print("하트비터가 없습니다~");
+                }            
+            }
 
             if(goreturn)
             {

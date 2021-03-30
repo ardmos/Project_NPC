@@ -15,6 +15,7 @@ public class Dialogue
     [Serializable]
     public class DialogueSet
     {
+        #region Details
         [Serializable]
         public class Details   //스타일, 좌상화, 우상화, 선택팝업, 글자속도 , 애니메이션
         {
@@ -287,7 +288,23 @@ public class Dialogue
             }
             [Header("- 글씨 크기 설정")]
             public FontSizeSettings fontSizeSettings;
+
+            //심박애니메이션 주고싶으신가요~?
+            [Serializable]
+            public enum BeatType
+            {
+                beatType0,
+                beatType1,
+                beatType2,
+                beatType3,
+                beatType4,
+                beatType5
+            }
+            [Header("- 심박 애니메이션을 주고 싶으신가요~?")]
+            public bool activeBeat;
+            public BeatType beatType;
         }
+        #endregion Details
 
         [Header("- ↑ \'대화\'의 제목")]
         public string smallTitle_;

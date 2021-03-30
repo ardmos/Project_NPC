@@ -12,16 +12,7 @@ public class HeartBeater : MonoBehaviour
     List<Vector2> points;
 
     //비트 타입 (외부 설정용)
-    public enum BeatType
-    {
-        beatType0,
-        beatType1,
-        beatType2,
-        beatType3,
-        beatType4,
-        beatType5
-    }
-    public BeatType beatType;
+    public Dialogue.DialogueSet.Details.BeatType beatType;
 
     void Start()
     {
@@ -31,13 +22,6 @@ public class HeartBeater : MonoBehaviour
         MakePointsFlow(beatType1);
     }
 
-
-
-    void Update()
-    {
-        //SetPoints(startIdx, beatType2);
-    }
-    
     //배치 부드럽게 돌리는 부분
     private void MakePointsFlow(float[] 비트arr)
     {
@@ -53,29 +37,29 @@ public class HeartBeater : MonoBehaviour
         {
             SetPoints(idx, 비트arr);
             gameObject.GetComponent<UILineRenderer>().SetAllDirty();
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.4f);
         }
         print("끝!");
 
         //시작하는걸 바꿔줄 수 있는 기회. 여기서 처리 필요
         switch (beatType)
         {
-            case BeatType.beatType0:
+            case Dialogue.DialogueSet.Details.BeatType.beatType0:
                 MakePointsFlow(beatType0);
                 break;
-            case BeatType.beatType1:
+            case Dialogue.DialogueSet.Details.BeatType.beatType1:
                 MakePointsFlow(beatType1);
                 break;
-            case BeatType.beatType2:
+            case Dialogue.DialogueSet.Details.BeatType.beatType2:
                 MakePointsFlow(beatType2);
                 break;
-            case BeatType.beatType3:
+            case Dialogue.DialogueSet.Details.BeatType.beatType3:
                 MakePointsFlow(beatType3);
                 break;
-            case BeatType.beatType4:
+            case Dialogue.DialogueSet.Details.BeatType.beatType4:
                 MakePointsFlow(beatType4);
                 break;
-            case BeatType.beatType5:
+            case Dialogue.DialogueSet.Details.BeatType.beatType5:
                 MakePointsFlow(beatType5);
                 break;
             default:
