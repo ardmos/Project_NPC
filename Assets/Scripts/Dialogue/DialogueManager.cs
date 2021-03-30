@@ -444,12 +444,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
             }
 
             //심장박동이펙트~~~?
-            if (dialogueSet.detail.activeBeat)
+            if (dialogueSet.detail.HeartBeatSettings.activeBeat)
             {
                 if(GameObject.FindObjectOfType<HeartBeater>() != null)
                 {
                     print("박동박동~!");
-                    FindObjectOfType<HeartBeater>().beatType = dialogueSet.detail.beatType;
+                    FindObjectOfType<HeartBeater>().beatType = dialogueSet.detail.HeartBeatSettings.beatType;
                 }
                 else
                 {

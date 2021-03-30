@@ -12,7 +12,7 @@ public class HeartBeater : MonoBehaviour
     List<Vector2> points;
 
     //비트 타입 (외부 설정용)
-    public Dialogue.DialogueSet.Details.BeatType beatType;
+    public Dialogue.DialogueSet.Details.BeatBeat.BeatType beatType;
 
     void Start()
     {
@@ -44,22 +44,22 @@ public class HeartBeater : MonoBehaviour
         //시작하는걸 바꿔줄 수 있는 기회. 여기서 처리 필요
         switch (beatType)
         {
-            case Dialogue.DialogueSet.Details.BeatType.beatType0:
+            case Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType0:
                 MakePointsFlow(beatType0);
                 break;
-            case Dialogue.DialogueSet.Details.BeatType.beatType1:
+            case Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType1:
                 MakePointsFlow(beatType1);
                 break;
-            case Dialogue.DialogueSet.Details.BeatType.beatType2:
+            case Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType2:
                 MakePointsFlow(beatType2);
                 break;
-            case Dialogue.DialogueSet.Details.BeatType.beatType3:
+            case Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType3:
                 MakePointsFlow(beatType3);
                 break;
-            case Dialogue.DialogueSet.Details.BeatType.beatType4:
+            case Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType4:
                 MakePointsFlow(beatType4);
                 break;
-            case Dialogue.DialogueSet.Details.BeatType.beatType5:
+            case Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType5:
                 MakePointsFlow(beatType5);
                 break;
             default:

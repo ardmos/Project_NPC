@@ -291,18 +291,24 @@ public class Dialogue
 
             //심박애니메이션 주고싶으신가요~?
             [Serializable]
-            public enum BeatType
+            public struct BeatBeat
             {
-                beatType0,
-                beatType1,
-                beatType2,
-                beatType3,
-                beatType4,
-                beatType5
+                [Serializable]
+                public enum BeatType
+                {
+                    beatType0,
+                    beatType1,
+                    beatType2,
+                    beatType3,
+                    beatType4,
+                    beatType5
+                }
+                public bool activeBeat;
+                public BeatType beatType;
             }
             [Header("- 심박 애니메이션을 주고 싶으신가요~?")]
-            public bool activeBeat;
-            public BeatType beatType;
+            public BeatBeat HeartBeatSettings;
+
         }
         #endregion Details
 
