@@ -51,7 +51,7 @@ public class FireBreath : MonoBehaviour
     public void FireFireBreath()
     {
         gameObject.GetComponent<AudioSource>().PlayOneShot(sfxClip);
-        gameObject.GetComponent<AudioSource>().volume = 0.5f;
+        gameObject.GetComponent<AudioSource>().volume = 0.2f;
         gameObject.GetComponent<Animator>().SetTrigger("StartFire");
     }
 

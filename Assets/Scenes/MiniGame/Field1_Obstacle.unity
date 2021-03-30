@@ -24384,6 +24384,7 @@ GameObject:
   - component: {fileID: 2011151006}
   - component: {fileID: 2011151008}
   - component: {fileID: 2011151007}
+  - component: {fileID: 2011151009}
   m_Layer: 0
   m_Name: "UI\uB77C\uC778\uB80C\uB354\uB7EC"
   m_TagString: Untagged
@@ -24457,6 +24458,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011151005}
   m_CullTransparentMesh: 0
+--- !u!114 &2011151009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011151005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab7bf6b89295f3418f92e971c794b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatType0:
+  - 0
+  - 10
+  - 0
+  beatType1:
+  - 0
+  - 20
+  - 0
+  - -10
+  - 0
+  beatType2:
+  - 0
+  - 20
+  - 0
+  - -20
+  - 0
+  - 10
+  - 0
+  - -10
+  - 0
+  beatType3:
+  - 0
+  - 40
+  - 0
+  - -30
+  - 0
+  - 20
+  - 0
+  - -20
+  - 10
+  - 0
+  beatType4:
+  - 0
+  - 10
+  - 0
+  - -10
+  - 0
+  - 30
+  - 0
+  - -30
+  - 10
+  - -10
+  - 0
+  beatType5:
+  - 0
+  - 10
+  - 0
+  - -10
+  - 0
+  - 40
+  - 0
+  - -40
+  - 0
+  - 10
+  - 0
+  - -10
+  - 0
+  points: []
+  beatType: 0
 --- !u!1 &2013359040
 GameObject:
   m_ObjectHideFlags: 0
