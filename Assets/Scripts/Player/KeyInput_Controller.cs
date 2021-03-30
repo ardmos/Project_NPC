@@ -58,7 +58,8 @@ public class KeyInput_Controller : MonoBehaviour
     //피격여부
     public bool isGetHit, is3SecPassed;
     public Vector3 getHitJumpDesPos;
-
+    //피격효과음
+    public AudioClip sfxClip;
 
 
     private void Awake()
@@ -150,10 +151,6 @@ public class KeyInput_Controller : MonoBehaviour
                 scanObject.GetComponent<Object>().TriggerDialogue();
             }
         }
-    
-
-
-
 }
 
 private void FixedUpdate()
@@ -666,6 +663,9 @@ private void FixedUpdate()
         getHitJumpDesPos = desPos;
         isGetHit = true;
         isControllable = false;
+        //효과음
+        gameObject.GetComponent<AudioSource>().volume = 0.4f;
+        gameObject.GetComponent<AudioSource>().PlayOneShot(sfxClip);
 
         //만일을 위해 카운터 따로 동작. 
         StartCoroutine(ThreeSecChecker());
@@ -674,7 +674,8 @@ private void FixedUpdate()
     IEnumerator ThreeSecChecker()
     {
         is3SecPassed = false;
-        yield return new WaitForSeconds(3f);
+        //2초로 변경
+        yield return new WaitForSeconds(2f);
         is3SecPassed = true;
     }
     #endregion
