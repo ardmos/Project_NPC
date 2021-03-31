@@ -664,7 +664,7 @@ private void FixedUpdate()
         isGetHit = true;
         isControllable = false;
         //효과음
-        gameObject.GetComponent<AudioSource>().volume = 0.4f;
+        gameObject.GetComponent<AudioSource>().volume = 0.2f;
         gameObject.GetComponent<AudioSource>().PlayOneShot(sfxClip);
         //HP 변동
         PlayerStat.instance.hP -= 0.2f;
