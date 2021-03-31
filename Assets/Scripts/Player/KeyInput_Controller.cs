@@ -188,7 +188,7 @@ private void FixedUpdate()
         {
             transform.position = Vector3.Slerp(transform.position, getHitJumpDesPos, 0.05f);
 
-            print(Mathf.Floor(transform.position.x) + " vs " + Mathf.Floor(getHitJumpDesPos.x));
+            //print(Mathf.Floor(transform.position.x) + " vs " + Mathf.Floor(getHitJumpDesPos.x));
             if (Mathf.Floor(transform.position.x) == Mathf.Floor(getHitJumpDesPos.x))
             {
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
@@ -666,6 +666,8 @@ private void FixedUpdate()
         //효과음
         gameObject.GetComponent<AudioSource>().volume = 0.4f;
         gameObject.GetComponent<AudioSource>().PlayOneShot(sfxClip);
+        //HP 변동
+        PlayerStat.instance.hP -= 0.2f;
 
         //만일을 위해 카운터 따로 동작. 
         StartCoroutine(ThreeSecChecker());

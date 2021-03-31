@@ -36819,7 +36819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b28246738e0557428d2d89925482caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hP: 0
+  hP: 1
   beatType: 0
   isGotkey: 
 --- !u!4 &363945966118263224

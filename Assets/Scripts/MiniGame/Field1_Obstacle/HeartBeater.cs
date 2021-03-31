@@ -32,14 +32,14 @@ public class HeartBeater : MonoBehaviour
     IEnumerator Flow(float[] 비트arr)
     {
         //21(끝)부터 ~ 0-비트arr.Length  까지. 
-        print("시작!");
+        //print("시작!");
         for (int idx = 21; idx >= -비트arr.Length; idx--)
         {
             SetPoints(idx, 비트arr);
             gameObject.GetComponent<UILineRenderer>().SetAllDirty();
             yield return new WaitForSeconds(0.2f);
         }
-        print("끝!");
+        //print("끝!");
 
         //시작하는걸 바꿔줄 수 있는 기회. 여기서 처리 필요
         switch (beatType)

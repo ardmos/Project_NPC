@@ -15,7 +15,11 @@ public class Slider_ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (slider.value <= 0) gameObject.transform.Find("Fill Area").gameObject.SetActive(false);
+        if (slider.value <= 0f)
+        {
+            slider.value = 0f;
+            gameObject.transform.Find("Fill Area").gameObject.SetActive(false);
+        }
         else gameObject.transform.Find("Fill Area").gameObject.SetActive(true);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStat : MonoBehaviour
 {
     //HP
-    public float hP;
+    public float hP = 1f;
     //하트비트 타입 BeatType
     public Dialogue.DialogueSet.Details.BeatBeat.BeatType beatType;
     //획득 열쇠 
