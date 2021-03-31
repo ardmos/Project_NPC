@@ -56,7 +56,7 @@ public class KeyInput_Controller : MonoBehaviour
     public Vector2 이번프레임이동량;
 
     //피격여부
-    public bool isGetHit, is3SecPassed;
+    public bool isGetHit, is3SecPassed, isDied;
     public Vector3 getHitJumpDesPos;
     //피격효과음
     public AudioClip sfxClip;
@@ -183,13 +183,27 @@ private void FixedUpdate()
         //이전위치 = transform.position;
         이번프레임이동량 = movement * movespeed * Time.fixedDeltaTime;
 
+        /*
+        //죽었는가 ㅠ 
+        if (PlayerStat.instance.hP <= 0&& !isDied)
+        {
+            PlayerStat.instance.hP = 0f;
+            //쭈금!!!
+            print("쭈금");
+            //눕기!
+            //gameObject.transform.rotation = new Quaternion(0f, 0f, 90f);
+            gameObject.transform.Rotate(0f, 0f, 90f);
+            isDied = true;
+        }
+        */
+
         //가장먼저, 피격당했는지? 
         if (isGetHit)
         {
             transform.position = Vector3.Slerp(transform.position, getHitJumpDesPos, 0.05f);
 
             //print(Mathf.Floor(transform.position.x) + " vs " + Mathf.Floor(getHitJumpDesPos.x));
-            if (Mathf.Floor(transform.position.x) == Mathf.Floor(getHitJumpDesPos.x))
+            if (Mathf.Floor(transform.position.x) == Mathf.Floor(getHitJumpDesPos.x) && !isDied)
             {
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
                 isGetHit = false;
@@ -198,7 +212,7 @@ private void FixedUpdate()
                 is3SecPassed = false;
             }
             //어떠한 예외적인 상황으로 인해, 피격모션에서 못빠져나오고있을경우를 위해서 2초가 지나면 강제로 피격모션 종료시켜주는 부분.
-            else if (is3SecPassed)
+            else if (is3SecPassed && !isDied)
             {
                 print("is3Sec passed");
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
@@ -657,18 +671,38 @@ private void FixedUpdate()
 
 
     #region 피격
-    public void GetHit(Vector3 desPos)
+    public void GetHit(Vector3 desPos, string where)
     {
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f, 1f);
         getHitJumpDesPos = desPos;
         isGetHit = true;
-        isControllable = false;
+        isControllable = false;        
         //효과음
         gameObject.GetComponent<AudioSource>().volume = 0.2f;
         gameObject.GetComponent<AudioSource>().PlayOneShot(sfxClip);
-        //HP 변동
-        PlayerStat.instance.hP -= 0.2f;
 
+        //HP 변동
+        //죽었는가 ㅠ 
+        if ((PlayerStat.instance.hP -= 0.2f) <= 0 && !isDied)
+        {
+            PlayerStat.instance.hP = 0f;
+            //쭈금!!!
+            print("쭈금");
+            //눕기!
+            if (where == "Left")
+                gameObject.transform.Rotate(0f, 0f, 90f);
+            else if (where == "Right")
+                gameObject.transform.Rotate(0f, 0f, -90f);
+            else
+                Debug.Log("방향설정 다시 해주세요");
+            gameObject.GetComponent<KeyInput_Controller>().isDied = true;            
+            gameObject.GetComponent<KeyInput_Controller>().animator.SetFloat("Speed", 0f);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        }
+        
+        print(PlayerStat.instance.hP);
+
+        //PlayerStat.instance.hP -= 0.2f;
         //만일을 위해 카운터 따로 동작. 
         StartCoroutine(ThreeSecChecker());
     }

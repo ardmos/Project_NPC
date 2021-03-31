@@ -19,4 +19,6 @@ public class PlayerStat : MonoBehaviour
         if(instance == null) instance = new PlayerStat();
     }
 
+
+
 }
