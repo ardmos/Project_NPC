@@ -61,6 +61,9 @@ public class KeyInput_Controller : MonoBehaviour
     //피격효과음
     public AudioClip sfxClip;
 
+    //플레이어 캐릭터 정보
+    public PlayerStat playerStat;
+
 
     private void Awake()
     {
@@ -683,9 +686,9 @@ private void FixedUpdate()
 
         //HP 변동
         //죽었는가 ㅠ 
-        if ((PlayerStat.instance.hP -= 0.2f) <= 0 && !isDied)
+        if ((playerStat.hP*0.1f) <= 0.2f && !isDied)
         {
-            PlayerStat.instance.hP = 0f;
+            playerStat.hP = 0f;
             //쭈금!!!
             print("쭈금");
             //눕기!
@@ -699,8 +702,12 @@ private void FixedUpdate()
             gameObject.GetComponent<KeyInput_Controller>().animator.SetFloat("Speed", 0f);
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
         }
+        else
+        {
+            playerStat.hP -= 2;
+        }
         
-        print(PlayerStat.instance.hP);
+        print(playerStat.hP);
 
         //PlayerStat.instance.hP -= 0.2f;
         //만일을 위해 카운터 따로 동작. 
