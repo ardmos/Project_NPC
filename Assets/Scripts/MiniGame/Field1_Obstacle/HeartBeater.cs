@@ -11,6 +11,8 @@ public class HeartBeater : MonoBehaviour
     [SerializeField]
     List<Vector2> points;
 
+    public PlayerStat playerStat;
+
     //비트 타입 (외부 설정용)
     public Dialogue.DialogueSet.Details.BeatBeat.BeatType beatType;
 
@@ -69,7 +71,7 @@ public class HeartBeater : MonoBehaviour
         }
 
         //PlayerStat에 현재 비트타입 저장
-        PlayerStat.instance.beatType = beatType;
+        playerStat.beatType = beatType;
     }
 
     //실제 Point 배치 처리 부분 
