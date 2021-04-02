@@ -691,6 +691,8 @@ private void FixedUpdate()
             playerStat.hP = 0f;
             //쭈금!!!
             print("쭈금");
+            //심박 삐이이
+            FindObjectOfType<HeartBeater>().beatType = Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType0;
             //눕기!
             if (where == "Left")
                 gameObject.transform.Rotate(0f, 0f, 90f);
