@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyInput_Controller : MonoBehaviour
 {
@@ -65,6 +66,7 @@ public class KeyInput_Controller : MonoBehaviour
     public PlayerStat playerStat;
 
 
+
     private void Awake()
     {
         moveSets = new Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet>();
@@ -73,7 +75,8 @@ public class KeyInput_Controller : MonoBehaviour
     public void Start()
     {
         도착범위 = 0.8f;
-        이동속도 = 1f;       
+        이동속도 = 1f;
+
     }
 
     // Update is called once per frame
@@ -700,9 +703,17 @@ private void FixedUpdate()
                 gameObject.transform.Rotate(0f, 0f, -90f);
             else
                 Debug.Log("방향설정 다시 해주세요");
+            //잠시 콜라이더 없애고
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            Debug.Log(gameObject.GetComponent<CircleCollider2D>().enabled);
             gameObject.GetComponent<KeyInput_Controller>().isDied = true;            
             gameObject.GetComponent<KeyInput_Controller>().animator.SetFloat("Speed", 0f);
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+
+
+            //사망시 팝업효과 실행
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Field1_Obstacle")
+                FindObjectOfType<MiniGameManager>().StartGameOverPopup();
         }
         else
         {
