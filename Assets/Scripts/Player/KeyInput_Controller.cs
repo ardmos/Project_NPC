@@ -677,7 +677,7 @@ private void FixedUpdate()
 
 
     #region 피격
-    public void GetHit(Vector3 desPos, string where)
+    public void GetHit(Vector3 desPos, string where, string from)
     {
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f, 1f);
         getHitJumpDesPos = desPos;
@@ -686,6 +686,14 @@ private void FixedUpdate()
         //효과음
         gameObject.GetComponent<AudioSource>().volume = 0.2f;
         gameObject.GetComponent<AudioSource>().PlayOneShot(sfxClip);
+        //피격이펙트 파이어브레스에 맞았는지, 가시에 찔렸는지. 
+        if(from == "FireBreath")
+        {
+            gameObject.GetComponentsInChildren<ParticleSystem>()[0].Play(); //불타는 효과
+        }else if(from == "Thorn")
+        {
+            gameObject.GetComponentsInChildren<ParticleSystem>()[1].Play(); //피나는 효과
+        }
 
         //HP 변동
         //죽었는가 ㅠ 
