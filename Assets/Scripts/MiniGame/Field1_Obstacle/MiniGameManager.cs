@@ -68,19 +68,19 @@ public class MiniGameManager : MonoBehaviour
 
     //게임재도전
     public void RestartGame()
-    {
-        Debug.Log(player.transform.position);
+    {        
         //플레이어 위치 초기화
-        player.transform.position = new Vector2(-15f, -1.5f);
-        Debug.Log(player.transform.position);
+        player.transform.position = new Vector2(-15f, -1.5f);        
         //플레이어 일어남.  어느쪽으로 누워있는지 확인 후 일으키기
         if (player.transform.rotation.z <= 0) player.transform.Rotate(0f, 0f, 90f);
         else player.transform.Rotate(0f, 0f, -90f);
         //플레이어 컨트롤권한 부여
         player.GetComponent<KeyInput_Controller>().isControllable = true;
         player.GetComponent<KeyInput_Controller>().isDied = false;
+        player.GetComponent<KeyInput_Controller>().is3SecPassed = false;
+        player.GetComponent<KeyInput_Controller>().isGetHit = false;   //얘 안해줘서 재도전시 리스폰 위치 버그가 있었다!!
         //플레이어 콜라이더 부활
-        //player.GetComponent<CircleCollider2D>().enabled = true;
+        player.GetComponent<CircleCollider2D>().enabled = true;
         //플레이어 HP 초기화
         playerStat.hP = 10;
         //심박 부활
@@ -89,8 +89,7 @@ public class MiniGameManager : MonoBehaviour
         //동료 위치 초기화 (플레이어 위치 x좌표 -1.)
         Vector2 vector = new Vector2(-16.5f, -1.5f);
         fellower.transform.position = vector;
-
-
+        
 
         //하트비팅 애니메이션 초기화
         heartBeatAnimator.enabled = true;

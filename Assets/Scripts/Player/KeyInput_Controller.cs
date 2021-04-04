@@ -691,6 +691,8 @@ private void FixedUpdate()
         //죽었는가 ㅠ 
         if ((playerStat.hP*0.1f) <= 0.2f && !isDied)
         {
+            //맞아서 날아가고있던거 정지
+            getHitJumpDesPos = transform.position;            
             playerStat.hP = 0f;
             //쭈금!!!
             print("쭈금");
