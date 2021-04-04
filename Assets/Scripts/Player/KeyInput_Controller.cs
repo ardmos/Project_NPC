@@ -719,8 +719,8 @@ private void FixedUpdate()
     IEnumerator ThreeSecChecker()
     {
         is3SecPassed = false;
-        //2초로 변경
-        yield return new WaitForSeconds(2f);
+        //1초로 변경
+        yield return new WaitForSeconds(1f);
         is3SecPassed = true;
     }
     #endregion
