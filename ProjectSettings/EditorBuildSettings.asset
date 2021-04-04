@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MiniGame/Field1_Obstacle.unity
+    guid: 6292e14aafdbcf949b730475ddbfb463
+  - enabled: 1
     path: Assets/Scenes/SampleTitle.unity
     guid: 482ea775fc027e849ab93eed04b2319f
   - enabled: 1
