@@ -36,7 +36,7 @@ public class GGaShi : MonoBehaviour
                         //collision.gameObject.GetComponent<Rigidbody2D>().MovePosition(Vector2.left*10f);
                         //print(gameObject.transform.position);
                         Vector3 desPos = new Vector3(collision.gameObject.transform.position.x - 2f, collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
-                        collision.gameObject.GetComponent<KeyInput_Controller>().GetHit(desPos, "Left");                        
+                        collision.gameObject.GetComponent<KeyInput_Controller>().GetHit(desPos, "Left", "Thorn");                        
                     }
                     else
                     {
@@ -44,7 +44,7 @@ public class GGaShi : MonoBehaviour
                         //collision.gameObject.GetComponent<Rigidbody2D>().MovePosition(Vector2.right*10f);
                         //print(gameObject.transform.position + ".!");
                         Vector3 desPos = new Vector3(collision.gameObject.transform.position.x + 2f, collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
-                        collision.gameObject.GetComponent<KeyInput_Controller>().GetHit(desPos, "Right");                        
+                        collision.gameObject.GetComponent<KeyInput_Controller>().GetHit(desPos, "Right", "Thorn");                        
                     }
                 }
             }

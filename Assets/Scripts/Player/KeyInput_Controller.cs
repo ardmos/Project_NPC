@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyInput_Controller : MonoBehaviour
 {
@@ -65,6 +66,7 @@ public class KeyInput_Controller : MonoBehaviour
     public PlayerStat playerStat;
 
 
+
     private void Awake()
     {
         moveSets = new Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet>();
@@ -73,7 +75,8 @@ public class KeyInput_Controller : MonoBehaviour
     public void Start()
     {
         도착범위 = 0.8f;
-        이동속도 = 1f;       
+        이동속도 = 1f;
+
     }
 
     // Update is called once per frame
@@ -674,7 +677,7 @@ private void FixedUpdate()
 
 
     #region 피격
-    public void GetHit(Vector3 desPos, string where)
+    public void GetHit(Vector3 desPos, string where, string from)
     {
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f, 1f);
         getHitJumpDesPos = desPos;
@@ -683,11 +686,21 @@ private void FixedUpdate()
         //효과음
         gameObject.GetComponent<AudioSource>().volume = 0.2f;
         gameObject.GetComponent<AudioSource>().PlayOneShot(sfxClip);
+        //피격이펙트 파이어브레스에 맞았는지, 가시에 찔렸는지. 
+        if(from == "FireBreath")
+        {
+            gameObject.GetComponentsInChildren<ParticleSystem>()[0].Play(); //불타는 효과
+        }else if(from == "Thorn")
+        {
+            gameObject.GetComponentsInChildren<ParticleSystem>()[1].Play(); //피나는 효과
+        }
 
         //HP 변동
         //죽었는가 ㅠ 
         if ((playerStat.hP*0.1f) <= 0.2f && !isDied)
         {
+            //맞아서 날아가고있던거 정지
+            getHitJumpDesPos = transform.position;            
             playerStat.hP = 0f;
             //쭈금!!!
             print("쭈금");
@@ -700,9 +713,17 @@ private void FixedUpdate()
                 gameObject.transform.Rotate(0f, 0f, -90f);
             else
                 Debug.Log("방향설정 다시 해주세요");
+            //잠시 콜라이더 없애고
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            Debug.Log(gameObject.GetComponent<CircleCollider2D>().enabled);
             gameObject.GetComponent<KeyInput_Controller>().isDied = true;            
             gameObject.GetComponent<KeyInput_Controller>().animator.SetFloat("Speed", 0f);
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+
+
+            //사망시 팝업효과 실행
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Field1_Obstacle")
+                FindObjectOfType<MiniGameManager>().StartGameOverPopup();
         }
         else
         {
