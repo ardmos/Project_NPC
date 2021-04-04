@@ -30,4 +30,9 @@ public class FireBall : MonoBehaviour
             }
         }
     }
+
+    public void SelfDestroy()
+    {
+        Destroy(gameObject);
+    }
 }
