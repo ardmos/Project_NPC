@@ -123,7 +123,10 @@ public class MiniGameManager : MonoBehaviour
         //동료 위치 초기화 (플레이어 위치 x좌표 -1.)
         Vector2 vector = new Vector2(-16.5f, -1.5f);
         fellower.transform.position = vector;
-        
+        //동료 desPos 갱신 (동료 부활하는 위치로)
+        fellower.GetComponent<NPC>().desPos = new Vector2(-16.5f, -1.5f);
+
+
 
         //하트비팅 애니메이션 초기화
         heartBeatAnimator.enabled = true;
