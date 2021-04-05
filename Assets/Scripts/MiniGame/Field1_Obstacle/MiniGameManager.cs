@@ -15,6 +15,11 @@ public class MiniGameManager : MonoBehaviour
     //동료 오브젝트
     public GameObject fellower;
 
+    //방해물---
+    //싱크홀
+    [SerializeField]
+    SinkHole sinkhole;
+
 
     //플레이어 죽음시 심장박동 애니메이션 정지를 위한.
     public Animator heartBeatAnimator;
@@ -23,11 +28,13 @@ public class MiniGameManager : MonoBehaviour
     //게임오버팝업
     public GameObject gameOverPopup;
 
+
+    #region 열쇠처리부분
     public void IGotKey1()
     {
         playerStat.isGotkey1 = true;
         key1.sprite = key;
-        foreach(ParticleSystem ps in key1.gameObject.GetComponentsInChildren<ParticleSystem>())
+        foreach (ParticleSystem ps in key1.gameObject.GetComponentsInChildren<ParticleSystem>())
         {
             ps.Play();
         }
@@ -41,6 +48,16 @@ public class MiniGameManager : MonoBehaviour
             ps.Play();
         }
     }
+
+    public void ResetKeyStat()
+    {
+        playerStat.isGotkey1 = false;
+        playerStat.isGotkey2 = false;
+        key1.sprite = key_hole;
+        key2.sprite = key_hole;
+    }
+    #endregion
+
 
     public void Start()
     {
@@ -70,10 +87,23 @@ public class MiniGameManager : MonoBehaviour
     public void RestartGame()
     {        
         //플레이어 위치 초기화
-        player.transform.position = new Vector2(-15f, -1.5f);        
+        player.transform.position = new Vector2(-15f, -1.5f);
         //플레이어 일어남.  어느쪽으로 누워있는지 확인 후 일으키기
-        if (player.transform.rotation.z <= 0) player.transform.Rotate(0f, 0f, 90f);
-        else player.transform.Rotate(0f, 0f, -90f);
+        //일어날 때 그림자도 원복시키기
+        Transform playerShadowTransform = GameObject.FindWithTag("PlayerShadow").transform;
+        playerShadowTransform.localPosition = new Vector3(0f, 0f, 0f);
+        playerShadowTransform.localScale = new Vector3(1f, 1f, 1f);
+        if (player.transform.rotation.z <= 0)
+        {
+            player.transform.Rotate(0f, 0f, 90f);
+            playerShadowTransform.Rotate(0f, 0f, -90f);
+        }
+        else
+        {
+            player.transform.Rotate(0f, 0f, -90f);
+            playerShadowTransform.Rotate(0f, 0f, 90f);
+        }
+
         //플레이어 컨트롤권한 부여
         player.GetComponent<KeyInput_Controller>().isControllable = true;
         player.GetComponent<KeyInput_Controller>().isDied = false;
@@ -85,6 +115,10 @@ public class MiniGameManager : MonoBehaviour
         playerStat.hP = 10;
         //심박 부활
         FindObjectOfType<HeartBeater>().beatType = Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType2;
+        //열쇠 초기화
+        ResetKeyStat();
+        //싱크홀 초기화
+        sinkhole.GetComponent<Animator>().SetBool("sinkHoleOn", false);
 
         //동료 위치 초기화 (플레이어 위치 x좌표 -1.)
         Vector2 vector = new Vector2(-16.5f, -1.5f);
