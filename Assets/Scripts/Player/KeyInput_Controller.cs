@@ -706,11 +706,25 @@ private void FixedUpdate()
             print("쭈금");
             //심박 삐이이
             FindObjectOfType<HeartBeater>().beatType = Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType0;
-            //눕기!
+            //눕기! 눕힐 때 그림자도 알맞게 세팅
             if (where == "Left")
+            {
                 gameObject.transform.Rotate(0f, 0f, 90f);
+                Transform playerShadowTransform = GameObject.FindWithTag("PlayerShadow").transform;
+                Debug.Log(playerShadowTransform);
+                playerShadowTransform.localPosition = new Vector3(-0.3f, 0.96f, 0f);
+                playerShadowTransform.Rotate(0f, 0f, -90f);
+                playerShadowTransform.localScale = new Vector3(3.17f, 1f, 1f);
+            }
             else if (where == "Right")
+            {
                 gameObject.transform.Rotate(0f, 0f, -90f);
+                Transform playerShadowTransform = GameObject.FindWithTag("PlayerShadow").transform;
+                Debug.Log(playerShadowTransform);
+                playerShadowTransform.localPosition = new Vector3(0.3f, 0.96f, 0f);
+                playerShadowTransform.Rotate(0f, 0f, 90f);
+                playerShadowTransform.localScale = new Vector3(3.17f, 1f, 1f);
+            }
             else
                 Debug.Log("방향설정 다시 해주세요");
             //잠시 콜라이더 없애고
