@@ -34,6 +34,10 @@ public class GameManager : DontDestroy<GameManager>
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
+    //ESC메뉴팝업 오브젝트
+    public GameObject escPopupObj;
+    public bool isEscOpen;
+
     protected override void OnAwake()
     {
         base.OnAwake();
@@ -58,16 +62,6 @@ public class GameManager : DontDestroy<GameManager>
         //씬 1인지 씬을 확인하고,  
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
-            //그림자까지 클로킹하기위해
-            //foreach (SpriteRenderer spriteRenderer in 천형사.GetComponentsInChildren<SpriteRenderer>())
-            //{
-            //    spriteRenderer.color = new Color(1, 1, 1, 0);
-            //}
-            //foreach (SpriteRenderer spriteRenderer in 경찰2.GetComponentsInChildren<SpriteRenderer>())
-            //{
-            //    spriteRenderer.color = new Color(1, 1, 1, 0);
-            //}
-
             천형사.SetActive(false);
             경찰2.SetActive(false);
         }
@@ -80,14 +74,22 @@ public class GameManager : DontDestroy<GameManager>
 
     private void Update()
     {
-        //딕셔너리에 선택상자 선택 결과물이 잘 들어왔는지 확인을 위한 프린트.
-        //if (choiceResults.Count > 0)
-        //{
-        //    foreach (KeyValuePair<string, int> item in choiceResults)
-        //    {
-                //print("선택지 " + item.Key + ", 에서의 선택은 " + item.Value + " 입니다.");
-        //    }
-        //}        
+        //ESC 눌렸을 시.  메뉴 팝업 띄우기
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isEscOpen == false)
+            {
+                Debug.Log("ESC");
+                escPopupObj.SetActive(true);
+                isEscOpen = true;
+            }
+            else
+            {
+                escPopupObj.SetActive(false);
+                isEscOpen = false;
+            }
+           
+        }
     }
 
     #region 메인 스토리 흐름 제어
