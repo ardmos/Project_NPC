@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 9c176ab9bd75b47eab36c9d9302a2849
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6639858632740700959
+    second: miro_jangae 1_0
+  - first:
+      213: -1961841563317835796
+    second: miro_jangae 1_1
+  - first:
+      213: -8952659191480797131
+    second: miro_jangae 1_2
+  - first:
+      213: -349752787299282849
+    second: miro_jangae 1_3
+  - first:
+      213: -6317861900422595119
+    second: miro_jangae 1_4
+  - first:
+      213: -6410402167650590347
+    second: miro_jangae 1_5
+  - first:
+      213: -1162264223158175251
+    second: miro_jangae 1_6
+  - first:
+      213: -1735500474501862839
+    second: miro_jangae 1_7
+  - first:
+      213: 2346242211616249695
+    second: miro_jangae 1_8
+  - first:
+      213: -6189915773275456821
+    second: miro_jangae 1_9
+  - first:
+      213: 7541704829102634165
+    second: miro_jangae 1_10
+  - first:
+      213: -5550173833641675570
+    second: miro_jangae 1_11
+  - first:
+      213: -8320318816186478123
+    second: miro_jangae 1_12
+  - first:
+      213: -5954974955817724433
+    second: miro_jangae 1_13
+  - first:
+      213: -17042711882844170
+    second: miro_jangae 1_14
+  - first:
+      213: 8709537752348565423
+    second: miro_jangae 1_15
+  - first:
+      213: 7220882179280323984
+    second: miro_jangae 1_16
+  - first:
+      213: 4966944306590112047
+    second: miro_jangae 1_17
+  - first:
+      213: 6562472592393616812
+    second: miro_jangae 1_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: miro_jangae 1_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 646
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecfda4c0cb7ad3a0800000000000000
+      internalID: -6639858632740700959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_1
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 675
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7e7d01e7326c4e0800000000000000
+      internalID: -1961841563317835796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_2
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 677
+        width: 104
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538b6a806e3c1c380800000000000000
+      internalID: -8952659191480797131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_3
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 506
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50d2d961bd652bf0800000000000000
+      internalID: -349752787299282849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_4
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 563
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd365533127258a0800000000000000
+      internalID: -6317861900422595119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_5
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 509
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571eac9313da907a0800000000000000
+      internalID: -6410402167650590347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 397
+        width: 83
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9f283d8decedfe0800000000000000
+      internalID: -1162264223158175251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_7
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 409
+        width: 20
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a6bc573834ae7e0800000000000000
+      internalID: -1735500474501862839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_8
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 451
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57d96c4cd68f8020800000000000000
+      internalID: 2346242211616249695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 383
+        width: 124
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca34585660091aa0800000000000000
+      internalID: -6189915773275456821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_10
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 304
+        width: 52
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4b28b959489a860800000000000000
+      internalID: 7541704829102634165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_11
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 357
+        width: 122
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4be1ced42d9f2b0800000000000000
+      internalID: -5550173833641675570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_12
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 343
+        width: 124
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1d43f9e1a488c80800000000000000
+      internalID: -8320318816186478123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_13
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 260
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5132814ddab5da0800000000000000
+      internalID: -5954974955817724433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_14
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 161
+        width: 20
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7b63c6eb373cff0800000000000000
+      internalID: -17042711882844170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_15
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 217
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf179ec07e7ed870800000000000000
+      internalID: 8709537752348565423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_16
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 160
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095c3fc851ab53460800000000000000
+      internalID: 7220882179280323984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_17
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 103
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29d375e7812ee440800000000000000
+      internalID: 4966944306590112047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miro_jangae 1_18
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 66
+        width: 54
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadbbd5ad06921b50800000000000000
+      internalID: 6562472592393616812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e9927b027f7404869a33f82d154c166f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
