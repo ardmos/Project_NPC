@@ -13,6 +13,8 @@ public class HeartBeater : MonoBehaviour
 
     public PlayerStat playerStat;
 
+    public float beatSpeed;
+
     //비트 타입 (외부 설정용)
     public Dialogue.DialogueSet.Details.BeatBeat.BeatType beatType;
 
@@ -39,7 +41,7 @@ public class HeartBeater : MonoBehaviour
         {
             SetPoints(idx, 비트arr);
             gameObject.GetComponent<UILineRenderer>().SetAllDirty();
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(beatSpeed);
         }
         //print("끝!");
 

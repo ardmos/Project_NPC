@@ -134,4 +134,6 @@ public class MiniGameManager : MonoBehaviour
         //게임오버팝업 닫기
         EndGameoverPopup();
     }
+
+
 }
