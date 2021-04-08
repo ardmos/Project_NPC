@@ -22217,7 +22217,7 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 0
+          leftPortraitNumber: 11
           smallPortraitL: 1
           showRightPortrait: 1
           rightPortraitNumber: 11
