@@ -32,7 +32,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     [Header("- 타이핑 효과음 저장소. 마찬가지로 사용될 효과음들을 모두 저장해주세요. ^^")]
     public AudioClip[] typingSounds;
 
-    
+
     Dialogue dialogue;
     Queue<Dialogue.DialogueSet> dialogueSetsQue;
 
@@ -79,7 +79,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     // Start is called before the first frame update
     override protected void OnStart()
-    {       
+    {
         dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
 
         if (SceneManager.GetActiveScene().name == "Field1_Obstacle" || SceneManager.GetActiveScene().name == "Field1_Obstacle2")
@@ -111,7 +111,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && is05Sec == true) isSpaceKeyDowned = true;
+        if (Input.GetKeyDown(KeyCode.Space) && is05Sec == true) isSpaceKeyDowned = true;
 
         if (isSpaceKeyDowned && isDialogueActive)
         {
@@ -133,7 +133,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 }
 
                 DisplayNextSentence();
-            }                
+            }
         }
 
         #region 다이얼로그는 이동 애니메이션 끝나길 기다렸다가 출력하기.
@@ -142,7 +142,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         if (isDuringMoveAnimation)
         {
             //string objname = null;
-            
+
             foreach (NPC npc in nPCs)
             {
                 //objname = npc.gameObject.name;
@@ -162,7 +162,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             {
                 //objname = player.gameObject.name;
                 if (player.isMoveSetOn == false)
-                {                    
+                {
                     isEndedMoveAnimation = true;
                     //print(objname + "플레이어 Arrived, isEndedMoveAnimation=" + isEndedMoveAnimation);
                 }
@@ -172,7 +172,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                     isEndedMoveAnimation = false;
                     return;
                 }
-            }            
+            }
 
             if (isEndedMoveAnimation)
             {
@@ -192,7 +192,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
 
         //New Anim
-        if(isDuringMoveAnimation_ForNew)
+        if (isDuringMoveAnimation_ForNew)
         {
             //isEndedMoveAnimation_ForNew 각각의 오브젝트에서 호출해줌. New는 동시에 여럿이 움직일 가능성이 없기 때문에 개별 처리.
             if (isEndedMoveAnimation_ForNew)
@@ -209,12 +209,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
             {
                 //Debug.Log("isEndedMoveAnimation_ForNew is False!");
             }
-        }     
-        #endregion         
+        }
+        #endregion
     }
 
     public void AddDialogueData()
-    {        
+    {
         foreach (AttachThis attachThis in FindObjectsOfType<AttachThis>())
         {
             foreach (Dialogue item in attachThis.dialogues)
@@ -262,7 +262,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             item.animator.SetFloat("Speed", item.movement.sqrMagnitude);
         }
 
-        
+
 
 
         //해당 아이디값 개체 검색       
@@ -280,7 +280,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             dialogueSetsQue.Clear();
             foreach (Dialogue.DialogueSet item in dialogueSet) dialogueSetsQue.Enqueue(item);
         }
-        else   Debug.Log("정보가 없는 녀석입니다.");
+        else Debug.Log("정보가 없는 녀석입니다.");
         DisplayNextSentence();
     }
 
@@ -306,7 +306,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             //초이스박스 열려있는 상태에서는 다음 다이얼로그 가면 안됨. 
             return;
-        }                
+        }
 
         if (dialogueSetsQue.Count == 0)
         {
@@ -326,7 +326,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     }
 
     //배치서비스 시작합니다.   스플릿서비스는 안녕!  일괄 처리.
-    void BatchService(Dialogue.DialogueSet dialogueSet) {
+    void BatchService(Dialogue.DialogueSet dialogueSet)
+    {
         //여기서 dialogueSet에 입력된 정보에 따라 새 다이얼로그창의 정보를 설정.
 
         //다이얼로그 시작 딜레이 타임 부여
@@ -446,7 +447,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             //심장박동이펙트~~~?
             if (dialogueSet.detail.HeartBeatSettings.activeBeat)
             {
-                if(GameObject.FindObjectOfType<HeartBeater>() != null)
+                if (GameObject.FindObjectOfType<HeartBeater>() != null)
                 {
                     print("박동박동~!");
                     FindObjectOfType<HeartBeater>().beatType = dialogueSet.detail.HeartBeatSettings.beatType;
@@ -454,10 +455,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 else
                 {
                     print("하트비터가 없습니다~");
-                }            
+                }
             }
 
-            if(goreturn)
+            if (goreturn)
             {
                 goreturn = false;
                 return;
@@ -549,31 +550,34 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //초상화(좌)
         if (dialogueSet.detail.portraitSettings.showLeftPortrait)
         {
+            Debug.Log("Here");
             dialogPortrait_Left.color = new Color(1, 1, 1, 1);
-            dialogPortrait_Left.sprite = portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정
-            ShowInsideDialoguePortrait(false, portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]);
+            dialogPortrait_Left.sprite = portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정            
         }
-        else
-        {
-            dialogPortrait_Left.color = new Color(1, 1, 1, 0);
-            HideInsideDialoguePortrait();
-        }            
+        else        
+            dialogPortrait_Left.color = new Color(1, 1, 1, 0);        
 
         //초상화(우)
         if (dialogueSet.detail.portraitSettings.showRightPortrait)
         {
             dialogPortrait_Right.color = new Color(1, 1, 1, 1);
-            dialogPortrait_Right.sprite = portraits[(int)dialogueSet.detail.portraitSettings.rightPortraitNumber]; //초상화(우) 표정
-            ShowInsideDialoguePortrait(true, portraits[(int)dialogueSet.detail.portraitSettings.rightPortraitNumber]);
+            dialogPortrait_Right.sprite = portraits[(int)dialogueSet.detail.portraitSettings.rightPortraitNumber]; //초상화(우) 표정            
         }
-        else
-        {
-            dialogPortrait_Right.color = new Color(1, 1, 1, 0);
-            HideInsideDialoguePortrait();
-        }
-            
-                    
+        else        
+            dialogPortrait_Right.color = new Color(1, 1, 1, 0);                   
 
+
+        //작은초상화 세팅
+        //좌
+        if (dialogueSet.detail.portraitSettings.smallPortraitR != true && dialogueSet.detail.portraitSettings.smallPortraitL)
+            ShowInsideDialoguePortrait(false, portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]);
+        else if (!dialogueSet.detail.portraitSettings.smallPortraitR && !dialogueSet.detail.portraitSettings.smallPortraitL)
+            HideInsideDialoguePortrait();
+        //우
+        if (dialogueSet.detail.portraitSettings.smallPortraitL != true && dialogueSet.detail.portraitSettings.smallPortraitR)
+            ShowInsideDialoguePortrait(true, portraits[(int)dialogueSet.detail.portraitSettings.rightPortraitNumber]);
+        else if (!dialogueSet.detail.portraitSettings.smallPortraitL && !dialogueSet.detail.portraitSettings.smallPortraitR)
+            HideInsideDialoguePortrait();
 
         //선택팝업
         if (dialogueSet.detail.selectionPopupSettings.activateSelectionPopup)
@@ -605,7 +609,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                     keyInput_Controller.MoveAnimStart(objAnimData);
                 }
             }
-        }        
+        }
         if (!dialogueSet.detail.oldAnimationSettings.activateObjAnimate && dialogueSet.detail.newAnimationSettings.activeNewAnimate)
         {
             //New
@@ -613,7 +617,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             {
                 nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
             }
-            else if(dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
+            else if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
             {
                 keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
             }
@@ -674,8 +678,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //Key값은 string으로 선택상자의 question을 넣어주고, Value값은 이후 진행된 스토리id로 어떤 선택을 했는지 번호를 저장.        
         GameManager.Instance.AddChoiceResults(curDialogSet_ForChoiceBox.detail.selectionPopupSettings.selectionPopupData.question, choice.linkedStoryDialogueIdNumber);
 
-        //5. 선택 결과에 따른 스토리다이얼로그 정보 읽어와서 열어주기. 
-        StartDialogue(choice.linkedStoryDialogueIdNumber);
+
 
         //만약, 해당 선택지가 정답이라면. GameManager의 메인 스토리 id도 해당 스토리 id로 변경.
         if (choice.isItCorrectAnswer)
@@ -685,7 +688,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
         else Debug.Log("오답! 다시 해보세요~");
 
-        activeChoiceBox = false;        
+        activeChoiceBox = false;
+
+        //5. 선택 결과에 따른 스토리다이얼로그 정보 읽어와서 열어주기. 
+        StartDialogue(choice.linkedStoryDialogueIdNumber);
     }
 
     //기타 애니메이션 실행
@@ -778,42 +784,44 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
     //다이얼로그 내부 초상화
     private void ShowInsideDialoguePortrait(bool dirIsRight, Sprite portraitSprite)
-    {        
-            //내부 초상화 표현시.
-            dialogPortrait_InDialogue.color = new Color(1, 1, 1, 1);
-            dialogPortrait_InDialogue.sprite = portraitSprite; //초상화(내부) 스프라이트
+    {
+        Debug.Log("Show Inside Man~");
+        //내부 초상화 표현시.
+        dialogPortrait_InDialogue.color = new Color(1, 1, 1, 1);
+        dialogPortrait_InDialogue.sprite = portraitSprite; //초상화(내부) 스프라이트
 
-            //내부초상화 존재시 Sentence 위치정보
-            RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
-            //Left
-            sentenceRectTransform.offsetMin = new Vector2(210f, sentenceRectTransform.offsetMin.y);
-            //내부초상화 존재시 Name 위치정보
-            RectTransform nameRectTransform = dialogObjName.gameObject.GetComponent<RectTransform>();
-            //PosX, PosY
-            nameRectTransform.localPosition = new Vector2(200f, -25f);
+        //내부초상화 존재시 Sentence 위치정보
+        RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
+        //Left
+        sentenceRectTransform.offsetMin = new Vector2(210f, sentenceRectTransform.offsetMin.y);
+        //내부초상화 존재시 Name 위치정보
+        RectTransform nameRectTransform = dialogObjName.gameObject.GetComponent<RectTransform>();
+        //PosX, PosY
+        nameRectTransform.localPosition = new Vector2(200f, -25f);
 
-            //초상화 좌우변경
-            Quaternion quaternion = dialogPortrait_InDialogue.gameObject.GetComponent<RectTransform>().localRotation;
+        //초상화 좌우변경
+        Quaternion quaternion = dialogPortrait_InDialogue.gameObject.GetComponent<RectTransform>().localRotation;
 
-            //dog2_5, dog5 초상화는 기본 이미지 방향이 다른애들과는 반대이기 때문에, 구분하여 처리해주어야함
-            if (portraitSprite.name.Contains("dog"))
-            {
-                if (dirIsRight)
-                    quaternion = Quaternion.Euler(quaternion.x, 180f, quaternion.z);
-                else
-                    quaternion = Quaternion.Euler(quaternion.x, 0f, quaternion.z);
-            }
+        //dog2_5, dog5 초상화는 기본 이미지 방향이 다른애들과는 반대이기 때문에, 구분하여 처리해주어야함
+        if (portraitSprite.name.Contains("dog"))
+        {
+            if (dirIsRight)
+                quaternion = Quaternion.Euler(quaternion.x, 180f, quaternion.z);
             else
-            {
-                if (dirIsRight)
-                    quaternion = Quaternion.Euler(quaternion.x, 0f, quaternion.z);
-                else
-                    quaternion = Quaternion.Euler(quaternion.x, 180f, quaternion.z);
-            }
+                quaternion = Quaternion.Euler(quaternion.x, 0f, quaternion.z);
+        }
+        else
+        {
+            if (dirIsRight)
+                quaternion = Quaternion.Euler(quaternion.x, 0f, quaternion.z);
+            else
+                quaternion = Quaternion.Euler(quaternion.x, 180f, quaternion.z);
+        }
 
     }
     private void HideInsideDialoguePortrait()
     {
+        Debug.Log("Hide Inside Man~");
         //내부 초상화 미표현시.  
         dialogPortrait_InDialogue.color = new Color(1, 1, 1, 0);
 
@@ -831,7 +839,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     IEnumerator TypeSentence(Dialogue.DialogueSet dialogueSet)
     {
         ///출력중       
-        isDuringTyping = true;        
+        isDuringTyping = true;
 
         //선택상자 팝업에서 빨리넘기기 할 때 쓰이는 변수. 
         printingSentence = dialogueSet.sentence;
@@ -840,7 +848,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         foreach (char letter in dialogueSet.sentence.ToCharArray())
         {
             dialogSentence.text += letter;
- 
+
             //타이핑 효과음 출력 부분.  스페이스는 거른다.  turnOffTypingSound 체크해제 되어있는지도 확인
             if (letter != System.Convert.ToChar(32) && dialogueSet.detail.sFXSettings.turnOffTypingSound == false)
             {
@@ -922,14 +930,14 @@ public class DialogueManager : DontDestroy<DialogueManager>
             continueBtn.SetActive(true);
             dialogueFlipSFXBlocker = false;
         }
-            
+
     }
 
     //다이얼로그 종료 
     void EndDialogue()
     {
         isDialogueActive = false;
-        dialog_animator.SetBool("isOpen", false);        
+        dialog_animator.SetBool("isOpen", false);
 
         //다이얼로그 끝나면 플레이어 컨트롤 권한 돌려줌.       
         foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())
@@ -950,7 +958,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             case 31:
                 //멧돼지게임
                 GameManager.Instance.storyNumber = 31;
-                GameManager.Instance.StartStoryEvent();                
+                GameManager.Instance.StartStoryEvent();
                 break;
             default:
                 break;

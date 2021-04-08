@@ -119,7 +119,7 @@ public class KeyInput_Controller : MonoBehaviour
 
             //다이얼로그가 끝나면 조작권 줌. isControllable. <-- 요고. 
 
-            //사용자 입력값 수집.
+            //사용자 입력값 수집.            
             movement.x = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Horizontal");
             movement.y = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Vertical");
 

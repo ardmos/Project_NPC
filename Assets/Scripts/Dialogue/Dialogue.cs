@@ -60,9 +60,11 @@ public class Dialogue
                 [Header("- 좌측 초상화              (체크박스에 체크 후, 원하는 초상화 저장소의 번호를 입력하면 초상화가 출력됩니다.)")]
                 public bool showLeftPortrait;
                 public Portraits leftPortraitNumber;
+                public bool smallPortraitL;
                 [Header("- 우측 초상화")]
                 public bool showRightPortrait;
                 public Portraits rightPortraitNumber;
+                public bool smallPortraitR;
             }
             [Header("- 초상화 설정"), Space(5)]
             public PortraitSettings portraitSettings;

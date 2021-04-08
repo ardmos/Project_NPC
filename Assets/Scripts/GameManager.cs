@@ -60,7 +60,7 @@ public class GameManager : DontDestroy<GameManager>
 
         //스토리1 등장인물들 클로킹
         //씬 1인지 씬을 확인하고,  
-        if(SceneManager.GetActiveScene().buildIndex == 1)
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Scene1_Incident")
         {
             천형사.SetActive(false);
             경찰2.SetActive(false);
