@@ -12847,6 +12847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 531643417}
+  - component: {fileID: 531643418}
   m_Layer: 0
   m_Name: "ESC\uBA54\uB274\uD31D\uC5C5"
   m_TagString: Untagged
@@ -12869,6 +12870,18 @@ Transform:
   m_Father: {fileID: 802939183}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531643418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531643416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7cf0cb8763c49c79d006d73d30a424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &570274018
 GameObject:
   m_ObjectHideFlags: 0
@@ -57210,6 +57223,8 @@ MonoBehaviour:
     type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
+  escPopupObj: {fileID: 531643416}
+  isEscOpen: 0
 --- !u!1 &2085679146
 GameObject:
   m_ObjectHideFlags: 0
