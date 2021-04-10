@@ -129,6 +129,7 @@ public class NPC : MonoBehaviour
         if (isItFromDialog)
         {
             if (IsItFar_ForDialog()) followMode = true;
+            else isItFromDialog = false;    //연속상호작용시,  그 이전에 남아있는 desPos로 이동하는 문제 방지.
             if (followMode) KeepGoing_Follow_ForDialog();
         }
 
@@ -469,16 +470,16 @@ public class NPC : MonoBehaviour
         float x, y;        
 
         //Left
-        if (xDis < 0)
+        if (xDis <= 0)
         {
-            if (xDis > -도착범위) x = 0f;
+            if (xDis >= -도착범위) x = 0f;
             else x = -이동속도;
             //animator.SetInteger("Direction", 3);
         }
         //Right
-        else if (xDis > 0)
+        else if (xDis >= 0)
         {
-            if (xDis < 도착범위) x = 0f;
+            if (xDis <= 도착범위) x = 0f;
             else x = 이동속도;
             //animator.SetInteger("Direction", 2);
         }
@@ -488,16 +489,16 @@ public class NPC : MonoBehaviour
             x = 0f;
         }
         //Down
-        if (yDis < 0)
+        if (yDis <= 0)
         {
-            if (yDis > -도착범위) y = 0f;
+            if (yDis >= -도착범위) y = 0f;
             else y = -이동속도;
             //animator.SetInteger("Direction", 0);
         }
         //Up
-        else if (yDis > 0)
+        else if (yDis >= 0)
         {
-            if (yDis < 도착범위) y = 0f;
+            if (yDis <= 도착범위) y = 0f;
             else y = 이동속도;
             //animator.SetInteger("Direction", 1);
         }
@@ -538,15 +539,15 @@ public class NPC : MonoBehaviour
         float x, y;
 
         //Left
-        if (xDis < 0)
+        if (xDis <= 0)
         {
-            if (xDis > -도착범위) x = 0f;
+            if (xDis >= -도착범위) x = 0f;
             else x = -이동속도;
         }
         //Right
-        else if (xDis > 0)
+        else if (xDis >= 0)
         {
-            if (xDis < 도착범위) x = 0f;
+            if (xDis <= 도착범위) x = 0f;
             else x = 이동속도;
         }
         else
@@ -555,15 +556,15 @@ public class NPC : MonoBehaviour
             x = 0f;
         }
         //Down
-        if (yDis < 0)
+        if (yDis <= 0)
         {
-            if (yDis > -도착범위) y = 0f;
+            if (yDis >= -도착범위) y = 0f;
             else y = -이동속도;
         }
         //Up
-        else if (yDis > 0)
+        else if (yDis >= 0)
         {
-            if (yDis < 도착범위) y = 0f;
+            if (yDis <= 도착범위) y = 0f;
             else y = 이동속도;
         }
         else

@@ -106,6 +106,7 @@ public class KeyInput_Controller : MonoBehaviour
             if (isItFromDialog)
             {
                 if (IsItFar_ForDialog()) followMode = true;
+                else isItFromDialog = false;    //연속상호작용시,  그 이전에 남아있는 desPos로 이동하는 문제 방지.
                 if (followMode) KeepGoing_Follow_ForDialog();
             }
 
@@ -157,9 +158,9 @@ public class KeyInput_Controller : MonoBehaviour
                 scanObject.GetComponent<Object>().TriggerDialogue();
             }
         }
-}
+    }
 
-private void FixedUpdate()
+    private void FixedUpdate()
     {
         //만약 미로맵일 경우! 
         //쳐다보는쪽으로 랜턴 비추기. 
@@ -172,11 +173,11 @@ private void FixedUpdate()
             {
                 transform.rotation = Quaternion.Euler(0, 0, -180f);
             }
-            else if(rayDir == Vector2.up)
+            else if (rayDir == Vector2.up)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            else if(rayDir == Vector2.left)
+            else if (rayDir == Vector2.left)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 90f);
             }
@@ -236,7 +237,7 @@ private void FixedUpdate()
 
 
         //Ray
-        rayPosition = new Vector2(rb.position.x, rb.position.y+0.4f);
+        rayPosition = new Vector2(rb.position.x, rb.position.y + 0.4f);
         Debug.DrawRay(rayPosition, rayDir, Color.green, 0.7f);
         RaycastHit2D raycastHit2D = Physics2D.Raycast(rayPosition, rayDir, 0.7f, LayerMask.GetMask("Object"));
 
@@ -266,10 +267,10 @@ private void FixedUpdate()
         //시작부터 등록되어있는 큐가 없으면?  등록을 안한것이니, 그냥 패스 ~!
         if (moveSets.Count == 0)
         {
-        //    Debug.Log("moveSet 큐가 비어있습니다.");
+            //    Debug.Log("moveSet 큐가 비어있습니다.");
         }
         else
-        {            
+        {
             StartNextMove();
         }
     }
@@ -324,11 +325,11 @@ private void FixedUpdate()
         else
         {
             //아직 도착한게 아니면 계속 이동 진행
-            KeepGoing(moveSet);            
+            KeepGoing(moveSet);
         }
 
         //걷기 애니메이션 처리
-        MakeWalkingAnimation();        
+        MakeWalkingAnimation();
     }
 
     public bool IsArrivedChecker(Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet moveSet)
@@ -411,7 +412,7 @@ private void FixedUpdate()
                 if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Down) movement = Vector2.down;
                 else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Up) movement = Vector2.up;
                 else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Right) movement = Vector2.right;
-                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left) movement = Vector2.left;                
+                else if (animData.endDir == Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.EndDir.Left) movement = Vector2.left;
                 Debug.Log("제자리돌기 킵고잉 movement:" + movement);
                 break;
             default:
@@ -458,7 +459,7 @@ private void FixedUpdate()
         {
             isJustTurnCompleted = true;
             animator.SetFloat("Speed", 1f);
-           // Debug.Log("회전!! Speed = 1f");
+            // Debug.Log("회전!! Speed = 1f");
         }
         else
         {
@@ -494,7 +495,7 @@ private void FixedUpdate()
     }
 
     public void StartNextMove()
-    {        
+    {
         isrm = true;    //리모트이동 시작 스위치 ON
         isArrived = false;
         isJustTurnCompleted = false;
@@ -531,8 +532,16 @@ private void FixedUpdate()
         xDis = desPos.x - transform.position.x;
         yDis = desPos.y - transform.position.y;
 
-        if (Mathf.Abs(xDis) > 도착범위 || Mathf.Abs(yDis) > 도착범위) return true;
-        else return false;
+        if (Mathf.Abs(xDis) > 도착범위 || Mathf.Abs(yDis) > 도착범위)
+        {
+            //Debug.Log("xDis: " + xDis + ", " + yDis + ", 도착범위: " + 도착범위 + ". arrived! followMode: " + followMode);
+            return true;
+        }
+        else
+        {
+            //Debug.Log("xDis: " + xDis + ", " + yDis + ", 도착범위: " + 도착범위 + ". NOT arrived! followMode: " + followMode);
+            return false;
+        }
     }
     //따르기 시작 - 다이얼로그로 호출
     public void StartFollowMode(Vector2 vector2, float 범위, Dialogue.DialogueSet.Details.NewAnimationSettings.EndDir endDir)
@@ -557,17 +566,17 @@ private void FixedUpdate()
         float x, y;
 
         //Left
-        if (xDis < 0)
+        if (xDis <= 0)
         {
-            if (xDis > -도착범위) x = 0f;
+            if (xDis >= -도착범위) x = 0f;
             else x = -이동속도;
             //animator.SetInteger("Direction", 3);
             //print("3");
         }
         //Right
-        else if (xDis > 0)
+        else if (xDis >= 0)
         {
-            if (xDis < 도착범위) x = 0f;
+            if (xDis <= 도착범위) x = 0f;
             else x = 이동속도;
             //animator.SetInteger("Direction", 2);
             //print("2");
@@ -578,17 +587,17 @@ private void FixedUpdate()
             x = 0f;
         }
         //Down
-        if (yDis < 0)
+        if (yDis <= 0)
         {
-            if (yDis > -도착범위) y = 0f;
+            if (yDis >= -도착범위) y = 0f;
             else y = -이동속도;
             //animator.SetInteger("Direction", 0);
             //print("0");
         }
         //Up
-        else if (yDis > 0)
+        else if (yDis >= 0)
         {
-            if (yDis < 도착범위) y = 0f;
+            if (yDis <= 도착범위) y = 0f;
             else y = 이동속도;
             //animator.SetInteger("Direction", 1);
             //print("1");
@@ -629,15 +638,15 @@ private void FixedUpdate()
         float x, y;
 
         //Left
-        if (xDis < 0)
+        if (xDis <= 0)
         {
-            if (xDis > -도착범위) x = 0f;
+            if (xDis >= -도착범위) x = 0f;
             else x = -이동속도;
         }
         //Right
-        else if (xDis > 0)
+        else if (xDis >= 0)
         {
-            if (xDis < 도착범위) x = 0f;
+            if (xDis <= 도착범위) x = 0f;
             else x = 이동속도;
         }
         else
@@ -646,15 +655,15 @@ private void FixedUpdate()
             x = 0f;
         }
         //Down
-        if (yDis < 0)
+        if (yDis <= 0)
         {
-            if (yDis > -도착범위) y = 0f;
+            if (yDis >= -도착범위) y = 0f;
             else y = -이동속도;
         }
         //Up
-        else if (yDis > 0)
+        else if (yDis >= 0)
         {
-            if (yDis < 도착범위) y = 0f;
+            if (yDis <= 도착범위) y = 0f;
             else y = 이동속도;
         }
         else
@@ -682,25 +691,26 @@ private void FixedUpdate()
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0.5f, 0.5f, 1f);
         getHitJumpDesPos = desPos;
         isGetHit = true;
-        isControllable = false;        
+        isControllable = false;
         //효과음
         gameObject.GetComponent<AudioSource>().volume = 0.2f;
         gameObject.GetComponent<AudioSource>().PlayOneShot(sfxClip);
         //피격이펙트 파이어브레스에 맞았는지, 가시에 찔렸는지. 
-        if(from == "FireBreath")
+        if (from == "FireBreath")
         {
             gameObject.GetComponentsInChildren<ParticleSystem>()[0].Play(); //불타는 효과
-        }else if(from == "Thorn")
+        }
+        else if (from == "Thorn")
         {
             gameObject.GetComponentsInChildren<ParticleSystem>()[1].Play(); //피나는 효과
         }
 
         //HP 변동
         //죽었는가 ㅠ 
-        if ((playerStat.hP*0.1f) <= 0.2f && !isDied)
+        if ((playerStat.hP * 0.1f) <= 0.2f && !isDied)
         {
             //맞아서 날아가고있던거 정지
-            getHitJumpDesPos = transform.position;            
+            getHitJumpDesPos = transform.position;
             playerStat.hP = 0f;
             //쭈금!!!
             print("쭈금");
@@ -730,7 +740,7 @@ private void FixedUpdate()
             //잠시 콜라이더 없애고
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
             Debug.Log(gameObject.GetComponent<CircleCollider2D>().enabled);
-            gameObject.GetComponent<KeyInput_Controller>().isDied = true;            
+            gameObject.GetComponent<KeyInput_Controller>().isDied = true;
             gameObject.GetComponent<KeyInput_Controller>().animator.SetFloat("Speed", 0f);
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
 
@@ -743,7 +753,7 @@ private void FixedUpdate()
         {
             playerStat.hP -= 2;
         }
-        
+
         print(playerStat.hP);
 
         //PlayerStat.instance.hP -= 0.2f;

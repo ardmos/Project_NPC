@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -15278,16 +15278,16 @@ MonoBehaviour:
             question: "\uC9C0\uAC11\uC5D0\uC11C \uAEBC\uB0BC \uAC74..."
             choices:
             - sentence: "\uD604\uAE08"
-              linkedStoryDialogueIdNumber: 0
+              linkedStoryDialogueIdNumber: 10001
               isItCorrectAnswer: 0
             - sentence: "\uC8FC\uBBFC\uB4F1\uB85D\uC99D"
-              linkedStoryDialogueIdNumber: 0
+              linkedStoryDialogueIdNumber: 10002
               isItCorrectAnswer: 0
             - sentence: "\uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568"
-              linkedStoryDialogueIdNumber: 0
-              isItCorrectAnswer: 0
+              linkedStoryDialogueIdNumber: 10003
+              isItCorrectAnswer: 1
             - sentence: "\uC544\uBB34\uAC83\uB3C4 \uC8FC\uC9C0 \uC54A\uB294\uB2E4"
-              linkedStoryDialogueIdNumber: 0
+              linkedStoryDialogueIdNumber: 10004
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
@@ -15325,120 +15325,6 @@ MonoBehaviour:
       soundType: 0
       name: 2
       sentence: "\uB4E4\uC5B4\uC624\uC2DC\uBA74 \uC548\uB41C\uB2E4\uB2C8\uAE4C\uC694."
-    - smallTitle_: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 1
-          leftPortraitNumber: 0
-          smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 11
-          smallPortraitR: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
-            choices:
-            - sentence: 
-              linkedStoryDialogueIdNumber: 0
-              isItCorrectAnswer: 0
-        oldAnimationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
-        etcAnimationSettings:
-          etcAnimSets: []
-        emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-        fontColorSettings:
-          changeColor: 0
-          fontColor: {r: 0, g: 0, b: 0, a: 0}
-        fontSizeSettings:
-          changeSize: 0
-          fontSize: 0
-        HeartBeatSettings:
-          activeBeat: 0
-          beatType: 0
-      soundType: 0
-      name: 0
-      sentence: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC..."
-    - smallTitle_: "\uB458\uB7EC\uBCF4\uC790"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 11
-          smallPortraitR: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
-            choices:
-            - sentence: 
-              linkedStoryDialogueIdNumber: 0
-              isItCorrectAnswer: 0
-        oldAnimationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
-        etcAnimationSettings:
-          etcAnimSets: []
-        emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-        fontColorSettings:
-          changeColor: 0
-          fontColor: {r: 0, g: 0, b: 0, a: 0}
-        fontSizeSettings:
-          changeSize: 0
-          fontSize: 0
-        HeartBeatSettings:
-          activeBeat: 0
-          beatType: 0
-      soundType: 0
-      name: 0
-      sentence: "'\uD604\uC7A5\uC744 \uC880 \uB458\uB7EC\uBCF4\uB294\uAC8C \uC88B\uACA0\uC9C0'"
 --- !u!1 &878789726
 GameObject:
   m_ObjectHideFlags: 0
@@ -27761,7 +27647,8 @@ MonoBehaviour:
       name: 2
       sentence: "\uC544\uC557!!! \uD0D0\uC815\uB2D8\uC774\uC168\uAD70\uC694!!!! \uC624\uC2E0\uB2E4\uB294
         \uB9D0\uC500 \uC804\uD574\uB4E4\uC5C8\uC2B5\uB2C8\uB2E4. \uC774\uCABD\uC785\uB2C8\uB2E4!"
-    - smallTitle_: "\uC544\uC557!! \uD0D0\uC815\uB2D8\uC774\uC168\uAD70\uC694!!!"
+    - smallTitle_: "(\uACBD\uCC301: \uBE44\uD0A4\uBA70 \uD3F4\uB9AC\uC2A4\uB77C\uC778\uC744
+        \uCE58\uC6B4\uB2E4)"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -27794,7 +27681,7 @@ MonoBehaviour:
               obj: {fileID: 1729303443}
               paramName: DoDisappear
         emotionSettings:
-          activeEmotion: 1
+          activeEmotion: 0
           object_: {fileID: 171954334}
           animation: 5
         sFXSettings:
@@ -27819,6 +27706,114 @@ MonoBehaviour:
       soundType: 0
       name: 2
       sentence: 
+    - smallTitle_: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC..."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        newAnimationSettings:
+          activeNewAnimate: 1
+          destinationPos: {x: 0, y: -7.5}
+          objToMove: {fileID: 171954334}
+          endDir: 0
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 171954334}
+          animation: 5
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 0
+      sentence: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC..."
+    - smallTitle_: "'\uD604\uC7A5\uC744 \uC880 \uB458\uB7EC\uBCF4\uB294\uAC8C \uC88B\uACA0\uC9C0'"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationData: []
+        newAnimationSettings:
+          activeNewAnimate: 1
+          destinationPos: {x: 0, y: -7.5}
+          objToMove: {fileID: 171954334}
+          endDir: 0
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 171954334}
+          animation: 5
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 0
+      sentence: "'\uD604\uC7A5\uC744 \uC880 \uB458\uB7EC\uBCF4\uB294\uAC8C \uC88B\uACA0\uC9C0'"
   - smallTitle_: "\uC120\uD0DD\uACB0\uACFC: \uC544\uBB34\uAC83\uB3C4 \uC8FC\uC9C0
       \uC54A\uB294\uB2E4"
     storyId: 10004
@@ -33803,7 +33798,7 @@ MonoBehaviour:
           objectAnimationData: []
         newAnimationSettings:
           activeNewAnimate: 1
-          destinationPos: {x: -1, y: -10}
+          destinationPos: {x: -2, y: -10}
           objToMove: {fileID: 20024207}
           endDir: 1
         etcAnimationSettings:
@@ -33901,120 +33896,6 @@ MonoBehaviour:
       name: 2
       sentence: "\uC5B4\uC5B4, \uC5EC\uAE30 \uD568\uBD80\uB85C \uB4E4\uC5B4\uC624\uC2DC\uBA74
         \uC548\uB429\uB2C8\uB2E4~!"
-    - smallTitle_: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 1
-          showRightPortrait: 0
-          rightPortraitNumber: 11
-          smallPortraitR: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
-            choices:
-            - sentence: 
-              linkedStoryDialogueIdNumber: 0
-              isItCorrectAnswer: 0
-        oldAnimationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
-        etcAnimationSettings:
-          etcAnimSets: []
-        emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-        fontColorSettings:
-          changeColor: 0
-          fontColor: {r: 0, g: 0, b: 0, a: 0}
-        fontSizeSettings:
-          changeSize: 0
-          fontSize: 0
-        HeartBeatSettings:
-          activeBeat: 0
-          beatType: 0
-      soundType: 0
-      name: 0
-      sentence: "\uC5B4\uC218\uC120\uD558\uAD6C\uB9CC..."
-    - smallTitle_: "\uB458\uB7EC\uBCF4\uC790"
-      dialogueSetName: 
-      detail:
-        delayTime: 0
-        letterSpeed: 0
-        styles: 0
-        portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 11
-          smallPortraitR: 0
-        selectionPopupSettings:
-          activateSelectionPopup: 0
-          selectionPopupData:
-            question: "\uC5B4\uB5BB\uAC8C\uD560\uAE4C?"
-            choices:
-            - sentence: 
-              linkedStoryDialogueIdNumber: 0
-              isItCorrectAnswer: 0
-        oldAnimationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
-        newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
-        etcAnimationSettings:
-          etcAnimSets: []
-        emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
-        sFXSettings:
-          turnOffTypingSound: 0
-          enableSFX: 0
-          audioClip: {fileID: 0}
-          playTime: 0
-          delayTime: 0
-          dialogueLifeTime: 0
-        cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
-        fontColorSettings:
-          changeColor: 0
-          fontColor: {r: 0, g: 0, b: 0, a: 0}
-        fontSizeSettings:
-          changeSize: 0
-          fontSize: 0
-        HeartBeatSettings:
-          activeBeat: 0
-          beatType: 0
-      soundType: 0
-      name: 0
-      sentence: "'\uD604\uC7A5\uC744 \uC880 \uB458\uB7EC\uBCF4\uB294\uAC8C \uC88B\uACA0\uC9C0'"
 --- !u!1 &1918554574
 GameObject:
   m_ObjectHideFlags: 0
