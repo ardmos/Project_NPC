@@ -387,11 +387,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
 
                 if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<NPC>(out NPC nPC))
                 {
-                    nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
+                    nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 0.1f, dialogueSet.detail.newAnimationSettings.endDir);
                 }
                 else if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
                 {
-                    keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
+                    keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 0.1f, dialogueSet.detail.newAnimationSettings.endDir);
                 }
                 isDuringMoveAnimation_ForNew = true;
                 goreturn = true;
@@ -550,7 +550,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //초상화(좌)
         if (dialogueSet.detail.portraitSettings.showLeftPortrait)
         {
-            Debug.Log("Here");
+            //Debug.Log("Here");
             dialogPortrait_Left.color = new Color(1, 1, 1, 1);
             dialogPortrait_Left.sprite = portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정            
         }
@@ -615,11 +615,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
             //New
             if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<NPC>(out NPC nPC))
             {
-                nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
+                nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 0.1f, dialogueSet.detail.newAnimationSettings.endDir);
             }
             else if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
             {
-                keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 1f, dialogueSet.detail.newAnimationSettings.endDir);
+                keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 0.1f, dialogueSet.detail.newAnimationSettings.endDir);
             }
         }
 
@@ -821,7 +821,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     }
     private void HideInsideDialoguePortrait()
     {
-        Debug.Log("Hide Inside Man~");
+        //Debug.Log("Hide Inside Man~");
         //내부 초상화 미표현시.  
         dialogPortrait_InDialogue.color = new Color(1, 1, 1, 0);
 
