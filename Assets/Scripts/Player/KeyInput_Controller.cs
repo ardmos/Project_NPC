@@ -544,7 +544,7 @@ public class KeyInput_Controller : MonoBehaviour
         }
     }
     //따르기 시작 - 다이얼로그로 호출
-    public void StartFollowMode(Vector2 vector2, float 범위, Dialogue.DialogueSet.Details.NewAnimationSettings.EndDir endDir)
+    public void StartFollowMode(Vector2 vector2, float 범위, Dialogue.DialogueSet.Details.NewAnimationSettings.NewAnimData.EndDir endDir)
     {
         isItFromDialog = true;
         desPos = vector2;

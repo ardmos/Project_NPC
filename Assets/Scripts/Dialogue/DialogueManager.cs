@@ -362,7 +362,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             if (dialogueSet.detail.oldAnimationSettings.activateObjAnimate && !dialogueSet.detail.newAnimationSettings.activeNewAnimate)
             {
                 //발동할 애니메이션이 존재하면, 해당 애니메이션이 끝나길 기다렸다가  return.                
-                foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.oldAnimationSettings.objectAnimationData)
+                foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.oldAnimationSettings.objectAnimationDatas)
                 {
                     //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
                     if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
@@ -384,14 +384,17 @@ public class DialogueManager : DontDestroy<DialogueManager>
             if (!dialogueSet.detail.oldAnimationSettings.activateObjAnimate && dialogueSet.detail.newAnimationSettings.activeNewAnimate)
             {
                 //New
-
-                if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<NPC>(out NPC nPC))
+                foreach (Dialogue.DialogueSet.Details.NewAnimationSettings.NewAnimData newAnimData in dialogueSet.detail.newAnimationSettings.newAnimDatas)
                 {
-                    nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 0.1f, dialogueSet.detail.newAnimationSettings.endDir);
-                }
-                else if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
-                {
-                    keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 0.1f, dialogueSet.detail.newAnimationSettings.endDir);
+                    //New
+                    if (newAnimData.objToMove.TryGetComponent<NPC>(out NPC nPC))
+                    {
+                        nPC.StartFollowMode(newAnimData.destinationPos, 0.1f, newAnimData.endDir);
+                    }
+                    else if (newAnimData.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
+                    {
+                        keyInput_Controller.StartFollowMode(newAnimData.destinationPos, 0.1f, newAnimData.endDir);
+                    }
                 }
                 isDuringMoveAnimation_ForNew = true;
                 goreturn = true;
@@ -590,13 +593,13 @@ public class DialogueManager : DontDestroy<DialogueManager>
         if (dialogueSet.detail.oldAnimationSettings.activateObjAnimate && !dialogueSet.detail.newAnimationSettings.activeNewAnimate)
         {
             //Old
-            foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.oldAnimationSettings.objectAnimationData)
+            foreach (Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData objAnimData in dialogueSet.detail.oldAnimationSettings.objectAnimationDatas)
             {
                 //objAnimData.objToMakeMove.MoveAnimStart(objAnimData);
 
                 //NPC.cs가 있는 경우.(NPC인 경우) or KeyInput_Controller가 있는 경우.(Player인 경우) 알아서 처리. 
 
-                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 2) return; //지금 미로(씬빌드인덱스2)씬 테스트 목적으로, 잠시 막아두기 
+                //if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 2) return; //지금 미로(씬빌드인덱스2)씬 테스트 목적으로, 잠시 막아두기 
 
                 if (objAnimData.objToMakeMove.TryGetComponent<NPC>(out NPC nPC))
                 {
@@ -612,15 +615,18 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
         if (!dialogueSet.detail.oldAnimationSettings.activateObjAnimate && dialogueSet.detail.newAnimationSettings.activeNewAnimate)
         {
-            //New
-            if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<NPC>(out NPC nPC))
+            foreach (Dialogue.DialogueSet.Details.NewAnimationSettings.NewAnimData newAnimData in dialogueSet.detail.newAnimationSettings.newAnimDatas)
             {
-                nPC.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 0.1f, dialogueSet.detail.newAnimationSettings.endDir);
-            }
-            else if (dialogueSet.detail.newAnimationSettings.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
-            {
-                keyInput_Controller.StartFollowMode(dialogueSet.detail.newAnimationSettings.destinationPos, 0.1f, dialogueSet.detail.newAnimationSettings.endDir);
-            }
+                //New
+                if (newAnimData.objToMove.TryGetComponent<NPC>(out NPC nPC))
+                {
+                    nPC.StartFollowMode(newAnimData.destinationPos, 0.1f, newAnimData.endDir);
+                }
+                else if (newAnimData.objToMove.TryGetComponent<KeyInput_Controller>(out KeyInput_Controller keyInput_Controller))
+                {
+                    keyInput_Controller.StartFollowMode(newAnimData.destinationPos, 0.1f, newAnimData.endDir);
+                }
+            }            
         }
 
 
@@ -785,7 +791,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //다이얼로그 내부 초상화
     private void ShowInsideDialoguePortrait(bool dirIsRight, Sprite portraitSprite)
     {
-        Debug.Log("Show Inside Man~");
+        //Debug.Log("Show Inside Man~");
         //내부 초상화 표현시.
         dialogPortrait_InDialogue.color = new Color(1, 1, 1, 1);
         dialogPortrait_InDialogue.sprite = portraitSprite; //초상화(내부) 스프라이트
@@ -813,10 +819,19 @@ public class DialogueManager : DontDestroy<DialogueManager>
         else
         {
             if (dirIsRight)
+            {
+                //Debug.Log("좌우바꾸기도전.오른쪽사진.");
                 quaternion = Quaternion.Euler(quaternion.x, 0f, quaternion.z);
+            }
+                
             else
+            {
+                //Debug.Log("좌우바꾸기도전.왼쪽사진.");
                 quaternion = Quaternion.Euler(quaternion.x, 180f, quaternion.z);
+            }                
         }
+
+        dialogPortrait_InDialogue.gameObject.GetComponent<RectTransform>().localRotation = quaternion;
 
     }
     private void HideInsideDialoguePortrait()
