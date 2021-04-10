@@ -557,8 +557,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
             dialogPortrait_Left.color = new Color(1, 1, 1, 1);
             dialogPortrait_Left.sprite = portraits[(int)dialogueSet.detail.portraitSettings.leftPortraitNumber]; //초상화(좌) 표정            
         }
-        else        
-            dialogPortrait_Left.color = new Color(1, 1, 1, 0);        
+        else
+            dialogPortrait_Left.color = new Color(1, 1, 1, 0);
 
         //초상화(우)
         if (dialogueSet.detail.portraitSettings.showRightPortrait)
@@ -566,8 +566,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
             dialogPortrait_Right.color = new Color(1, 1, 1, 1);
             dialogPortrait_Right.sprite = portraits[(int)dialogueSet.detail.portraitSettings.rightPortraitNumber]; //초상화(우) 표정            
         }
-        else        
-            dialogPortrait_Right.color = new Color(1, 1, 1, 0);                   
+        else
+            dialogPortrait_Right.color = new Color(1, 1, 1, 0);
 
 
         //작은초상화 세팅
@@ -626,7 +626,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 {
                     keyInput_Controller.StartFollowMode(newAnimData.destinationPos, 0.1f, newAnimData.endDir);
                 }
-            }            
+            }
         }
 
 
@@ -800,10 +800,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
         RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
         //Left
         sentenceRectTransform.offsetMin = new Vector2(210f, sentenceRectTransform.offsetMin.y);
-        //내부초상화 존재시 Name 위치정보
-        RectTransform nameRectTransform = dialogObjName.gameObject.GetComponent<RectTransform>();
+        //내부초상화 존재시 Name 위치정보        
         //PosX, PosY
-        nameRectTransform.localPosition = new Vector2(200f, -25f);
+        dialogObjName.gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(200f, -25f);        
 
         //초상화 좌우변경
         Quaternion quaternion = dialogPortrait_InDialogue.gameObject.GetComponent<RectTransform>().localRotation;
@@ -823,12 +822,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 //Debug.Log("좌우바꾸기도전.오른쪽사진.");
                 quaternion = Quaternion.Euler(quaternion.x, 0f, quaternion.z);
             }
-                
+
             else
             {
                 //Debug.Log("좌우바꾸기도전.왼쪽사진.");
                 quaternion = Quaternion.Euler(quaternion.x, 180f, quaternion.z);
-            }                
+            }
         }
 
         dialogPortrait_InDialogue.gameObject.GetComponent<RectTransform>().localRotation = quaternion;
@@ -836,7 +835,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     }
     private void HideInsideDialoguePortrait()
     {
-        //Debug.Log("Hide Inside Man~");
+        Debug.Log("Hide Inside Man~");
         //내부 초상화 미표현시.  
         dialogPortrait_InDialogue.color = new Color(1, 1, 1, 0);
 
@@ -844,10 +843,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
         RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
         //Left
         sentenceRectTransform.offsetMin = new Vector2(60f, sentenceRectTransform.offsetMin.y);
-        //내부초상화 존재시 Name 위치정보
-        RectTransform nameRectTransform = dialogObjName.gameObject.GetComponent<RectTransform>();
-        //PosX, PosY
-        nameRectTransform.localPosition = new Vector2(50f, -25f);
+        //내부초상화 존재시 Name 위치정보        
+        //PosX, PosY        
+        dialogObjName.gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(50f, -25f);
     }
 
     //한글자씩 도도도 찍기
