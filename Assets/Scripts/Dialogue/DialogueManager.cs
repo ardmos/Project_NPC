@@ -278,7 +278,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             curDialogSetCountNumber = 0;    //넘버 초기화. 
 
             //그 중 dialogueSet 배열에 접근한다.  배열을 큐로 변환시키기 위함. 편의를 위해서. 
-            Dialogue.DialogueSet[] dialogueSets = dialogue.dialogueSets;
+            Dialogue.DialogueSet[] dialogueSets = dialogue.dialogue;
 
             //해당 dialogueSet 배열의 문자열들 길이 확인 후 처리.
             SentenceLengthChecker(dialogueSets);
