@@ -371,5 +371,5 @@ public class Dialogue
     }
 
     [Header("- 대화묶음에 포함될 대화의 갯수를 정해주세요."), Space(10)]
-    public DialogueSet[] dialogue;
+    public DialogueSet[] dialogueSets;
 }
