@@ -124,7 +124,7 @@ public class GameManager : DontDestroy<GameManager>
                 //페이드 아웃, 씬 이동 
                 LevelChanger_ForScene1.instance.FadeToNextLevel();
                 //다음날, 경찰서 취조실
-                SceneManager.LoadScene("Scene2_InterrogationRoom");
+                //SceneManager.LoadScene("Scene2_InterrogationRoom");
                 break;
             case 3:
 

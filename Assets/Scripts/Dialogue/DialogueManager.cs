@@ -15,6 +15,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public AudioSystem audioSystem;
     //Continue버튼
     public GameObject continueBtn;
+    //경찰1 오브젝트
+    public GameObject 경찰1;
+
     //다이얼로그 열려있는지 체크 
     [HideInInspector]
     public bool isDialogueActive;
@@ -275,10 +278,14 @@ public class DialogueManager : DontDestroy<DialogueManager>
             curDialogSetCountNumber = 0;    //넘버 초기화. 
 
             //그 중 dialogueSet 배열에 접근한다.  배열을 큐로 변환시키기 위함. 편의를 위해서. 
-            Dialogue.DialogueSet[] dialogueSet = dialogue.dialogue;
+            Dialogue.DialogueSet[] dialogueSets = dialogue.dialogueSets;
+
+            //해당 dialogueSet 배열의 문자열들 길이 확인 후 처리.
+            SentenceLengthChecker(dialogueSets);
+
             //얻어낸 dialogueSet을 Queue에 순차적으로 Enqueue 한다.
             dialogueSetsQue.Clear();
-            foreach (Dialogue.DialogueSet item in dialogueSet) dialogueSetsQue.Enqueue(item);
+            foreach (Dialogue.DialogueSet item in dialogueSets) dialogueSetsQue.Enqueue(item);
         }
         else Debug.Log("정보가 없는 녀석입니다.");
         DisplayNextSentence();
@@ -799,7 +806,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //내부초상화 존재시 Sentence 위치정보
         RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
         //Left
-        sentenceRectTransform.offsetMin = new Vector2(210f, sentenceRectTransform.offsetMin.y);
+        sentenceRectTransform.offsetMin = new Vector2(210f, 25f);
+        sentenceRectTransform.sizeDelta = new Vector2(sentenceRectTransform.sizeDelta.x, 110f);
         //내부초상화 존재시 Name 위치정보        
         //PosX, PosY
         dialogObjName.gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(200f, -25f);        
@@ -835,14 +843,27 @@ public class DialogueManager : DontDestroy<DialogueManager>
     }
     private void HideInsideDialoguePortrait()
     {
-        Debug.Log("Hide Inside Man~");
+
+        //Debug.Log("Hide Inside Man~");
         //내부 초상화 미표현시.  
         dialogPortrait_InDialogue.color = new Color(1, 1, 1, 0);
 
         //내부초상화 존재시 Sentence 위치정보
         RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
         //Left
-        sentenceRectTransform.offsetMin = new Vector2(60f, sentenceRectTransform.offsetMin.y);
+        if (dialogObjName.text == "")
+        {
+            //이름이 빈칸이었을 경우 문장 위치 올려주기. 
+            sentenceRectTransform.sizeDelta = new Vector2(sentenceRectTransform.sizeDelta.x, 145f);
+            //sentenceRectTransform.offsetMin = new Vector2(60f, 25f);
+            //dialogSentence.rectTransform.SetAllDirty();
+        }
+        else
+        {
+            sentenceRectTransform.sizeDelta = new Vector2(sentenceRectTransform.sizeDelta.x, 110f);
+            sentenceRectTransform.offsetMin = new Vector2(60f, 25f);
+        }
+
         //내부초상화 존재시 Name 위치정보        
         //PosX, PosY        
         dialogObjName.gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(50f, -25f);
@@ -943,7 +964,43 @@ public class DialogueManager : DontDestroy<DialogueManager>
             continueBtn.SetActive(true);
             dialogueFlipSFXBlocker = false;
         }
+    }
 
+    //다이얼로그 문자열 길이가 너무 길지는 않은지 확인하고 처리
+    void SentenceLengthChecker(Dialogue.DialogueSet[] dialogueSets)
+    {
+        //배열을 List로.
+        List<Dialogue.DialogueSet> dialogueSetsList = new List<Dialogue.DialogueSet>();
+        dialogueSetsList.AddRange(dialogueSets);
+
+        foreach (Dialogue.DialogueSet dialogueSet in dialogueSetsList)
+        {
+            //List에서 몇 번째 요소인지 확인해서.  나는 몫 값을 더해준다.  그렇게 해서 추가!
+            int currindex = dialogueSetsList.IndexOf(dialogueSet);
+            //만약 해당 다이얼로그셋의 sentence의 길이가 30보다 길면! 
+            if (dialogueSet.sentence.Length > 30)
+            {
+                //전체 문장 임시 저장
+                string tempStr = dialogueSet.sentence;
+                dialogueSet.sentence = "";
+
+                int splitcount = dialogueSet.sentence.Length / 30;
+                Debug.Log("splitcount:" + splitcount);
+
+
+                for (int n=0; n<splitcount; n++)
+                {
+
+                    //리스트 insert를 해줘야하는데... 지금 currindex의 다이얼로그셋 정보를 그대로 갖고있는 애들을 복사해서 insert해줘야한다. <<<<< 여기부터 ! 
+
+
+                    for (int sn = 30*n; sn<= 30*n+29; sn++)
+                    {
+                        dialogueSetsList[currindex + n].sentence += tempStr[sn];
+                    }
+                }
+            }
+        }
     }
 
     //다이얼로그 종료 
@@ -959,7 +1016,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
             print("컨트롤 권한 돌려줌!");
         }
 
-        //특정 이벤트 연계 위한 부분.
+        //특정 이벤트 연계 위한 부분. 선택상자 정답시 처리도 여기서. ^-^
         switch (curStoryId)
         {
             case 1:
@@ -972,6 +1029,11 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 //멧돼지게임
                 GameManager.Instance.storyNumber = 31;
                 GameManager.Instance.StartStoryEvent();
+                break;
+            case 10003:
+                //Scene1. 첫 등장 - 경찰 제지 선택상자 정답 결과.
+                //경찰1 오브젝트의 ID값을 10000에서 10005로 변경시켜준다. (정답을 맞춘 후 경찰1에게 다시 말을 걸었을 때를 위한 처리.)
+                경찰1.GetComponent<Object>().id = 10005;
                 break;
             default:
                 break;
