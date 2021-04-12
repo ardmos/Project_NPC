@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : DontDestroy<DialogueManager>
 {
+    public Dialogue.DialogueSet[] dialogueSets;
     public Animator dialog_animator;
     public RuntimeAnimatorController stable, slide;
     public Text dialogObjName, dialogSentence;
@@ -278,10 +279,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
             curDialogSetCountNumber = 0;    //넘버 초기화. 
 
             //그 중 dialogueSet 배열에 접근한다.  배열을 큐로 변환시키기 위함. 편의를 위해서. 
-            Dialogue.DialogueSet[] dialogueSets = dialogue.dialogue;
+            dialogueSets = dialogue.dialogue;
 
             //해당 dialogueSet 배열의 문자열들 길이 확인 후 처리.
-            SentenceLengthChecker(dialogueSets);
+            dialogueSets = SentenceLengthChecker(dialogueSets);
 
             //얻어낸 dialogueSet을 Queue에 순차적으로 Enqueue 한다.
             dialogueSetsQue.Clear();
@@ -967,40 +968,88 @@ public class DialogueManager : DontDestroy<DialogueManager>
     }
 
     //다이얼로그 문자열 길이가 너무 길지는 않은지 확인하고 처리
-    void SentenceLengthChecker(Dialogue.DialogueSet[] dialogueSets)
+    Dialogue.DialogueSet[] SentenceLengthChecker(Dialogue.DialogueSet[] dialogueSets)
     {
         //배열을 List로.
         List<Dialogue.DialogueSet> dialogueSetsList = new List<Dialogue.DialogueSet>();
         dialogueSetsList.AddRange(dialogueSets);
 
-        foreach (Dialogue.DialogueSet dialogueSet in dialogueSetsList)
+        for(int currindex = 0; currindex<dialogueSetsList.Count; currindex++)
+        //foreach (Dialogue.DialogueSet dialogueSet in dialogueSetsList)  >>  forEach사용하니.  중간에 길이 바뀌는경우 .  처리 불가.  for문으로 바꿔서 처리했음. 
         {
             //List에서 몇 번째 요소인지 확인해서.  나는 몫 값을 더해준다.  그렇게 해서 추가!
-            int currindex = dialogueSetsList.IndexOf(dialogueSet);
+            //int currindex = dialogueSetsList.IndexOf(dialogueSet);
+            Dialogue.DialogueSet dialogueSet = dialogueSetsList[currindex];
             //만약 해당 다이얼로그셋의 sentence의 길이가 30보다 길면! 
             if (dialogueSet.sentence.Length > 30)
             {
+                Debug.Log("길이가 30 이상이다. 몇인가? : " + dialogueSet.sentence.Length);
                 //전체 문장 임시 저장
                 string tempStr = dialogueSet.sentence;
-                dialogueSet.sentence = "";
+                Debug.Log("tempStr: " + tempStr);
 
-                int splitcount = dialogueSet.sentence.Length / 30;
+                //현재 다이얼로그셋 정보 임시 저장(복사를 위한)
+                Dialogue.DialogueSet tmpDialogueSet = dialogueSet;
+
+
+                int splitcount = tempStr.Length / 30;
+                int splitcountRemainder = tempStr.Length % 30;
                 Debug.Log("splitcount:" + splitcount);
 
 
-                for (int n=0; n<splitcount; n++)
+                for (int n=0; n<=splitcount; n++)
+
+                    ///////////////////////////////// 여기부터...!    왜 0,1 두 개가?
                 {
-
+                    //dialogueSet.sentence = "";
+                    Debug.Log("For문 시작!");
                     //리스트 insert를 해줘야하는데... 지금 currindex의 다이얼로그셋 정보를 그대로 갖고있는 애들을 복사해서 insert해줘야한다. <<<<< 여기부터 ! 
-
-
-                    for (int sn = 30*n; sn<= 30*n+29; sn++)
+                    //n이 0인 경우. 는 현재 다이얼로그셋.  이니까. 이미 있으니까. 따로 insert 해줄 필요 없고, 나머지 경우만!해주자
+                    if (n != 0)
                     {
-                        dialogueSetsList[currindex + n].sentence += tempStr[sn];
+                        //Debug.Log("dialogueSetsList.Count: " + dialogueSetsList.Count);
+                        dialogueSetsList.Insert(currindex + n, tmpDialogueSet);
+                        //Debug.Log("복사 완료 n: "+n);
+                        //Debug.Log("dialogueSetsList.Count: " + dialogueSetsList.Count);
+                    }
+                    else Debug.Log("n이 0인 경우는 그냥 패스!");
+
+                    //복사 다 해줬으니까 얘네의 sentence값만 각각에 알맞게 바꿔주면 된다!
+
+                    //n이 splitcount(몫)과 같으면!  마지막이니까.  sn의 최댓값 + 를 29 대신 나머지값으로 하면 되고, 아닌경우는 30*n*29 ! 
+                    int num = currindex + n;
+                    //Debug.Log("n == splitcount인 상황. n?" + n);
+                    Debug.Log("dialogueSetsList["+0+"].sentence : " + dialogueSetsList[0].sentence);
+                    Debug.Log("dialogueSetsList[" + 1 + "].sentence : " + dialogueSetsList[1].sentence);
+                    dialogueSetsList[num].sentence = "";
+                    Debug.Log("dialogueSetsList[" + 0 + "].sentence : " + dialogueSetsList[0].sentence);
+                    Debug.Log("dialogueSetsList[" + 1 + "].sentence : " + dialogueSetsList[1].sentence);
+                    if (n == splitcount)
+                    {
+                        
+                        for (int sn = 30 * n; sn < 30 * n + splitcountRemainder; sn++)
+                        { 
+                            //Debug.Log("currindex + n:" + num);
+                            dialogueSetsList[num].sentence += tempStr[sn];
+                            //Debug.Log("n:" + n + ", sn:" + sn + ", tempStr[sn]:" + tempStr[sn] + "\n" + num + " sentence:" + dialogueSetsList[num].sentence);
+                            Debug.Log("n:" + n + ", sn:" + sn + ","+ " sentence:" + dialogueSetsList[0].sentence);
+                            Debug.Log("n:" + n + ", sn:" + sn + "," + " sentence:" + dialogueSetsList[1].sentence);
+                        }
+                    }
+                    else
+                    {
+                        for (int sn = 30 * n; sn <= 30 * n + 29; sn++)
+                        {
+                            dialogueSetsList[num].sentence += tempStr[sn];
+                            //Debug.Log("n:"+n + ", sn:"+sn + ", tempStr[sn]:"+ tempStr[sn] + "\n" + num + " sentence:" + dialogueSetsList[num].sentence);
+                            Debug.Log("n:" + n + ", sn:" + sn + "," + " sentence:" + dialogueSetsList[num].sentence);
+                        }
                     }
                 }
             }
         }
+
+        return dialogueSetsList.ToArray();
     }
 
     //다이얼로그 종료 

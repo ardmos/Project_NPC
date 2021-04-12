@@ -26571,6 +26571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c836510a9a9fa4498d705e0d946624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueSets: []
   dialog_animator: {fileID: 187658097}
   stable: {fileID: 9100000, guid: 19a6fb0fd6b7b4b8fa6b70a662f8385c, type: 2}
   slide: {fileID: 9100000, guid: 5870389648b5892479d39dd6a4a367df, type: 2}
@@ -30942,6 +30943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c836510a9a9fa4498d705e0d946624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueSets: []
   dialog_animator: {fileID: 909741904}
   stable: {fileID: 9100000, guid: 19a6fb0fd6b7b4b8fa6b70a662f8385c, type: 2}
   slide: {fileID: 9100000, guid: 5870389648b5892479d39dd6a4a367df, type: 2}
