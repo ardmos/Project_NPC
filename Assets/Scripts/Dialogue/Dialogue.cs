@@ -15,6 +15,7 @@ public class Dialogue
     [Serializable]
     public class DialogueSet
     {
+
         #region Details
         [Serializable]
         public class Details   //스타일, 좌상화, 우상화, 선택팝업, 글자속도 , 애니메이션
