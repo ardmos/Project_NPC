@@ -154,7 +154,7 @@ public class Dialogue
                 [Header("- 이동 애니메이션 활성화"), Space(5)]
                 public bool activateObjAnimate;
                 [Header("- 활성화시킬 이동 정보를 넣는 곳")]
-                public ObjectAnimData[] objectAnimationData;
+                public ObjectAnimData[] objectAnimationDatas;
             }
             [Header("- 이동 애니메이션 설정"), Space(5)]
             public AnimationSettings oldAnimationSettings;
@@ -163,17 +163,25 @@ public class Dialogue
             public struct NewAnimationSettings
             {
                 public bool activeNewAnimate;
-                public Vector2 destinationPos;
-                public GameObject objToMove;
-                public enum EndDir
+                //한번에 여러명 움직이려면 구조체로 배열 선언!
+                [Serializable]
+                public struct NewAnimData
                 {
-                    Down,
-                    Up,
-                    Right,
-                    Left
+                    public Vector2 destinationPos;
+                    public GameObject objToMove;
+                    public enum EndDir
+                    {
+                        Down,
+                        Up,
+                        Right,
+                        Left
+                    }
+                    [Header("- 정지시 쳐다볼 방향")]
+                    public EndDir endDir;
                 }
-                [Header("- 정지시 쳐다볼 방향")]
-                public EndDir endDir;
+
+                public NewAnimData[] newAnimDatas;
+                
             }
             public NewAnimationSettings newAnimationSettings;
 
@@ -363,5 +371,5 @@ public class Dialogue
     }
 
     [Header("- 대화묶음에 포함될 대화의 갯수를 정해주세요."), Space(10)]
-    public DialogueSet[] dialogue;
+    public DialogueSet[] dialogueSets;
 }

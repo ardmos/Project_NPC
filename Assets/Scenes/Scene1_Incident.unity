@@ -246,7 +246,8 @@ MonoBehaviour:
   - smallTitle_: "\uCC9C\uD615\uC0AC \uB4F1\uC7A5"
     storyId: 1
     dialogue:
-    - smallTitle_: "\uB4F1\uC7A5."
+    - smallTitle_: "\uB4F1\uC7A5. \uC870\uC0AC\uC911\uC774\uB2C8 \uC0AC\uAC74\uD604\uC7A5\uC5D0
+        \uC190\uB300\uC9C0 \uB9D0\uC544\uC8FC\uC2ED\uC2DC\uC624."
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -266,12 +267,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -321,12 +320,16 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          activeNewAnimate: 1
+          newAnimDatas:
+          - destinationPos: {x: -1.5, y: -3.5}
+            objToMove: {fileID: 1450160335}
+            endDir: 2
+          - destinationPos: {x: -2, y: -3}
+            objToMove: {fileID: 580652749}
+            endDir: 2
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -363,10 +366,10 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
           smallPortraitL: 0
-          showRightPortrait: 1
+          showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -376,12 +379,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -431,12 +432,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -485,12 +484,13 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          activeNewAnimate: 1
+          newAnimDatas:
+          - destinationPos: {x: -0.5, y: -3.5}
+            objToMove: {fileID: 20024207}
+            endDir: 3
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -540,12 +540,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -585,9 +583,9 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
-          smallPortraitL: 0
+          smallPortraitL: 1
           showRightPortrait: 0
-          rightPortraitNumber: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -596,12 +594,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -639,7 +635,7 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
-          smallPortraitL: 0
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -650,12 +646,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -696,7 +690,7 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
-          smallPortraitL: 0
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -707,12 +701,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -764,12 +756,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -806,11 +796,11 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
           smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -819,12 +809,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -854,19 +842,19 @@ MonoBehaviour:
       name: 0
       sentence: "\uC544\uD734~ \uC5F0\uCD08\uBD80\uD130 \uC774\uAC8C \uBB34\uC2A8
         \uB0A0\uBCBC\uB77D\uC774\uB78D\uB2C8\uAE4C?\n"
-    - smallTitle_: "\uC2B9\uD6C8: \uC544\uD734~ \uC5F0\uCD08\uBD80\uD130 \uC774\uAC8C
-        \uBB34\uC2A8"
+    - smallTitle_: "\uB0A8\uB4E4\uC740 \uC1A1\uB144\uD68C\uB2E4, \uC2E0\uB144\uD68C\uB2E4
+        \uBC14\uC060 \uB550\uB370, "
       dialogueSetName: 
       detail:
         delayTime: 0
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
           smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -875,12 +863,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -920,11 +906,11 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
           smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -933,12 +919,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -977,11 +961,11 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
           smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -990,12 +974,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1046,12 +1028,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1102,12 +1082,13 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          activeNewAnimate: 1
+          newAnimDatas:
+          - destinationPos: {x: -1, y: -3}
+            objToMove: {fileID: 580652749}
+            endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1144,8 +1125,8 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 0
+          leftPortraitNumber: 12
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -1156,12 +1137,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 0
@@ -1169,9 +1148,9 @@ MonoBehaviour:
               obj: {fileID: 580652753}
               paramName: DoPaperAction
         emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
+          activeEmotion: 1
+          object_: {fileID: 580652749}
+          animation: 3
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -1207,8 +1186,8 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -1217,12 +1196,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1261,8 +1238,8 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 0
+          leftPortraitNumber: 12
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -1273,18 +1250,16 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
+          activeEmotion: 1
+          object_: {fileID: 580652749}
+          animation: 4
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -1316,8 +1291,8 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 0
+          leftPortraitNumber: 12
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -1328,12 +1303,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1377,8 +1350,8 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -1387,12 +1360,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1430,8 +1401,8 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 0
+          leftPortraitNumber: 12
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -1442,12 +1413,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1489,8 +1458,8 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 0
+          leftPortraitNumber: 12
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -1501,12 +1470,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1550,8 +1517,8 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -1560,12 +1527,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 1
@@ -1573,9 +1538,9 @@ MonoBehaviour:
               obj: {fileID: 580652753}
               paramName: DoPaperAction
         emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
+          activeEmotion: 1
+          object_: {fileID: 20024207}
+          animation: 1
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -1608,8 +1573,8 @@ MonoBehaviour:
         styles: 0
         portraitSettings:
           showLeftPortrait: 0
-          leftPortraitNumber: 0
-          smallPortraitL: 0
+          leftPortraitNumber: 12
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -1620,12 +1585,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1653,8 +1616,8 @@ MonoBehaviour:
           beatType: 0
       soundType: 0
       name: 3
-      sentence: "\uADF8\uB7F0\uB370... \uC2DC\uCCB4\uC5D0 \uC774\uC0C1\uD55C \uC810\uC774
-        \uC788\uC2B5\uB2C8\uB2E4."
+      sentence: "\uC800... \uADF8\uB7F0\uB370... \uC2DC\uCCB4\uC5D0 \uC774\uC0C1\uD55C
+        \uC810\uC774 \uD558\uB098 \uC788\uC2B5\uB2C8\uB2E4."
     - smallTitle_: "\uC2B9\uD6C8: \uC774\uC0C1\uD55C \uC810?"
       dialogueSetName: 
       detail:
@@ -1665,8 +1628,8 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
-          rightPortraitNumber: 1
+          showRightPortrait: 1
+          rightPortraitNumber: 0
           smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
@@ -1675,12 +1638,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1716,8 +1677,8 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
           smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 1
@@ -1729,12 +1690,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1771,8 +1730,8 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
-          leftPortraitNumber: 0
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
           smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 1
@@ -1784,12 +1743,13 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          activeNewAnimate: 1
+          newAnimDatas:
+          - destinationPos: {x: -4, y: -7.5}
+            objToMove: {fileID: 580652749}
+            endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1839,12 +1799,13 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          activeNewAnimate: 1
+          newAnimDatas:
+          - destinationPos: {x: 2.5, y: -3.5}
+            objToMove: {fileID: 1450160335}
+            endDir: 2
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -1893,18 +1854,19 @@ MonoBehaviour:
             question: 
             choices: []
         oldAnimationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
+          activateObjAnimate: 1
+          objectAnimationDatas:
+          - objToMakeMove: {fileID: 20024207}
+            moveSet: []
+            endDir: 3
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
+          activeEmotion: 1
+          object_: {fileID: 20024207}
           animation: 0
         sFXSettings:
           turnOffTypingSound: 0
@@ -1948,12 +1910,13 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
-          activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          activeNewAnimate: 1
+          newAnimDatas:
+          - destinationPos: {x: 2, y: -3}
+            objToMove: {fileID: 20024207}
+            endDir: 2
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 0
@@ -1997,7 +1960,7 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
-          smallPortraitL: 0
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -2008,18 +1971,16 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
+          activeEmotion: 1
+          object_: {fileID: 20024207}
+          animation: 6
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -2063,12 +2024,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2113,7 +2072,7 @@ MonoBehaviour:
           smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 1
-          smallPortraitR: 0
+          smallPortraitR: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -2121,12 +2080,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2178,12 +2135,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2223,7 +2178,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -2236,12 +2191,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2282,7 +2235,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -2291,13 +2244,14 @@ MonoBehaviour:
             question: 
             choices: []
         oldAnimationSettings:
-          activateObjAnimate: 0
-          objectAnimationData: []
+          activateObjAnimate: 1
+          objectAnimationDatas:
+          - objToMakeMove: {fileID: 1450160335}
+            moveSet: []
+            endDir: 2
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2338,7 +2292,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -2351,18 +2305,16 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
+          activeEmotion: 1
+          object_: {fileID: 20024207}
+          animation: 1
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -2399,7 +2351,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -2409,12 +2361,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2457,7 +2407,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -2467,12 +2417,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2511,7 +2459,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -2524,12 +2472,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2570,7 +2516,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -2580,12 +2526,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2623,7 +2567,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -2636,12 +2580,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2682,7 +2624,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -2692,12 +2634,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2748,12 +2688,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2808,12 +2746,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2867,12 +2803,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2909,7 +2843,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -2922,12 +2856,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -2957,9 +2889,9 @@ MonoBehaviour:
       name: 0
       sentence: "\uB0B4\uAC00 \uAC8C\uC784\uB54C\uBB38\uC5D0 \uC8FD\uACE0 \uC8FD\uC774\uACE0,
         \uB5BC\uC778 \uB3C8 \uCC3E\uC544\uC8FC\uACE0 \n\uBB50 \uADF8\uB7F0 \uBCC4\uC758
-        \uBCC4 \uD558\uCC2E\uC740 \uC0AC\uAC74\uB4E4\uC744 \uB9CE\uC774 \uACBD\uD5D8\uD55C
-        \uAC74 \uB9DE\uC544\uC694. \uADFC\uB370 \uC774\uAC74 \uC544\uB2C8\uC796\uC544~!"
-    - smallTitle_: "\uC9C0\uD604: \uBB50\uAC00 \uB9D0\uC785\uB2C8\uAE4C?"
+        \uBCC4 \uC0AC\uAC74\uB4E4\uC744 \uB9CE\uC774 \uACBD\uD5D8\uD55C \uAC74 \uB9DE\uC544\uC694.
+        \uADFC\uB370 \uC774\uAC74..."
+    - smallTitle_: "\uC9C0\uD604: ??"
       dialogueSetName: 
       detail:
         delayTime: 0
@@ -2969,7 +2901,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -2979,12 +2911,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3012,7 +2942,7 @@ MonoBehaviour:
           beatType: 0
       soundType: 0
       name: 1
-      sentence: "\uBB50\uAC00 \uB9D0\uC785\uB2C8\uAE4C?"
+      sentence: ??
     - smallTitle_: "\uC2B9\uD6C8: \uC544\uB2C8, \uBCF4\uC2DC\uB2E4\uC2DC\uD53C \uCE68\uC785
         \uD754\uC801\uB3C4 \uC5C6\uACE0, ..."
       dialogueSetName: 
@@ -3021,7 +2951,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -3034,12 +2964,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3079,7 +3007,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -3092,18 +3020,16 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
-          activeEmotion: 0
-          object_: {fileID: 0}
-          animation: 0
+          activeEmotion: 1
+          object_: {fileID: 20024207}
+          animation: 3
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -3136,7 +3062,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -3146,12 +3072,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3187,7 +3111,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -3200,12 +3124,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3245,7 +3167,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -3255,12 +3177,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3301,7 +3221,7 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
-          smallPortraitL: 0
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -3312,12 +3232,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3362,7 +3280,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -3372,12 +3290,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3417,7 +3333,7 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
-          smallPortraitL: 0
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 1
           smallPortraitR: 0
@@ -3428,12 +3344,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3469,7 +3383,7 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 0
+          showLeftPortrait: 1
           leftPortraitNumber: 0
           smallPortraitL: 0
           showRightPortrait: 0
@@ -3482,12 +3396,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3528,7 +3440,7 @@ MonoBehaviour:
           showLeftPortrait: 0
           leftPortraitNumber: 0
           smallPortraitL: 0
-          showRightPortrait: 0
+          showRightPortrait: 1
           rightPortraitNumber: 1
           smallPortraitR: 0
         selectionPopupSettings:
@@ -3538,12 +3450,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -3812,12 +3722,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -6993,12 +6901,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -7530,12 +7436,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -7793,8 +7697,9 @@ GameObject:
   - component: {fileID: 250607622}
   - component: {fileID: 250607624}
   - component: {fileID: 250607623}
-  m_Layer: 0
-  m_Name: door (1)
+  - component: {fileID: 250607625}
+  m_Layer: 8
+  m_Name: "\uC67C\uCABD \uC9D1"
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7807,13 +7712,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250607621}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.48, y: -6.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1708364136}
-  m_Father: {fileID: 653170597}
-  m_RootOrder: 20
+  m_Father: {fileID: 547723876}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &250607623
 BoxCollider2D:
@@ -7828,7 +7733,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04160595}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7839,7 +7744,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28125, y: 0.28125}
+  m_Size: {x: 1, y: 1.6910152}
   m_EdgeRadius: 0
 --- !u!212 &250607624
 SpriteRenderer:
@@ -7892,6 +7797,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &250607625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250607621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b396b14bcfc566243af7bdac8e1a29df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 15800
 --- !u!1 &264977695
 GameObject:
   m_ObjectHideFlags: 0
@@ -8068,12 +7986,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8125,12 +8041,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8180,12 +8094,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8234,12 +8146,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8288,12 +8198,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8343,12 +8251,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8397,12 +8303,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8452,12 +8356,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8508,12 +8410,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8562,12 +8462,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8618,12 +8516,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8675,12 +8571,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8730,12 +8624,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8784,12 +8676,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8838,12 +8728,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8892,12 +8780,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -8947,12 +8833,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9002,12 +8886,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9059,12 +8941,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9117,12 +8997,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9172,12 +9050,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9228,12 +9104,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9286,12 +9160,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9340,12 +9212,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9398,12 +9268,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9456,12 +9324,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9510,12 +9376,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9567,12 +9431,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9621,12 +9483,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9675,12 +9535,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9729,12 +9587,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9784,12 +9640,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9839,12 +9693,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9893,12 +9745,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -9951,12 +9801,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -10007,12 +9855,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -10400,7 +10246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 10, y: 0}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339418164
@@ -11509,6 +11355,9 @@ Transform:
   - {fileID: 1616415022}
   - {fileID: 1501625307}
   - {fileID: 878789727}
+  - {fileID: 614822377}
+  - {fileID: 2126296560}
+  - {fileID: 250607622}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11541,7 +11390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 580652750}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &553220203
 SpriteRenderer:
@@ -11734,9 +11583,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580652749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.13, y: -10.87, z: 0}
+  m_LocalPosition: {x: -2, y: -10.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2085992222}
   - {fileID: 553220202}
   m_Father: {fileID: 1613328308}
   m_RootOrder: 3
@@ -12003,12 +11853,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12069,12 +11917,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12124,12 +11970,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12179,12 +12023,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12234,12 +12076,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12288,12 +12128,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12342,12 +12180,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12397,12 +12233,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12453,12 +12287,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -12609,7 +12441,7 @@ GameObject:
   - component: {fileID: 614822378}
   - component: {fileID: 614822380}
   m_Layer: 8
-  m_Name: door
+  m_Name: "\uC624\uB978\uCABD \uC9D1"
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12622,13 +12454,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614822376}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.51, y: -6.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 605136359}
-  m_Father: {fileID: 653170597}
-  m_RootOrder: 19
+  m_Father: {fileID: 547723876}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &614822378
 BoxCollider2D:
@@ -12643,7 +12475,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.13083124}
+  m_Offset: {x: 0, y: -0.036248684}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12654,7 +12486,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.908124}
+  m_Size: {x: 1, y: 1.7189589}
   m_EdgeRadius: 0
 --- !u!212 &614822379
 SpriteRenderer:
@@ -13048,12 +12880,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -13103,12 +12933,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -13162,12 +12990,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -13222,12 +13048,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -13280,12 +13104,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -13339,12 +13161,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -13397,12 +13217,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -13456,12 +13274,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -13723,8 +13539,6 @@ Transform:
   - {fileID: 1305684859}
   - {fileID: 889465081}
   - {fileID: 402077638}
-  - {fileID: 614822377}
-  - {fileID: 250607622}
   - {fileID: 1729303440}
   - {fileID: 1555472112}
   m_Father: {fileID: 0}
@@ -15256,7 +15070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - smallTitle_: 
+  - smallTitle_: "\uC815\uB2F5\uC744 \uC544\uC9C1 \uBABB \uB9DE\uCDC4\uC744 \uB54C"
     storyId: 10000
     dialogue:
     - smallTitle_: "\uACBD\uCC30 \uC81C\uC9C0"
@@ -15291,12 +15105,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -15325,6 +15137,74 @@ MonoBehaviour:
       soundType: 0
       name: 2
       sentence: "\uB4E4\uC5B4\uC624\uC2DC\uBA74 \uC548\uB41C\uB2E4\uB2C8\uAE4C\uC694."
+  - smallTitle_: "\uC815\uB2F5\uC744 \uC774\uBBF8 \uB9DE\uCDC4\uC744 \uB54C"
+    storyId: 10005
+    dialogue:
+    - smallTitle_: "\uACBD\uCC30 \uC81C\uC9C0"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 11
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 11
+          smallPortraitR: 1
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: "\uC9C0\uAC11\uC5D0\uC11C \uAEBC\uB0BC \uAC74..."
+            choices:
+            - sentence: "\uD604\uAE08"
+              linkedStoryDialogueIdNumber: 10001
+              isItCorrectAnswer: 0
+            - sentence: "\uC8FC\uBBFC\uB4F1\uB85D\uC99D"
+              linkedStoryDialogueIdNumber: 10002
+              isItCorrectAnswer: 0
+            - sentence: "\uD0D0\uC815\uC0AC\uBB34\uC18C \uBA85\uD568"
+              linkedStoryDialogueIdNumber: 10003
+              isItCorrectAnswer: 1
+            - sentence: "\uC544\uBB34\uAC83\uB3C4 \uC8FC\uC9C0 \uC54A\uB294\uB2E4"
+              linkedStoryDialogueIdNumber: 10004
+              isItCorrectAnswer: 0
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 2
+      sentence: "\uC5B4\uC11C\uC624\uC2ED\uC2DC\uC624 \uD0D0\uC815\uB2D8!\n\uD615\uC0AC\uB2D8\uC740
+        \uACE7 \uC624\uC2E4\uAC81\uB2C8\uB2E4."
 --- !u!1 &878789726
 GameObject:
   m_ObjectHideFlags: 0
@@ -15358,7 +15238,6 @@ Transform:
   m_Children:
   - {fileID: 1290929847}
   - {fileID: 1481285681}
-  - {fileID: 2126296560}
   m_Father: {fileID: 547723876}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15460,7 +15339,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.35764122}
+  m_Offset: {x: 0, y: -0.17176962}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15471,7 +15350,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0625, y: 1.9754429}
+  m_Size: {x: 1.0625, y: 1.6036997}
   m_EdgeRadius: 0
 --- !u!1 &889465080
 GameObject:
@@ -15925,7 +15804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937402247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.863461, y: -9.936539, z: -11}
+  m_LocalPosition: {x: -9.98346, y: -10.016539, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17078,12 +16957,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17135,12 +17012,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17190,12 +17065,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17244,12 +17117,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17298,12 +17169,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17353,12 +17222,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17407,12 +17274,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17462,12 +17327,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17518,12 +17381,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17572,12 +17433,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17628,12 +17487,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17685,12 +17542,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17740,12 +17595,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17794,12 +17647,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17848,12 +17699,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17902,12 +17751,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -17957,12 +17804,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18012,12 +17857,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18069,12 +17912,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18127,12 +17968,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18182,12 +18021,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18238,12 +18075,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18296,12 +18131,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18350,12 +18183,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18408,12 +18239,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18466,12 +18295,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18520,12 +18347,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18577,12 +18402,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18631,12 +18454,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18685,12 +18506,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18739,12 +18558,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18794,12 +18611,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18849,12 +18664,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18903,12 +18716,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -18961,12 +18772,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19017,12 +18826,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19118,12 +18925,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19173,12 +18978,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19232,12 +19035,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19292,12 +19093,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19350,12 +19149,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19409,12 +19206,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19467,12 +19262,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -19526,12 +19319,121 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 14
+      sentence: "\uC774 \uC9D1\uC774 \uC544\uB2CC \uAC83 \uAC19\uB2E4."
+  - smallTitle_: "\uC4F0\uB808\uAE30\uD1B5"
+    storyId: 15700
+    dialogue:
+    - smallTitle_: "\uAE30\uBCF8 \uC815\uBCF4"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 14
+      sentence: "\uAD6C\uACA8\uC9C4 \uC885\uC774\uB4E4\uC774 \uAC00\uB4DD\uD558\uB2E4.
+        \n\uBB34\uC5B8\uAC00\uC758 \uC124\uACC4\uB3C4 \uAC19\uAE30\uB3C4 \uD55C\uB370..."
+  - smallTitle_: "\uC67C\uCABD\uC9D1"
+    storyId: 15800
+    dialogue:
+    - smallTitle_: "\uAE30\uBCF8 \uC815\uBCF4"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -20152,12 +20054,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -20209,12 +20109,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -20266,12 +20164,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -20332,6 +20228,189 @@ Transform:
   m_Father: {fileID: 641186953}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1264595873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264595874}
+  - component: {fileID: 1264595875}
+  m_Layer: 0
+  m_Name: Shadow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1264595874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264595873}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1450160336}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1264595875
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264595873}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -536478411
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -4756028443593143600, guid: 205347b400ed04fe690b3126cd1529b9,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.34375, y: 2.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1273865776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273865777}
+  - component: {fileID: 1273865779}
+  - component: {fileID: 1273865778}
+  m_Layer: 0
+  m_Name: EmotionSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1273865777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273865776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2085992222}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1273865778
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273865776}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef4166ab3ee137440952d700bfd3b5b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1273865779
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273865776}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1907403191
+  m_SortingLayer: 6
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.40625, y: 0.65625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1273944361
 GameObject:
   m_ObjectHideFlags: 0
@@ -22500,12 +22579,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22555,12 +22632,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22610,12 +22685,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22665,12 +22738,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22719,12 +22790,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22774,12 +22843,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22830,12 +22897,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22884,12 +22949,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22941,12 +23004,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -22998,12 +23059,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23053,12 +23112,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23109,12 +23166,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23167,12 +23222,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23224,12 +23277,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23280,12 +23331,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23336,12 +23385,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23390,12 +23437,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 0
@@ -23451,12 +23496,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23507,12 +23550,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23562,12 +23603,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23621,12 +23660,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23676,12 +23713,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23735,12 +23770,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23794,12 +23827,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 1
@@ -23854,12 +23885,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23909,12 +23938,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -23963,12 +23990,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24018,12 +24043,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24073,12 +24096,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24128,12 +24149,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24182,12 +24201,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 0
@@ -24242,12 +24259,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24297,12 +24312,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24355,12 +24368,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24412,12 +24423,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24470,12 +24479,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24526,12 +24533,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24585,12 +24590,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24643,12 +24646,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24701,12 +24702,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24758,12 +24757,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24814,12 +24811,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24870,12 +24865,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24926,12 +24919,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -24982,12 +24973,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25042,12 +25031,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25101,12 +25088,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25156,12 +25141,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25213,12 +25196,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25268,12 +25249,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25326,12 +25305,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25380,12 +25357,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25434,12 +25409,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25489,12 +25462,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25546,12 +25517,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25606,12 +25575,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25662,12 +25629,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25716,12 +25681,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25772,12 +25735,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -25809,18 +25770,239 @@ MonoBehaviour:
         \uC811\uC18D\uD588\uB358 \uB370\uC774\uD130 \uAE30\uB85D\uC744 \uD1A0\uB300\uB85C
         \uC6A9\uC758\uC790\uB97C \uCD94\uB9AC\uB294 \uC911\uC785\uB2C8\uB2E4. \n\uC6A9\uC758\uC790\uB4E4\uC774
         \uBAA8\uB450 \uBAA8\uC774\uBA74 \uD0D0\uBB38\uC218\uC0AC\uB97C \uD560 \uACC4\uD68D\uC785\uB2C8\uB2E4."
---- !u!1 &1450160335 stripped
+--- !u!1 &1450160335
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1112399904096812814, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-    type: 3}
-  m_PrefabInstance: {fileID: 1112399905469616065}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1450160336 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450160336}
+  - component: {fileID: 1450160342}
+  - component: {fileID: 1450160341}
+  - component: {fileID: 1450160340}
+  - component: {fileID: 1450160339}
+  - component: {fileID: 1450160338}
+  - component: {fileID: 1450160337}
+  - component: {fileID: 1450160343}
+  m_Layer: 8
+  m_Name: "\uCC9C\uC9C0\uD604 \uD615\uC0AC"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1450160336
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-    type: 3}
-  m_PrefabInstance: {fileID: 1112399905469616065}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450160335}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5, y: -11.51, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6333997003658421155}
+  - {fileID: 1264595874}
+  m_Father: {fileID: 1613328308}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1450160337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450160335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef8de7bccf384c2bb7cb05d06ad92d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: 5
+  rb: {fileID: 1450160340}
+  animator: {fileID: 1450160339}
+  movement: {x: 0, y: 0}
+  isrm: 0
+  animData:
+    objToMakeMove: {fileID: 0}
+    moveSet: []
+    endDir: 0
+  originalPos: {x: 0, y: 0}
+  destinationPos: {x: 0, y: 0}
+  curpos: {x: 0, y: 0}
+  isArrived: 0
+  isJustTurnCompleted: 0
+  isMoveSetOn: 0
+  followMode: 0
+  isItMiro: 0
+  isItFromDialog: 0
+  desObj: {fileID: 0}
+  xDis: 0
+  yDis: 0
+  desPos: {x: 0, y: 0}
+  "\uB3C4\uCC29\uBC94\uC704": 1
+  "\uB530\uB77C\uAC00\uAE30\uC704\uCE58\uC0DD\uC131\uAC70\uB9AC": 0
+  "\uC774\uB3D9\uC18D\uB3C4": 0
+  "\uCD1D\uC774\uB3D9\uB7C9": {x: 0, y: 0}
+  "\uB2E4\uC774\uC5BC\uB85C\uADF8\uD638\uCD9C\uB9C8\uC9C0\uB9C9\uBC29\uD5A5": 0
+--- !u!114 &1450160338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450160335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b396b14bcfc566243af7bdac8e1a29df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10100
+--- !u!95 &1450160339
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450160335}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0da2840930c11404ab6970f0099e9345, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &1450160340
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450160335}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &1450160341
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450160335}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01, y: 0.2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.0625, y: 2}
+    newSize: {x: 0.6875, y: 1.9375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.6}
+  m_EdgeRadius: 0
+--- !u!212 &1450160342
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450160335}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -536478411
+  m_SortingLayer: 4
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: e036af57aa680ca43815c91a29408361, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.6875, y: 1.9375}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &1450160343
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450160335}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.984375}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.0625, y: 2}
+    newSize: {x: 0.6875, y: 1.9375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.65625, y: 1.96875}
+  m_EdgeRadius: 0
 --- !u!1 &1463901922
 GameObject:
   m_ObjectHideFlags: 0
@@ -26402,6 +26584,7 @@ MonoBehaviour:
   audioSource: {fileID: 1556139920}
   audioSystem: {fileID: 1556139922}
   continueBtn: {fileID: 680339351}
+  "\uACBD\uCC301": {fileID: 171954334}
   isDialogueActive: 0
   isSpaceKeyDowned: 0
   isDuringTyping: 0
@@ -26445,12 +26628,10 @@ MonoBehaviour:
           choices: []
       oldAnimationSettings:
         activateObjAnimate: 0
-        objectAnimationData: []
+        objectAnimationDatas: []
       newAnimationSettings:
         activeNewAnimate: 0
-        destinationPos: {x: 0, y: 0}
-        objToMove: {fileID: 0}
-        endDir: 0
+        newAnimDatas: []
       etcAnimationSettings:
         etcAnimSets: []
       emotionSettings:
@@ -26500,12 +26681,10 @@ MonoBehaviour:
           choices: []
       oldAnimationSettings:
         activateObjAnimate: 0
-        objectAnimationData: []
+        objectAnimationDatas: []
       newAnimationSettings:
         activeNewAnimate: 0
-        destinationPos: {x: 0, y: 0}
-        objToMove: {fileID: 0}
-        endDir: 0
+        newAnimDatas: []
       etcAnimationSettings:
         etcAnimSets: []
       emotionSettings:
@@ -26806,7 +26985,7 @@ Transform:
   m_LocalScale: {x: -0.9615926, y: 1.0665449, z: 1}
   m_Children: []
   m_Father: {fileID: 653170597}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 70.911}
 --- !u!61 &1555472113
 BoxCollider2D:
@@ -27046,12 +27225,10 @@ MonoBehaviour:
           choices: []
       oldAnimationSettings:
         activateObjAnimate: 0
-        objectAnimationData: []
+        objectAnimationDatas: []
       newAnimationSettings:
         activeNewAnimate: 0
-        destinationPos: {x: 0, y: 0}
-        objToMove: {fileID: 0}
-        endDir: 0
+        newAnimDatas: []
       etcAnimationSettings:
         etcAnimSets: []
       emotionSettings:
@@ -27441,12 +27618,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -27498,12 +27673,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -27558,16 +27731,14 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
-          activeEmotion: 1
+          activeEmotion: 0
           object_: {fileID: 171954334}
           animation: 5
         sFXSettings:
@@ -27601,10 +27772,10 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 11
-          smallPortraitL: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 11
-          smallPortraitR: 0
+          smallPortraitR: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -27612,12 +27783,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -27657,10 +27826,10 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 11
-          smallPortraitL: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 11
-          smallPortraitR: 0
+          smallPortraitR: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -27668,12 +27837,13 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 1
-          destinationPos: {x: 0, y: -7.5}
-          objToMove: {fileID: 171954334}
-          endDir: 0
+          newAnimDatas:
+          - destinationPos: {x: 0, y: -7.5}
+            objToMove: {fileID: 171954334}
+            endDir: 0
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 0
@@ -27715,10 +27885,10 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 0
-          smallPortraitL: 0
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 0
-          smallPortraitR: 1
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -27726,12 +27896,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 1
-          destinationPos: {x: 0, y: -7.5}
-          objToMove: {fileID: 171954334}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -27769,10 +27937,10 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 0
-          smallPortraitL: 0
+          smallPortraitL: 1
           showRightPortrait: 0
           rightPortraitNumber: 0
-          smallPortraitR: 1
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -27780,12 +27948,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 1
-          destinationPos: {x: 0, y: -7.5}
-          objToMove: {fileID: 171954334}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -27838,12 +28004,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28120,12 +28284,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28186,12 +28348,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28241,12 +28401,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28296,12 +28454,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28351,12 +28507,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28405,12 +28559,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28459,12 +28611,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28514,12 +28664,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -28570,12 +28718,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -29127,7 +29273,7 @@ GameObject:
   - component: {fileID: 1708364136}
   - component: {fileID: 1708364138}
   - component: {fileID: 1708364137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bell
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -29386,7 +29532,7 @@ Transform:
   - {fileID: 1390459597}
   - {fileID: 1758966297}
   m_Father: {fileID: 653170597}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.565001}
 --- !u!61 &1729303441
 BoxCollider2D:
@@ -30809,6 +30955,7 @@ MonoBehaviour:
   audioSource: {fileID: 1814461020}
   audioSystem: {fileID: 1814461019}
   continueBtn: {fileID: 1898981218}
+  "\uACBD\uCC301": {fileID: 0}
   isDialogueActive: 1
   isSpaceKeyDowned: 0
   isDuringTyping: 0
@@ -30853,12 +31000,10 @@ MonoBehaviour:
           choices: []
       oldAnimationSettings:
         activateObjAnimate: 0
-        objectAnimationData: []
+        objectAnimationDatas: []
       newAnimationSettings:
         activeNewAnimate: 0
-        destinationPos: {x: 0, y: 0}
-        objToMove: {fileID: 0}
-        endDir: 0
+        newAnimDatas: []
       etcAnimationSettings:
         etcAnimSets: []
       emotionSettings:
@@ -30911,12 +31056,10 @@ MonoBehaviour:
           choices: []
       oldAnimationSettings:
         activateObjAnimate: 0
-        objectAnimationData: []
+        objectAnimationDatas: []
       newAnimationSettings:
         activeNewAnimate: 0
-        destinationPos: {x: 0, y: 0}
-        objToMove: {fileID: 0}
-        endDir: 0
+        newAnimDatas: []
       etcAnimationSettings:
         etcAnimSets: []
       emotionSettings:
@@ -31040,12 +31183,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -31096,12 +31237,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 0
@@ -31160,12 +31299,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 1
-          destinationPos: {x: -5, y: -10}
-          objToMove: {fileID: 0}
-          endDir: 1
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -31214,12 +31351,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -31271,12 +31406,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -31337,12 +31470,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -31395,12 +31526,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -31452,12 +31581,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -31752,12 +31879,10 @@ MonoBehaviour:
           choices: []
       oldAnimationSettings:
         activateObjAnimate: 0
-        objectAnimationData: []
+        objectAnimationDatas: []
       newAnimationSettings:
         activeNewAnimate: 0
-        destinationPos: {x: 0, y: 0}
-        objToMove: {fileID: 0}
-        endDir: 0
+        newAnimDatas: []
       etcAnimationSettings:
         etcAnimSets: []
       emotionSettings:
@@ -32082,12 +32207,10 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -33564,12 +33687,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -33620,12 +33741,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets:
           - activateOrDeActiveObjAnimate: 0
@@ -33684,12 +33803,13 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 1
-          destinationPos: {x: -5, y: -10}
-          objToMove: {fileID: 20024207}
-          endDir: 2
+          newAnimDatas:
+          - destinationPos: {x: -5, y: -10}
+            objToMove: {fileID: 20024207}
+            endDir: 2
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -33738,12 +33858,10 @@ MonoBehaviour:
             choices: []
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 0
-          destinationPos: {x: 0, y: 0}
-          objToMove: {fileID: 0}
-          endDir: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -33795,12 +33913,13 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 1
-          destinationPos: {x: -2, y: -10}
-          objToMove: {fileID: 20024207}
-          endDir: 1
+          newAnimDatas:
+          - destinationPos: {x: -2, y: -10}
+            objToMove: {fileID: 20024207}
+            endDir: 1
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -33838,10 +33957,10 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 11
-          smallPortraitL: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 11
-          smallPortraitR: 0
+          smallPortraitR: 1
         selectionPopupSettings:
           activateSelectionPopup: 1
           selectionPopupData:
@@ -33861,12 +33980,13 @@ MonoBehaviour:
               isItCorrectAnswer: 0
         oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
         newAnimationSettings:
           activeNewAnimate: 1
-          destinationPos: {x: -2, y: -7.5}
-          objToMove: {fileID: 171954334}
-          endDir: 0
+          newAnimDatas:
+          - destinationPos: {x: -2, y: -7.5}
+            objToMove: {fileID: 171954334}
+            endDir: 0
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -34330,8 +34450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 90, y: 25}
-  m_SizeDelta: {x: -240, y: 110}
+  m_AnchoredPosition: {x: 0, y: 25}
+  m_SizeDelta: {x: -120, y: 110}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1959286226
 MonoBehaviour:
@@ -34363,7 +34483,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\uB0B4\uC6A9"
 --- !u!222 &1959286227
@@ -35009,6 +35129,37 @@ Transform:
   m_Father: {fileID: 806612664}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2085992221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085992222}
+  m_Layer: 0
+  m_Name: EmotionCase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2085992222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085992221}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1273865777}
+  m_Father: {fileID: 580652750}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123239345
 GameObject:
   m_ObjectHideFlags: 0
@@ -35084,7 +35235,8 @@ GameObject:
   - component: {fileID: 2126296560}
   - component: {fileID: 2126296561}
   - component: {fileID: 2126296562}
-  m_Layer: 0
+  - component: {fileID: 2126296563}
+  m_Layer: 8
   m_Name: trashcan
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -35099,11 +35251,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126296559}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16000032, y: -1.69, z: 0}
+  m_LocalPosition: {x: -4.5599995, y: -4.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 878789727}
-  m_RootOrder: 2
+  m_Father: {fileID: 547723876}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2126296561
 SpriteRenderer:
@@ -35143,7 +35295,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 610542433
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 53
   m_Sprite: {fileID: 594684614783499637, guid: cfbb64264e970894483f0d020bc0d3be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -35181,6 +35333,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.71875, y: 1.34375}
   m_EdgeRadius: 0
+--- !u!114 &2126296563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126296559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b396b14bcfc566243af7bdac8e1a29df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 15700
 --- !u!1 &2126409441
 GameObject:
   m_ObjectHideFlags: 0
@@ -35395,12 +35560,12 @@ PrefabInstance:
     - target: {fileID: 363945967062784043, guid: 0732656ae41e8471b97ea3f01406419c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.88
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 363945967062784043, guid: 0732656ae41e8471b97ea3f01406419c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.92
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 363945967062784043, guid: 0732656ae41e8471b97ea3f01406419c,
         type: 3}
@@ -35449,75 +35614,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0732656ae41e8471b97ea3f01406419c, type: 3}
---- !u!1001 &1112399905469616065
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1613328308}
-    m_Modifications:
-    - target: {fileID: 1112399904096812814, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_Name
-      value: "\uCC9C\uC9C0\uD604 \uD615\uC0AC"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1112399904096812817, guid: 9b5cbc447116e4fd2a84755a1c3f0338,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9b5cbc447116e4fd2a84755a1c3f0338, type: 3}
 --- !u!1001 &3219217766063091670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35538,12 +35634,12 @@ PrefabInstance:
     - target: {fileID: 3219217766351638601, guid: 9031ce589c4aa47b1b388b36f6d8fa80,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.939992
+      value: -10.059992
       objectReference: {fileID: 0}
     - target: {fileID: 3219217766351638601, guid: 9031ce589c4aa47b1b388b36f6d8fa80,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.488738
+      value: -9.568738
       objectReference: {fileID: 0}
     - target: {fileID: 3219217766351638601, guid: 9031ce589c4aa47b1b388b36f6d8fa80,
         type: 3}
@@ -35681,6 +35777,91 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af579edce83354e6f859b60b60e757b6, type: 3}
+--- !u!212 &4571677978175540087
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8345714356875335719}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1907403191
+  m_SortingLayer: 6
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.40625, y: 0.65625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &4653057572884644706
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8345714356875335719}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef4166ab3ee137440952d700bfd3b5b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &5779144971463403833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6333997003658421155}
+  m_Layer: 0
+  m_Name: EmotionCase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &6261429762539101601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35760,3 +35941,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3705fcd21edeb79468cc0260fdca0993, type: 3}
+--- !u!4 &6333997003658421155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779144971463403833}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7718408846634061104}
+  m_Father: {fileID: 1450160336}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &7718408846634061104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8345714356875335719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6333997003658421155}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8345714356875335719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7718408846634061104}
+  - component: {fileID: 4571677978175540087}
+  - component: {fileID: 4653057572884644706}
+  m_Layer: 0
+  m_Name: EmotionSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
