@@ -14,10 +14,18 @@ public class Timer : MonoBehaviour
         if (Mathf.Floor(remainTime) <= 0f)
         {
             //시간 모두 소모! 실패!
-            //Debug.Log("시간 모두 소모! 실패!!!");            
+            //Debug.Log("시간 모두 소모! 실패!!!");
+            remainTime = 0;
+            text.text = remainTime.ToString();
         }
         else
         {
+            if(Mathf.Floor(remainTime) <= 10f)
+            {
+                //두근두근애니메이션 추가하기
+                GetComponent<Animator>().SetTrigger("TimerPopMinus");
+            }
+
             remainTime -= Time.deltaTime;
             text.text = Mathf.Floor(remainTime).ToString();
         }
