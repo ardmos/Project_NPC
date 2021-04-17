@@ -22,6 +22,7 @@ public class KeyInput_Controller : MonoBehaviour
 
 
     public float movespeed = 5f;
+    public float rayDistance = 0.7f;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -77,6 +78,11 @@ public class KeyInput_Controller : MonoBehaviour
         도착범위 = 0.8f;
         이동속도 = 1f;
 
+        //미로일 경우 isControllable true로 시작 
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
+        {
+            isControllable = true;            
+        }        
     }
 
     // Update is called once per frame
@@ -164,10 +170,11 @@ public class KeyInput_Controller : MonoBehaviour
             //미로인지 아닌지에 따라 다른 처리
             if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
             {
-                if (Input.GetKeyDown(KeyCode.Space) && scanObject)
+                if (Input.GetKeyDown(KeyCode.Space) && scanObject && movement == Vector2.zero)
                 {
                     print("scanObject: " + scanObject);
-                    scanObject.GetComponent<Maze_Obstacle>().StartTask();
+                    
+                    scanObject.GetComponent<Maze_Obstacle>().StartTask(gameObject.transform.position);
                 }
             }
             else
@@ -262,8 +269,9 @@ public class KeyInput_Controller : MonoBehaviour
 
         //Ray
         rayPosition = new Vector2(rb.position.x, rb.position.y + 0.4f);
-        Debug.DrawRay(rayPosition, rayDir, Color.green, 0.7f);
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(rayPosition, rayDir, 0.7f, LayerMask.GetMask("Object"));
+        Debug.DrawRay(rayPosition, rayDir, Color.green, rayDistance);
+        Debug.Log("rayDistance: " + rayDistance);
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(rayPosition, rayDir, rayDistance, LayerMask.GetMask("Object"));
 
         if (raycastHit2D.collider != null)
             scanObject = raycastHit2D.collider.gameObject;

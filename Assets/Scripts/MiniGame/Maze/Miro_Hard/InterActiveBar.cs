@@ -14,12 +14,12 @@ public class InterActiveBar : MonoBehaviour
 
     public Slider slider;
     float delayTime;
-    GameObject obstacleObj;
+    GameObject obstacleObj;    
 
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false);        
     }
 
     // Update is called once per frame
@@ -38,8 +38,9 @@ public class InterActiveBar : MonoBehaviour
         }
 
         //슬라이더 게이지가 꽉 차면.  작업 완료 처리
-        if(slider.value == 1f)
+        if (slider.value == 1f)
         {
+            Debug.Log("게이지 꽉 찼다! 작업종료 시작 : " + obstacleObj);
             obstacleObj.GetComponent<Maze_Obstacle>().CompleteTask();
             gameObject.SetActive(false);
         }
@@ -56,7 +57,6 @@ public class InterActiveBar : MonoBehaviour
     //상호작용바 시작
     public void StartInterActiveBar(string prompt, GameObject obstacle)
     {
-        gameObject.SetActive(true);
         slider = gameObject.GetComponentInChildren<Slider>();
         slider.value = 0f;
         delayTime = 0.02f;
@@ -64,5 +64,8 @@ public class InterActiveBar : MonoBehaviour
 
         //문구 설정
         gameObject.GetComponentInChildren<Text>().text = prompt;
+
     }
+
+
 }
