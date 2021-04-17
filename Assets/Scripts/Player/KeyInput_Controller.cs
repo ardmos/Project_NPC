@@ -22,6 +22,7 @@ public class KeyInput_Controller : MonoBehaviour
 
 
     public float movespeed = 5f;
+    public float rayDistance = 0.7f;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -77,6 +78,11 @@ public class KeyInput_Controller : MonoBehaviour
         도착범위 = 0.8f;
         이동속도 = 1f;
 
+        //미로일 경우 isControllable true로 시작 
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
+        {
+            isControllable = true;
+        }
     }
 
     // Update is called once per frame
@@ -164,9 +170,11 @@ public class KeyInput_Controller : MonoBehaviour
             //미로인지 아닌지에 따라 다른 처리
             if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
             {
-                if (Input.GetKeyDown(KeyCode.Space) && scanObject)
+                if (Input.GetKeyDown(KeyCode.Space) && scanObject && movement == Vector2.zero)
                 {
                     print("scanObject: " + scanObject);
+                    gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+                    isGetHit = false;
                     scanObject.GetComponent<Maze_Obstacle>().StartTask();
                 }
             }
@@ -262,8 +270,9 @@ public class KeyInput_Controller : MonoBehaviour
 
         //Ray
         rayPosition = new Vector2(rb.position.x, rb.position.y + 0.4f);
-        Debug.DrawRay(rayPosition, rayDir, Color.green, 0.7f);
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(rayPosition, rayDir, 0.7f, LayerMask.GetMask("Object"));
+        Debug.DrawRay(rayPosition, rayDir, Color.green, rayDistance);
+        //Debug.Log("rayDistance: " + rayDistance);
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(rayPosition, rayDir, rayDistance, LayerMask.GetMask("Object"));
 
         if (raycastHit2D.collider != null)
             scanObject = raycastHit2D.collider.gameObject;
@@ -730,57 +739,67 @@ public class KeyInput_Controller : MonoBehaviour
         }
 
         //HP 변동
-        //죽었는가 ㅠ 
-        if ((playerStat.hP * 0.1f) <= 0.2f && !isDied)
+
+        //미로일 경우 타이머 차감
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
         {
-            //맞아서 날아가고있던거 정지
-            getHitJumpDesPos = transform.position;
-            playerStat.hP = 0f;
-            //쭈금!!!
-            print("쭈금");
-            //심박 삐이이 (이거 PlayerStat에서 해줌)
-            //FindObjectOfType<HeartBeater>().beatType = Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType0;
-            //눕기! 눕힐 때 그림자도 알맞게 세팅
-            if (where == "Left")
-            {
-                gameObject.transform.Rotate(0f, 0f, 90f);
-                Transform playerShadowTransform = GameObject.FindWithTag("PlayerShadow").transform;
-                Debug.Log(playerShadowTransform);
-                playerShadowTransform.localPosition = new Vector3(-0.3f, 0.96f, 0f);
-                playerShadowTransform.Rotate(0f, 0f, -90f);
-                playerShadowTransform.localScale = new Vector3(3.17f, 1f, 1f);
-            }
-            else if (where == "Right")
-            {
-                gameObject.transform.Rotate(0f, 0f, -90f);
-                Transform playerShadowTransform = GameObject.FindWithTag("PlayerShadow").transform;
-                Debug.Log(playerShadowTransform);
-                playerShadowTransform.localPosition = new Vector3(0.3f, 0.96f, 0f);
-                playerShadowTransform.Rotate(0f, 0f, 90f);
-                playerShadowTransform.localScale = new Vector3(3.17f, 1f, 1f);
-            }
-            else
-                Debug.Log("방향설정 다시 해주세요");
-            //잠시 콜라이더 없애고
-            gameObject.GetComponent<CircleCollider2D>().enabled = false;
-            Debug.Log(gameObject.GetComponent<CircleCollider2D>().enabled);
-            gameObject.GetComponent<KeyInput_Controller>().isDied = true;
-            gameObject.GetComponent<KeyInput_Controller>().animator.SetFloat("Speed", 0f);
-            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-
-
-            //사망시 팝업효과 실행
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Field1_Obstacle")
-                FindObjectOfType<MiniGameManager>().StartGameOverPopup();
+            FindObjectOfType<Timer>().MinusTime(10);
+            //피격시 작업게이지도 종료
+            if (FindObjectOfType<InterActiveBar>() != null)
+                FindObjectOfType<InterActiveBar>().StopInterActiveBar();
         }
         else
         {
-            playerStat.hP -= 2;
+            //죽었는가 ㅠ 
+            if ((playerStat.hP * 0.1f) <= 0.2f && !isDied)
+            {
+                //맞아서 날아가고있던거 정지
+                getHitJumpDesPos = transform.position;
+                playerStat.hP = 0f;
+                //쭈금!!!
+                print("쭈금");
+                //심박 삐이이 (이거 PlayerStat에서 해줌)
+                //FindObjectOfType<HeartBeater>().beatType = Dialogue.DialogueSet.Details.BeatBeat.BeatType.beatType0;
+                //눕기! 눕힐 때 그림자도 알맞게 세팅
+                if (where == "Left")
+                {
+                    gameObject.transform.Rotate(0f, 0f, 90f);
+                    Transform playerShadowTransform = GameObject.FindWithTag("PlayerShadow").transform;
+                    Debug.Log(playerShadowTransform);
+                    playerShadowTransform.localPosition = new Vector3(-0.3f, 0.96f, 0f);
+                    playerShadowTransform.Rotate(0f, 0f, -90f);
+                    playerShadowTransform.localScale = new Vector3(3.17f, 1f, 1f);
+                }
+                else if (where == "Right")
+                {
+                    gameObject.transform.Rotate(0f, 0f, -90f);
+                    Transform playerShadowTransform = GameObject.FindWithTag("PlayerShadow").transform;
+                    Debug.Log(playerShadowTransform);
+                    playerShadowTransform.localPosition = new Vector3(0.3f, 0.96f, 0f);
+                    playerShadowTransform.Rotate(0f, 0f, 90f);
+                    playerShadowTransform.localScale = new Vector3(3.17f, 1f, 1f);
+                }
+                else
+                    Debug.Log("방향설정 다시 해주세요");
+                //잠시 콜라이더 없애고
+                gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                Debug.Log(gameObject.GetComponent<CircleCollider2D>().enabled);
+                gameObject.GetComponent<KeyInput_Controller>().isDied = true;
+                gameObject.GetComponent<KeyInput_Controller>().animator.SetFloat("Speed", 0f);
+                gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+
+
+                //사망시 팝업효과 실행
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Field1_Obstacle")
+                    FindObjectOfType<MiniGameManager>().StartGameOverPopup();
+            }
+            else
+            {
+                playerStat.hP -= 2;
+            }
+            print(playerStat.hP);
         }
 
-        print(playerStat.hP);
-
-        //PlayerStat.instance.hP -= 0.2f;
         //만일을 위해 카운터 따로 동작. 
         StartCoroutine(ThreeSecChecker());
     }
