@@ -121,7 +121,7 @@ public class KeyInput_Controller : MonoBehaviour
             //다이얼로그가 끝나면 조작권 줌. isControllable. <-- 요고. 
 
             //사용자 입력값 수집.    DialogueManager가 없을 경우도 처리!
-            if(FindObjectOfType<DialogueManager>() == null)
+            if (FindObjectOfType<DialogueManager>() == null)
             {
                 movement.x = Input.GetAxisRaw("Horizontal");
                 movement.y = Input.GetAxisRaw("Vertical");
@@ -132,7 +132,7 @@ public class KeyInput_Controller : MonoBehaviour
                 movement.y = DialogueManager.Instance.isDialogueActive ? 0 : Input.GetAxisRaw("Vertical");
             }
 
-            
+
 
             //Idle방향
             if (movement.y == -1)
@@ -160,13 +160,27 @@ public class KeyInput_Controller : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
 
-            //스캔 발동. Space키 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
-            if (Input.GetKeyDown(KeyCode.Space) && scanObject != null && DialogueManager.Instance.isDialogueActive == false)
+
+            //미로인지 아닌지에 따라 다른 처리
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
             {
-                print("scanObject: " + scanObject);
-                //다이얼로그 발동시키자.
-                scanObject.GetComponent<Object>().TriggerDialogue();
+                if (Input.GetKeyDown(KeyCode.Space) && scanObject)
+                {
+                    print("scanObject: " + scanObject);
+                    scanObject.GetComponent<Maze_Obstacle>().StartTask();
+                }
             }
+            else
+            {
+                //스캔 발동. Space키 감지 처리 부분. Dialogue가 실행중일땐 감지 불가.
+                if (Input.GetKeyDown(KeyCode.Space) && scanObject != null && DialogueManager.Instance.isDialogueActive == false)
+                {
+                    print("scanObject: " + scanObject);
+                    //다이얼로그 발동시키자.
+                    scanObject.GetComponent<Object>().TriggerDialogue();
+                }
+            }
+
         }
     }
 

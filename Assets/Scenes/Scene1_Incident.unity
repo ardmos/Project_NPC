@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -41869,7 +41869,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeungHoon_Main
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 363945967062784041, guid: 0732656ae41e8471b97ea3f01406419c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0732656ae41e8471b97ea3f01406419c, type: 3}
 --- !u!1001 &3219217766063091670
 PrefabInstance:
