@@ -10,10 +10,11 @@ public class Maze_Obstacle : MonoBehaviour
     public string[] 작업문구;
 
     SpriteRenderer spriteRenderer;
-    bool isTaskStarted;
-    Vector2 playerPos;
+    public bool isTaskStarted;
+    KeyInput_Controller player;
     Miro_Hard_Manager miro_Hard_Manager;
     InterActiveBar 작업바;
+    Vector2 tmpMovement;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class Maze_Obstacle : MonoBehaviour
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         miro_Hard_Manager = FindObjectOfType<Miro_Hard_Manager>();
         작업바 = miro_Hard_Manager.작업바.GetComponent<InterActiveBar>();
+        player = FindObjectOfType<KeyInput_Controller>();
     }
 
     private void Update()
@@ -28,22 +30,23 @@ public class Maze_Obstacle : MonoBehaviour
         //작업 시작 이후 플레이어가 이동하면 작업 중지.
         //작업시작했는지
         if (isTaskStarted)
-        {
+        {            
+            tmpMovement = player.movement;
             //플레이어가 이동했는지
-            if (playerPos != (Vector2)FindObjectOfType<KeyInput_Controller>().gameObject.transform.position)
+            if (Vector2.zero != tmpMovement)
             {
-                Debug.Log("이동했습니다! 진행중이던 작업을 종료합니다!");
+                //Debug.Log("이동했습니다! 진행중이던 작업을 종료합니다! tmpMovement: " + tmpMovement);
                 StopTask();
             }
             else
             {
-                Debug.Log("이동하지 않았습니다!");
+                //Debug.Log("이동하지 않았습니다! tmpMovement: " + tmpMovement);
             }
         }
     }
 
     //작업 시작 처리
-    public void StartTask(Vector2 pos)
+    public void StartTask()
     {
         if (miro_Hard_Manager != null)
         {
@@ -57,10 +60,11 @@ public class Maze_Obstacle : MonoBehaviour
 
                 miro_Hard_Manager.작업바.SetActive(true);
                 작업바.StartInterActiveBar(작업문구[Random.Range(0, 작업문구.Length)], gameObject);
-
-                //현재 플레이어 위치 저장
+                
                 isTaskStarted = true;
-                playerPos = pos;
+
+                //Timer 마이너스 5초
+                FindObjectOfType<Timer>().MinusTime(5);
             }
         }
         else Debug.Log("상호작용바를 찾을 수 없습니다.");
@@ -70,8 +74,7 @@ public class Maze_Obstacle : MonoBehaviour
     {
         if (FindObjectOfType<InterActiveBar>() != null)
         {
-            FindObjectOfType<InterActiveBar>().gameObject.SetActive(false);
-            isTaskStarted = false;
+            FindObjectOfType<InterActiveBar>().StopInterActiveBar();
         }
         else Debug.Log("종료시킬 상호작용바가 없습니다.");
     }

@@ -26,10 +26,13 @@ public class InterActiveBar : MonoBehaviour
     void Update()
     {
         //게이지 자동으로 차게끔.
-        if (Mathf.Floor(delayTime) <= 0)
+        //if (Mathf.Floor(delayTime) <= 0)
+        if (delayTime <= 0)
         {
+            //Debug.Log("delayTime: " + delayTime);
             //0일때마다 게이지 증가.
             FillingGage();
+            delayTime = 0.02f;
         }
         else
         {
@@ -51,13 +54,13 @@ public class InterActiveBar : MonoBehaviour
     //게이지 자동충전중...
     private void FillingGage()
     {
-        slider.value += 0.003f;
+        slider.value += 0.02f;
     }
 
     //상호작용바 시작
     public void StartInterActiveBar(string prompt, GameObject obstacle)
     {
-        slider = gameObject.GetComponentInChildren<Slider>();
+        slider = gameObject.GetComponent<Slider>();
         slider.value = 0f;
         delayTime = 0.02f;
         obstacleObj = obstacle;
@@ -67,5 +70,11 @@ public class InterActiveBar : MonoBehaviour
 
     }
 
+    //상호작용바 강제종료
+    public void StopInterActiveBar()
+    {
+        obstacleObj.GetComponent<Maze_Obstacle>().isTaskStarted = false;
+        gameObject.SetActive(false);        
+    }
 
 }

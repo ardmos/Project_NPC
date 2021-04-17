@@ -13,7 +13,7 @@ public class FireBall : MonoBehaviour
                 Debug.Log("hit");
                 if (collision.gameObject.transform.position.x <= gameObject.transform.position.x)
                 {
-                    //브레스보다 좌측에서 맞았을 떄
+                    //파이어볼보다 좌측에서 맞았을 떄
                     //collision.gameObject.GetComponent<Rigidbody2D>().MovePosition(Vector2.left*10f);
                     //print(gameObject.transform.position);
                     Vector3 desPos = new Vector3(collision.gameObject.transform.position.x - 2f, collision.gameObject.transform.position.y, collision.gameObject.transform.position.z);
