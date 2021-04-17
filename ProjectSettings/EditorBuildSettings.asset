@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniGame/Field1_Obstacle.unity
     guid: 6292e14aafdbcf949b730475ddbfb463
   - enabled: 1
-    path: Assets/Scenes/MiniGame/Miro.unity
+    path: Assets/Scenes/MiniGame/Miro_Hard.unity
     guid: 16ef60708c8bddc47bae6046d57f81a2
   - enabled: 1
     path: Assets/Scenes/SampleGallary.unity

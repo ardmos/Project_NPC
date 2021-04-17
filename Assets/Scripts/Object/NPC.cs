@@ -84,7 +84,7 @@ public class NPC : MonoBehaviour
         //Following 구현 부분
 
         // 미로맵일 경우! 멀어지면 FollowMode 켜주는 부분.
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Miro") isItMiro = true;
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro")) isItMiro = true;
 
         if (isItMiro)
         {
