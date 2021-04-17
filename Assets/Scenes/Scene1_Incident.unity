@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -19871,8 +19871,8 @@ MonoBehaviour:
           delayTime: 1
           dialogueLifeTime: 0
         cutSceneSettings:
-          activateCutScene: 0
-          image: {fileID: 0}
+          activateCutScene: 1
+          image: {fileID: 21300000, guid: 17d57b836d9f2f347af7891cd5fe2079, type: 3}
         fontColorSettings:
           changeColor: 0
           fontColor: {r: 0, g: 0, b: 0, a: 0}
