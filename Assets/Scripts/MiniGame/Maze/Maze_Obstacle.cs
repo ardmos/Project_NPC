@@ -64,7 +64,7 @@ public class Maze_Obstacle : MonoBehaviour
                 isTaskStarted = true;
 
                 //Timer 마이너스 5초
-                FindObjectOfType<Timer>().MinusTime(5);
+                //FindObjectOfType<Timer>().MinusTime(5);  삭제 
             }
         }
         else Debug.Log("상호작용바를 찾을 수 없습니다.");
@@ -96,11 +96,17 @@ public class Maze_Obstacle : MonoBehaviour
     IEnumerator StartDisappear(SpriteRenderer spriteRenderer)
     {
         Debug.Log("스르륵 사라지기 진행 : " + spriteRenderer.gameObject.name);
+
+        //사라지기 시작하면 레이어 기본으로 바꾸기! << 스페이스 말풍선 감지 안되게 하기 위해! 
+        gameObject.layer = 0;
+
+
+
         while (spriteRenderer.color.a >= 0f)
         {
             yield return new WaitForSeconds(0.01f);
             
-            spriteRenderer.color = new Color(1f, 1f, 1f, spriteRenderer.color.a - 0.03f);
+            spriteRenderer.color = new Color(1f, 1f, 1f, spriteRenderer.color.a - 0.01f);
         }       
 
         //완전 완료!
@@ -109,11 +115,11 @@ public class Maze_Obstacle : MonoBehaviour
         //만약, 오브젝트가 문1이나 문2라면!  가시나 힐팩을 활성화시켜줘야한다.
         if (name == "문1")
         {
-            miro_Hard_Manager.Active가시();
+            miro_Hard_Manager.Activate가시();
         }
         else if (name == "문2")
         {
-            miro_Hard_Manager.Active힐팩();
+            miro_Hard_Manager.Activate힐팩();
         }
 
         isTaskStarted = false;

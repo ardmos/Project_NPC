@@ -78,11 +78,11 @@ public class KeyInput_Controller : MonoBehaviour
         도착범위 = 0.8f;
         이동속도 = 1f;
 
-        //미로일 경우 isControllable true로 시작 
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
-        {
-            isControllable = true;
-        }
+        //미로일 경우 isControllable true로 시작 <---- 게임룰가이드 팝업에서 알아서 해주기로 함
+        //if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
+        //{
+        //    isControllable = true;
+        //}
     }
 
     // Update is called once per frame
@@ -175,6 +175,16 @@ public class KeyInput_Controller : MonoBehaviour
                     print("scanObject: " + scanObject);
                     gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
                     isGetHit = false;
+                    //말풍선 해제
+                    if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Hard"))
+                    {
+                        FindObjectOfType<Miro_Hard_Manager>().DeActivate말풍선();
+                    }
+                    else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Easy"))
+                    {
+                        //FindObjectOfType<Miro_Easy_Manager>
+                    }
+                    //작업게이지 시작
                     scanObject.GetComponent<Maze_Obstacle>().StartTask();
                 }
             }
@@ -278,6 +288,30 @@ public class KeyInput_Controller : MonoBehaviour
             scanObject = raycastHit2D.collider.gameObject;
         else
             scanObject = null;
+
+        //미로인지 체크. 해서 미로인경우 scanObject 위에 Space 말풍선 띄워주기 !  
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
+        {
+            if(scanObject != null)
+            {
+                if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Hard"))
+                {
+                    //Debug.Log(scanObject + "의 월드상 좌표: " + scanObject.transform.position + ", 화면상 좌표");
+                    FindObjectOfType<Miro_Hard_Manager>().Activate말풍선(Camera.main.WorldToScreenPoint(scanObject.transform.position), scanObject.name);
+                }
+                else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Easy"))
+                {
+                    //FindObjectOfType<Miro_Easy_Manager>
+                }                
+            }
+            else
+            {
+                //null인 경우 말풍선 끄기 
+                FindObjectOfType<Miro_Hard_Manager>().DeActivate말풍선();
+            }
+
+        }
+
     }
 
 
