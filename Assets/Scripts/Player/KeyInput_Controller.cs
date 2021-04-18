@@ -78,11 +78,11 @@ public class KeyInput_Controller : MonoBehaviour
         도착범위 = 0.8f;
         이동속도 = 1f;
 
-        //미로일 경우 isControllable true로 시작 
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
-        {
-            isControllable = true;
-        }
+        //미로일 경우 isControllable true로 시작 <---- 게임룰가이드 팝업에서 알아서 해주기로 함
+        //if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Miro"))
+        //{
+        //    isControllable = true;
+        //}
     }
 
     // Update is called once per frame

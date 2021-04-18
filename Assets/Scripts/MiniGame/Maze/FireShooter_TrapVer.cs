@@ -64,6 +64,13 @@ public class FireShooter_TrapVer : MonoBehaviour
             shootTrigger = true;
             FireFireBall();
         }
+    }
 
+    public void DeActivateFireShooterTrap()
+    {
+        if (shootTrigger == true)
+        {
+            shootTrigger = false;
+        }
     }
 }
