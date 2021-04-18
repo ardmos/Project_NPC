@@ -274,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isControllable: 0
   movespeed: 5
+  rayDistance: 0.7
   rb: {fileID: 363945967062784040}
   animator: {fileID: 363945967062784042}
   movement: {x: 0, y: 0}
@@ -298,6 +299,14 @@ MonoBehaviour:
   yDis: 0
   desPos: {x: 0, y: 0}
   "\uB3C4\uCC29\uBC94\uC704": 1
+  "\uC774\uB3D9\uC18D\uB3C4": 0
+  "\uC774\uBC88\uD504\uB808\uC784\uC774\uB3D9\uB7C9": {x: 0, y: 0}
+  isGetHit: 0
+  is3SecPassed: 0
+  isDied: 0
+  getHitJumpDesPos: {x: 0, y: 0, z: 0}
+  sfxClip: {fileID: 0}
+  playerStat: {fileID: 0}
 --- !u!70 &363945967062784047
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

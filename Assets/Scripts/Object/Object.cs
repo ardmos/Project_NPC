@@ -13,21 +13,32 @@ public class Object : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (!DialogueManager.Instance.isDialogueActive && IsThePlayerNear())
+        //책상한테 말걸었을경우!  말풍선 처리
+        if(gameObject.name == "desk")
         {
-            //대화시 작동되는 부분.
-
-            //혹시 상호작용 기반 이벤트가 발동될 조건인가 확인해보고
-            if (InteractedEventController())
+            //다이얼로그 대신에 말푼선컨트롤러한테 정보 넘기기 
+            GetComponentInChildren<TalkBalloonController>().StartTalkBalloon(id);
+        }
+        //책상 아닐경우
+        else
+        {
+            if (!DialogueManager.Instance.isDialogueActive && IsThePlayerNear())
             {
-                return;
-            }            
+                //대화시 작동되는 부분.
 
-            //다이얼로그를 열고
-            DialogueManager.Instance.StartDialogue(id);
-            //게임매니져에 보고를 한다.
-            GameManager.Instance.DidInteracted(id);
-        }            
+                //혹시 상호작용 기반 이벤트가 발동될 조건인가 확인해보고
+                if (InteractedEventController())
+                {
+                    return;
+                }
+
+                //다이얼로그를 열고
+                DialogueManager.Instance.StartDialogue(id);
+                //게임매니져에 보고를 한다.
+                GameManager.Instance.DidInteracted(id);
+            }
+        }
+          
     }
 
 
@@ -65,6 +76,7 @@ public class Object : MonoBehaviour
         }
     }
 
+    //캡슐 진 오픈 조건 만족했는지
     public bool InteractedEventController()
     {
         //씬1 기타 오브젝트들 상호작용 완료 후 캡슐 선택시.

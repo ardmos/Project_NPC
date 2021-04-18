@@ -1066,6 +1066,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //다이얼로그 종료 
     void EndDialogue()
     {
+        cutSceneImage.color = new Color(1, 1, 1, 0);
         isDialogueActive = false;
         dialog_animator.SetBool("isOpen", false);
 

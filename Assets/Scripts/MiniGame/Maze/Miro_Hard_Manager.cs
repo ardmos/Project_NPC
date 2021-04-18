@@ -201,7 +201,7 @@ public class Miro_Hard_Manager : MonoBehaviour
         while (!zoom)
         {
             yield return new WaitForSeconds(0.001f);
-            if(cinemachineVirtual.m_Lens.OrthographicSize >= 2f)
+            if(cinemachineVirtual.m_Lens.OrthographicSize >= 4f)
             {
                 cinemachineVirtual.m_Lens.OrthographicSize -= 0.01f;
             }
