@@ -135,6 +135,10 @@ public class Miro_Hard_Manager : MonoBehaviour
         //동료캐릭터 출발위치로. 
         //FindObjectOfType<NPC>().gameObject.transform.position = fellowStartingPos;
 
+        //카메라 원위치 
+        cinemachineVirtual.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneWidth = 0.8f;
+        cinemachineVirtual.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneHeight = 0.7f;
+        cinemachineVirtual.m_Lens.OrthographicSize = 8f;
         //게임종료 팝업 끄고.
         게임오버팝업.SetActive(false);
     }
@@ -153,21 +157,55 @@ public class Miro_Hard_Manager : MonoBehaviour
         //일단 음악 재생 시작
         //지금은 없음
 
-        //다음 화면확대스르륵 시작
-        if (cinemachineVirtual.m_Lens.OrthographicSize >= 4)
+
+        //다음 화면 이동 스르륵 시작
+        bool width = false;
+        bool height = false;
+        while (!width && !height)
         {
             //화면 중앙으로! 
-            cinemachineVirtual.enabled = false;
-            cinemachineVirtual.enabled = true;
-            //확대!
-            for(float s=8; s>=4;s-=0.5f)
+            yield return new WaitForSeconds(1f);
+
+            if (cinemachineVirtual.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneWidth >= 0.1f)
             {
-                yield return new WaitForSeconds(0.05f);
-                cinemachineVirtual.m_Lens.OrthographicSize = s;
+                cinemachineVirtual.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneWidth -= 0.001f;
+            }
+            else
+            {
+                width = true;
+            }
+
+            if (cinemachineVirtual.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneHeight >= 0.1f)
+            {
+                cinemachineVirtual.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneHeight -= 0.001f;
+            }
+            else
+            {
+                height = true;
             }
         }
 
-        //마지막으로 게임오버 팝업 띄우기까지
+        //다음 화면 확대 시작
+        bool zoom = false;
+        while (!zoom)
+        {
+            yield return new WaitForSeconds(1f);
+            if(cinemachineVirtual.m_Lens.OrthographicSize >= 2f)
+            {
+                cinemachineVirtual.m_Lens.OrthographicSize -= 0.01f;
+            }
+            else
+            {
+                zoom = true;
+            }
+        }
+
+
+
+
+
+        //마지막으로 2초 기다렸다가 게임오버 팝업 띄우기까지
+        yield return new WaitForSeconds(2f);
         게임오버팝업.SetActive(true);
 
 

@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class MiroGameOverPopup : MonoBehaviour
 {
+    public GameObject popupBG;
+
+    private void Start()
+    {
+        popupBG.SetActive(false);
+    }
+
+    public void MakePopup()
+    {
+        //얘도 애니메이션으로 하자. 
+        popupBG.SetActive(true);
+    }
+
     public void OnClickBtnRestartGame()
     {
         GetComponentInChildren<Animator>().SetTrigger("StartFadeIn");        
