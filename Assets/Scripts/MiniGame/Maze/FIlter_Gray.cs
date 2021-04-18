@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class FIlter_Gray : MonoBehaviour
 {
+    public void MakeGameOverPopup()
+    {
+        FindObjectOfType<MiroGameOverPopup>().MakePopup();
+    }
+
     public void StartRestartGame()
     {
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Contains("Hard"))
