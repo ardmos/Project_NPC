@@ -47,11 +47,7 @@ public class FireBallShooter : MonoBehaviour
             prefObj = Instantiate(fireBall2Pref);
             prefObj.transform.SetParent(transform);
             prefObj.transform.position = Vector2.zero;
-        }
-
-        
-        
-
+        }             
     }
 
 }
