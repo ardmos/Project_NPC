@@ -8875,8 +8875,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1558533556}
-  remainTime: 90
+  remainTime: 1
   miro_Hard_Manager: {fileID: 1582103184}
+  timerStopper: 0
+  isgameover: 0
 --- !u!95 &840465847
 Animator:
   serializedVersion: 3

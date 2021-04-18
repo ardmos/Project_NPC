@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     public Text text;
     public float remainTime = 90;
     public Miro_Hard_Manager miro_Hard_Manager;
-    bool timerStopper;
+    public bool timerStopper, isgameover;
     
     // Update is called once per frame
     void Update()
@@ -22,8 +22,13 @@ public class Timer : MonoBehaviour
                 remainTime = 0;
                 text.text = remainTime.ToString();
 
-                //실패!
-                miro_Hard_Manager.GameOver();
+                if (isgameover == false)
+                {
+                    //실패!
+                    miro_Hard_Manager.GameOver();
+                    isgameover = true;
+                }
+
             }
             else
             {
