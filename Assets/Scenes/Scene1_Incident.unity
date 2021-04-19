@@ -23945,7 +23945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1403925578
 Transform:
   m_ObjectHideFlags: 0
@@ -35632,7 +35632,7 @@ MonoBehaviour:
         newAnimationSettings:
           activeNewAnimate: 1
           newAnimDatas:
-          - destinationPos: {x: -5, y: -10}
+          - destinationPos: {x: -5.5, y: -10}
             objToMove: {fileID: 20024207}
             endDir: 2
         etcAnimationSettings:
@@ -42205,6 +42205,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 20024208}
+    - target: {fileID: 3219217766351638600, guid: 9031ce589c4aa47b1b388b36f6d8fa80,
+        type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.3333334
+      objectReference: {fileID: 0}
     - target: {fileID: 3219217766351638601, guid: 9031ce589c4aa47b1b388b36f6d8fa80,
         type: 3}
       propertyPath: m_RootOrder

@@ -14,7 +14,8 @@ public class Object : MonoBehaviour
     public void TriggerDialogue()
     {
         //책상한테 말걸었을경우!  말풍선 처리
-        if(gameObject.name == "desk")
+        //if(gameObject.name == "desk")
+        if (gameObject.name == "desk1111")
         {
             //다이얼로그 대신에 말푼선컨트롤러한테 정보 넘기기 
             GetComponentInChildren<TalkBalloonController>().StartTalkBalloon(id);

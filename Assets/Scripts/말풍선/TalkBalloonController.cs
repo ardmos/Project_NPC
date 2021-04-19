@@ -22,5 +22,6 @@ public class TalkBalloonController : MonoBehaviour
     {
         //말풍선 시작하면 끝날때까지 자동진행돼야함!
         //왼 - 오 구분해서 출력해주기. 
+
     }
 }
