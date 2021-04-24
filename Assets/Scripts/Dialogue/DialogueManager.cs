@@ -246,29 +246,6 @@ public class DialogueManager : DontDestroy<DialogueManager>
     //다이얼로그 시작
     public void StartDialogue(int objid)    //다이얼로그의 다양한 부분을 초기화. 
     {
-        isDialogueActive = true;
-
-        //Continue버튼 비활성화
-        continueBtn.SetActive(false);
-        //다이얼로그 처음 대화 시작하면, 0.5초정도 있다가 빨리넘기기 작동 가능하게끔.
-        StartCoroutine(Count005Sec());
-
-        //다이얼로그 시작하면 플레이어 컨트롤 권한 뺏음.       
-        foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())
-        {
-            //컨트롤권한도 뺐고
-            item.isControllable = false;
-
-            //진행중이던 무빙 애니메이션도 끝냄
-            item.movement = Vector2.zero;
-            item.animator.SetFloat("Horizontal", item.movement.x);
-            item.animator.SetFloat("Vertical", item.movement.y);
-            item.animator.SetFloat("Speed", item.movement.sqrMagnitude);
-        }
-
-
-
-
         //해당 아이디값 개체 검색       
         if (dialogueData_Dic.ContainsKey(objid))    //해당 id값을 가진 개체가 존자한다면
         {
@@ -289,7 +266,35 @@ public class DialogueManager : DontDestroy<DialogueManager>
             foreach (Dialogue.DialogueSet item in dialogueSets) dialogueSetsQue.Enqueue(item);
         }
         else Debug.Log("정보가 없는 녀석입니다.");
-        DisplayNextSentence();
+
+        //말풍선팝업일수도 있으니.  id넘버 팔십만 이상인지?  아니면 그냥 다이얼로그 진행.
+        if (objid >= 800000)
+        {
+            FindObjectOfType<TalkBalloonManager>().ConnectTB(objid, dialogueSetsQue);
+            return;
+        }
+        else DisplayNextSentence();
+
+
+        isDialogueActive = true;
+
+        //Continue버튼 비활성화
+        continueBtn.SetActive(false);
+        //다이얼로그 처음 대화 시작하면, 0.5초정도 있다가 빨리넘기기 작동 가능하게끔.
+        StartCoroutine(Count005Sec());
+
+        //다이얼로그 시작하면 플레이어 컨트롤 권한 뺏음.       
+        foreach (KeyInput_Controller item in GameObject.FindObjectsOfType<KeyInput_Controller>())
+        {
+            //컨트롤권한도 뺐고
+            item.isControllable = false;
+
+            //진행중이던 무빙 애니메이션도 끝냄
+            item.movement = Vector2.zero;
+            item.animator.SetFloat("Horizontal", item.movement.x);
+            item.animator.SetFloat("Vertical", item.movement.y);
+            item.animator.SetFloat("Speed", item.movement.sqrMagnitude);
+        }
     }
 
     //문자 출력 들어감.
@@ -1095,6 +1100,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 //Scene1. 첫 등장 - 경찰 제지 선택상자 정답 결과.
                 //경찰1 오브젝트의 ID값을 10000에서 10005로 변경시켜준다. (정답을 맞춘 후 경찰1에게 다시 말을 걸었을 때를 위한 처리.)
                 경찰1.GetComponent<Object>().id = 10005;
+                break;
+            case 15500:
+                //Scene1. 책상 정보설명 끝나고 말풍선 시작해주는부분.
+                StartDialogue(800000);
                 break;
             default:
                 break;

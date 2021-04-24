@@ -5,7 +5,7 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     public int id;
-    public Dictionary<int, bool> isInteracted;    
+    public Dictionary<int, bool> isInteracted;
 
     //주워지거나 하는 상호작용기능이 있는 오브젝트 ex동전. 
     //같은 경우에는 추가적으로 스크립트 만들어서 기능 붙여주자. 
@@ -13,33 +13,23 @@ public class Object : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        //책상한테 말걸었을경우!  말풍선 처리
-        //if(gameObject.name == "desk")
-        if (gameObject.name == "desk1111")
+
+        if (!DialogueManager.Instance.isDialogueActive && IsThePlayerNear())
         {
-            //다이얼로그 대신에 말푼선컨트롤러한테 정보 넘기기 
-            GetComponentInChildren<TalkBalloonController>().StartTalkBalloon(id);
-        }
-        //책상 아닐경우
-        else
-        {
-            if (!DialogueManager.Instance.isDialogueActive && IsThePlayerNear())
+            //대화시 작동되는 부분.
+
+            //혹시 상호작용 기반 이벤트가 발동될 조건인가 확인해보고
+            if (InteractedEventController())
             {
-                //대화시 작동되는 부분.
-
-                //혹시 상호작용 기반 이벤트가 발동될 조건인가 확인해보고
-                if (InteractedEventController())
-                {
-                    return;
-                }
-
-                //다이얼로그를 열고
-                DialogueManager.Instance.StartDialogue(id);
-                //게임매니져에 보고를 한다.
-                GameManager.Instance.DidInteracted(id);
+                return;
             }
+
+            //다이얼로그를 열고
+            DialogueManager.Instance.StartDialogue(id);
+            //게임매니져에 보고를 한다.
+            GameManager.Instance.DidInteracted(id);
         }
-          
+
     }
 
 
