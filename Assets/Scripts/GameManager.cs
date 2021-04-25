@@ -63,7 +63,7 @@ public class GameManager : DontDestroy<GameManager>
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Scene1_Incident")
         {
             천형사.SetActive(false);
-            경찰2.SetActive(false);
+            //경찰2.SetActive(false);  <<- 이제는 숨어있지 않음!
         }
 
 
@@ -115,7 +115,7 @@ public class GameManager : DontDestroy<GameManager>
                 //    spriteRenderer.color = new Color(1, 1, 1, 1);
                 //}
                 천형사.SetActive(true);
-                경찰2.SetActive(true);
+                //경찰2.SetActive(true); <<-- 이제는 숨어있지 않음
 
                 //천형사 애니메이션 포함된 다이얼로그 시작시키자.
                 DialogueManager.Instance.StartDialogue(storyNumber);
