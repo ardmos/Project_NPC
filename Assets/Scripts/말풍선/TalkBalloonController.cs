@@ -11,9 +11,14 @@ public class TalkBalloonController : MonoBehaviour
     List<TalkBalloonDataContainer> talkBalloonDataContainersList;
     Queue<Dialogue.DialogueSet> talkBalloonDatasQueue;
     //TextMeshPro textMesh;
-    Text textMesh;
+    TextMeshProUGUI textUI;
     public GameObject balloonReal;
     public RectTransform bgspriteRectT;
+
+
+    //말풍선 살짝살짝 오른쪽 왼쪽 이동시키기 위한 
+    public float 살짝만큼;
+    Vector2 thisPos;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +34,9 @@ public class TalkBalloonController : MonoBehaviour
 
     private void Update()
     {
+        thisPos = new Vector2(transform.position.x + 살짝만큼, transform.position.y);
         //위치 지속 갱신
-        balloonReal.transform.position = Camera.main.WorldToScreenPoint(transform.position);
+        balloonReal.transform.position = Camera.main.WorldToScreenPoint(thisPos);
     }
 
 
@@ -45,7 +51,7 @@ public class TalkBalloonController : MonoBehaviour
         transform.localScale = Vector3.one;
 
         //받아온 queue 정보대로 출력 작업 시작하자~!
-        talkBalloonDatasQueue = dialogueSetsQue;
+        talkBalloonDatasQueue = new Queue<Dialogue.DialogueSet>(dialogueSetsQue);
 
         //순서대로 하나씩 빼주자. 
         LoadNextTalkData();
@@ -71,24 +77,34 @@ public class TalkBalloonController : MonoBehaviour
         if(talkBalloonData.smallTitle_.Contains("a:"))
         {
             //textMesh = gameObject.GetComponentsInChildren<TextMesh>()[0];
-            textMesh = gameObject.GetComponentsInChildren<Text>()[0];
+            textUI = gameObject.GetComponentsInChildren<TextMeshProUGUI>()[0];
+            //textUI.alignment = TextAnchor.UpperLeft;
+            textUI.alignment = TextAlignmentOptions.TopLeft;
+            Debug.Log("Left");
+            살짝만큼 = -0.2f;
+
+            //textMesh.text
             //gameObject.GetComponentsInChildren<TextMeshPro>()[1].text = "";
         }
         else if (talkBalloonData.smallTitle_.Contains("b:"))
         {
             //textMesh = gameObject.GetComponentsInChildren<TextMesh>()[1];
-            textMesh = gameObject.GetComponentsInChildren<Text>()[0];
+            textUI = gameObject.GetComponentsInChildren<TextMeshProUGUI>()[0];
+            //textUI.alignment = TextAnchor.UpperRight;
+            textUI.alignment = TextAlignmentOptions.TopRight;
+            Debug.Log("Right");
+            살짝만큼 = +0.2f;
             //gameObject.GetComponentsInChildren<TextMeshPro>()[0].text = "";
         }
         
-        Debug.Log(textMesh);
+        Debug.Log(textUI);
 
 
         //글씨설정에 따라 샐깔, 크기 설정해주기. 
         //
-        if (talkBalloonData.detail.fontColorSettings.changeColor) textMesh.color = talkBalloonData.detail.fontColorSettings.fontColor;
+        if (talkBalloonData.detail.fontColorSettings.changeColor) textUI.color = talkBalloonData.detail.fontColorSettings.fontColor;
 
-        textMesh.color = new Color(textMesh.color.r, textMesh.color.g, textMesh.color.b, 1f);
+        textUI.color = new Color(textUI.color.r, textUI.color.g, textUI.color.b, 1f);
 
         ///
         //글씨 잠깐 투명으로 하고 다 넣어서
@@ -98,7 +114,7 @@ public class TalkBalloonController : MonoBehaviour
         //출력 직전에 
         ///
 
-        if (talkBalloonData.detail.fontSizeSettings.changeSize) textMesh.fontSize = talkBalloonData.detail.fontSizeSettings.fontSize;
+        if (talkBalloonData.detail.fontSizeSettings.changeSize) textUI.fontSize = talkBalloonData.detail.fontSizeSettings.fontSize;
         
         //Sentence 출력 //다음 대사! 2초 뒤에! 호출!
         StartCoroutine(TypeSentence(talkBalloonData.sentence));
@@ -119,17 +135,23 @@ public class TalkBalloonController : MonoBehaviour
     IEnumerator TypeSentence(string sentence)
     {
         Debug.Log("TypeSentence");
-        textMesh.text = "";
+        //textMesh.text = "";
 
-        foreach (char letter in sentence.ToCharArray())
-        {
-            textMesh.text += letter;
-            //배경 이미지 크기 변경
-            //bgspriteRectT.sizeDelta = new Vector2(textMesh.preferredWidth, textMesh.preferredHeight);
-            //Debug.Log("textMesh.preferredWidth:"+textMesh.preferredWidth+ ", textMesh.preferredHeight:" + textMesh.preferredHeight);
+        textUI.text = sentence;
 
-            yield return new WaitForSeconds(0.075f); 
-        }
+        //foreach (char letter in sentence.ToCharArray())
+        //{
+        //textMesh.text += letter;
+        //배경 이미지 크기 변경
+        bgspriteRectT.sizeDelta = new Vector2(bgspriteRectT.sizeDelta.x, textUI.preferredHeight+46f);
+        //배경이미지 위치 재조정        
+        //bgspriteRectT.anchoredPosition = new Vector2(bgspriteRectT.anchoredPosition.x, bgspriteRectT.anchoredPosition.y - (bgspriteRectT.sizeDelta.y/2));
+
+        //bgspriteRectT.sizeDelta = new Vector2(textMesh.preferredWidth, textMesh.preferredHeight);
+        //Debug.Log("textMesh.preferredWidth:"+textMesh.preferredWidth+ ", textMesh.preferredHeight:" + textMesh.preferredHeight);
+
+        //  yield return new WaitForSeconds(0.075f); 
+        //}
 
         //효과음 아직 없음
 
