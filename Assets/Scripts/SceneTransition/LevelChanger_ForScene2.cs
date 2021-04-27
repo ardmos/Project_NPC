@@ -27,15 +27,28 @@ public class LevelChanger_ForScene2 : MonoBehaviour
     {
         //처음 날짜 도도도도 찍어주기.
         StartCoroutine(TypeSentence("다음날, 00경찰서 취조실"));
+        //까만배경 페이드인 애니메이션 실행
+        animator.SetBool("DoFadeIn", true);
     }
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetKeyDown(KeyCode.F8))
         {
             FadeToNextLevel();
         }
     }
+
+
+    public void StartDialogue()
+    {
+        Debug.Log(GameManager.Instance.storyNumber);
+        GameManager.Instance.storyNumber = 3;
+        Debug.Log(GameManager.Instance.storyNumber);
+        GameManager.Instance.StartStoryEvent();
+    }
+
+
 
     //한글자씩 도도도 찍기
     IEnumerator TypeSentence(string str)
@@ -54,13 +67,11 @@ public class LevelChanger_ForScene2 : MonoBehaviour
             yield return new WaitForSeconds(0.08f);
         }
 
-        //출력 끝나면,  스토리 이벤트 시작 (경찰서 취조실...)
-        //GameManager.Instance.StartStoryEvent();
-        print("Start");
     }
 
 
-    public void FadeToNextLevel()   //이걸 호출하면 빌드세팅 씬 넘버 순서상 다음 씬으로 넘어감.! 
+    #region 씬 넘기기용
+    public void FadeToNextLevel()   //이걸 호출하면 빌드세팅 씬 넘버 순서상 다음 씬으로 넘어감! 
     {
         print("FadeToNextLevel");
         FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
@@ -77,6 +88,7 @@ public class LevelChanger_ForScene2 : MonoBehaviour
         print("OnFadeComplete");
         SceneManager.LoadScene(levelToLoad);
     }
+    #endregion
 
 }
 

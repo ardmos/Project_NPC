@@ -99,6 +99,7 @@ public class GameManager : DontDestroy<GameManager>
         switch (storyNumber)
         {
             case 0:
+                ///씬1_사건현장 시작.
                 //첫 뚜벅뚜벅 다이얼로그 발동.
                 DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
@@ -124,10 +125,11 @@ public class GameManager : DontDestroy<GameManager>
                 //페이드 아웃, 씬 이동 
                 LevelChanger_ForScene1.instance.FadeToNextLevel();
                 //다음날, 경찰서 취조실
-                //SceneManager.LoadScene("Scene2_InterrogationRoom");
                 break;
             case 3:
-
+                ///씬2_취조실 시작.   (LevelChanger_ForScene2.cs에서 페이드인 애니메이션 끝났을 때  호출.)
+                DialogueManager.Instance.StartDialogue(storyNumber);
+                break;
             case 4:
 
             case 5:                

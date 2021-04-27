@@ -29,6 +29,15 @@ public class LevelChanger_ForScene1 : MonoBehaviour
         StartCoroutine(TypeSentence("20XX년 1월 3일 오후 2시, 경기도 A빌라 306호"));
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F8))
+        {
+            FadeToNextLevel();
+        }
+    }
+
+
     //한글자씩 도도도 찍기
     IEnumerator TypeSentence(string str)
     {
@@ -72,5 +81,12 @@ public class LevelChanger_ForScene1 : MonoBehaviour
         SceneManager.LoadScene(levelToLoad);
     }
 
+
+
+
+    //씬2 등 다른 씬에서 사용하는 녀석.  씬1에서는 필요 없지만, 애니메이션을 공유하는 이상 함수 자체는 존재해야 한다. 아무런 기능을 넣지 않는 함수
+    public void StartDialogue()
+    {        
+    }
 }
 

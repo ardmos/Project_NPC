@@ -8658,7 +8658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - smallTitle_: "\uB300\uD559\uC0DD \uCDE8\uC870"
-    storyId: 9999
+    storyId: 3
     dialogue:
     - smallTitle_: 
       dialogueSetName: 
