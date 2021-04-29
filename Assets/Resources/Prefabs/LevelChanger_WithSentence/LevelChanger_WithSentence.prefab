@@ -316,8 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d1aacc2955745b9b5892c1e4664792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 6261429763025236849}
   text: {fileID: 0}
-  audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
   storyNumber: 0
+  sentence: 

@@ -8,6 +8,15 @@ namespace CatchingWildBoar
 {
     public class GameManager : MonoBehaviour
     {
+        /// <summary>
+        /// 추가할것들
+        ///  1.성공시, 실패시 다이얼로그 출력되는부분 추가.
+        ///  2.씬4_베릴성과의 알맞은 씬 전환 연결.
+        ///  3.LevelChanger_WithSentence 추가 및 활용.
+        /// </summary>
+
+
+
         //멧돼지 잡은 숫자 카운트. 
         public int catchCount;
         public bool isClear;

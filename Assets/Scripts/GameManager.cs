@@ -170,14 +170,27 @@ public class GameManager : DontDestroy<GameManager>
                 break;
             case 10:
                 //페이드아웃, 씬4_베릴성으로 씬 전환.
-                
+                LevelChanger_WithSentence.instance.FadeToNextLevel();
                 break;
             case 11:
                 ///씬4_베릴성 다이얼로그 시작. 
+                DialogueManager.Instance.StartDialogue(storyNumber);                
                 break;
-            case 12: break;
-            case 13: break;
-            case 14: break;
+            case 12:
+                //페이드아웃, 미니게임<멧돼지>로 씬 전환.
+                ///미니게임<멧돼지>는 다이얼로그 없이 바로 시작됨.
+                LevelChanger_WithSentence.instance.FadeToNextLevel();
+                break;
+            case 13:
+                //미니게임<멧돼지> 성공시 다시 이 전 씬으로 씬 전환 하는 부분.
+                //씬 전환 시작 하기 전에 성공 다이얼로그 조금 진행되어야함. 미니게임<멧돼지>씬에서 해주는 부분. 
+                LevelChanger_WithSentence.instance.FadeToPreviousLevel();
+                break;
+            case 14:
+                //씬4_베릴성의 미니게임<멧돼지> 성공 축하 다이얼로그 시작.
+                //'농부: 감사합니다 모헙가님! 다음에도 ...'
+
+                break;
             case 15: break;
 
             case 31:
