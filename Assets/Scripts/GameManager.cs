@@ -16,7 +16,8 @@ public class GameManager : DontDestroy<GameManager>
     #endregion
 
     [Header("현재 진행중 스토리. 자동진행 스토리 관리")]
-    public int storyNumber;    
+    [SerializeField]
+    private int storyNumber;    
 
     [Header("선택상자의 선택 결과들.")]
     public Dictionary<string, int> choiceResults;
@@ -93,6 +94,17 @@ public class GameManager : DontDestroy<GameManager>
     }
 
     #region 메인 스토리 흐름 제어
+    //세팅 현재 스토리넘버
+    public void SetStoryNumber(int num)
+    {
+        storyNumber = num;
+    }
+    //겟 현재 스토리 넘버
+    public int GetStoryNumber()
+    {
+        return storyNumber;
+    }
+
     //스토리 이벤트 
     public void StartStoryEvent()
     {
@@ -100,7 +112,7 @@ public class GameManager : DontDestroy<GameManager>
         {
             case 0:
                 ///씬1_사건현장 시작.
-                //첫 뚜벅뚜벅 다이얼로그 발동.
+                ///씬1_사건현장 다이얼로그 발동. (뚜벅뚜벅)
                 DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
             case 1:
@@ -127,13 +139,33 @@ public class GameManager : DontDestroy<GameManager>
                 //다음날, 경찰서 취조실
                 break;
             case 3:
-                ///씬2_취조실 시작.   (LevelChanger_ForScene2.cs에서 페이드인 애니메이션 끝났을 때  호출.)
+                ///씬2_취조실 다이얼로그 시작.   (LevelChanger_ForScene2.cs에서 페이드인 애니메이션 끝났을 때  호출.)
                 DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
             case 4:
+                //페이드아웃, 씬2_검은화면 발동, 검은화면 시작
+                LevelChanger_ForScene2.instance.StartScene2_Black();
 
-            case 5:                
                 break;
+            case 5:
+                ///씬2_검은화면 다이얼로그 시작.
+                DialogueManager.Instance.StartDialogue(storyNumber);
+                break;
+
+            case 6:
+                //씬3_다시 취조실로 이동. 
+                break;
+            case 7:
+                //씬3_다시 취조실 다이얼로그 시작.
+                break;
+            case 8: break;
+            case 9: break;
+            case 10: break;
+            case 11: break;
+            case 12: break;
+            case 13: break;
+            case 14: break;
+            case 15: break;
 
             case 31:
                 print("Here is GameManager.StartStoryEvent() 31");

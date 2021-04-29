@@ -13,6 +13,7 @@ public class LevelChanger_ForScene2 : MonoBehaviour
 
     int levelToLoad;
 
+    bool forScene2_BalckScreen;
 
     #region 싱글턴
     public static LevelChanger_ForScene2 instance;
@@ -40,11 +41,13 @@ public class LevelChanger_ForScene2 : MonoBehaviour
     }
 
 
+    //애니메이션 이벤트로 호출되는 함
     public void StartDialogue()
     {
-        Debug.Log(GameManager.Instance.storyNumber);
-        GameManager.Instance.storyNumber = 3;
-        Debug.Log(GameManager.Instance.storyNumber);
+        //Scene2_취조실 다이얼로그 최초 시작
+        Debug.Log(GameManager.Instance.GetStoryNumber());
+        GameManager.Instance.SetStoryNumber(3);
+        Debug.Log(GameManager.Instance.GetStoryNumber());
         GameManager.Instance.StartStoryEvent();
     }
 
@@ -54,7 +57,8 @@ public class LevelChanger_ForScene2 : MonoBehaviour
     IEnumerator TypeSentence(string str)
     {
         text.text = "";
-        foreach (char letter in str.ToCharArray())
+        //foreach (char letter in str.ToCharArray()) ToCharArray()가 중복이라고 한다.
+        foreach (char letter in str)
         {
             text.text += letter;
 
@@ -86,9 +90,32 @@ public class LevelChanger_ForScene2 : MonoBehaviour
     public void OnFadeComplete()    //애니메이션이벤트를 사용했음.
     {
         print("OnFadeComplete");
-        SceneManager.LoadScene(levelToLoad);
+
+        if (forScene2_BalckScreen)
+        {
+            //까만화면인채로 다이얼로그 시작. 해야함.  이걸 OnFadeComplete에서 한 번에 처리.  다른 페이드아웃이지만. 페이드아웃 컴플릿 메소드는 공유중!        
+            //씬2_까만화면 실행할 차례면 아래 내용
+            //씬2_까만화면 다이얼로그 시작할 차례.
+            GameManager.Instance.SetStoryNumber(5);
+            GameManager.Instance.StartStoryEvent();
+        }
+        else
+        {
+            //씬3_다시취조실이면 다음씬으로.
+            SceneManager.LoadScene(levelToLoad);
+        }               
     }
     #endregion
 
+
+    #region 씬2_검은화면용
+    public void StartScene2_Black()
+    {
+        forScene2_BalckScreen = true;
+        //페이드아웃 시키고,
+        
+        animator.SetTrigger("FadeOut_Scene2_BlackScreen");                
+    }        
+    #endregion
 }
 

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11681,7 +11681,7 @@ MonoBehaviour:
   dialogues:
   - smallTitle_: "\uD559\uC0DD\uB4E4\uAC00\uACE0 \uC9C0\uD604\uACFC \uC2B9\uD6C8\uC758
       \uB300\uD654"
-    storyId: 0
+    storyId: 7
     dialogue:
     - smallTitle_: "\uC9C0\uD604: \uAC00\uC0C1\uC758 \uC8FD\uC74C\uC774"
       dialogueSetName: 
@@ -16151,6 +16151,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4062764418430449684, guid: 0f89c2777abacec4b92d7a0e96b0b737,
         type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4062764418430449684, guid: 0f89c2777abacec4b92d7a0e96b0b737,
+        type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
@@ -16178,6 +16183,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429761409021256, guid: 0f89c2777abacec4b92d7a0e96b0b737,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429761409021256, guid: 0f89c2777abacec4b92d7a0e96b0b737,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429761409021256, guid: 0f89c2777abacec4b92d7a0e96b0b737,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429761409021256, guid: 0f89c2777abacec4b92d7a0e96b0b737,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 768
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429761409021256, guid: 0f89c2777abacec4b92d7a0e96b0b737,
+        type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261429761409021259, guid: 0f89c2777abacec4b92d7a0e96b0b737,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6261429763025236847, guid: 0f89c2777abacec4b92d7a0e96b0b737,
         type: 3}

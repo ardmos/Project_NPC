@@ -702,7 +702,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //만약, 해당 선택지가 정답이라면. GameManager의 메인 스토리 id도 해당 스토리 id로 변경.
         if (choice.isItCorrectAnswer)
         {
-            GameManager.Instance.storyNumber = choice.linkedStoryDialogueIdNumber;
+            //GameManager.Instance.storyNumber = choice.linkedStoryDialogueIdNumber;
+            GameManager.Instance.SetStoryNumber(choice.linkedStoryDialogueIdNumber);
             Debug.Log("정답! 해당 스토리 넘버로 메인 스토리가 진행됩니다.");
         }
         else Debug.Log("오답! 다시 해보세요~");
@@ -1087,13 +1088,30 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             case 1:
                 //씬1 다이얼로그 모두 끝난 시점 
-                //씬2로 이동.
-                GameManager.Instance.storyNumber = 2;
+                //씬2_취조실로 이동.
+                GameManager.Instance.SetStoryNumber(2);
                 GameManager.Instance.StartStoryEvent();
+                break;
+            case 3:
+                //씬2_취조실 다이얼로그 끝난 시점.
+                //씬2_검은화면 발동!
+                GameManager.Instance.SetStoryNumber(4);
+                GameManager.Instance.StartStoryEvent();
+                break;
+            case 5:
+                //씬2_검은화면 다이얼로그 끝난 시점.
+                //씬3_다시 취조실로 이동.
+                GameManager.Instance.SetStoryNumber(6);
+                GameManager.Instance.StartStoryEvent();
+                break;
+            case 7:
+                //씬3_다시 취조실 다이얼로그 끝난 시점.
+                //여기 진행해줘야함 ~! 다음은 대망의 베릴 성.
+
                 break;
             case 31:
                 //멧돼지게임
-                GameManager.Instance.storyNumber = 31;
+                GameManager.Instance.SetStoryNumber(31); // 31?? 맞나 확인 필요
                 GameManager.Instance.StartStoryEvent();
                 break;
             case 10003:

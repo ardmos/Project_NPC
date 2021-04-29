@@ -79,7 +79,8 @@ public class Object : MonoBehaviour
             {
                 //나머지와 모두 대화를 마쳤다.                
                 //씬1 천형사 등장 이벤트 발동. 스토리 이벤트 넘버 = 1
-                GameManager.Instance.storyNumber = 1;
+                //GameManager.Instance.storyNumber = 1;
+                GameManager.Instance.SetStoryNumber(1);
                 GameManager.Instance.StartStoryEvent();
                 return true;
             }
