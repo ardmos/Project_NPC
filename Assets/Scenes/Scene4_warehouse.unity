@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2762,7 +2762,7 @@ GameObject:
   - component: {fileID: 1888680054}
   - component: {fileID: 1888680055}
   m_Layer: 0
-  m_Name: "\uC52C4_\uC811\uC18D\uAE30 \uC811\uC18D\uD5C8\uAE30"
+  m_Name: "\uC52C3_\uC9C0\uD558\uCC3D\uACE0_\uC811\uC18D\uAE30 \uC811\uC18D\uD558\uAE30"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2796,7 +2796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - smallTitle_: "\uACBD\uCC30\uC11C \uB0B4\uBD80 \uC9C0\uD558\uCC3D\uACE0"
-    storyId: 0
+    storyId: 9
     dialogue:
     - smallTitle_: "\uD0D0\uC815: \uC815\uB9D0 \uC774\uB807\uAC8C\uAE4C\uC9C0/"
       dialogueSetName: 
@@ -2807,20 +2807,27 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -2831,7 +2838,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC815\uB9D0 \uC774\uB807\uAC8C\uAE4C\uC9C0 \uD574\uC57C\uB3FC\uC694?"
     - smallTitle_: "\uC9C0\uD604: \uBC29\uBC95\uC774 \uC5C6\uC796\uC2B5\uB2C8\uAE4C>?"
@@ -2843,20 +2859,27 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -2867,7 +2890,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uBC29\uBC95\uC774 \uC5C6\uC796\uC2B5\uB2C8\uAE4C?\n\uD53C\uD574\uC790\uAC00
         \uC8FD\uC740 \uAC74 \uAC8C\uC784 \uC811\uC18D\uAE30 \uC548\uC774\uC5C8\uACE0.\n\uC544\uBB34\uB7F0
@@ -2882,20 +2914,27 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -2906,7 +2945,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uBB54\uAC00 \uB098\uC62C \uB54C\uAE4C\uC9C0 \uC544\uBB34\uAC83\uB3C4
         \uC548 \uD558\uACE0 \uAC00\uB9CC\uD788 \uC788\uC744 \uC218\uB294 \uC5C6\uC2B5\uB2C8\uB2E4."
@@ -2919,20 +2967,27 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -2943,7 +2998,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "....\n'\uBABB \uB9D0\uB9AC\uACA0\uAD70.'"
     - smallTitle_: "\uD0D0\uC815: ..."
@@ -2955,20 +3019,27 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -2979,7 +3050,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uADF8\uB798! \uAC8C\uC784 \uC18D\uC5D0\uC11C \uC0B4\uC778\uC0AC\uAC74
         \uC218\uC0AC\uB77C\uB2C8,\n\uC815\uB9D0 \uC7AC\uBC0C\uACA0\uAD6C\uB9CC! \uC2E0\uC120\uD574,
@@ -2996,20 +3076,27 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -3020,7 +3107,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: "\uBE44\uC5B4\uC788\uB294 \uC785\uB825\uCC3D\uC5D0 \uCC98\uC74C \uBCF4\uB294
         \uC544\uC774\uB514\uC640 \uD328\uC2A4\uC6CC\uB4DC\uAC00\n\uC790\uB3D9\uC73C\uB85C
@@ -3034,20 +3130,27 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -3058,7 +3161,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "'\uC544\uBB34\uB798\uB3C4 \uC218\uC0AC\uB97C \uC704\uD55C \uACC4\uC815\uC774
         \uB530\uB85C \uC9C0\uAE09 \uB41C \uBAA8\uC591\uC774\uAD70...'"
@@ -3071,24 +3183,33 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 1
           selectionPopupData:
             question: 
             choices:
             - sentence: "\uB3D9\uC758\uD55C\uB2E4"
-              storyJump: 2
+              linkedStoryDialogueIdNumber: 0
+              isItCorrectAnswer: 0
             - sentence: "\uB3D9\uC758\uD558\uC9C0 \uC54A\uB294\uB2E4"
-              storyJump: 0
-            choice_results: []
-            responses: []
-        animationSettings:
+              linkedStoryDialogueIdNumber: 0
+              isItCorrectAnswer: 0
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -3099,7 +3220,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: "[\uC0DD\uCCB4 \uC815\uBCF4 \uC218\uC2E0\uC911\u2026\n\uC2EC\uC7A5
         \uBC15\uB3D9 \uCE21\uC815\uAE30 \u2018\uD558\uD2B8 \uBE44\uD2B8\u2019 \uB370\uC774\uD130
@@ -3113,20 +3243,27 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-            choice_results: []
-            responses: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -3137,7 +3274,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: "[\uB370\uC774\uD130 \uC218\uC9D1\uC5D0 \uB3D9\uC758\uD558\uC9C0
         \uC54A\uC73C\uBA74 \uAC8C\uC784\uC744 \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.]"
@@ -3150,24 +3296,33 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 1
           selectionPopupData:
             question: 
             choices:
             - sentence: "\uB3D9\uC758\uD55C\uB2E4"
-              storyJump: 0
+              linkedStoryDialogueIdNumber: 0
+              isItCorrectAnswer: 0
             - sentence: "\uC5B4\uCA54\uC218 \uC5C6\uC774 \uB3D9\uC758\uD55C\uB2E4"
-              storyJump: 0
-            choice_results: []
-            responses: []
-        animationSettings:
+              linkedStoryDialogueIdNumber: 0
+              isItCorrectAnswer: 0
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -3178,7 +3333,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: "[\uC0DD\uCCB4 \uC815\uBCF4 \uC218\uC2E0\uC911\u2026\n\uC2EC\uC7A5
         \uBC15\uB3D9 \uCE21\uC815\uAE30 \u2018\uD558\uD2B8 \uBE44\uD2B8\u2019 \uB370\uC774\uD130
@@ -3192,24 +3356,33 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices:
             - sentence: "\uB3D9\uC758\uD55C\uB2E4"
-              storyJump: 0
+              linkedStoryDialogueIdNumber: 0
+              isItCorrectAnswer: 0
             - sentence: "\uC5B4\uCA54\uC218 \uC5C6\uC774 \uB3D9\uC758\uD55C\uB2E4"
-              storyJump: 0
-            choice_results: []
-            responses: []
-        animationSettings:
+              linkedStoryDialogueIdNumber: 0
+              isItCorrectAnswer: 0
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
         sFXSettings:
           turnOffTypingSound: 0
           enableSFX: 0
@@ -3220,7 +3393,16 @@ MonoBehaviour:
         cutSceneSettings:
           activateCutScene: 0
           image: {fileID: 0}
-      soundNumber: 0
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: ... ...
 --- !u!1 &2113493272
@@ -3350,3 +3532,323 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!224 &556261040213005202
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306459293130671956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6261429761784696048}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4062764418810708386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306459293130671956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_RaycastTarget: 0
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7415103db205a1e40a628c859b9b278f, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 80
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &5208723550312585035
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306459293130671956}
+  m_CullTransparentMesh: 0
+--- !u!1 &5306459293130671956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556261040213005202}
+  - component: {fileID: 5208723550312585035}
+  - component: {fileID: 4062764418810708386}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6261429761784696048
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429761784696049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 6261429762080506161}
+  - {fileID: 556261040213005202}
+  m_Father: {fileID: 6261429762313865926}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &6261429761784696049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6261429761784696048}
+  - component: {fileID: 6261429761784696061}
+  - component: {fileID: 6261429761784696062}
+  - component: {fileID: 6261429761784696063}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!223 &6261429761784696061
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429761784696049}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 900
+  m_TargetDisplay: 0
+--- !u!114 &6261429761784696062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429761784696049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!114 &6261429761784696063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429761784696049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &6261429762080506160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429762080506162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!224 &6261429762080506161
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429762080506162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6261429761784696048}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &6261429762080506162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6261429762080506161}
+  - component: {fileID: 6261429762080506175}
+  - component: {fileID: 6261429762080506160}
+  m_Layer: 5
+  m_Name: FadeInOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &6261429762080506175
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429762080506162}
+  m_CullTransparentMesh: 0
+--- !u!4 &6261429762313865926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429762313865945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.17514428, y: 0.43296152, z: -2.28125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6261429761784696048}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6261429762313865927
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429762313865945}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9b8a5c3079b2f043a5f72c5b4f7911a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &6261429762313865945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6261429762313865926}
+  - component: {fileID: 6261429762313865927}
+  - component: {fileID: 8790819282031862951}
+  m_Layer: 0
+  m_Name: LevelChanger_WithSentence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &8790819282031862951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261429762313865945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d1aacc2955745b9b5892c1e4664792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6261429762313865927}
+  text: {fileID: 4062764418810708386}
+  storyNumber: 9
+  sentence: "\uACBD\uCC30\uC11C \uB0B4\uBD80 \uC9C0\uD558 \uCC3D\uACE0"

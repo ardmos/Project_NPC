@@ -162,12 +162,19 @@ public class GameManager : DontDestroy<GameManager>
                 break;
             case 8:
                 //페이드아웃, 씬3_지하창고로 씬 전환.
+                LevelChanger_ForScene2.instance.FadeToNextLevel();
                 break;
             case 9:
-                ///씬3_지하창 다이얼로그 시작.
+                ///씬3_지하창고 다이얼로그 시작.
+                DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
-            case 10: break;
-            case 11: break;
+            case 10:
+                //페이드아웃, 씬4_베릴성으로 씬 전환.
+                
+                break;
+            case 11:
+                ///씬4_베릴성 다이얼로그 시작. 
+                break;
             case 12: break;
             case 13: break;
             case 14: break;

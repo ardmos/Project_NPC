@@ -1088,7 +1088,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         {
             case 1:
                 //씬1 다이얼로그 모두 끝난 시점 
-                //씬2_취조실로 이동.
+                //씬2_취조실로 씬 전환 작업 시작.
                 GameManager.Instance.SetStoryNumber(2);
                 GameManager.Instance.StartStoryEvent();
                 break;
@@ -1106,10 +1106,17 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 break;
             case 7:
                 //씬2_다시 취조실 다이얼로그 끝난 시점.
-                //여기 진행해줘야함 ~! 다음은 지하창고
+                //씬3_지하창고로 씬 전환 직업 시작
                 GameManager.Instance.SetStoryNumber(8);
                 GameManager.Instance.StartStoryEvent();
                 break;
+            case 9:
+                //씬3_지하창고 다이얼로그 끝난 시점.
+                //씬4_베릴성으로 씬 전환 작업 시작
+                GameManager.Instance.SetStoryNumber(10);
+                GameManager.Instance.StartStoryEvent();
+                break;
+
             case 31:
                 //멧돼지게임
                 GameManager.Instance.SetStoryNumber(31); // 31?? 맞나 확인 필요

@@ -7,9 +7,7 @@ public class LevelChanger_ForScene2 : MonoBehaviour
 {
 
     public Animator animator;
-    public Text text;
-    public AudioSource audioSource;
-    public AudioClip audioClip;
+    public Text text;      
 
     int levelToLoad;
 
@@ -102,7 +100,7 @@ public class LevelChanger_ForScene2 : MonoBehaviour
         }       
         else
         {
-            //씬2_다시취조실 끝난거면 씬3_지하창고로 씬 전환
+            //씬2_다시취조실 끝난거면 씬3_지하창고로 씬 전\
             SceneManager.LoadScene(levelToLoad);
         }               
     }
