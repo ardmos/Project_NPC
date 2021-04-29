@@ -9,6 +9,8 @@ namespace CatchingWildBoar
     public class GameManager : MonoBehaviour
     {
         /// <summary>
+        /// 이곳은 미니게임<멧돼지>의 게임 매니저
+        /// 
         /// 추가할것들
         ///  1.성공시, 실패시 다이얼로그 출력되는부분 추가.
         ///  2.씬4_베릴성과의 알맞은 씬 전환 연결.
