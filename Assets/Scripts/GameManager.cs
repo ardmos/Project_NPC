@@ -134,7 +134,7 @@ public class GameManager : DontDestroy<GameManager>
                 DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
             case 2:
-                //페이드 아웃, 씬 이동 
+                //페이드 아웃, 씬 전화 
                 LevelChanger_ForScene1.instance.FadeToNextLevel();
                 //다음날, 경찰서 취조실
                 break;
@@ -153,13 +153,19 @@ public class GameManager : DontDestroy<GameManager>
                 break;
 
             case 6:
-                //씬3_다시 취조실로 이동. 
+                //페이드인, 씬2_다시 취조실 시작.
+                LevelChanger_ForScene2.instance.StartScene2_InterrogationAgain();
                 break;
             case 7:
-                //씬3_다시 취조실 다이얼로그 시작.
+                ///씬2_다시 취조실 다이얼로그 시작.
+                DialogueManager.Instance.StartDialogue(storyNumber);
                 break;
-            case 8: break;
-            case 9: break;
+            case 8:
+                //페이드아웃, 씬3_지하창고로 씬 전환.
+                break;
+            case 9:
+                ///씬3_지하창 다이얼로그 시작.
+                break;
             case 10: break;
             case 11: break;
             case 12: break;

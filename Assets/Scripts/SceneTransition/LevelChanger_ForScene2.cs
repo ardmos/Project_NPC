@@ -13,7 +13,7 @@ public class LevelChanger_ForScene2 : MonoBehaviour
 
     int levelToLoad;
 
-    bool forScene2_BalckScreen;
+    bool forScene2_BalckScreen, forScene2_InterrogationAgain;
 
     #region 싱글턴
     public static LevelChanger_ForScene2 instance;
@@ -98,10 +98,11 @@ public class LevelChanger_ForScene2 : MonoBehaviour
             //씬2_까만화면 다이얼로그 시작할 차례.
             GameManager.Instance.SetStoryNumber(5);
             GameManager.Instance.StartStoryEvent();
-        }
+            forScene2_BalckScreen = false;
+        }       
         else
         {
-            //씬3_다시취조실이면 다음씬으로.
+            //씬2_다시취조실 끝난거면 씬3_지하창고로 씬 전환
             SceneManager.LoadScene(levelToLoad);
         }               
     }
@@ -114,8 +115,21 @@ public class LevelChanger_ForScene2 : MonoBehaviour
         forScene2_BalckScreen = true;
         //페이드아웃 시키고,
         
-        animator.SetTrigger("FadeOut_Scene2_BlackScreen");                
-    }        
+        animator.SetBool("FadeOut_Scene2_BlackScreen", true);                
+    }
+    #endregion
+
+    #region 씬2_다시취조실용
+    public void StartScene2_InterrogationAgain()
+    {
+        //fadeIn애니메이션 스타트.
+        animator.SetBool("DoFadeIn_ForScene2_InterrogationAgain", true);
+    }
+    public void StartScene2_InterrogationAgainDialogue()    //애니메이션 이벤트로 호출.
+    {
+        GameManager.Instance.SetStoryNumber(7);
+        GameManager.Instance.StartStoryEvent();
+    }
     #endregion
 }
 

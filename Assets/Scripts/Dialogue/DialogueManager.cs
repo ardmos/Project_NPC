@@ -1100,14 +1100,15 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 break;
             case 5:
                 //씬2_검은화면 다이얼로그 끝난 시점.
-                //씬3_다시 취조실로 이동.
+                //씬2_다시 취조실로 이동작업 시작.
                 GameManager.Instance.SetStoryNumber(6);
                 GameManager.Instance.StartStoryEvent();
                 break;
             case 7:
-                //씬3_다시 취조실 다이얼로그 끝난 시점.
-                //여기 진행해줘야함 ~! 다음은 대망의 베릴 성.
-
+                //씬2_다시 취조실 다이얼로그 끝난 시점.
+                //여기 진행해줘야함 ~! 다음은 지하창고
+                GameManager.Instance.SetStoryNumber(8);
+                GameManager.Instance.StartStoryEvent();
                 break;
             case 31:
                 //멧돼지게임
