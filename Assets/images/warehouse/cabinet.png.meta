@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c0d8493d468674b489a64a3914cc7d3f
+guid: 673076c9bb43244dbac63b6a15c72033
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6605271373435725172
-    second: "\uD559\uC0DD2\uC6B0\uB294\uAC70_0"
+      213: -2788250296871982078
+    second: cabinet_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -69,7 +69,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -81,7 +81,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -93,7 +93,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -102,22 +102,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uD559\uC0DD2\uC6B0\uB294\uAC70_0"
+      name: cabinet_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 7
-        width: 25
-        height: 58
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 59
+        y: 4
+        width: 40
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8a9e4d9eac5554a0800000000000000
-      internalID: -6605271373435725172
+      spriteID: 20c6116b0252e49d0800000000000000
+      internalID: -2788250296871982078
       vertices: []
       indices: 
       edges: []

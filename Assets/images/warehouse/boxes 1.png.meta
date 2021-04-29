@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: c0d8493d468674b489a64a3914cc7d3f
+guid: bad28473253824b1292955cc2a27c2ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6605271373435725172
-    second: "\uD559\uC0DD2\uC6B0\uB294\uAC70_0"
+      213: 1283480818136640221
+    second: boxes 1_0
+  - first:
+      213: 514093057759445378
+    second: boxes 1_1
+  - first:
+      213: 3488948537473801501
+    second: boxes 1_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -48,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,22 +108,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uD559\uC0DD2\uC6B0\uB294\uAC70_0"
+      name: boxes 1_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 7
-        width: 25
-        height: 58
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 9
+        y: 56
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8a9e4d9eac5554a0800000000000000
-      internalID: -6605271373435725172
+      spriteID: ddaef010107dfc110800000000000000
+      internalID: 1283480818136640221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxes 1_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 56
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2810f3989ec622700800000000000000
+      internalID: 514093057759445378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boxes 1_2
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 7
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d9eb7a53c3b6030800000000000000
+      internalID: 3488948537473801501
       vertices: []
       indices: 
       edges: []
@@ -125,7 +173,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 4ff0bd16971f64cbe8666bf5382b3eff
     internalID: 0
     vertices: []
     indices: 
