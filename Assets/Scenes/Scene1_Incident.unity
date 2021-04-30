@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7259,7 +7259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &124598116
 GameObject:
@@ -7563,7 +7563,7 @@ Transform:
   m_Children:
   - {fileID: 1293882305}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &150088135
 MonoBehaviour:
@@ -7606,7 +7606,7 @@ Transform:
   m_Children:
   - {fileID: 20024208}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &171954334 stripped
 GameObject:
@@ -7678,6 +7678,163 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!1 &183358470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183358471}
+  - component: {fileID: 183358473}
+  - component: {fileID: 183358472}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &183358471
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183358470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1396261300}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.3002014, y: 3}
+  m_SizeDelta: {x: -27.458801, y: -36.138245}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &183358472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183358470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f9b6441fb4df55498123a570529a7cb, type: 2}
+  m_sharedMaterial: {fileID: -1258008973528065580, guid: 8f9b6441fb4df55498123a570529a7cb,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 14
+  m_fontSizeBase: 14
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 257
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_textInfo:
+    textComponent: {fileID: 183358472}
+    characterCount: 8
+    spriteCount: 0
+    spaceCount: 1
+    wordCount: 2
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &183358473
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183358470}
+  m_CullTransparentMesh: 0
 --- !u!1 &187658093
 GameObject:
   m_ObjectHideFlags: 0
@@ -8501,7 +8658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - smallTitle_: "\uB300\uD559\uC0DD \uCDE8\uC870"
-    storyId: 9999
+    storyId: 3
     dialogue:
     - smallTitle_: 
       dialogueSetName: 
@@ -11114,7 +11271,7 @@ Transform:
   m_Children:
   - {fileID: 662838194}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &402077637
 GameObject:
@@ -11599,6 +11756,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &520772393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 520772394}
+  - component: {fileID: 520772397}
+  - component: {fileID: 520772396}
+  - component: {fileID: 520772395}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &520772394
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520772393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1396261300}
+  m_Father: {fileID: 1403925578}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &520772395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520772393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &520772396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520772393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 32
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1024, y: 768}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &520772397
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520772393}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 1
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 900
+  m_TargetDisplay: 0
 --- !u!1 &525210958
 GameObject:
   m_ObjectHideFlags: 0
@@ -11759,6 +12015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isControllable: 0
   movespeed: 5
+  rayDistance: 0.7
   rb: {fileID: 525210961}
   animator: {fileID: 0}
   movement: {x: 0, y: 0}
@@ -11820,7 +12077,7 @@ Transform:
   m_Children:
   - {fileID: 143384930}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &542969457
 GameObject:
@@ -11857,7 +12114,7 @@ Transform:
   - {fileID: 641186953}
   - {fileID: 1704679909}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &547723875
 GameObject:
@@ -11899,7 +12156,7 @@ Transform:
   - {fileID: 1808558873}
   - {fileID: 1750541322}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553220201
 GameObject:
@@ -11930,7 +12187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 580652750}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &553220203
 SpriteRenderer:
@@ -11968,8 +12225,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -536478411
-  m_SortingLayer: 4
+  m_SortingLayerID: 610542433
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -4756028443593143600, guid: 205347b400ed04fe690b3126cd1529b9,
     type: 3}
@@ -12126,6 +12383,7 @@ Transform:
   m_LocalPosition: {x: 4.06, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 655411664}
   - {fileID: 2085992222}
   - {fileID: 553220202}
   m_Father: {fileID: 1613328308}
@@ -12326,6 +12584,85 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65625, y: 1.96875}
   m_EdgeRadius: 0
+--- !u!1001 &589406185
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 580652750}
+    m_Modifications:
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181475, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_Name
+      value: FurnitureLayerSetter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181477, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.7966309
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394551659260181477, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.14831543
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ea43114fe189bd458a29e286c0ea2b6, type: 3}
 --- !u!1 &592900666
 GameObject:
   m_ObjectHideFlags: 0
@@ -14081,7 +14418,7 @@ Transform:
   - {fileID: 1729303440}
   - {fileID: 1555472112}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654900364
 GameObject:
@@ -14115,6 +14452,12 @@ Transform:
   m_Father: {fileID: 641186953}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &655411664 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5394551659260181474, guid: 1ea43114fe189bd458a29e286c0ea2b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 589406185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &659228953
 GameObject:
   m_ObjectHideFlags: 0
@@ -14711,7 +15054,7 @@ RectTransform:
   m_Children:
   - {fileID: 970492861}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15162,7 +15505,7 @@ Transform:
   m_Children:
   - {fileID: 315965343}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &766340144
 GameObject:
@@ -15233,7 +15576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 70
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1024, y: 768}
   m_ScreenMatchMode: 0
@@ -15374,7 +15717,7 @@ Transform:
   - {fileID: 849152245}
   - {fileID: 1585838192}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &806612665
 MonoBehaviour:
@@ -15777,6 +16120,7 @@ Transform:
   m_Children:
   - {fileID: 1290929847}
   - {fileID: 1481285681}
+  - {fileID: 1403925578}
   m_Father: {fileID: 547723876}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16347,7 +16691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &937402251
 MonoBehaviour:
@@ -16876,50 +17220,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 977671939}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1019360874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1019360875}
-  - component: {fileID: 1019360876}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1019360875
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019360874}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1585838192}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1019360876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019360874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues: []
 --- !u!1 &1023926789
 GameObject:
   m_ObjectHideFlags: 0
@@ -21574,7 +21874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - smallTitle_: "\uB274\uC2A4 ab\uB300\uD654"
-    storyId: 20000
+    storyId: 800000
     dialogue:
     - smallTitle_: "a: \uCD5C\uADFC \uBB34\uC2A8\uBB34\uC2A8\uAE30\uC5C5 "
       dialogueSetName: 
@@ -23702,6 +24002,128 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1396261299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396261300}
+  - component: {fileID: 1396261304}
+  - component: {fileID: 1396261303}
+  m_Layer: 5
+  m_Name: BalloonReal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1396261300
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396261299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 183358471}
+  m_Father: {fileID: 520772394}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -25.335876, y: -191.17035}
+  m_SizeDelta: {x: 410, y: 380}
+  m_Pivot: {x: 0.4381109, y: 0.023370193}
+--- !u!114 &1396261303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396261299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6f16b33aa3a7942a98e3e0da01ba93ac, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1396261304
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396261299}
+  m_CullTransparentMesh: 0
+--- !u!1 &1403925577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403925578}
+  - component: {fileID: 1403925580}
+  m_Layer: 8
+  m_Name: "desk\uB9D0\uD48D\uC120"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1403925578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403925577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.5, y: 1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 520772394}
+  m_Father: {fileID: 878789727}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1403925580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403925577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379f321b206c888439f67c027a80367e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonReal: {fileID: 1396261299}
+  bgspriteRectT: {fileID: 1396261300}
+  "\uC0B4\uC9DD\uB9CC\uD07C": 0
 --- !u!1 &1410493980
 GameObject:
   m_ObjectHideFlags: 0
@@ -23985,6 +24407,980 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84375, y: 0.8764167}
   m_EdgeRadius: 0
+--- !u!1 &1430865822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430865823}
+  - component: {fileID: 1430865824}
+  m_Layer: 0
+  m_Name: "\uC52C3_\uD559\uC0DD\uB4E4\uAC00\uACE0\uB098\uC11C"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1430865823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430865822}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.1628013, y: 8.905903, z: -3.423116}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1585838192}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1430865824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430865822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed26e1ac82fb3640aafdbc2ebf262ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - smallTitle_: "\uD559\uC0DD\uB4E4\uAC00\uACE0 \uC9C0\uD604\uACFC \uC2B9\uD6C8\uC758
+      \uB300\uD654"
+    storyId: 7
+    dialogue:
+    - smallTitle_: "\uC9C0\uD604: \uAC00\uC0C1\uC758 \uC8FD\uC74C\uC774"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 1
+      sentence: "\uAC00\uC0C1\uC758 \uC8FD\uC74C\uC774 \uD604\uC2E4\uC758 \uC8FD\uC74C\uC73C\uB85C
+        \uC774\uC5B4\uC9C8 \uC218\uB3C4 \uC788\uC2B5\uB2C8\uAE4C?"
+    - smallTitle_: "\uD0D0\uC815: ? \uAE00\uC384\uC694"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 0
+      sentence: ?...
+    - smallTitle_: "\uD0D0\uC815: \uAE00\uC384\uC6942"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 0
+      sentence: "\uAE00\uC384\uC694. \n\uB204\uAD70\uAC00\uC5D0\uAC8C\uB294 \uAC8C\uC784\uC0C1\uC758
+        \uC8FD\uC74C\uC744 \uD604\uC2E4\uCC98\uB7FC \uB290\uB07C\uB294 \uC0AC\uB78C\uB3C4
+        \uAC04\uD639 \uC788\uC8E0. \n\uADF8\uAC78 '\uB3D9\uC9C8\uD654'\uB77C\uACE0
+        \uD574\uC694. "
+    - smallTitle_: "\uD0D0\uC815: \uAE00\uC384\uC6943"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 0
+      sentence: "\uAC8C\uC784\uC18D \uC790\uC2E0\uC774 \uC2E4\uC81C\uC758 \uB098\uB85C
+        \uCC29\uAC01\uD558\uB294 \uAC83\uC785\uB2C8\uB2E4. \n\uC2E4\uC81C\uB85C \uAC8C\uC784
+        \uC911\uB3C5 \uB9D0\uAE30\uC778 \uC0AC\uB78C\uB4E4\uC774 \uAC8C\uC784\uC0C1\uC5D0\uC11C
+        \uACAA\uB294 \uC2A4\uD2B8\uB808\uC2A4 \uC9C0\uC218\uB294 \n\uD604\uC2E4\uC758
+        \uC218\uCE58\uC640 \uAC70\uC758 \uBE44\uC2B7\uD558\uB2E4\uB294 \uBCF4\uACE0\uB3C4
+        \uC788\uAE34 \uD569\uB2C8\uB2E4\uB9CC\u2026"
+    - smallTitle_: "\uD0D0\uC815 \uB3C5\uBC31"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 14
+      sentence: "\L\uADF8\uB807\uB2E4\uACE0\uB294 \uD574\uB3C4 \uC2E4\uC81C\uB85C
+        \uC8FD\uC740 \uC0AC\uB840\uB294 \uC5C6\uC5C8\uB2E4. \n\uADF8\uAC83\uC774
+        \uACFC\uD559\uC801\uC73C\uB85C \uAC00\uB2A5\uD55C \uAC83\uC778\uC9C0 \uC544\uB2CC\uC9C0\uB294
+        \uC758\uD559\uC790\uAC00 \uC544\uB2CC \uB098\uB85C\uC11C\uB294 \uB3C4\uC800\uD788
+        \uD310\uB2E8\uD560 \uC218\uAC00 \uC5C6\uB2E4. \n\uD558\uC9C0\uB9CC \uC774\uAC83\uC774
+        \uCCAB \uC0AC\uB840\uAC00 \uB41C\uB2E4\uBA74 \uC560\uAE30\uAC00 \uB2EC\uB77C\uC9C0\uC9C0
+        \uC54A\uC744\uAE4C?"
+    - smallTitle_: "\uD0D0\uC815 \uB3C5\uBC312"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 14
+      sentence: "\uC0DD\uAC01\uD574\uBCF4\uB2C8 \uB0A9\uB4DD\uD560\uB9CC\uD558\uB2E4.
+        \n'\uB9AC\uC5BC \uBC84\uC2A4\uD2F0\uB4DC'\uB294\_\uACFC\uAC70 \uC628\uB77C\uC778
+        \uAC8C\uC784\uACFC\uB294 \uB2E4\uB974\uAC8C \uB1CC\uD30C\uC7A5\uCE58\uB97C
+        \uBD80\uCC29\uD574\uC11C \uD604\uC2E4\uACFC\uC758 \uB3D9\uC9C8\uD654\uAC00
+        \uB9E4\uC6B0 \uB192\uB2E4. \n\uADF8\uB294 R\uAC8C\uC784 \uC911\uB3C5 \uB9D0\uAE30\uC600\uC73C\uBA70,
+        \uAC00\uC0C1\uC758 \uC8FD\uC74C\uC744 \uD604\uC2E4\uCC98\uB7FC \uB290\uAEF4
+        \uC1FC\uD06C\uC0AC\uC5D0 \uC774\uB974\uB800\uB2E4\uB294 \uAC00\uC124. \n"
+    - smallTitle_: "\uD0D0\uC815 \uB3C5\uBC313"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 14
+      sentence: "\uC81C\uBC95 \uC77C\uB9AC\uC788\uAC8C \uB4E4\uB9B0\uB2E4. \n\n\uBB3C\uB860
+        \uADF8\uAC00 \uAD34\uC774\uD55C \uD615\uD0DC\uC758 \uC0AC\uCCB4\uB85C \uBC1C\uACAC\uB41C
+        \uAC83\uC5D0\uB294 \uC544\uC9C1 \uC758\uBB38 \uD22C\uC131\uC774\uC9C0\uB9CC..."
+    - smallTitle_: "\uD0D0\uC815: \uC1FC\uD06C\uC0AC\uC77C \uAC00\uB2A5"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 0
+      sentence: "\uC1FC\uD06C\uC0AC\uC77C \uAC00\uB2A5\uC131\uC744 \uC5FC\uB450\uC5D0
+        \uB461\uC2DC\uB2E4. \n\uC77C\uB2E8 \uADF8\uB4E4\uC744 \uBD88\uAD6C\uC18D
+        \uAE30\uC18C\uD558\uACE0..\L."
+    - smallTitle_: "\uC9C0\uD604: \uC7A0\uAE50\uB9CC\uC694"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 1
+      sentence: "\uC7A0\uAE50\uB9CC\uC694.\n\uC0AC\uC778\uC740 \uBD80\uAC80 \uACB0\uACFC\uAC00
+        \uB098\uC640\uC57C \uC54C\uACA0\uC8E0."
+    - smallTitle_: "\uD0D0\uC815: \uD0B9\uCE58\uB9CC..."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 0
+      sentence: "\uD558\uC9C0\uB9CC..."
+    - smallTitle_: "\uC9C0\uD604: \uB9D0\uC774 \uC548\uB418\uC796\uC544\uC6A9.."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 1
+      sentence: "\uC77C\uB2E8\uC740 \uB9D0\uC774 \uC548 \uB418\uB294 \uAC70\uC796\uC544\uC694.\n\uC1FC\uD06C\uC0AC\uB85C
+        \uADF8\uB7F0 \uD615\uD0DC\uC758 \uC2DC\uC2E0\uC774 \uB098\uC62C\uC218\uB294
+        \uC5C6\uC2B5\uB2C8\uB2E4."
+    - smallTitle_: "\uD0D0\uC815 \uB3C5\uBC31"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 14
+      sentence: "\uADF8\uB140\uC758 \uB2E8\uD638\uD55C \uB9D0\uC5D0 \uC21C\uAC04
+        \uB9D0\uBB38\uC774 \uB9C9\uD614\uB2E4."
+    - smallTitle_: "\uC9C0\uD604: \uAC8C\uB2E4\uAC00 \uC758\uBB38\uC774 "
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 1
+      sentence: "\uAC8C\uB2E4\uAC00 \uC758\uBB38\uC740 \uC544\uC9C1 \uB0A8\uC544\uC788\uC2B5\uB2C8\uB2E4.\n\uADF8\uAC00
+        '50\uBC88'\uC529\uC774\uB098 \uB418\uC0B4\uC544\uB0AC\uB358 \uC774\uC720..."
+    - smallTitle_: "\uC9C0\uD604: \uAC8C\uC784\uC744 \uD574\uBCF4\uC9C4 \uC54A\uC558\uC9C0\uB9CC,,"
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 1
+      sentence: "R\uAC8C\uC784\uC744 \uC9C1\uC811 \uD574\uBCF4\uC9C0\uB294 \uC54A\uC558\uC9C0\uB9CC,
+        \n\uC0C1\uC2DD\uC801\uC73C\uB85C \uC2B9\uC0B0\uC774 \uC5C6\uB294 \uC804\uD22C\uC5D0
+        50\uBC88\uC529\uC774\uB098 \uB364\uBCBC\uB4E4 \uB9CC \uD55C \uADFC\uAC70\uB294
+        \uCD94\uCE21\uD558\uAE30 \uD798\uB4ED\uB2C8\uB2E4. "
+    - smallTitle_: "\uC9C0\uD604: \uD639\uC2DC, \uB2E4\uB978 \uD50C\uB808\uC774\uC5B4\uAC00? "
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 1
+          leftPortraitNumber: 1
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 1
+      sentence: "\uD639\uC2DC, \uB2E4\uB978 \uD50C\uB808\uC774\uC5B4\uAC00 \uADF8\uAC83\uC744
+        \uC5B5\uC9C0\uB85C \uC0AC\uC6A9\uD558\uAC8C \uB9CC\uB4E4\uC218\uB3C4 \uC788\uC2B5\uB2C8\uAE4C?"
+    - smallTitle_: "\uD0D0\uC815: \uADF8\uAC74 \uC1FC\uD06C\uC0AC\uBCF4\uB2E4 \uB354 "
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 1
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 0
+      sentence: "\uADF8\uAC74.. \uC1FC\uD06C\uC0AC\uBCF4\uB2E4 \uB354 \uB9D0\uC774
+        \uC548\uB418\uC8E0. \n\uADF8\uB807\uAC8C \uD558\uB824\uBA74 \uC774 R\uAC8C\uC784
+        \uB0B4\uC758 \uC11C\uBC84 \uBCF4\uC548\uC744 \uD574\uD0B9 \uD574\uC57C \uD55C\uB2E4\uB294
+        \uC774\uC57C\uAE30\uC778\uB370 \n\uC800\uB7F0 \uBAA8\uC9C8\uC774 \uB300\uD559\uC0DD
+        \uB140\uC11D\uB4E4\uC774 \uADF8\uB7F0 \uC218\uC900\uC758 \uD574\uD0B9\uC774
+        \uAC00\uB2A5\uD560 \uB9AC\uAC00 \uC5C6\uC8E0.\L"
+    - smallTitle_: "\uC9C0\uD604: \uC54C\uACA0\uC501\uB2C8\uB2E4. \uC77C\uB2E8\uC740."
+      dialogueSetName: 
+      detail:
+        delayTime: 0
+        letterSpeed: 0
+        styles: 0
+        portraitSettings:
+          showLeftPortrait: 0
+          leftPortraitNumber: 0
+          smallPortraitL: 0
+          showRightPortrait: 0
+          rightPortraitNumber: 0
+          smallPortraitR: 0
+        selectionPopupSettings:
+          activateSelectionPopup: 0
+          selectionPopupData:
+            question: 
+            choices: []
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
+        etcAnimationSettings:
+          etcAnimSets: []
+        emotionSettings:
+          activeEmotion: 0
+          object_: {fileID: 0}
+          animation: 0
+        sFXSettings:
+          turnOffTypingSound: 0
+          enableSFX: 0
+          audioClip: {fileID: 0}
+          playTime: 0
+          delayTime: 0
+          dialogueLifeTime: 0
+        cutSceneSettings:
+          activateCutScene: 0
+          image: {fileID: 0}
+        fontColorSettings:
+          changeColor: 0
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
+        fontSizeSettings:
+          changeSize: 0
+          fontSize: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
+      name: 1
+      sentence: "\u2026 \uC54C\uACA0\uC2B5\uB2C8\uB2E4. \n\uC77C\uB2E8\uC740 '\uBE44\uBC00\uC758
+        \uC232' \uB370\uC774\uD130 \uBCA0\uC774\uC2A4 \uC815\uBC00 \uBD84\uC11D \uC758\uB8B0\uB97C
+        \uB9E1\uACA8 \uB193\uC558\uC2B5\uB2C8\uB2E4. \n\uAC74\uC9C8\uB9CC\uD55C \uAC8C
+        \uB098\uC62C\uC9C0\uB294 \uBAA8\uB974\uACA0\uC9C0\uB9CC\uC694."
 --- !u!1 &1442231508
 GameObject:
   m_ObjectHideFlags: 0
@@ -27508,7 +28904,7 @@ Transform:
   - {fileID: 1317732908}
   - {fileID: 1666454315}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1472496410
 GameObject:
@@ -27588,6 +28984,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472496410}
   m_CullTransparentMesh: 0
+--- !u!1 &1474381158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474381159}
+  - component: {fileID: 1474381160}
+  m_Layer: 0
+  m_Name: TalkBalloonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1474381159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474381158}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.995127, y: -7.2426095, z: -11.390313}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1474381160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474381158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d9b56eee5550a4db86c00f76367ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desk: {fileID: 1403925580}
 --- !u!1 &1475225944
 GameObject:
   m_ObjectHideFlags: 0
@@ -28664,7 +30104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1556139922
 MonoBehaviour:
@@ -29020,7 +30460,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1019360875}
+  - {fileID: 1430865823}
   m_Father: {fileID: 806612664}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29081,10 +30521,10 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 11
-          smallPortraitL: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 11
-          smallPortraitR: 0
+          smallPortraitR: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -29136,10 +30576,10 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 11
-          smallPortraitL: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 11
-          smallPortraitR: 0
+          smallPortraitR: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -29465,12 +30905,12 @@ MonoBehaviour:
         letterSpeed: 0
         styles: 0
         portraitSettings:
-          showLeftPortrait: 1
+          showLeftPortrait: 0
           leftPortraitNumber: 11
-          smallPortraitL: 1
-          showRightPortrait: 0
+          smallPortraitL: 0
+          showRightPortrait: 1
           rightPortraitNumber: 11
-          smallPortraitR: 0
+          smallPortraitR: 1
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
@@ -29543,7 +30983,7 @@ Transform:
   - {fileID: 580652750}
   - {fileID: 1450160336}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1616415021
 GameObject:
@@ -29736,7 +31176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - smallTitle_: "\uCDE8\uC870\uC774\uD6C4 \uB300\uD559\uC0DD\uB4E4\uC758 \uB300\uD654"
-    storyId: 1212
+    storyId: 5
     dialogue:
     - smallTitle_: 
       dialogueSetName: 
@@ -30953,7 +32393,7 @@ RectTransform:
   m_Children:
   - {fileID: 766340145}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -32195,6 +33635,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 16000
+--- !u!1 &1751095526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751095528}
+  - component: {fileID: 1751095527}
+  m_Layer: 0
+  m_Name: FurnitureLayerSetterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1751095527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751095526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9555bd7ae4438646a1cada8d78759f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteBoard: 
+--- !u!4 &1751095528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751095526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 450.43933, y: 356.76843, z: -35.723484}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1758966296
 GameObject:
   m_ObjectHideFlags: 0
@@ -35310,7 +36794,7 @@ MonoBehaviour:
         newAnimationSettings:
           activeNewAnimate: 1
           newAnimDatas:
-          - destinationPos: {x: -5, y: -10}
+          - destinationPos: {x: -5.5, y: -10}
             objToMove: {fileID: 20024207}
             endDir: 2
         etcAnimationSettings:
@@ -35663,7 +37147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949190463
 GameObject:
@@ -41415,7 +42899,7 @@ Transform:
   m_Children:
   - {fileID: 1273865777}
   m_Father: {fileID: 580652750}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123239345
 GameObject:
@@ -41869,8 +43353,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeungHoon_Main
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 363945967062784041, guid: 0732656ae41e8471b97ea3f01406419c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0732656ae41e8471b97ea3f01406419c, type: 3}
 --- !u!1001 &3219217766063091670
 PrefabInstance:
@@ -41884,6 +43367,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 20024208}
+    - target: {fileID: 3219217766351638600, guid: 9031ce589c4aa47b1b388b36f6d8fa80,
+        type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.3333334
+      objectReference: {fileID: 0}
     - target: {fileID: 3219217766351638601, guid: 9031ce589c4aa47b1b388b36f6d8fa80,
         type: 3}
       propertyPath: m_RootOrder
@@ -42145,7 +43633,7 @@ PrefabInstance:
     - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6261429763025236848, guid: 3705fcd21edeb79468cc0260fdca0993,
         type: 3}

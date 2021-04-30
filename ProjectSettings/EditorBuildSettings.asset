@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene2_InterrogationRoom.unity
     guid: 8b46ea9d913ba424e94986898f03a49e
   - enabled: 1
+    path: Assets/Scenes/Scene4_warehouse.unity
+    guid: 1edef3ff58e484ba6979f2d0163dc8fb
+  - enabled: 1
+    path: Assets/Scenes/Scene5_ Verrilcastle.unity
+    guid: c60585526205841c496176fb16e696d1
+  - enabled: 1
     path: Assets/Scenes/MiniGame/CatchingWildBoar.unity
     guid: 36c92cea772238841a23ab90dd393ae3
   - enabled: 1
