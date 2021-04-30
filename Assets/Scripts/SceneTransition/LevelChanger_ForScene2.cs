@@ -13,6 +13,13 @@ public class LevelChanger_ForScene2 : MonoBehaviour
 
     bool forScene2_BalckScreen, forScene2_InterrogationAgain;
 
+    //학생들 오브젝트
+    [SerializeField]
+    GameObject 학생들;
+    //브금으로 넣을 사운드 클립
+    [SerializeField]
+    AudioClip audioClip;
+
     #region 싱글턴
     public static LevelChanger_ForScene2 instance;
 
@@ -111,15 +118,16 @@ public class LevelChanger_ForScene2 : MonoBehaviour
     public void StartScene2_Black()
     {
         forScene2_BalckScreen = true;
-        //페이드아웃 시키고,
-        
-        animator.SetBool("FadeOut_Scene2_BlackScreen", true);                
+        //페이드아웃 시키고,         
+        animator.SetBool("FadeOut_Scene2_BlackScreen", true);
     }
     #endregion
 
     #region 씬2_다시취조실용
     public void StartScene2_InterrogationAgain()
     {
+        //취조실에서 학생들도 떠나보내야지.
+        학생들.SetActive(false);
         //fadeIn애니메이션 스타트.
         animator.SetBool("DoFadeIn_ForScene2_InterrogationAgain", true);
     }
@@ -127,6 +135,13 @@ public class LevelChanger_ForScene2 : MonoBehaviour
     {
         GameManager.Instance.SetStoryNumber(7);
         GameManager.Instance.StartStoryEvent();
+    }
+    #endregion
+
+    #region 브금실행용
+    public void ActivateBGM()
+    {
+        AudioSystem.Instance.ActivateBGM(audioClip);
     }
     #endregion
 }
