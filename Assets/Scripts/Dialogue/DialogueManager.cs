@@ -1126,6 +1126,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 //Scene1. 첫 등장 - 경찰 제지 선택상자 정답 결과.
                 //경찰1 오브젝트의 ID값을 10000에서 10005로 변경시켜준다. (정답을 맞춘 후 경찰1에게 다시 말을 걸었을 때를 위한 처리.)
                 경찰1.GetComponent<Object>().id = 10005;
+                //브금도 실행해준다
+                LevelChanger_ForScene1.instance.ActivateBGM_ForScene1();
                 break;
             case 15500:
                 //Scene1. 책상 정보설명 끝나고 말풍선 시작해주는부분.

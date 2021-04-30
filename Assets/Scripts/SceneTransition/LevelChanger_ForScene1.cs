@@ -9,7 +9,7 @@ public class LevelChanger_ForScene1 : MonoBehaviour
     public Animator animator;
     public Text text;
     public AudioSource audioSource;
-    public AudioClip audioClip;
+    public AudioClip clickSound, BGMClip;
 
     int levelToLoad;
 
@@ -52,14 +52,14 @@ public class LevelChanger_ForScene1 : MonoBehaviour
             //타이핑 효과음 출력 부분.  스페이스는 거른다. 
             if (letter != System.Convert.ToChar(32))
             {
-                audioSource.PlayOneShot(audioClip);
+                audioSource.PlayOneShot(clickSound);
             }
 
             yield return new WaitForSeconds(0.08f);
         }
 
         //출력 끝나면,  스토리 이벤트 시작 (낡은 빌라에 도착...)
-        GameManager.Instance.StartStoryEvent();
+        GameManager.Instance.StartStoryEvent();        
     }
 
 
@@ -81,12 +81,26 @@ public class LevelChanger_ForScene1 : MonoBehaviour
         SceneManager.LoadScene(levelToLoad);
     }
 
-
-
-
-    //씬2 등 다른 씬에서 사용하는 녀석.  씬1에서는 필요 없지만, 애니메이션을 공유하는 이상 함수 자체는 존재해야 한다. 아무런 기능을 넣지 않는 함수
+    //씬2 등 다른 씬에서 사용하는 녀석.  씬1에서는 필요 없지만,
+    //애니메이션을 공유하는 이상 함수 자체는 존재해야 한다. 아무런 기능을 넣지 않는 함수
     public void StartDialogue()
     {        
     }
+
+    #region 브금조절용
+    //Scene1에서는 브금 실행 타이밍이 조금 달라서.  여기 말고
+    //얘는 애니메이션을 공유하기 때문에 기능은없이 존재만 하는것.
+    public void ActivateBGM()
+    {
+        //Debug.Log("A:" + AudioSystem.Instance);
+        //AudioSystem.Instance.ActivateBGM(clickSound);
+    }
+
+    //여기서 브금 실행한다.
+    public void ActivateBGM_ForScene1()
+    {
+        AudioSystem.Instance.ActivateBGM(BGMClip);
+    }
+    #endregion
 }
 
