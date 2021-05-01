@@ -8,7 +8,7 @@ public class LevelChanger_ForScene1 : MonoBehaviour
 
     public Animator animator;
     public Text text;
-    public AudioSource audioSource;
+    AudioSource audioSource;
     public AudioClip clickSound, BGMClip;
 
     int levelToLoad;
@@ -25,6 +25,7 @@ public class LevelChanger_ForScene1 : MonoBehaviour
 
     private void Start()
     {
+        audioSource = AudioSystem.Instance.gameObject.GetComponent<AudioSource>();
         //처음 날짜 도도도도 찍어주기.
         StartCoroutine(TypeSentence("20XX년 1월 3일 오후 2시, 경기도 A빌라 306호"));
     }

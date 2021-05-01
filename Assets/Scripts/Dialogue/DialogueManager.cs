@@ -12,8 +12,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public Text dialogObjName, dialogSentence;
     public Image dialogPortrait_Left, dialogPortrait_Right, dialogPortrait_InDialogue, cutSceneImage;
     public ChoiceBox choiceBox;
-    public AudioSource audioSource;
-    public AudioSystem audioSystem;
+    AudioSource audioSource;
+    AudioSystem audioSystem;
     //Continue버튼
     public GameObject continueBtn;
     //경찰1 오브젝트
@@ -84,6 +84,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     // Start is called before the first frame update
     override protected void OnStart()
     {
+        audioSystem = AudioSystem.Instance;
+        audioSource = audioSystem.gameObject.GetComponent<AudioSource>();
         dialogueSetsQue = new Queue<Dialogue.DialogueSet>();
 
         if (SceneManager.GetActiveScene().name == "Field1_Obstacle" || SceneManager.GetActiveScene().name == "Field1_Obstacle2")

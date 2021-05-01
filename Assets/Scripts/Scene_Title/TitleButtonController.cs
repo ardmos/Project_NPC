@@ -7,25 +7,33 @@ public class TitleButtonController : MonoBehaviour
 {
     public void OnButtonClick_Continue()
     {
+        //씬 이동시 브금 정지
+        AudioSystem.Instance.StopBGM();
         //이어하기
         Debug.Log("이어하기버튼 클릭");
     }
 
     public void OnButtonClick_StartNewGame()
     {
+        //씬 이동시 브금 정지
+        AudioSystem.Instance.StopBGM();
         print("OnButtonClick_StartNewGame");
-        //처음부터 시작.
+        //처음부터 시작.        
         SceneManager.LoadScene("Scene1_Incident");
     }
 
     public void OnButtonClick_Gallary()
     {
+        //씬 이동시 브금 정지
+        AudioSystem.Instance.StopBGM();
         //갤러리씬 이동
         Debug.Log("갤러리씬 오픈");        
         SceneManager.LoadScene("SampleGallary");
     }
     public void OnButtonClick_Option()
     {
+        //씬 이동시 브금 정지
+        AudioSystem.Instance.StopBGM();
         //옵션창 팝업
         FindObjectOfType<OptionPopUp>().OpenThisPopup();
     }

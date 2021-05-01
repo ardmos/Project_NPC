@@ -67,5 +67,10 @@ public class AudioSystem : DontDestroy<AudioSystem>
         audioSource_BGM.clip = audioClip;
         audioSource_BGM.Play();
     }
+    public void StopBGM()
+    {
+        if (audioSource_BGM.isPlaying)
+            audioSource_BGM.Stop();
+    }
     #endregion
 }
