@@ -14,11 +14,11 @@ public class AudioSystem : DontDestroy<AudioSystem>
     public AudioClip furnitureClick;
 
     //AudioSource들.  FX용, BGM용
-    public AudioSource audioSource_FX, audioSource_BGM;
+    public AudioSource audioSource_SFX, audioSource_BGM;
 
     private void Start()
     {
-        audioSource_FX = gameObject.GetComponent<AudioSource>();
+        audioSource_SFX = gameObject.GetComponent<AudioSource>();
     }
 
     #region Dialogue추가 효과음
@@ -35,7 +35,7 @@ public class AudioSystem : DontDestroy<AudioSystem>
         {
             for (int i = 0; i < dialogueSet.detail.sFXSettings.playTime; i++)
             {
-                audioSource_FX.PlayOneShot(dialogueSet.detail.sFXSettings.audioClip);
+                audioSource_SFX.PlayOneShot(dialogueSet.detail.sFXSettings.audioClip);
                 yield return new WaitForSeconds(dialogueSet.detail.sFXSettings.delayTime);
             }
         }
@@ -45,14 +45,14 @@ public class AudioSystem : DontDestroy<AudioSystem>
     #region Dialogue넘길때 소리
     public void PlayDialogueFlipSFX()
     {
-        audioSource_FX.PlayOneShot(dialogFlip);
+        audioSource_SFX.PlayOneShot(dialogFlip);
     }
     #endregion
 
     #region 마우스 클릭 소리
     public void PlayFurnitureClickSFX()
     {
-        audioSource_FX.PlayOneShot(furnitureClick);
+        audioSource_SFX.PlayOneShot(furnitureClick);
     }
     #endregion
 
@@ -71,6 +71,25 @@ public class AudioSystem : DontDestroy<AudioSystem>
     {
         if (audioSource_BGM.isPlaying)
             audioSource_BGM.Stop();
+    }
+    #endregion
+
+    #region BGM, SFX 볼륨 관련
+    public void SetVolume_BGM(float value)
+    {
+        audioSource_BGM.volume = value;
+    }
+    public void SetVolume_SFX(float value)
+    {
+        audioSource_SFX.volume = value;
+    }
+    public float GetVolume_BGM()
+    {
+        return audioSource_BGM.volume;
+    }
+    public float GetVolume_SFX()
+    {
+        return audioSource_SFX.volume;
     }
     #endregion
 }

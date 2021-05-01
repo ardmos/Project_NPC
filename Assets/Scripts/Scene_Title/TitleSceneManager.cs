@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Scene0_Title의 씬 매니저.
 /// 하는 일.
-/// 1. BGM의 관ㄹ
+/// 1. BGM의 관리
 /// </summary>
 
 
@@ -19,4 +19,6 @@ public class TitleSceneManager : MonoBehaviour
     {
         AudioSystem.Instance.ActivateBGM(bgmClip);   
     }
+
+    
 }

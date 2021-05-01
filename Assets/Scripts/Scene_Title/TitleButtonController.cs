@@ -32,8 +32,6 @@ public class TitleButtonController : MonoBehaviour
     }
     public void OnButtonClick_Option()
     {
-        //씬 이동시 브금 정지
-        AudioSystem.Instance.StopBGM();
         //옵션창 팝업
         FindObjectOfType<OptionPopUp>().OpenThisPopup();
     }
