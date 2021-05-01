@@ -173,7 +173,7 @@ public class GameManager : DontDestroy<GameManager>
                 LevelChanger_WithSentence.instance.FadeToNextLevel();
                 break;
             case 11:
-                ///씬4_베릴성 다이얼로그 시작. 
+                ///씬4_베릴성_퀘스트부여 다이얼로그 시작. 
                 DialogueManager.Instance.StartDialogue(storyNumber);                
                 break;
             case 12:

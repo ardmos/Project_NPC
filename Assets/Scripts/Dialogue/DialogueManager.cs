@@ -1118,6 +1118,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
                 GameManager.Instance.SetStoryNumber(10);
                 GameManager.Instance.StartStoryEvent();
                 break;
+            case 11:
+                //씬4_베릴성_퀘스트부여 다이얼로그 끝난 시점.
+                //미니게임<멧돼지>로 씬 전환 작업 시작.
+                GameManager.Instance.SetStoryNumber(12);
+                GameManager.Instance.StartStoryEvent();
+                break;
 
             case 31:
                 //멧돼지게임
