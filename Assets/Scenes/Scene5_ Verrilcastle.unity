@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -43059,7 +43059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - smallTitle_: "\uBCA0\uB9B4\uC131"
-    storyId: 0
+    storyId: 11
     dialogue:
     - smallTitle_: "\uD0D0\uC815: \uBB50\uC57C! \uCEE4\uC2A4\uD130\uB9C8\uC774\uC9D5\uC774"
       dialogueSetName: 
@@ -43070,16 +43070,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43102,7 +43107,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uBB50\uC57C! \uCEE4\uC2A4\uD130\uB9C8\uC774\uC9D5\uC774 \uC5C9\uB9DD\uC73C\uB85C
         \uB3FC\uC788\uC796\uC544?\n\uADF8\uB0E5 \uD604\uC2E4\uC758\uC0C1\uACFC \uB3D9\uAE30\uD654
@@ -43116,19 +43124,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
-          activateObjAnimate: 1
-          objectAnimationData:
-          - objToMakeMove: {fileID: 315735684}
-            moveSet: []
-            endDir: 0
+        oldAnimationSettings:
+          activateObjAnimate: 0
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43151,7 +43161,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: 
     - smallTitle_: "\uC9C0\uD604: ....\uC81C\uAC00"
@@ -43163,16 +43176,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43195,7 +43213,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC81C\uAC00... \uC9C0\uAE08 \uC811\uC18D \uB41C\uAC74\uAC00\uC694?"
     - smallTitle_: "\uD0D0\uC815: ..."
@@ -43207,16 +43228,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 0
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43239,7 +43265,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: ...
     - smallTitle_: "\uC9C0\uD604: \uC640 \uC2E0\uAE30\uD558\uB124\uC694"
@@ -43251,16 +43280,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43283,7 +43317,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC640... \uC2E0\uAE30\uD558\uB124\uC694.\n\n\uB9C8\uCE58..."
     - smallTitle_: "\uC9C0\uD604: \uB610\uB2E4\uB978 \uD604\uC2E4\uC778\uAC70\uAC19\uC544\uC694."
@@ -43295,16 +43332,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43327,7 +43369,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uB610 \uB2E4\uB978 \uD604\uC2E4\uC778 \uAC83 \uAC19\uC544\uC694."
     - smallTitle_: "\uC2B9\uD6C8:...\uD06C\uD760"
@@ -43339,16 +43384,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43371,7 +43421,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "...\n\uD06C\uD760! \uC2E4\uC81C\uB85C\uB3C4 \uC774 \uACF3\uC744
         \uD604\uC2E4\uB85C \uC0BC\uB294 \uC778\uAC04\uB4E4\uC774 \uB9CE\uC8E0.\n\uC790,
@@ -43385,16 +43438,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43417,7 +43475,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uC5B4\uC11C\uC624\uC2ED\uC2DC\uC624. \uC5EC\uAE30\uB294 '\uC13C\uD2B8\uB9AC\uC628
         \uC655\uAD6D'\uC758 \uC218\uB3C4,\n'\uBCA0\uB9B4 \uC131'\uC785\uB2C8\uB2E4."
@@ -43430,16 +43491,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43462,7 +43528,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uBAA8\uD5D8\uAC00\uB2D8~~~!!!!"
     - smallTitle_: "\uC2B9\uD6C8: \uBB50\uC57C?"
@@ -43474,16 +43543,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43506,7 +43580,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uBB50...\uBB50\uC57C?!"
     - smallTitle_: "\uB18D\uBD80: \uBAA8\uD5D8\uAC00\uB2D8 \uD070\uC77C\uB0AC\uC2B5\uB2C8\uB2E4!"
@@ -43518,16 +43595,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43550,7 +43632,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uBAA8\uD5D8\uAC00\uB2D8, \uD070\uC77C\uB0AC\uC2B5\uB2C8\uB2E4!"
     - smallTitle_: "\uC9C0\uD604: \uC0B4\uC778\uC0AC\uAC74??"
@@ -43562,16 +43647,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43594,7 +43684,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uBB34\uC2A8\uC77C\uC774\uC8E0? \uB610 \uC0B4\uC778\uC0AC\uAC74\uC778\uAC00\uC694?"
     - smallTitle_: "\uC2B9\uD6C8: \uC544, \uC6B0\uB9B0"
@@ -43606,16 +43699,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43638,7 +43736,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC544, \uC6B0\uB9AC\uB294 \uAC8C\uC784\uC744 \uD558\uB7EC \uC628
         \uAC8C \uC544\uB2C8\uB77C \uC0AC\uAC74\uC744 \uC870\uC0AC\uD558\uB7EC \uC628
@@ -43652,16 +43753,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43684,7 +43790,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uADFC\uCC98 \uBA67\uB3FC\uC9C0\uB4E4\uC774 \uB610 \uBBFC\uAC00\uB97C
         \uB36E\uCCE4\uC2B5\uB2C8\uB2E4\uC694...\n\uBAA8\uD5D8\uAC00\uB2D8\uAED8\uC11C
@@ -43698,16 +43807,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43730,7 +43844,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC544 \uAE00\uC384, \uC774\uB7F4 \uC2DC\uAC04 \uC5C6\uB2E4\uB2C8\uAE4C
         \uC774\uB7EC\uB124!"
@@ -43743,16 +43860,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43775,7 +43897,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uBD80\uD0C1\uD569\uB2C8\uB2E4\uC694~!\n\uC774 \uB188\uB4E4\uC774
         \uC800\uD76C \uB18D\uC0AC\uB97C \uB2E4 \uB9DD\uCCD0\uB193\uACE0 \uC788\uC2B5\uB2C8\uB2E4!\n\uC81C\uBC1C
@@ -43789,16 +43914,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43821,7 +43951,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC0AC\uC815\uC774 \uB531\uD558\uB2C8 \uC77C\uB2E8 \uB3C4\uC640\uC8FC\uC8E0!\n\uC5B4\uB514\uB85C
         \uAC00\uBA74 \uB429\uB2C8\uAE4C?"
@@ -43834,16 +43967,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43866,7 +44004,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: ?!
     - smallTitle_: "\uB18D\uBD80: \uC218\uB77D_"
@@ -43878,16 +44019,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43910,7 +44056,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: "[\uC218\uB77D] \uAC10\uC0AC\uD569\uB2C8\uB2E4! \uC5ED\uC2DC \uBAA8\uD5D8\uAC00\uB2D8\uC774\uB77C\uBA74
         \uB3C4\uC640\uC8FC\uC2E4 \uC904 \uC54C\uC558\uC2B5\uB2C8\uB2E4!"
@@ -43923,16 +44072,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -43955,7 +44109,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: "[\uC644\uB8CC\uBCF4\uC0C1] EXP 150, 400G, \uCCB4\uB825 \uD68C\uBCF5
         \uBB3C\uC57D(\uCD08\uAE09) 5\uAC1C\n"
@@ -43968,16 +44125,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44000,7 +44162,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uBA67\uB3FC\uC9C0 50\uB9C8\uB9AC\uB97C \uC7A1\uACE0 \uB2E4\uC2DC
         \uC800\uC5D0\uAC8C \uB3CC\uC544\uC640 \uB9D0\uC744 \uAC78\uC5B4\uC8FC\uC138\uC694!"
@@ -44013,16 +44178,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44045,7 +44215,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uBB34...\uBB34\uC2A8....\n\uC800\uAE30 \uAE40 \uD0D0\uC815\uB2D8,
         \uC774 \uC0AC\uB78C\uC774 \uC9C0\uAE08 \uBB50\uB77C\uACE0 \uD558\uB294..."
@@ -44058,16 +44231,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44090,7 +44268,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uB2F5\uB2F5\uD558\uAE34, \uB2F9\uC2E0\uC740 \uC9C0\uAE08 \uC800
         NPC\uC758 \uD018\uC2A4\uD2B8\uB97C \uBC1B\uC740 \uAC70\uB77C\uAD6C."
@@ -44103,16 +44284,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44135,7 +44321,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "NPC\uC694?"
     - smallTitle_: "\uD0D0\uC815: \uB17C\uD50C\uB808\uC774\uC5B4 \uCE90\uB9AD\uD130"
@@ -44147,16 +44336,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44179,7 +44373,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uB17C\uD50C\uB808\uC774\uC5B4 \uCE90\uB9AD\uD130(Non-player character)!
         \n\uC27D\uAC8C \uB9D0\uD574 \uAC8C\uC784 \uC9C4\uD589\uC744 \uC704\uD574
@@ -44194,16 +44391,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44226,7 +44428,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uBCF4\uD1B5 \uC800\uB7F0 \uC2DD\uC73C\uB85C \uD018\uC2A4\uD2B8\uB97C
         \uC918\uC11C \uC2A4\uD1A0\uB9AC\uB97C \uC9C4\uD589 \uC2DC\uD0A4\uAC70\uB098,
@@ -44241,16 +44446,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44273,7 +44483,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC544... \uADF8\uB7FC \uC0AC\uB78C\uC774 \uC544\uB2C8\uC5C8\uAD70\uC694..."
     - smallTitle_: "\uD0D0\uC815:\uC694\uC998\uC740 \uC800\uB807\uAC8C"
@@ -44285,16 +44498,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44317,7 +44535,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC694\uC998 \uAC8C\uC784\uB4E4\uC740 \uC800\uB807\uAC8C npc\uB791
         \uC9C4\uC9DC \uD50C\uB808\uC774\uC5B4\uB791 \uAD6C\uBD84\uD558\uAE30 \uD798\uB4E4
@@ -44333,16 +44554,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44365,7 +44591,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC8C4\uC1A1\uD569\uB2C8\uB2E4..."
     - smallTitle_: "\uD0D0\uC815: \uB410\uC2B5\uB2C8\uB2E4."
@@ -44377,16 +44606,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44409,7 +44643,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uB410\uC2B5\uB2C8\uB2E4.\n\uC5B4\uCA54 \uC218 \uC5C6\uC774 \uBA67\uB3FC\uC9C0\uB098
         \uC794\uB729 \uC7A1\uC73C\uB7EC \uAC00\uC57C\uACA0\uB124\uC694."
@@ -44422,16 +44659,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44454,7 +44696,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uB2E4\uC2DC \uB3CC\uC544\uAC00\uC11C \uBABB\uD558\uACA0\uB2E4\uACE0
         \uD558\uBA74..."
@@ -44467,16 +44712,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44499,7 +44749,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC544, \uC544~ \uD55C\uBC88 \uD018\uC2A4\uD2B8\uB97C \uBC1B\uC73C\uBA74
         \uC644\uB8CC \uD560 \uB54C\uAE4C\uC9C0 \uC815\uD574\uC9C4 \uC9C0\uC5ED \uC774\uC0C1\uC73C\uB85C
@@ -44514,16 +44767,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44546,7 +44804,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC774 \uAC8C\uC784, \uCC98\uC74C\uC774\uC8E0?"
     - smallTitle_: "\uC9C0\uD604: \uC544\uC5D0,,"
@@ -44558,16 +44819,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44590,7 +44856,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC544, \uC608..."
     - smallTitle_: "\uC2B9\uD6C8: \uAC11\uC2DC\uB2E4"
@@ -44602,16 +44871,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44634,7 +44908,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uAC11\uC2DC\uB2E4. \uBA67\uB3FC\uC9C0 \uC7A1\uC73C\uB7EC!"
     - smallTitle_: "\uB3C5\uBC31 "
@@ -44646,16 +44923,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44678,7 +44960,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: "\uBB3C\uB860 \uD018\uC2A4\uD2B8\uB97C \uCDE8\uC18C\uD560 \uC218
         \uC5C6\uB2E4\uB294 \uAC74 \uAC70\uC9D3\uB9D0\uC774\uC5C8\uB2E4.\n\uB2E4\uB978
@@ -44693,16 +44978,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44725,7 +45015,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 14
       sentence: "\uADF8\uC800 \uAC8C\uC784\uC758 g\uC790\uB3C4 \uBAA8\uB974\uBA74\uC11C
         \uC5B4\uB9AC\uBC14\uB9AC\uD55C \uC774 \uC5EC\uC790\uC5D0\uAC8C \uACE8\uD0D5\uC744
@@ -44745,16 +45038,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44777,7 +45075,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uAC10\uC0AC\uD569\uB2C8\uB2E4 \uBAA8\uD5D8\uAC00\uB2D8! \uB2E4\uC74C\uC5D0\uB3C4
         \uB610 \uB3C4\uC640\uC8FC\uC2E4\uAC70\uC8E0?!\n[\uBCF4\uC0C1 \uC9C0\uAE09
@@ -44791,16 +45092,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44823,7 +45129,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "'npc\uB140\uC11D\uB4E4\uC740 \uC720\uC800\uB9CC \uBCF4\uBA74 \uBD80\uB824\uBA39\uC744
         \uC0DD\uAC01\uBC16\uC5D0 \uC548 \uD55C\uB2E4\uB2C8\uAE50...'"
@@ -44836,16 +45145,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44868,7 +45182,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC544, \uD639\uC2DC \uC131\uD568\uC774 \uC5B4\uB5BB\uAC8C \uB418\uC2ED\uB2C8\uAE4C?"
     - smallTitle_: "\uB18D\uBD80: \uB124?"
@@ -44880,16 +45197,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44912,7 +45234,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uB124??"
     - smallTitle_: "\uC2B9\uD6C8: \uC544 \uAE00\uC384,,"
@@ -44924,16 +45249,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -44956,7 +45286,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC544 \uAE00\uC384, \uC774\uAC74 \uADF8\uB0E5 npc\uB77C\uC11C \uB530\uB85C
         \uC774\uB984\uC774 \uC788\uC9C0\uB294 \uC54A..."
@@ -44969,16 +45302,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45001,7 +45339,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uB370\uB9AD\uC785\uB2C8\uB2E4."
     - smallTitle_: "\uD0D0\uC815?"
@@ -45013,16 +45354,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45045,7 +45391,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: ?!
     - smallTitle_: "\uC9C0\uD604: \uC544, \uB370\uB9AD\uC528."
@@ -45057,16 +45406,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45089,7 +45443,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC544, \uB370\uB9AD\uC528.\n\uD639\uC2DC '\uBE44\uBC00\uC758 \uC232'\uC774
         \uC5B4\uB514\uC788\uB294\uC9C0 \uC544\uC2DC\uB098\uC694?"
@@ -45102,16 +45459,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45134,7 +45496,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\u2018\uBE44\uBC00\uC758 \uC232\u2019\uC774\uB77C\uACE0\uC694? \uC608
         \uC54C\uACE0 \uB9D0\uACE0\uC694!\n\uC218\uB3C4 \u2018\uBCA0\uB9B4 \uC131\u2019\uC5D0\uC11C
@@ -45152,16 +45517,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45184,7 +45554,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uAC70\uAE30\uAC00 \u2018\uBE44\uBC00\uC758 \uC232\u2019\uC778\uB370,
         \uC6CC\uB099 \uC0AC\uB78C\uC758 \uBC1C\uAE38\uC774 \uB2FF\uC9C0 \uC54A\uB294
@@ -45199,16 +45572,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45231,7 +45609,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC790\u2026 \uC7A0\uAE50\uB9CC, \uBC1B\uC544 \uC801\uACE0 \uC788\uC73C\uB2C8\uAE4C
         \uCC9C\uCC9C\uD788, \uCC9C\uCC9C\uD788!"
@@ -45244,16 +45625,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45276,7 +45662,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uADF8\uBCF4\uB2E4\u2026 \uCD5C\uADFC\uC5D0 \uC218\uC778\uB4E4\uC758
         \uAC70\uB9AC \uADFC\uCC98\uC5D0\uC11C \n\uC218\uC778\uB140\uC11D\uB4E4\uBCF4\uB2E4
@@ -45291,16 +45680,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45323,7 +45717,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC545\uB784\uD55C \uB140\uC11D?"
     - smallTitle_: "\uD0D0\uC815: \uB610 \uD018\uC2A4\uD2B8\uC8FC\uB824\uACE0;"
@@ -45335,16 +45732,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45367,7 +45769,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "'\uB610 \uD018\uC2A4\uD2B8 \uC8FC\uB824\uACE0 \uAC01 \uC7A1\uB294\uAD6C\uB9CC...'"
     - smallTitle_: "\uB370\uB9AD: \uC608\uC5D0, \uAC80\uC740\uC545\uB9C8!"
@@ -45379,16 +45784,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45411,7 +45821,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uC608\uC5D0, \uADF8 \u2018\uC678\uB208\uC758 \uAC80\uC740 \uC545\uB9C8\u2019\uB77C\uB358\uAC00?
         \n\uADF8 \uB140\uC11D\uC774 \uB098\uD0C0\uB09C \uC774\uD6C4\uB85C \uC544\uC8FC
@@ -45426,16 +45839,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45458,7 +45876,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uADF8\uB7F0\uAC00\uC694?"
     - smallTitle_: "\uD0D0\uC815: \uCCA8\uB4E0\uB290 \u3134\uC774\uB984\uC778\uB370"
@@ -45470,16 +45891,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45502,7 +45928,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "'\uCC98\uC74C \uB4E3\uB294 \uC774\uB984\uC778\uB370... \uCD5C\uADFC\uC5D0
         \uBAAC\uC2A4\uD130 \uAD00\uB828 \uD328\uCE58\uAC00 \uC788\uC5C8\uB358\uAC00?'"
@@ -45515,16 +45944,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45547,7 +45981,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uC544 \uADFC\uB370 \uADF8 \uB140\uC11D\uC774 \uAE00\uC384...."
     - smallTitle_: "\uD0D0\uC815: \uC774\uC57C\uAE30\uB294 \uB098\uC911"
@@ -45559,16 +45996,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45591,7 +46033,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC774\uC57C\uAE30\uB294 \uB098\uC911\uC5D0 \uB4E3\uC9C0. \n\uC6B0\uB9B0
         \uBC14\uC058\uAC70\uB4E0. "
@@ -45604,16 +46049,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45636,7 +46086,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC774\uBD10\uC694 \uACC4\uC18D \uADF8\uB807\uAC8C \uB4E3\uACE0\uB9CC
         \uC788\uC744\uAC70\uC694? \n\uADF8\uB0E5 \uAC8C\uC784 \uC2A4\uD1A0\uB9AC\uC77C
@@ -45652,16 +46105,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 1
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45684,7 +46142,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: "\uC544. \uC8C4\uC1A1\uD569\uB2C8\uB2E4. \n\uB370\uB9AD\uC528 \uACE0\uB9C8\uC6CC\uC694."
     - smallTitle_: "\uB370\uB9AD: \uCC9C\uB9CC\uC5D0\uC694!"
@@ -45696,16 +46157,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45728,7 +46194,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 4
       sentence: "\uC544\uC774\uACE0 \uCC9C\uB9CC\uC5D0\uC694! \uBAA8\uD5D8\uAC00\uB2D8\uC740
         \uC800\uD76C \uB9C8\uC744\uC758 \uC740\uC778\uC785\uB2C8\uB2E4!\n\uADF8\uB9AC\uACE0
@@ -45743,16 +46212,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 0
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45775,7 +46249,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 1
       sentence: '?'
     - smallTitle_: "\uD0D0\uC815: \uC790\uC790, \uAC00\uC790~"
@@ -45787,16 +46264,21 @@ MonoBehaviour:
         portraitSettings:
           showLeftPortrait: 0
           leftPortraitNumber: 1
+          smallPortraitL: 0
           showRightPortrait: 1
           rightPortraitNumber: 0
+          smallPortraitR: 0
         selectionPopupSettings:
           activateSelectionPopup: 0
           selectionPopupData:
             question: 
             choices: []
-        animationSettings:
+        oldAnimationSettings:
           activateObjAnimate: 0
-          objectAnimationData: []
+          objectAnimationDatas: []
+        newAnimationSettings:
+          activeNewAnimate: 0
+          newAnimDatas: []
         etcAnimationSettings:
           etcAnimSets: []
         emotionSettings:
@@ -45819,7 +46301,10 @@ MonoBehaviour:
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
-      soundNumber: 0
+        HeartBeatSettings:
+          activeBeat: 0
+          beatType: 0
+      soundType: 0
       name: 0
       sentence: "\uC790, \uC790!\n\uC800 npc\uAC00 \uB9D0\uD574\uC900 \uACF3\uC73C\uB85C
         \uC5B4\uC11C \uCD9C\uBC1C \uD574 \uBCF4\uC790\uACE0."
@@ -45953,3 +46438,323 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1 &449326440594360265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5197220906673869583}
+  - component: {fileID: 563260978651289558}
+  - component: {fileID: 8645176453920555327}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &563260978651289558
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449326440594360265}
+  m_CullTransparentMesh: 0
+--- !u!1 &1836643641138367044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836643641138367067}
+  - component: {fileID: 1836643641138367066}
+  - component: {fileID: 3920175768053179450}
+  m_Layer: 0
+  m_Name: LevelChanger_WithSentence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1836643641138367066
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641138367044}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fbc869002a57540f688015ee32a318dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1836643641138367067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641138367044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.17514428, y: 0.43296152, z: -2.28125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1836643641673829485}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!223 &1836643641673829472
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641673829484}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 900
+  m_TargetDisplay: 0
+--- !u!114 &1836643641673829474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641673829484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1836643641673829475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641673829484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!1 &1836643641673829484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836643641673829485}
+  - component: {fileID: 1836643641673829472}
+  - component: {fileID: 1836643641673829475}
+  - component: {fileID: 1836643641673829474}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1836643641673829485
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641673829484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1836643641977766316}
+  - {fileID: 5197220906673869583}
+  m_Father: {fileID: 1836643641138367067}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!222 &1836643641977766306
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641977766319}
+  m_CullTransparentMesh: 0
+--- !u!224 &1836643641977766316
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641977766319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1836643641673829485}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1836643641977766317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641977766319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1836643641977766319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836643641977766316}
+  - component: {fileID: 1836643641977766306}
+  - component: {fileID: 1836643641977766317}
+  m_Layer: 5
+  m_Name: FadeInOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &3920175768053179450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836643641138367044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d1aacc2955745b9b5892c1e4664792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1836643641138367066}
+  text: {fileID: 8645176453920555327}
+  storyNumber: 11
+  sentence: "\uAC8C\uC784 \uC18D \uB300\uB3C4\uC2DC \uAD11\uC7A5, \uBCA0\uB9B4 \uC131"
+--- !u!224 &5197220906673869583
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449326440594360265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1836643641673829485}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8645176453920555327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449326440594360265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
+  m_RaycastTarget: 0
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7415103db205a1e40a628c859b9b278f, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 80
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text

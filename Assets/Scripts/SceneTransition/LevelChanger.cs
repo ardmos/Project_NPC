@@ -21,12 +21,10 @@ public class LevelChanger : MonoBehaviour
 
     private void Update()
     {
-        
-        if (Input.GetMouseButton(0))
+        if (Input.GetKeyDown(KeyCode.F8))
         {
             FadeToNextLevel();
         }
-        
     }
 
 
