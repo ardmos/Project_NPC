@@ -15,6 +15,7 @@ namespace CatchingWildBoar
         ///  1.성공시, 실패시 다이얼로그 출력되는부분 추가.
         ///  2.씬4_베릴성과의 알맞은 씬 전환 연결.
         ///  3.LevelChanger_WithSentence 추가 및 활용.
+        ///  4. 다른 동물 잡으면 피가 깎이는것?
         /// </summary>
 
 
