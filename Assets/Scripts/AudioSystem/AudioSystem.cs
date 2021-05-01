@@ -13,6 +13,13 @@ public class AudioSystem : DontDestroy<AudioSystem>
     //마우스 클릭 효과음
     public AudioClip furnitureClick;
 
+    //AudioSource들.  FX용, BGM용
+    public AudioSource audioSource_FX, audioSource_BGM;
+
+    private void Start()
+    {
+        audioSource_FX = gameObject.GetComponent<AudioSource>();
+    }
 
     #region Dialogue추가 효과음
     public void DialogSFXHelper(Dialogue.DialogueSet dialogueSet)
@@ -28,7 +35,7 @@ public class AudioSystem : DontDestroy<AudioSystem>
         {
             for (int i = 0; i < dialogueSet.detail.sFXSettings.playTime; i++)
             {
-                gameObject.GetComponent<AudioSource>().PlayOneShot(dialogueSet.detail.sFXSettings.audioClip);
+                audioSource_FX.PlayOneShot(dialogueSet.detail.sFXSettings.audioClip);
                 yield return new WaitForSeconds(dialogueSet.detail.sFXSettings.delayTime);
             }
         }
@@ -38,16 +45,27 @@ public class AudioSystem : DontDestroy<AudioSystem>
     #region Dialogue넘길때 소리
     public void PlayDialogueFlipSFX()
     {
-        gameObject.GetComponent<AudioSource>().PlayOneShot(dialogFlip);
+        audioSource_FX.PlayOneShot(dialogFlip);
     }
     #endregion
 
     #region 마우스 클릭 소리
     public void PlayFurnitureClickSFX()
     {
-        gameObject.GetComponent<AudioSource>().PlayOneShot(furnitureClick);
+        audioSource_FX.PlayOneShot(furnitureClick);
     }
     #endregion
 
-
+    #region 브금조절
+    public void ActivateBGM(AudioClip audioClip)
+    {
+        //Debug.Log("audioClip: " + audioClip);
+        if (audioClip == null)
+        {
+            return;
+        }
+        audioSource_BGM.clip = audioClip;
+        audioSource_BGM.Play();
+    }
+    #endregion
 }

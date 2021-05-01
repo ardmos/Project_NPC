@@ -22,6 +22,12 @@ public class Miro_Hard_Manager : MonoBehaviour
     //동료 스타팅 포지션
     Vector2 fellowStartingPos = new Vector2(0f, -12f);
 
+
+    //실패시 카메라 효과 위한 부분
+    bool width = false;
+    bool height = false;
+    bool zoom = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -109,6 +115,7 @@ public class Miro_Hard_Manager : MonoBehaviour
     //게임 패배 팝업 시작
     public void GameOver()
     {
+        Debug.Log("게임오버");
         //이동 정지 하고 
         player.movement = Vector2.zero;
         player.isControllable = false;
@@ -130,6 +137,7 @@ public class Miro_Hard_Manager : MonoBehaviour
 
         //타이머 원상봉귀 시키고
         타이머.GetComponent<Timer>().SetRemainTime(90);
+        타이머.GetComponent<Timer>().isgameover = false;
         //플레이어캐릭터 출발위치로.
         player.gameObject.transform.position = playerStartingPos;
         //동료캐릭터 출발위치로. 
@@ -159,15 +167,18 @@ public class Miro_Hard_Manager : MonoBehaviour
 
 
         //다음 화면 이동 스르륵 시작
-        bool width = false;
-        bool height = false;
+        width = false;
+        height = false;
+        zoom = false;
+
+
         while (!width && !height)
         {
             //화면 중앙으로! 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.001f);
 
             if (cinemachineVirtual.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneWidth >= 0.1f)
-            {
+            {      
                 cinemachineVirtual.GetCinemachineComponent<CinemachineFramingTransposer>().m_DeadZoneWidth -= 0.001f;
             }
             else
@@ -186,11 +197,11 @@ public class Miro_Hard_Manager : MonoBehaviour
         }
 
         //다음 화면 확대 시작
-        bool zoom = false;
+
         while (!zoom)
         {
-            yield return new WaitForSeconds(1f);
-            if(cinemachineVirtual.m_Lens.OrthographicSize >= 2f)
+            yield return new WaitForSeconds(0.001f);
+            if(cinemachineVirtual.m_Lens.OrthographicSize >= 4f)
             {
                 cinemachineVirtual.m_Lens.OrthographicSize -= 0.01f;
             }
@@ -201,13 +212,10 @@ public class Miro_Hard_Manager : MonoBehaviour
         }
 
 
-
-
-
         //마지막으로 2초 기다렸다가 게임오버 팝업 띄우기까지
-        yield return new WaitForSeconds(2f);
-        게임오버팝업.SetActive(true);
-
+        yield return new WaitForSeconds(1f);
+        if (게임오버팝업.activeSelf == false)
+            게임오버팝업.SetActive(true);
 
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     public int id;
-    public Dictionary<int, bool> isInteracted;    
+    public Dictionary<int, bool> isInteracted;
 
     //주워지거나 하는 상호작용기능이 있는 오브젝트 ex동전. 
     //같은 경우에는 추가적으로 스크립트 만들어서 기능 붙여주자. 
@@ -13,6 +13,7 @@ public class Object : MonoBehaviour
 
     public void TriggerDialogue()
     {
+
         if (!DialogueManager.Instance.isDialogueActive && IsThePlayerNear())
         {
             //대화시 작동되는 부분.
@@ -21,13 +22,14 @@ public class Object : MonoBehaviour
             if (InteractedEventController())
             {
                 return;
-            }            
+            }
 
             //다이얼로그를 열고
             DialogueManager.Instance.StartDialogue(id);
             //게임매니져에 보고를 한다.
             GameManager.Instance.DidInteracted(id);
-        }            
+        }
+
     }
 
 
@@ -65,6 +67,7 @@ public class Object : MonoBehaviour
         }
     }
 
+    //캡슐 진 오픈 조건 만족했는지
     public bool InteractedEventController()
     {
         //씬1 기타 오브젝트들 상호작용 완료 후 캡슐 선택시.
@@ -76,7 +79,8 @@ public class Object : MonoBehaviour
             {
                 //나머지와 모두 대화를 마쳤다.                
                 //씬1 천형사 등장 이벤트 발동. 스토리 이벤트 넘버 = 1
-                GameManager.Instance.storyNumber = 1;
+                //GameManager.Instance.storyNumber = 1;
+                GameManager.Instance.SetStoryNumber(1);
                 GameManager.Instance.StartStoryEvent();
                 return true;
             }
