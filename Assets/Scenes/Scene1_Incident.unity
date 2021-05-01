@@ -11825,7 +11825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 32
+  m_ReferencePixelsPerUnit: 80
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1024, y: 768}
   m_ScreenMatchMode: 0
@@ -24205,7 +24205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f16b33aa3a7942a98e3e0da01ba93ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ceef1ae821b774228b5d6b113ec193ea, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -24248,7 +24248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403925577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 1.6, z: 0}
+  m_LocalPosition: {x: 2.7, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 520772394}
@@ -37749,7 +37749,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -44036,7 +44036,7 @@ MonoBehaviour:
   text: {fileID: 7963709424816039349}
   audioSource: {fileID: 1556139920}
   clickSound: {fileID: 8300000, guid: 74e2200ce23787b44915f6800bf7df9d, type: 3}
-  BGMClip: {fileID: 8300000, guid: 8050fa75686b548339e25a0d7bb0f047, type: 3}
+  BGMClip: {fileID: 8300000, guid: 4de0bf8926f144a4cbe1dc0e9d37c480, type: 3}
 --- !u!4 &7718408846634061104
 Transform:
   m_ObjectHideFlags: 0
