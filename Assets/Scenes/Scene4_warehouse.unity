@@ -1977,8 +1977,8 @@ Camera:
   m_GameObject: {fileID: 1668396000}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2152,6 +2152,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 0
       sentence: "\uC815\uB9D0 \uC774\uB807\uAC8C\uAE4C\uC9C0 \uD574\uC57C\uB3FC\uC694?"
@@ -2204,11 +2208,15 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 1
       sentence: "\uBC29\uBC95\uC774 \uC5C6\uC796\uC2B5\uB2C8\uAE4C?\n\uD53C\uD574\uC790\uAC00
         \uC8FD\uC740 \uAC74 \uAC8C\uC784 \uC811\uC18D\uAE30 \uC548\uC774\uC5C8\uACE0.\n\uC544\uBB34\uB7F0
-        \uB2E8\uC11C\uAC00 \uB098\uC624\uC9C0 \uC54A\uB294 \uC9C0\uAE08 \uC774 \uC0C1\uD669\uC5D0\uC11C...\n\uC9C0\uD478\u314F\uAE30\uB77C\uB3C4
+        \uB2E8\uC11C\uAC00 \uB098\uC624\uC9C0 \uC54A\uB294 \uC9C0\uAE08 \uC774 \uC0C1\uD669\uC5D0\uC11C...\n\uC9C0\uD478\uB77C\uAE30\uB77C\uB3C4
         \uC7A1\uC544\uC57C \uD558\uC9C0 \uC54A\uACA0\uC2B5\uB2C8\uAE4C?"
     - smallTitle_: "\uC9C0\uD604: \uBC29\uBC95\uC774 \uC5C6\uC796\uC2B5\uB2C8\uAE4C2 "
       dialogueSetName: 
@@ -2259,6 +2267,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 1
       sentence: "\uBB54\uAC00 \uB098\uC62C \uB54C\uAE4C\uC9C0 \uC544\uBB34\uAC83\uB3C4
@@ -2312,6 +2324,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 0
       sentence: "....\n'\uBABB \uB9D0\uB9AC\uACA0\uAD70.'"
@@ -2364,6 +2380,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 0
       sentence: "\uADF8\uB798! \uAC8C\uC784 \uC18D\uC5D0\uC11C \uC0B4\uC778\uC0AC\uAC74
@@ -2421,6 +2441,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 14
       sentence: "\uBE44\uC5B4\uC788\uB294 \uC785\uB825\uCC3D\uC5D0 \uCC98\uC74C \uBCF4\uB294
@@ -2475,6 +2499,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 0
       sentence: "'\uC544\uBB34\uB798\uB3C4 \uC218\uC0AC\uB97C \uC704\uD55C \uACC4\uC815\uC774
@@ -2534,6 +2562,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 14
       sentence: "[\uC0DD\uCCB4 \uC815\uBCF4 \uC218\uC2E0\uC911\u2026\n\uC2EC\uC7A5
@@ -2588,6 +2620,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 14
       sentence: "[\uB370\uC774\uD130 \uC218\uC9D1\uC5D0 \uB3D9\uC758\uD558\uC9C0
@@ -2647,6 +2683,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 14
       sentence: "[\uC0DD\uCCB4 \uC815\uBCF4 \uC218\uC2E0\uC911\u2026\n\uC2EC\uC7A5
@@ -2707,6 +2747,10 @@ MonoBehaviour:
         HeartBeatSettings:
           activeBeat: 0
           beatType: 0
+        bGMSettings:
+          audioClip: {fileID: 0}
+          changeVolume: 0
+          volumeValue: 0
       soundType: 0
       name: 14
       sentence: ... ...

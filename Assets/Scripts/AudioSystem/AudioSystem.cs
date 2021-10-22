@@ -16,7 +16,7 @@ public class AudioSystem : DontDestroy<AudioSystem>
     //AudioSource들.  FX용, BGM용
     public AudioSource audioSource_FX, audioSource_BGM;
 
-    private void Start()
+    override protected void OnStart()
     {
         audioSource_FX = gameObject.GetComponent<AudioSource>();
     }
@@ -57,6 +57,8 @@ public class AudioSystem : DontDestroy<AudioSystem>
     #endregion
 
     #region 브금조절
+
+    //변경
     public void ActivateBGM(AudioClip audioClip)
     {
         //Debug.Log("audioClip: " + audioClip);
@@ -66,6 +68,13 @@ public class AudioSystem : DontDestroy<AudioSystem>
         }
         audioSource_BGM.clip = audioClip;
         audioSource_BGM.Play();
+    }
+
+    //볼륨
+    public void SetBGMVolume(float volumeValue)
+    {
+        if (volumeValue < 0f || volumeValue > 1f) return;
+        audioSource_BGM.volume = volumeValue;
     }
     #endregion
 }

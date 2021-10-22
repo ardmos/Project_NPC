@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class DialogueObj : DontDestroy<DialogueObj>
 {
+    
 }

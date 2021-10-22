@@ -320,6 +320,19 @@ public class Dialogue
             [Header("- 심박 애니메이션을 주고 싶으신가요~?")]
             public BeatBeat HeartBeatSettings;
 
+            //배경음악을 조작하고싶으신가요?
+            [Serializable]
+            public struct BGMSettings
+            {
+                [Header("- 배경음악 변경을 원하면 오디오클립을 넣어주세요")]
+                public AudioClip audioClip;
+                [Header("- 배경음악 볼륨 조절을 원하면 체크 후 숫자를 넣어주세요")]
+                public bool changeVolume;
+                [Range(0f, 1f)]
+                public float volumeValue;
+            }
+            [Header("- 배경 음악 설정")]
+            public BGMSettings bGMSettings;
         }
         #endregion Details
 

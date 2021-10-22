@@ -9,7 +9,8 @@ public class DialogueManager : DontDestroy<DialogueManager>
     public Dialogue.DialogueSet[] dialogueSets;
     public Animator dialog_animator;
     public RuntimeAnimatorController stable, slide;
-    public Text dialogObjName, dialogSentence;
+    //dialogSentence와 dialogMonologSentence. Name속성값을 기준으로 curDialogBox에 적절한 텍스트박스를 넣어준다.
+    public Text dialogObjName, curDialogBox, dialogSentence, dialogMonologSentence;
     public Image dialogPortrait_Left, dialogPortrait_Right, dialogPortrait_InDialogue, cutSceneImage;
     public ChoiceBox choiceBox;
     public AudioSource audioSource;
@@ -343,6 +344,21 @@ public class DialogueManager : DontDestroy<DialogueManager>
     {
         //여기서 dialogueSet에 입력된 정보에 따라 새 다이얼로그창의 정보를 설정.
 
+        //Name값에 따라 알맞은 텍스트박스 설정해주기.
+        if (dialogueSet.name == Dialogue.DialogueSet.Names.빈칸)
+        {
+            //독백인 경우. 
+            curDialogBox = dialogMonologSentence;
+            dialogSentence.text = "";
+            dialogObjName.text = "";
+        }
+        else
+        {
+            //독백이 아닌 경우 
+            curDialogBox = dialogSentence;
+            dialogMonologSentence.text = "";
+        }
+
         //다이얼로그 시작 딜레이 타임 부여
         if (dialogueSet.detail.delayTime != 0f)
         {
@@ -650,8 +666,22 @@ public class DialogueManager : DontDestroy<DialogueManager>
         EmotionAnimation(dialogueSet);
 
 
-        //효과음 실행
+        //효과음 실행(얘는 audioSystem에서 실행할지안할지 확인함... 이러면 안되는데 ㅠㅠ)
         audioSystem.DialogSFXHelper(dialogueSet);
+
+
+        //배경음악 변경
+        if (dialogueSet.detail.bGMSettings.audioClip != null)
+        {
+            audioSystem.ActivateBGM(dialogueSet.detail.bGMSettings.audioClip);
+        }
+        else Debug.Log("브금을 바꾸려했지만...  오디오클립이 없는걸요 ㅠㅠ!");
+
+        //배경음악 볼륨 변경
+        if (dialogueSet.detail.bGMSettings.changeVolume)
+        {
+            audioSystem.SetBGMVolume(dialogueSet.detail.bGMSettings.volumeValue);
+        }
 
 
 
@@ -664,23 +694,24 @@ public class DialogueManager : DontDestroy<DialogueManager>
         }
         else cutSceneImage.color = new Color(1, 1, 1, 0);
 
+
         //글자 색깔 설정.
         if (dialogueSet.detail.fontColorSettings.changeColor)
         {
             //혹시 실수로 글씨 투명으로 설정했으면 불투명하게 처리 
             if (dialogueSet.detail.fontColorSettings.fontColor.a == 0f)
-                dialogSentence.color = new Color(dialogueSet.detail.fontColorSettings.fontColor.r, dialogueSet.detail.fontColorSettings.fontColor.g, dialogueSet.detail.fontColorSettings.fontColor.b, 1);
+                curDialogBox.color = new Color(dialogueSet.detail.fontColorSettings.fontColor.r, dialogueSet.detail.fontColorSettings.fontColor.g, dialogueSet.detail.fontColorSettings.fontColor.b, 1);
             else
-                dialogSentence.color = dialogueSet.detail.fontColorSettings.fontColor;
+                curDialogBox.color = dialogueSet.detail.fontColorSettings.fontColor;
         }
-        else dialogSentence.color = Color.white;    //기본은 검은색
+        else curDialogBox.color = Color.white;    //기본은 검은색
 
         //글자 크기 설정
         if (dialogueSet.detail.fontSizeSettings.changeSize)
         {
-            dialogSentence.fontSize = dialogueSet.detail.fontSizeSettings.fontSize;
+            curDialogBox.fontSize = dialogueSet.detail.fontSizeSettings.fontSize;
         }
-        else dialogSentence.fontSize = 30;
+        else curDialogBox.fontSize = 30;
 
         #endregion
 
@@ -811,9 +842,9 @@ public class DialogueManager : DontDestroy<DialogueManager>
         dialogPortrait_InDialogue.sprite = portraitSprite; //초상화(내부) 스프라이트
 
         //내부초상화 존재시 Sentence 위치정보
-        RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
+        RectTransform sentenceRectTransform = curDialogBox.gameObject.GetComponent<RectTransform>();
         //Left
-        sentenceRectTransform.offsetMin = new Vector2(210f, 25f);
+        sentenceRectTransform.offsetMin = new Vector2(210f, 27f);
         sentenceRectTransform.sizeDelta = new Vector2(sentenceRectTransform.sizeDelta.x, 110f);
         //내부초상화 존재시 Name 위치정보        
         //PosX, PosY
@@ -856,19 +887,19 @@ public class DialogueManager : DontDestroy<DialogueManager>
         dialogPortrait_InDialogue.color = new Color(1, 1, 1, 0);
 
         //내부초상화 존재시 Sentence 위치정보
-        RectTransform sentenceRectTransform = dialogSentence.gameObject.GetComponent<RectTransform>();
+        RectTransform sentenceRectTransform = curDialogBox.gameObject.GetComponent<RectTransform>();
         //Left
         if (dialogObjName.text == "")
         {
             //이름이 빈칸이었을 경우 문장 위치 올려주기. 
-            sentenceRectTransform.sizeDelta = new Vector2(sentenceRectTransform.sizeDelta.x, 130f);
-            sentenceRectTransform.offsetMin = new Vector2(60f, 25f);
+            sentenceRectTransform.sizeDelta = new Vector2(sentenceRectTransform.sizeDelta.x, 160f);
+            sentenceRectTransform.offsetMin = new Vector2(60f, 27f);
             //dialogSentence.rectTransform.SetAllDirty();
         }
         else
         {
             sentenceRectTransform.sizeDelta = new Vector2(sentenceRectTransform.sizeDelta.x, 110f);
-            sentenceRectTransform.offsetMin = new Vector2(60f, 25f);
+            sentenceRectTransform.offsetMin = new Vector2(60f, 27f);
         }
 
         //내부초상화 존재시 Name 위치정보        
@@ -885,10 +916,10 @@ public class DialogueManager : DontDestroy<DialogueManager>
         //선택상자 팝업에서 빨리넘기기 할 때 쓰이는 변수. 
         printingSentence = dialogueSet.sentence;
 
-        dialogSentence.text = "";
+        curDialogBox.text = "";
         foreach (char letter in dialogueSet.sentence.ToCharArray())
         {
-            dialogSentence.text += letter;
+            curDialogBox.text += letter;
 
             //타이핑 효과음 출력 부분.  스페이스는 거른다.  turnOffTypingSound 체크해제 되어있는지도 확인
             if (letter != System.Convert.ToChar(32) && dialogueSet.detail.sFXSettings.turnOffTypingSound == false)
@@ -955,7 +986,7 @@ public class DialogueManager : DontDestroy<DialogueManager>
         StopAllCoroutines();
         isSpaceKeyDowned = false;
 
-        dialogSentence.text = printingSentence;
+        curDialogBox.text = printingSentence;
 
         isDuringTyping = false;
 
