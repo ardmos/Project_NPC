@@ -266,7 +266,12 @@ public class DialogueManager : DontDestroy<DialogueManager>
             dialogueSetsQue.Clear();
             foreach (Dialogue.DialogueSet item in dialogueSets) dialogueSetsQue.Enqueue(item);
         }
-        else Debug.Log("정보가 없는 녀석입니다.");
+        else
+        {            
+            Debug.Log("정보가 없는 녀석입니다.");
+            //정보가 없는 녀석이면 아래 내용 실행 안하도록 수정함. 정보가 없는 씬1 경찰2한테 말걸때마다 에러가 발생하는것을 막기 위해. 
+            return;
+        }
 
         //말풍선팝업일수도 있으니.  id넘버 팔십만 이상인지?  아니면 그냥 다이얼로그 진행.
         if (objid >= 800000)

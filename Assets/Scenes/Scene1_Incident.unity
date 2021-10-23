@@ -12886,6 +12886,7 @@ MonoBehaviour:
   "\uC774\uB3D9\uC18D\uB3C4": 0
   "\uCD1D\uC774\uB3D9\uB7C9": {x: 0, y: 0}
   "\uB2E4\uC774\uC5BC\uB85C\uADF8\uD638\uCD9C\uB9C8\uC9C0\uB9C9\uBC29\uD5A5": 0
+  tmpForisTrigger: 0
 --- !u!114 &580652752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12949,7 +12950,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.01, y: 0.2}
@@ -20666,8 +20667,8 @@ MonoBehaviour:
           activateCutScene: 0
           image: {fileID: 0}
         fontColorSettings:
-          changeColor: 1
-          fontColor: {r: 1, g: 0.71290123, b: 0, a: 0}
+          changeColor: 0
+          fontColor: {r: 1, g: 1, b: 1, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -22806,7 +22807,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.8396226, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 1, g: 1, b: 1, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -22865,7 +22866,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.8396226, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 1, g: 1, b: 1, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -22923,7 +22924,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.39215687, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -22983,7 +22984,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.39215687, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23045,7 +23046,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.8392157, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 1, g: 1, b: 1, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23104,7 +23105,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.8392157, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 1, g: 1, b: 1, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23163,7 +23164,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.39215687, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23221,7 +23222,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.39215687, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23279,7 +23280,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.39215687, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23338,7 +23339,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.39215687, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23399,7 +23400,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.84313726, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 1, g: 1, b: 1, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23464,7 +23465,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.39215687, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -23522,7 +23523,7 @@ MonoBehaviour:
           image: {fileID: 0}
         fontColorSettings:
           changeColor: 1
-          fontColor: {r: 0.39215687, g: 0.25672644, b: 0, a: 0}
+          fontColor: {r: 0, g: 0, b: 0, a: 0}
         fontSizeSettings:
           changeSize: 0
           fontSize: 0
@@ -30017,6 +30018,7 @@ MonoBehaviour:
   "\uC774\uB3D9\uC18D\uB3C4": 0
   "\uCD1D\uC774\uB3D9\uB7C9": {x: 0, y: 0}
   "\uB2E4\uC774\uC5BC\uB85C\uADF8\uD638\uCD9C\uB9C8\uC9C0\uB9C9\uBC29\uD5A5": 0
+  tmpForisTrigger: 0
 --- !u!114 &1450160338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44467,6 +44469,7 @@ MonoBehaviour:
   "\uC774\uB3D9\uC18D\uB3C4": 0
   "\uCD1D\uC774\uB3D9\uB7C9": {x: 0, y: 0}
   "\uB2E4\uC774\uC5BC\uB85C\uADF8\uD638\uCD9C\uB9C8\uC9C0\uB9C9\uBC29\uD5A5": 0
+  tmpForisTrigger: 0
 --- !u!50 &2066939045
 Rigidbody2D:
   serializedVersion: 4
