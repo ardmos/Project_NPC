@@ -2390,7 +2390,7 @@ MonoBehaviour:
         \uC218\uC0AC\uB77C\uB2C8,\n\uC815\uB9D0 \uC7AC\uBC0C\uACA0\uAD6C\uB9CC! \uC2E0\uC120\uD574,
         \uC544\uC8FC!"
   - smallTitle_: "\uAC80\uC740\uD654\uBA74 \uC774\uD6C4"
-    storyId: 0
+    storyId: 10
     dialogue:
     - smallTitle_: "\uB3C5\uBC31?"
       dialogueSetName: 

@@ -45,9 +45,6 @@ public class NPC : MonoBehaviour
     //다이얼로그 호출 처리
     public int 다이얼로그호출마지막방향;
 
-    //MoveMaker. 이동처리시에 충돌방지용 기능 구현하기위해 사용하는 isTrigger 상태 저장용 변수
-    public bool tmpForisTrigger = false;
-
     private void Awake()
     {
         moveSets = new Queue<Dialogue.DialogueSet.Details.AnimationSettings.ObjectAnimData.MoveSet>();
@@ -220,7 +217,7 @@ public class NPC : MonoBehaviour
         if (IsArrivedChecker(moveSet))      //도착여부 확인 
         {
             //도착시 다시 위에서 첫 번째 콜라이더 isTrigger 여부 원래대로 만들기. 
-            gameObject.GetComponents<BoxCollider2D>()[0].isTrigger = tmpForisTrigger;
+            gameObject.GetComponents<BoxCollider2D>()[0].isTrigger = false;
 
             //이동 도착 처리.
             Arrived();
@@ -230,7 +227,6 @@ public class NPC : MonoBehaviour
             //이동중엔 콜라이더 충돌 안되게끔 isTrigger 켜주기.         
             //이곳에서는 첫 번째 콜라이더의 isTrigger만 조작하기 때문에.
             //항상 위쪽 첫 번째 콜라이더가 물리충돌체크용 콜라이더여야 함. 
-            tmpForisTrigger = gameObject.GetComponents<BoxCollider2D>()[0].isTrigger;
             gameObject.GetComponents<BoxCollider2D>()[0].isTrigger = true;
 
             //아직 도착한게 아니면 계속 이동 진행
@@ -548,9 +544,8 @@ public class NPC : MonoBehaviour
         //이동중엔 콜라이더 충돌 안되게끔 isTrigger 켜주기.         
         //이곳에서는 첫 번째 콜라이더의 isTrigger만 조작하기 때문에.
         //항상 위쪽 첫 번째 콜라이더가 물리충돌체크용 콜라이더여야 함. 
-        tmpForisTrigger = gameObject.GetComponents<BoxCollider2D>()[0].isTrigger;
         gameObject.GetComponents<BoxCollider2D>()[0].isTrigger = true;
-
+        Debug.Log("다이얼로그 팔로우 시작!");
 
         xDis = desPos.x - transform.position.x;
         yDis = desPos.y - transform.position.y;
@@ -595,8 +590,9 @@ public class NPC : MonoBehaviour
         //도착 보고 처리 
         if (x == 0f && y == 0f)
         {
-            //도착시 다시 위에서 첫 번째 콜라이더 isTrigger 여부 원래대로 만들기. 
-            gameObject.GetComponents<BoxCollider2D>()[0].isTrigger = tmpForisTrigger;
+            //도착시 다시 위에서 첫 번째 콜라이더 isTrigger 여부 false로 만들기. 
+            gameObject.GetComponents<BoxCollider2D>()[0].isTrigger = false;
+            Debug.Log("다이얼로그 팔로우 끝!");
 
             DialogueManager.Instance.isEndedMoveAnimation_ForNew = true;
         }

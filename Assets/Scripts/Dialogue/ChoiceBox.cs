@@ -250,7 +250,7 @@ public class ChoiceBox : MonoBehaviour
     //입력 처리하는 부분.
     public void GetChoice(int n)
     {
-        //print(n);
+        print("GetChoice!" + n);
         if (buttons[n].activeSelf)
         {
             foreach (GameObject item in buttons)

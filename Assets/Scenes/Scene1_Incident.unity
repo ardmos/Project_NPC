@@ -4684,7 +4684,7 @@ RectTransform:
   - {fileID: 306523136}
   - {fileID: 2123239346}
   m_Father: {fileID: 187658094}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -8155,9 +8155,9 @@ RectTransform:
   - {fileID: 680339352}
   - {fileID: 1204332597}
   - {fileID: 714163985}
-  - {fileID: 31794535}
   - {fileID: 1788815193}
   - {fileID: 1870176788}
+  - {fileID: 31794535}
   m_Father: {fileID: 766340145}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12886,7 +12886,6 @@ MonoBehaviour:
   "\uC774\uB3D9\uC18D\uB3C4": 0
   "\uCD1D\uC774\uB3D9\uB7C9": {x: 0, y: 0}
   "\uB2E4\uC774\uC5BC\uB85C\uADF8\uD638\uCD9C\uB9C8\uC9C0\uB9C9\uBC29\uD5A5": 0
-  tmpForisTrigger: 0
 --- !u!114 &580652752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30018,7 +30017,6 @@ MonoBehaviour:
   "\uC774\uB3D9\uC18D\uB3C4": 0
   "\uCD1D\uC774\uB3D9\uB7C9": {x: 0, y: 0}
   "\uB2E4\uC774\uC5BC\uB85C\uADF8\uD638\uCD9C\uB9C8\uC9C0\uB9C9\uBC29\uD5A5": 0
-  tmpForisTrigger: 0
 --- !u!114 &1450160338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35481,7 +35479,7 @@ RectTransform:
   m_Children:
   - {fileID: 339418163}
   m_Father: {fileID: 187658094}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -37181,7 +37179,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 187658094}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -39213,7 +39211,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -44469,7 +44467,6 @@ MonoBehaviour:
   "\uC774\uB3D9\uC18D\uB3C4": 0
   "\uCD1D\uC774\uB3D9\uB7C9": {x: 0, y: 0}
   "\uB2E4\uC774\uC5BC\uB85C\uADF8\uD638\uCD9C\uB9C8\uC9C0\uB9C9\uBC29\uD5A5": 0
-  tmpForisTrigger: 0
 --- !u!50 &2066939045
 Rigidbody2D:
   serializedVersion: 4
